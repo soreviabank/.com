@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande reçue - Sorevia Bank</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{min-height:100vh;display:grid;place-items:center;padding:20px;
+      font-family:Arial,sans-serif;background:#f3f7fa;color:#142d38}
+    .card{width:min(100%,520px);padding:42px 30px;text-align:center;background:#fff;
+      border:1px solid #e1eaee;border-radius:24px;box-shadow:0 12px 40px rgba(24,65,82,.09)}
+    .icon{width:72px;height:72px;margin:0 auto 22px;border-radius:50%;
+      display:grid;place-items:center;background:#e8f7ef;color:#16834d;font-size:36px}
+    h1{color:#123f52;font-size:28px;margin-bottom:12px}
+    p{color:#637780;line-height:1.65;font-size:15px;margin-bottom:25px}
+    a{display:inline-block;padding:14px 22px;border-radius:12px;background:#1685bd;
+      color:#fff;text-decoration:none;font-weight:700}
+    .brand{margin-top:28px;color:#1685bd;font-size:13px;font-weight:700;letter-spacing:1px}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="icon" aria-hidden="true">✓</div>
+    <h1>Merci pour votre demande !</h1>
+    <p>Votre formulaire a bien été transmis. Votre demande pourra être examinée et vous serez contacté(e) si des informations complémentaires sont nécessaires.</p>
+    <a href="index.html">Retour à l’accueil</a>
+    <div class="brand">SOREVIA BANK</div>
+  </main>
+<script>
+(function(){
+var SUP=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var DEF={fr:"fr-FR",en:"en-US",es:"es-ES",it:"it-IT",de:"de-DE",pt:"pt-BR",pl:"pl-PL",ru:"ru-RU",nl:"nl-NL",tr:"tr-TR"};
+var D={"Demande reçue - Sorevia Bank":["Request received - Sorevia Bank","Solicitud recibida - Sorevia Bank","Richiesta ricevuta - Sorevia Bank","Antrag erhalten - Sorevia Bank","Pedido recebido - Sorevia Bank","Wniosek otrzymany - Sorevia Bank","Заявка получена - Sorevia Bank","Aanvraag ontvangen - Sorevia Bank","Talep alındı - Sorevia Bank"],"Merci pour votre demande !":["Thank you for your request!","¡Gracias por su solicitud!","Grazie per la sua richiesta!","Vielen Dank für Ihren Antrag!","Obrigado pelo seu pedido!","Dziękujemy za Twój wniosek!","Спасибо за вашу заявку!","Bedankt voor uw aanvraag!","Talebiniz için teşekkürler!"],"Retour à l’accueil":["Back to home","Volver al inicio","Torna alla home","Zurück zur Startseite","Voltar ao início","Wróć do strony głównej","Вернуться на главную","Terug naar home","Ana sayfaya dön"],"Votre formulaire a bien été transmis. Votre demande pourra être examinée et vous serez contacté(e) si des informations complémentaires sont nécessaires.":["Your form has been submitted. Your request may be reviewed and you will be contacted if additional information is needed.","Su formulario se ha enviado correctamente. Su solicitud podrá ser examinada y se le contactará si se necesita información adicional.","Il suo modulo è stato inviato correttamente. La sua richiesta potrà essere esaminata e sarà contattato/a se saranno necessarie ulteriori informazioni.","Ihr Formular wurde übermittelt. Ihr Antrag kann nun geprüft werden, und wir melden uns bei Ihnen, falls weitere Angaben erforderlich sind.","O seu formulário foi enviado com sucesso. O seu pedido poderá ser analisado e será contactado(a) se forem necessárias informações adicionais.","Twój formularz został przesłany. Wniosek może zostać rozpatrzony, a w razie potrzeby dodatkowych informacji skontaktujemy się z Tobą.","Ваша форма успешно отправлена. Заявка может быть рассмотрена, и с вами свяжутся, если потребуется дополнительная информация.","Uw formulier is verzonden. Uw aanvraag kan worden beoordeeld en u wordt gecontacteerd als er aanvullende informatie nodig is.","Formunuz başarıyla iletildi. Talebiniz incelenebilir ve ek bilgi gerekirse sizinle iletişime geçilecektir."]};
+function pick(){
+  var q=null;try{q=new URLSearchParams(location.search).get("lang");}catch(e){}
+  if(q){q=String(q).toLowerCase().slice(0,2);if(SUP.indexOf(q)>-1)return{l:q,tag:DEF[q]};}
+  var list=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||"en"];
+  for(var i=0;i<list.length;i++){var tag=String(list[i]||"");var p=tag.toLowerCase().slice(0,2);if(SUP.indexOf(p)>-1)return{l:p,tag:tag};}
+  return{l:"en",tag:"en-US"};
+}
+var P=pick(),L=P.l,idx=SUP.indexOf(L)-1,LOC=P.tag;
+try{new Intl.NumberFormat(LOC);}catch(e){LOC=DEF[L];}
+window.LANG=L;window.LOCALE=LOC;
+var AMT=/(\d{1,3}(?:[\s\u00a0\u202f]\d{3})*(?:,\d+)?)[\s\u00a0\u202f]*(€|\$)/g;
+function fmt(num,cur){
+  var v=parseFloat(num.replace(/[\s\u00a0\u202f]/g,"").replace(",","."));var dec=(num.split(",")[1]||"").length;
+  try{return new Intl.NumberFormat(LOC,{style:"currency",currency:cur==="€"?"EUR":"USD",minimumFractionDigits:dec,maximumFractionDigits:dec}).format(v);}
+  catch(e){return num+" "+cur;}
+}
+function tr(src){
+  var a=[];var key=src.replace(AMT,function(m,n,c){a.push([n,c]);return"§"+a.length;});
+  var m=/^(\d+) mois$/.exec(key);if(m&&D["mois"])return m[1]+" "+D["mois"][idx];
+  var t=D[key];
+  if(t===undefined){if(!a.length)return src;t=key;}else{t=t[idx];}
+  return t.replace(/§(\d)/g,function(x,i){var z=a[i-1];return z?fmt(z[0],z[1]):x;});
+}
+window.T=function(s){if(L==="fr")return s;return tr(String(s).replace(/\s+/g," ").trim());};
+if(L==="fr")return;
+document.documentElement.setAttribute("lang",L);
+try{
+  var w=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT,null),n,nodes=[];
+  while((n=w.nextNode()))nodes.push(n);
+  nodes.forEach(function(n){
+    var p=n.parentNode&&n.parentNode.nodeName;if(p==="SCRIPT"||p==="STYLE"||p==="NOSCRIPT")return;
+    var raw=n.nodeValue,src=raw.replace(/\s+/g," ").trim();if(!src)return;
+    var out=tr(src);if(out!==src)n.nodeValue=raw.match(/^\s*/)[0]+out+raw.match(/\s*$/)[0];
+  });
+  ["placeholder","aria-label","title","alt"].forEach(function(at){
+    document.querySelectorAll("["+at+"]").forEach(function(e){var v=e.getAttribute(at).replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)e.setAttribute(at,o);});
+  });
+  var md=document.querySelector('meta[name="description"]');
+  if(md){var v=md.getAttribute("content").replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)md.setAttribute("content",o);}
+}catch(e){if(window.console)console.error("i18n",e);}
+})();
+
+</script>
+</body>
+</html>

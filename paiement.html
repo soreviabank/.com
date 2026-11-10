@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#061b28">
+<meta name="description" content="Sorevia Bank - Paiements, virements, transferts et change de devises.">
+<title>Sorevia Bank | Paiements & Transferts</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#f5f8fa;color:#102b38;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+img{max-width:100%;display:block}
+:root{--blue:#087fc4;--dark:#061c29;--deep:#03131e;--cyan:#72ddf5;--gold:#d5ad5c;--white:#fff;--muted:#71868f}
+.container{width:calc(100% - 30px);max-width:650px;margin:auto}
+.header{height:74px;background:#fff;border-bottom:1px solid #e5edef;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #0619250d}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:43px;height:43px;border-radius:12px;background:linear-gradient(145deg,#0ba5df,#07527a);color:#fff;display:grid;place-items:center;font:700 25px Georgia;box-shadow:0 8px 20px #087fc42c}
+.logo-text strong{display:block;font:700 18px Georgia;color:#0a2531;line-height:1}
+.logo-text small{display:block;font-size:6px;letter-spacing:3px;color:#8b9da3;margin-top:6px}
+.header-link{font-size:8px;font-weight:800;color:#0879b9;display:flex;align-items:center;gap:6px}
+.hero{min-height:690px;background:linear-gradient(145deg,#03131e 0%,#06354a 55%,#075a78 100%);color:#fff;position:relative;overflow:hidden;padding:44px 0 35px}
+.hero:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-180px;top:-90px;border:1px solid #ffffff12}
+.hero:after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;left:-170px;bottom:30px;border:1px solid #ffffff0d}
+.hero-grid{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff1d;background:#ffffff0b;padding:8px 12px;border-radius:50px;color:#9be8f9;font-size:7px;font-weight:800;letter-spacing:1.3px}
+.hero h1{font:700 37px/1.08 "Playfair Display",Georgia,serif;margin-top:19px}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:9px;line-height:1.9;color:#b5cbd3;margin-top:13px;max-width:570px}
+.hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:23px}
+.hero-buttons a{height:46px;border-radius:9px;display:flex;justify-content:center;align-items:center;gap:7px;font-size:8px;font-weight:800}
+.primary{background:#0888d0;color:#fff;box-shadow:0 12px 25px #0003}
+.secondary{background:#fff;color:#0879b9}
+.hero-photo{height:280px;margin-top:27px;border-radius:20px;position:relative;overflow:hidden;background:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:0 25px 50px #0006}
+.hero-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#03131e15,#03131eb0)}
+.hero-photo-card{position:absolute;left:15px;right:15px;bottom:15px;background:#ffffff18;border:1px solid #ffffff2a;border-radius:15px;padding:14px;backdrop-filter:blur(12px)}
+.hero-photo-card small{font-size:6px;color:#b9d2db;letter-spacing:1px}
+.hero-photo-card strong{display:block;font:700 24px Georgia;margin-top:4px}
+.hero-photo-card span{font-size:6px;color:#a9c1c9}
+.hero-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}
+.trust-item{background:#ffffff0b;border:1px solid #ffffff12;border-radius:11px;padding:11px 5px;text-align:center}
+.trust-item i{color:#70dbf4;font-size:13px;margin-bottom:6px}
+.trust-item span{display:block;font-size:6px;color:#a8c1ca}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-mark">S</div>
+<div class="logo-text">
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</a>
+<a href="index.html" class="header-link"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container hero-grid">
+
+<div class="eyebrow"><i class="fa-solid fa-shield-halved"></i> SOREVIA BANK • PAIEMENTS DIGITAUX</div>
+
+<h1>Votre argent mérite une expérience <span>exceptionnelle.</span></h1>
+
+<p>Virements, transferts, paiements et change de devises : gérez vos opérations financières dans une expérience moderne conçue pour vous accompagner partout.</p>
+
+<div class="hero-buttons">
+<a href="#services" class="primary">Découvrir les services <i class="fa-solid fa-arrow-down"></i></a>
+<a href="inscription.html" class="secondary">Ouvrir un compte <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div class="hero-photo">
+<div class="hero-photo-card">
+<small>SOLDE DISPONIBLE</small>
+<strong>18 740,50 €</strong>
+<span>Compte Sorevia •••• 4582</span>
+</div>
+</div>
+
+<div class="hero-trust">
+<div class="trust-item"><i class="fa-solid fa-lock"></i><span>Protection</span></div>
+<div class="trust-item"><i class="fa-solid fa-bolt"></i><span>Rapidité</span></div>
+<div class="trust-item"><i class="fa-solid fa-mobile-screen"></i><span>Mobile</span></div>
+</div>
+
+</div>
+</section>
+
+<style>
+.services{background:#fff;padding:55px 0}
+.label{font-size:7px;font-weight:800;letter-spacing:1.7px;color:#087fc4}
+.title{font:700 30px/1.12 "Playfair Display",Georgia,serif;color:#092633;margin-top:7px}
+.title span{color:#087fc4}
+.desc{font-size:8px;line-height:1.9;color:#74878e;margin-top:10px}
+.services-grid{display:grid;gap:12px;margin-top:25px}
+.service{border:1px solid #e0e9ec;border-radius:17px;overflow:hidden;background:#fff;box-shadow:0 12px 30px #0619250a;transition:.3s}
+.service:active{transform:scale(.985)}
+.service-image{height:165px;position:relative;background-size:cover;background-position:center}
+.service-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2800,#061b2899)}
+.national-image{background-image:url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=85")}
+.international-image{background-image:url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=900&q=85")}
+.fast-image{background-image:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85")}
+.service-tag{position:absolute;z-index:2;left:12px;top:12px;background:#ffffffdf;color:#0879b9;padding:7px 9px;border-radius:30px;font-size:6px;font-weight:800;letter-spacing:1px}
+.service-body{padding:16px}
+.service-icon{width:39px;height:39px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:14px;margin-bottom:12px}
+.service h3{font:700 18px Georgia;color:#15333f}
+.service p{font-size:7px;line-height:1.8;color:#74878f;margin-top:7px}
+.service-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #edf1f2}
+.service-bottom span{font-size:6px;color:#83969d}
+.service-bottom a{font-size:7px;font-weight:800;color:#087fc4}
+.stats{background:#f2f7f9;padding:38px 0}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.stat{background:#fff;border:1px solid #e1e9ec;border-radius:14px;padding:16px}
+.stat strong{font:700 25px Georgia;color:#087fc4}
+.stat small{display:block;font-size:6px;line-height:1.6;color:#788c93;margin-top:5px}
+.intro-banner{margin-top:25px;border-radius:17px;background:linear-gradient(140deg,#071e2b,#075b79);color:#fff;padding:21px;position:relative;overflow:hidden}
+.intro-banner:after{content:"";position:absolute;width:130px;height:130px;border:1px solid #ffffff13;border-radius:50%;right:-55px;top:-40px}
+.intro-banner strong{display:block;font:700 20px Georgia;position:relative;z-index:2}
+.intro-banner p{font-size:7px;line-height:1.8;color:#aec4cc;margin-top:7px;position:relative;z-index:2}
+.intro-banner a{display:inline-flex;align-items:center;gap:7px;margin-top:13px;background:#fff;color:#0879b9;border-radius:8px;padding:10px 13px;font-size:7px;font-weight:800;position:relative;z-index:2}
+</style>
+
+<section class="services" id="services">
+<div class="container">
+
+<div class="label">01 • LES SERVICES SOREVIA</div>
+<h2 class="title">Une banque qui suit <span>votre rythme.</span></h2>
+<p class="desc">Découvrez les solutions conçues pour vos opérations quotidiennes et vos besoins financiers.</p>
+
+<div class="services-grid">
+
+<article class="service reveal">
+<div class="service-image national-image">
+<span class="service-tag">VIREMENT NATIONAL</span>
+</div>
+<div class="service-body">
+<div class="service-icon"><i class="fa-solid fa-building-columns"></i></div>
+<h3>Virement national</h3>
+<p>Envoyez des euros vers un compte bancaire dans votre pays avec un parcours simple, clair et sécurisé.</p>
+<div class="service-bottom">
+<span>Opération bancaire</span>
+<a href="inscription.html">Commencer →</a>
+</div>
+</div>
+</article>
+
+<article class="service reveal">
+<div class="service-image international-image">
+<span class="service-tag">INTERNATIONAL</span>
+</div>
+<div class="service-body">
+<div class="service-icon"><i class="fa-solid fa-earth-europe"></i></div>
+<h3>Virement international</h3>
+<p>Transférez vos fonds vers l'étranger et gardez une vision claire de votre opération et de son statut.</p>
+<div class="service-bottom">
+<span>Multi-destinations</span>
+<a href="inscription.html">Commencer →</a>
+</div>
+</div>
+</article>
+
+<article class="service reveal">
+<div class="service-image fast-image">
+<span class="service-tag">TRANSFERT RAPIDE</span>
+</div>
+<div class="service-body">
+<div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+<h3>Transfert rapide</h3>
+<p>Un parcours simplifié pour envoyer rapidement des fonds lorsque le temps compte.</p>
+<div class="service-bottom">
+<span>Expérience simplifiée</span>
+<a href="inscription.html">Transférer →</a>
+</div>
+</div>
+</article>
+
+</div>
+
+<div class="stats reveal">
+<div class="stats-grid">
+<div class="stat"><strong>24/7</strong><small>Accès à votre espace bancaire selon les disponibilités du service.</small></div>
+<div class="stat"><strong>€</strong><small>Des opérations présentées clairement en euros et dans les devises proposées.</small></div>
+<div class="stat"><strong>100%</strong><small>Une expérience pensée pour être utilisée depuis votre smartphone.</small></div>
+<div class="stat"><strong>5★</strong><small>Une interface conçue autour de la simplicité et du confort.</small></div>
+</div>
+</div>
+
+<div class="intro-banner reveal">
+<strong>Une opération. Une interface. Aucun détour.</strong>
+<p>Accédez rapidement à vos principaux services financiers depuis un espace pensé pour le mobile.</p>
+<a href="inscription.html">Créer mon espace <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</div>
+</section>
+
+<style>
+.global{background:linear-gradient(145deg,#051b28,#063d53);padding:58px 0;color:#fff;position:relative;overflow:hidden}
+.global:before{content:"";position:absolute;width:350px;height:350px;border-radius:50%;border:1px solid #ffffff0b;right:-210px;top:50px}
+.global .title{color:#fff}
+.global .title span{color:#70dcf5}
+.global .desc{color:#aec4cc}
+.exchange-card{margin-top:23px;background:#fff;border-radius:19px;padding:16px;color:#173440;box-shadow:0 25px 50px #0005}
+.exchange-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
+.exchange-head strong{font:700 17px Georgia}
+.exchange-head span{font-size:6px;color:#087fc4;font-weight:800;background:#eaf7fb;padding:7px 9px;border-radius:20px}
+.exchange-row{display:grid;grid-template-columns:1fr 35px 1fr;align-items:center;gap:6px}
+.money-box{background:#f7fafb;border:1px solid #dfe8eb;border-radius:11px;padding:12px}
+.money-box label{font-size:6px;font-weight:800;color:#83949a;display:block;margin-bottom:6px}
+.money-box strong{font-size:12px;display:block}
+.money-box small{font-size:6px;color:#8799a0;display:block;margin-top:4px}
+.swap{width:35px;height:35px;border-radius:50%;background:#e9f6fa;color:#087fc4;display:grid;place-items:center;font-size:9px}
+.rate-box{background:#f0f7f9;border-radius:9px;padding:10px;margin-top:12px;font-size:6px;color:#70868e;line-height:1.6}
+.rate-box i{color:#087fc4;margin-right:4px}
+.exchange-btn{display:flex;align-items:center;justify-content:center;gap:7px;background:#087fc4;color:#fff;padding:13px;border-radius:9px;font-size:8px;font-weight:800;margin-top:10px}
+.currency-list{display:flex;gap:6px;margin-top:13px;overflow:hidden}
+.currency-list span{white-space:nowrap;background:#edf4f6;border-radius:20px;padding:7px 9px;font-size:6px;color:#526b74;font-weight:700}
+.merchant{background:#fff;padding:58px 0}
+.merchant-layout{margin-top:23px}
+.merchant-photo{height:240px;border-radius:19px;background:url("https://images.unsplash.com/photo-1556742111-a301076d9d18?auto=format&fit=crop&w=1000&q=85") center/cover;position:relative;overflow:hidden}
+.merchant-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2820,#061b28b8)}
+.merchant-floating{position:absolute;z-index:2;left:13px;right:13px;bottom:13px;background:#ffffffee;border-radius:13px;padding:13px}
+.merchant-floating small{font-size:6px;color:#80929a}
+.merchant-floating strong{display:block;font:700 22px Georgia;color:#102e3a;margin-top:4px}
+.merchant-floating span{font-size:6px;color:#5e747d}
+.merchant-copy{margin-top:20px}
+.merchant-copy h3{font:700 23px Georgia;color:#102e3a}
+.merchant-copy h3 span{color:#087fc4}
+.merchant-copy p{font-size:8px;line-height:1.9;color:#74878e;margin-top:9px}
+.merchant-features{display:grid;gap:8px;margin-top:16px}
+.merchant-feature{display:flex;align-items:center;gap:10px;padding:11px;border:1px solid #e0e9ec;border-radius:10px}
+.merchant-feature i{width:30px;height:30px;border-radius:8px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:10px}
+.merchant-feature strong{font-size:7px;color:#314b55}
+.merchant-btn{display:flex;align-items:center;justify-content:center;gap:7px;background:#087fc4;color:#fff;padding:13px;border-radius:9px;font-size:8px;font-weight:800;margin-top:15px}
+</style>
+
+<section class="global" id="change">
+<div class="container">
+
+<div class="label" style="color:#70dcf5">02 • CHANGE DE DEVISES</div>
+<h2 class="title">Voyagez avec votre argent,<br><span>sans perdre le contrôle.</span></h2>
+<p class="desc">Visualisez vos conversions et gérez vos opérations en devises depuis une interface claire.</p>
+
+<div class="exchange-card reveal">
+<div class="exchange-head">
+<strong>Conversion</strong>
+<span>EUR • DEVISES</span>
+</div>
+
+<div class="exchange-row">
+<div class="money-box">
+<label>VOUS DONNEZ</label>
+<strong>1 000,00 €</strong>
+<small>EUR • Euro</small>
+</div>
+
+<div class="swap"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+
+<div class="money-box">
+<label>VOUS RECEVEZ</label>
+<strong>1 080,00 $</strong>
+<small>USD • Dollar</small>
+</div>
+</div>
+
+<div class="rate-box"><i class="fa-solid fa-circle-info"></i> Exemple indicatif. Le taux réel, les frais et les conditions applicables sont ceux affichés lors de l'opération.</div>
+
+<div class="currency-list">
+<span>€ EUR</span>
+<span>$ USD</span>
+<span>£ GBP</span>
+<span>CHF</span>
+</div>
+
+<a href="inscription.html" class="exchange-btn">Accéder au change <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</div>
+</section>
+
+<section class="merchant" id="marchand">
+<div class="container">
+
+<div class="label">03 • PAIEMENT MARCHAND</div>
+<h2 class="title">Vos achats, <span>autrement.</span></h2>
+<p class="desc">Une expérience moderne pour payer auprès des commerçants participants.</p>
+
+<div class="merchant-layout">
+
+<div class="merchant-photo reveal">
+<div class="merchant-floating">
+<small>PAIEMENT CONFIRMÉ</small>
+<strong>74,90 €</strong>
+<span>Sorevia Market • Carte •••• 4582</span>
+</div>
+</div>
+
+<div class="merchant-copy reveal">
+<h3>Un paiement <span>simple.</span></h3>
+<p>Profitez d'un parcours de paiement conçu pour réduire les étapes inutiles et vous permettre de garder une vision claire de chaque opération.</p>
+
+<div class="merchant-features">
+<div class="merchant-feature"><i class="fa-solid fa-qrcode"></i><strong>Paiement digital moderne</strong></div>
+<div class="merchant-feature"><i class="fa-solid fa-receipt"></i><strong>Confirmation de l'opération</strong></div>
+<div class="merchant-feature"><i class="fa-solid fa-shield-halved"></i><strong>Protection des informations sensibles</strong></div>
+</div>
+
+<a href="inscription.html" class="merchant-btn">Activer les paiements <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</div>
+</div>
+</section>
+
+<style>
+.steps{background:#f3f7f9;padding:58px 0}
+.step-list{margin-top:25px;display:grid;gap:10px}
+.step{background:#fff;border:1px solid #e0e9ec;border-radius:15px;padding:16px;display:flex;gap:13px;align-items:flex-start;box-shadow:0 8px 20px #06192508}
+.step-number{width:39px;height:39px;border-radius:12px;background:#087fc4;color:#fff;display:grid;place-items:center;font:700 14px Georgia;flex:none}
+.step h3{font:700 16px Georgia;color:#16333e;margin-bottom:5px}
+.step p{font-size:7px;line-height:1.8;color:#788c93}
+.benefits{background:#fff;padding:58px 0}
+.benefit-image{height:230px;border-radius:18px;background:url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85") center/cover;position:relative;overflow:hidden;margin-top:22px}
+.benefit-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2810,#061b28a8)}
+.benefit-message{position:absolute;z-index:2;bottom:14px;left:14px;right:14px;background:#ffffffeb;border-radius:12px;padding:13px}
+.benefit-message strong{font:700 18px Georgia;color:#12303c}
+.benefit-message span{display:block;font-size:6px;color:#71858c;margin-top:4px}
+.benefit-list{display:grid;gap:9px;margin-top:19px}
+.benefit{display:flex;gap:11px;padding:13px;background:#f7fafb;border-radius:11px}
+.benefit i{width:33px;height:33px;border-radius:9px;background:#e7f5fa;color:#087fc4;display:grid;place-items:center;font-size:11px;flex:none}
+.benefit strong{font-size:8px;color:#29444e;display:block;margin-bottom:4px}
+.benefit p{font-size:6px;line-height:1.7;color:#81939a}
+.security{background:linear-gradient(145deg,#061a27,#07435b);padding:55px 0;color:#fff;position:relative;overflow:hidden}
+.security:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff0b;border-radius:50%;right:-170px;top:-60px}
+.security .title{color:#fff}
+.security .title span{color:#72ddf5}
+.security .desc{color:#aac0c9}
+.security-box{margin-top:22px;background:#ffffff0d;border:1px solid #ffffff15;border-radius:16px;padding:15px}
+.security-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #ffffff10}
+.security-row:last-child{border-bottom:0}
+.security-row i{width:38px;height:38px;border-radius:11px;background:#ffffff0d;color:#72ddf5;display:grid;place-items:center}
+.security-row strong{display:block;font-size:8px}
+.security-row p{font-size:6px;line-height:1.7;color:#9fb8c1;margin-top:4px}
+</style>
+
+<section class="steps">
+<div class="container">
+
+<div class="label">04 • COMMENT ÇA MARCHE</div>
+<h2 class="title">Tout commence en <span>quelques étapes.</span></h2>
+<p class="desc">Une expérience conçue pour rester simple même lorsque l'opération est importante.</p>
+
+<div class="step-list">
+
+<div class="step reveal">
+<div class="step-number">01</div>
+<div><h3>Connectez-vous</h3><p>Accédez à votre espace Sorevia depuis votre smartphone.</p></div>
+</div>
+
+<div class="step reveal">
+<div class="step-number">02</div>
+<div><h3>Choisissez votre opération</h3><p>Sélectionnez un virement, un transfert, un change ou un paiement marchand.</p></div>
+</div>
+
+<div class="step reveal">
+<div class="step-number">03</div>
+<div><h3>Renseignez les informations</h3><p>Indiquez le montant, le bénéficiaire ou les informations nécessaires à l'opération.</p></div>
+</div>
+
+<div class="step reveal">
+<div class="step-number">04</div>
+<div><h3>Vérifiez et confirmez</h3><p>Contrôlez les informations avant de valider votre opération.</p></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="benefits">
+<div class="container">
+
+<div class="label">05 • L'EXPÉRIENCE SOREVIA</div>
+<h2 class="title">Plus qu'un paiement,<br><span>une expérience.</span></h2>
+<p class="desc">Chaque détail est pensé pour rendre vos opérations plus lisibles et plus agréables.</p>
+
+<div class="benefit-image reveal">
+<div class="benefit-message">
+<strong>Votre banque dans votre poche.</strong>
+<span>Une interface conçue pour le quotidien.</span>
+</div>
+</div>
+
+<div class="benefit-list">
+
+<div class="benefit reveal">
+<i class="fa-solid fa-mobile-screen-button"></i>
+<div><strong>Pensé pour le smartphone</strong><p>Une interface adaptée aux petits écrans et aux interactions tactiles.</p></div>
+</div>
+
+<div class="benefit reveal">
+<i class="fa-solid fa-chart-line"></i>
+<div><strong>Une vision claire</strong><p>Consultez les montants et le statut de vos opérations avec une présentation lisible.</p></div>
+</div>
+
+<div class="benefit reveal">
+<i class="fa-solid fa-clock"></i>
+<div><strong>Gagnez du temps</strong><p>Les services essentiels sont accessibles directement depuis votre espace.</p></div>
+</div>
+
+<div class="benefit reveal">
+<i class="fa-solid fa-headset"></i>
+<div><strong>Un accompagnement</strong><p>Retrouvez les informations utiles et les canaux d'assistance disponibles.</p></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="security">
+<div class="container">
+
+<div class="label" style="color:#72ddf5">06 • SÉCURITÉ</div>
+<h2 class="title">Vos opérations méritent<br><span>toute notre attention.</span></h2>
+<p class="desc">La sécurité fait partie intégrante de l'expérience Sorevia Bank.</p>
+
+<div class="security-box reveal">
+
+<div class="security-row">
+<i class="fa-solid fa-lock"></i>
+<div><strong>Connexion protégée</strong><p>Gardez vos identifiants confidentiels et utilisez uniquement les canaux officiels.</p></div>
+</div>
+
+<div class="security-row">
+<i class="fa-solid fa-user-shield"></i>
+<div><strong>Validation des opérations</strong><p>Les opérations sensibles peuvent nécessiter une vérification supplémentaire.</p></div>
+</div>
+
+<div class="security-row">
+<i class="fa-solid fa-bell"></i>
+<div><strong>Suivi des mouvements</strong><p>Gardez une vue sur les opérations réalisées depuis votre espace.</p></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<style>
+.final-cta{background:#fff;padding:60px 0;text-align:center}
+.final-icon{width:57px;height:57px;border-radius:16px;background:#e8f6fa;color:#087fc4;display:grid;place-items:center;margin:0 auto 15px;font-size:20px}
+.final-cta .title{font-size:30px}
+.final-cta p{font-size:8px;line-height:1.9;color:#758991;margin:11px auto 20px;max-width:500px}
+.final-cta a{display:flex;justify-content:center;align-items:center;gap:7px;background:#087fc4;color:#fff;border-radius:10px;padding:14px;font-size:8px;font-weight:800;max-width:500px;margin:auto;box-shadow:0 12px 25px #087fc42e}
+.footer{background:#03131e;color:#fff;padding:39px 0 18px}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}
+.footer-logo{display:flex;align-items:center;gap:9px}
+.footer-logo .logo-mark{box-shadow:none}
+.footer-logo strong{display:block;font:700 17px Georgia}
+.footer-logo small{display:block;font-size:6px;letter-spacing:2px;color:#6e8790;margin-top:5px}
+.footer-description{font-size:7px;line-height:1.8;color:#6e8790;margin:15px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;border-top:1px solid #ffffff0d;padding-top:20px}
+.footer-col h4{font:700 14px Georgia;margin-bottom:11px}
+.footer-col a{display:block;font-size:7px;color:#82989f;margin:8px 0}
+.footer-bottom{border-top:1px solid #ffffff0d;margin-top:22px;padding-top:14px;text-align:center;font-size:6px;color:#506972;line-height:1.8}
+.floating{position:fixed;bottom:17px;right:15px;width:45px;height:45px;border-radius:50%;background:#087fc4;color:#fff;display:grid;place-items:center;box-shadow:0 8px 25px #0004;z-index:500;font-size:13px;opacity:0;pointer-events:none;transition:.3s}
+.floating.visible{opacity:1;pointer-events:auto}
+@media(min-width:500px){
+.services-grid{grid-template-columns:1fr 1fr}
+.service:last-child{grid-column:1/-1}
+.merchant-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+.merchant-copy{margin-top:0}
+}
+</style>
+
+<section class="final-cta">
+<div class="container">
+
+<div class="final-icon"><i class="fa-solid fa-paper-plane"></i></div>
+<div class="label">07 • SOREVIA BANK</div>
+
+<h2 class="title">Votre argent.<br><span>Votre liberté.</span></h2>
+
+<p>Rejoignez l'expérience Sorevia Bank et découvrez une nouvelle manière de gérer vos paiements, transferts et opérations financières.</p>
+
+<a href="inscription.html">Ouvrir mon compte Sorevia <i class="fa-solid fa-arrow-right"></i></a>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+
+<div class="footer-top">
+<div class="footer-logo">
+<div class="logo-mark">S</div>
+<div>
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</div>
+</div>
+
+<p class="footer-description">Une expérience bancaire digitale conçue pour vous accompagner dans vos paiements, virements, transferts et opérations en devises.</p>
+
+<div class="footer-grid">
+
+<div class="footer-col">
+<h4>Services</h4>
+<a href="#services">Virement national</a>
+<a href="#services">Virement international</a>
+<a href="#services">Transfert rapide</a>
+<a href="#change">Change de devises</a>
+<a href="#marchand">Paiement marchand</a>
+</div>
+
+<div class="footer-col">
+<h4>Sorevia</h4>
+<a href="index.html">Accueil</a>
+<a href="bancaire.html">Cartes bancaires</a>
+<a href="inscription.html">Inscription</a>
+<a href="connecter.html">Connexion</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Sorevia Bank — Tous droits réservés.<br>
+La sécurité de vos informations reste une priorité.
+</div>
+
+</div>
+</footer>
+
+<a href="#" class="floating" id="topBtn"><i class="fa-solid fa-arrow-up"></i></a>
+
+</main>
+
+<script>
+(function(){
+var SUP=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var DEF={fr:"fr-FR",en:"en-US",es:"es-ES",it:"it-IT",de:"de-DE",pt:"pt-BR",pl:"pl-PL",ru:"ru-RU",nl:"nl-NL",tr:"tr-TR"};
+var D={"01 • LES SERVICES SOREVIA":["01 • SOREVIA SERVICES","01 • LOS SERVICIOS SOREVIA","01 • I SERVIZI SOREVIA","01 • DIE SOREVIA-SERVICES","01 • OS SERVIÇOS SOREVIA","01 • USŁUGI SOREVIA","01 • УСЛУГИ SOREVIA","01 • DE SOREVIA-DIENSTEN","01 • SOREVIA HİZMETLERİ"],"02 • CHANGE DE DEVISES":["02 • CURRENCY EXCHANGE","02 • CAMBIO DE DIVISAS","02 • CAMBIO VALUTA","02 • WÄHRUNGSUMTAUSCH","02 • CÂMBIO DE MOEDAS","02 • WYMIANA WALUT","02 • ОБМЕН ВАЛЮТ","02 • VALUTAWISSEL","02 • DÖVİZ İŞLEMLERİ"],"03 • PAIEMENT MARCHAND":["03 • MERCHANT PAYMENT","03 • PAGO A COMERCIOS","03 • PAGAMENTO AI COMMERCIANTI","03 • HÄNDLERZAHLUNG","03 • PAGAMENTO A COMERCIANTES","03 • PŁATNOŚĆ U SPRZEDAWCY","03 • ОПЛАТА В МАГАЗИНАХ","03 • BETALING BIJ WINKELIERS","03 • ÜYE İŞYERİ ÖDEMESİ"],"04 • COMMENT ÇA MARCHE":["04 • HOW IT WORKS","04 • CÓMO FUNCIONA","04 • COME FUNZIONA","04 • SO FUNKTIONIERT’S","04 • COMO FUNCIONA","04 • JAK TO DZIAŁA","04 • КАК ЭТО РАБОТАЕТ","04 • HOE HET WERKT","04 • NASIL ÇALIŞIR"],"05 • L'EXPÉRIENCE SOREVIA":["05 • THE SOREVIA EXPERIENCE","05 • LA EXPERIENCIA SOREVIA","05 • L’ESPERIENZA SOREVIA","05 • DAS SOREVIA-ERLEBNIS","05 • A EXPERIÊNCIA SOREVIA","05 • DOŚWIADCZENIE SOREVIA","05 • СЕРВИС SOREVIA","05 • DE SOREVIA-ERVARING","05 • SOREVIA DENEYİMİ"],"06 • SÉCURITÉ":["06 • SECURITY","06 • SEGURIDAD","06 • SICUREZZA","06 • SICHERHEIT","06 • SEGURANÇA","06 • BEZPIECZEŃSTWO","06 • БЕЗОПАСНОСТЬ","06 • VEILIGHEID","06 • GÜVENLİK"],"07 • SOREVIA BANK":["07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK"],"Accueil":["Home","Inicio","Home","Startseite","Início","Strona główna","Главная","Home","Ana sayfa"],"Accès à votre espace bancaire selon les disponibilités du service.":["Access to your banking area subject to service availability.","Acceso a su espacio bancario según la disponibilidad del servicio.","Accesso al suo spazio bancario secondo la disponibilità del servizio.","Zugriff auf Ihren Bankbereich je nach Verfügbarkeit des Services.","Acesso ao seu espaço bancário conforme a disponibilidade do serviço.","Dostęp do Twojej strefy bankowej zgodnie z dostępnością usługi.","Доступ к вашему банковскому кабинету в зависимости от доступности сервиса.","Toegang tot uw bankomgeving afhankelijk van de beschikbaarheid van de dienst.","Bankacılık alanınıza hizmetin uygunluğuna göre erişim."],"Accéder au change":["Go to currency exchange","Acceder al cambio","Accedi al cambio","Zum Währungsumtausch","Aceder ao câmbio","Przejdź do wymiany walut","Перейти к обмену валют","Naar valutawissel","Döviz işlemlerine git"],"Accédez rapidement à vos principaux services financiers depuis un espace pensé pour le mobile.":["Quickly access your main financial services from an area designed for mobile.","Acceda rápidamente a sus principales servicios financieros desde un espacio pensado para el móvil.","Acceda rapidamente ai suoi principali servizi finanziari da uno spazio pensato per il mobile.","Greifen Sie schnell auf Ihre wichtigsten Finanzservices zu – in einem Bereich, der für Mobilgeräte gemacht ist.","Aceda rapidamente aos seus principais serviços financeiros a partir de um espaço pensado para o telemóvel.","Szybko uzyskaj dostęp do głównych usług finansowych w strefie stworzonej z myślą o urządzeniach mobilnych.","Быстро получайте доступ к основным финансовым услугам в кабинете, созданном для мобильных устройств.","Krijg snel toegang tot uw belangrijkste financiële diensten vanuit een omgeving ontworpen voor mobiel.","Başlıca finansal hizmetlerinize mobil için tasarlanmış bir alandan hızlıca erişin."],"Accédez à votre espace Sorevia depuis votre smartphone.":["Access your Sorevia account from your smartphone.","Acceda a su espacio Sorevia desde su smartphone.","Acceda al suo spazio Sorevia dallo smartphone.","Rufen Sie Ihren Sorevia-Bereich auf Ihrem Smartphone auf.","Aceda ao seu espaço Sorevia a partir do smartphone.","Wejdź do swojej strefy Sorevia na smartfonie.","Откройте свой кабинет Sorevia на смартфоне.","Open uw Sorevia-omgeving op uw smartphone.","Sorevia alanınıza akıllı telefonunuzdan erişin."],"Activer les paiements":["Activate payments","Activar los pagos","Attiva i pagamenti","Zahlungen aktivieren","Ativar os pagamentos","Aktywuj płatności","Включить платежи","Betalingen activeren","Ödemeleri etkinleştir"],"Cartes bancaires":["Bank cards","Tarjetas bancarias","Carte bancarie","Bankkarten","Cartões bancários","Karty bankowe","Банковские карты","Bankkaarten","Banka kartları"],"Change de devises":["Currency exchange","Cambio de divisas","Cambio valuta","Währungsumtausch","Câmbio de moedas","Wymiana walut","Обмен валют","Valutawissel","Döviz işlemleri"],"Chaque détail est pensé pour rendre vos opérations plus lisibles et plus agréables.":["Every detail is designed to make your transactions clearer and more pleasant.","Cada detalle está pensado para hacer sus operaciones más claras y agradables.","Ogni dettaglio è pensato per rendere le sue operazioni più leggibili e piacevoli.","Jedes Detail ist darauf ausgelegt, Ihre Vorgänge übersichtlicher und angenehmer zu machen.","Cada detalhe é pensado para tornar as suas operações mais legíveis e agradáveis.","Każdy szczegół ma sprawić, by Twoje operacje były czytelniejsze i przyjemniejsze.","Каждая деталь продумана, чтобы ваши операции были понятнее и приятнее.","Elk detail is bedacht om uw transacties duidelijker en aangenamer te maken.","Her ayrıntı, işlemlerinizi daha anlaşılır ve keyifli kılmak için düşünülmüştür."],"Choisissez votre opération":["Choose your operation","Elija su operación","Scelga la sua operazione","Wählen Sie Ihren Vorgang","Escolha a sua operação","Wybierz operację","Выберите операцию","Kies uw transactie","İşleminizi seçin"],"Commencer →":["Start →","Empezar →","Inizia →","Starten →","Começar →","Rozpocznij →","Начать →","Beginnen →","Başla →"],"Compte Sorevia •••• 4582":["Sorevia account •••• 4582","Cuenta Sorevia •••• 4582","Conto Sorevia •••• 4582","Sorevia-Konto •••• 4582","Conta Sorevia •••• 4582","Konto Sorevia •••• 4582","Счёт Sorevia •••• 4582","Sorevia-rekening •••• 4582","Sorevia hesabı •••• 4582"],"Confirmation de l'opération":["Transaction confirmation","Confirmación de la operación","Conferma dell’operazione","Bestätigung des Vorgangs","Confirmação da operação","Potwierdzenie operacji","Подтверждение операции","Bevestiging van de transactie","İşlemin onaylanması"],"Connectez-vous":["Log in","Inicie sesión","Acceda","Melden Sie sich an","Inicie sessão","Zaloguj się","Войдите","Log in","Giriş yapın"],"Connexion":["Login","Inicio de sesión","Accesso","Anmeldung","Início de sessão","Logowanie","Вход","Inloggen","Giriş"],"Connexion protégée":["Protected login","Conexión protegida","Accesso protetto","Geschützte Anmeldung","Ligação protegida","Chronione logowanie","Защищённый вход","Beveiligde aanmelding","Korumalı giriş"],"Consultez les montants et le statut de vos opérations avec une présentation lisible.":["Check the amounts and status of your transactions in a readable layout.","Consulte los importes y el estado de sus operaciones con una presentación legible.","Consulti importi e stato delle sue operazioni con una presentazione leggibile.","Sehen Sie Beträge und Status Ihrer Vorgänge in einer gut lesbaren Darstellung.","Consulte os montantes e o estado das suas operações com uma apresentação legível.","Sprawdzaj kwoty i statusy operacji w czytelnej prezentacji.","Просматривайте суммы и статусы операций в удобном виде.","Bekijk de bedragen en de status van uw transacties in een leesbare weergave.","İşlemlerinizin tutarlarını ve durumunu okunaklı bir sunumla görüntüleyin."],"Contrôlez les informations avant de valider votre opération.":["Check the information before validating your transaction.","Compruebe la información antes de validar su operación.","Controlli le informazioni prima di convalidare l’operazione.","Prüfen Sie die Angaben, bevor Sie Ihren Vorgang bestätigen.","Verifique as informações antes de validar a sua operação.","Sprawdź dane przed zatwierdzeniem operacji.","Проверьте данные перед подтверждением операции.","Controleer de gegevens voordat u uw transactie bevestigt.","İşleminizi onaylamadan önce bilgileri kontrol edin."],"Conversion":["Conversion","Conversión","Conversione","Umrechnung","Conversão","Przeliczenie","Конвертация","Omrekening","Dönüştürme"],"Créer mon espace":["Create my account area","Crear mi espacio","Crea il mio spazio","Meinen Bereich erstellen","Criar o meu espaço","Utwórz moją strefę","Создать личный кабинет","Mijn omgeving aanmaken","Alanımı oluştur"],"Des opérations présentées clairement en euros et dans les devises proposées.":["Transactions clearly presented in euros and in the currencies offered.","Operaciones presentadas con claridad en euros y en las divisas disponibles.","Operazioni presentate chiaramente in euro e nelle valute disponibili.","Vorgänge klar in Euro und in den angebotenen Währungen dargestellt.","Operações apresentadas com clareza em euros e nas moedas disponíveis.","Operacje przedstawione przejrzyście w euro i w oferowanych walutach.","Операции наглядно отображаются в евро и в доступных валютах.","Transacties duidelijk weergegeven in euro en in de aangeboden valuta.","İşlemler euro ve sunulan para birimlerinde net biçimde gösterilir."],"Découvrez les solutions conçues pour vos opérations quotidiennes et vos besoins financiers.":["Discover the solutions designed for your daily operations and financial needs.","Descubra las soluciones diseñadas para sus operaciones diarias y sus necesidades financieras.","Scopra le soluzioni progettate per le sue operazioni quotidiane e le sue esigenze finanziarie.","Entdecken Sie die Lösungen für Ihre täglichen Vorgänge und finanziellen Bedürfnisse.","Descubra as soluções concebidas para as suas operações diárias e necessidades financeiras.","Poznaj rozwiązania stworzone z myślą o Twoich codziennych operacjach i potrzebach finansowych.","Познакомьтесь с решениями для ваших повседневных операций и финансовых потребностей.","Ontdek de oplossingen voor uw dagelijkse transacties en financiële behoeften.","Günlük işlemleriniz ve finansal ihtiyaçlarınız için tasarlanmış çözümleri keşfedin."],"Découvrir les services":["Discover the services","Descubrir los servicios","Scopri i servizi","Services entdecken","Descobrir os serviços","Poznaj usługi","Узнать об услугах","Ontdek de diensten","Hizmetleri keşfet"],"EUR • DEVISES":["EUR • CURRENCIES","EUR • DIVISAS","EUR • VALUTE","EUR • WÄHRUNGEN","EUR • MOEDAS","EUR • WALUTY","EUR • ВАЛЮТЫ","EUR • VALUTA’S","EUR • DÖVİZ"],"EUR • Euro":["EUR • Euro","EUR • Euro","EUR • Euro","EUR • Euro","EUR • Euro","EUR • Euro","EUR • Евро","EUR • Euro","EUR • Euro"],"Envoyez des euros vers un compte bancaire dans votre pays avec un parcours simple, clair et sécurisé.":["Send euros to a bank account in your country with a simple, clear and secure process.","Envíe euros a una cuenta bancaria en su país con un proceso sencillo, claro y seguro.","Invii euro a un conto bancario nel suo paese con un percorso semplice, chiaro e sicuro.","Senden Sie Euro auf ein Bankkonto in Ihrem Land – einfach, klar und sicher.","Envie euros para uma conta bancária no seu país com um processo simples, claro e seguro.","Wyślij euro na konto bankowe w swoim kraju w prosty, przejrzysty i bezpieczny sposób.","Отправляйте евро на банковский счёт в вашей стране — просто, понятно и безопасно.","Stuur euro’s naar een bankrekening in uw land via een eenvoudig, duidelijk en veilig proces.","Ülkenizdeki bir banka hesabına basit, net ve güvenli bir süreçle euro gönderin."],"Exemple indicatif. Le taux réel, les frais et les conditions applicables sont ceux affichés lors de l'opération.":["Indicative example. The actual rate, fees and applicable conditions are those displayed at the time of the transaction.","Ejemplo orientativo. El tipo real, las comisiones y las condiciones aplicables son los que se muestran al realizar la operación.","Esempio indicativo. Il tasso effettivo, le commissioni e le condizioni applicabili sono quelli mostrati al momento dell’operazione.","Unverbindliches Beispiel. Maßgeblich sind der tatsächliche Kurs, die Gebühren und die Bedingungen, die bei der Transaktion angezeigt werden.","Exemplo indicativo. A taxa real, as comissões e as condições aplicáveis são as apresentadas no momento da operação.","Przykład orientacyjny. Obowiązują rzeczywisty kurs, opłaty i warunki wyświetlone podczas operacji.","Ориентировочный пример. Действуют фактический курс, комиссии и условия, показанные при выполнении операции.","Indicatief voorbeeld. De werkelijke koers, kosten en toepasselijke voorwaarden zijn die welke tijdens de transactie worden getoond.","Gösterge niteliğinde örnek. Geçerli kur, ücretler ve koşullar işlem sırasında gösterilenlerdir."],"Expérience simplifiée":["Simplified experience","Experiencia simplificada","Esperienza semplificata","Vereinfachtes Erlebnis","Experiência simplificada","Uproszczone doświadczenie","Упрощённый сервис","Vereenvoudigde ervaring","Sadeleştirilmiş deneyim"],"Gagnez du temps":["Save time","Gane tiempo","Risparmi tempo","Sparen Sie Zeit","Ganhe tempo","Oszczędzaj czas","Экономьте время","Win tijd","Zaman kazanın"],"Gardez une vue sur les opérations réalisées depuis votre espace.":["Keep an eye on the transactions made from your account area.","Mantenga una visión de las operaciones realizadas desde su espacio.","Mantenga una visione delle operazioni effettuate dal suo spazio.","Behalten Sie die aus Ihrem Bereich durchgeführten Vorgänge im Blick.","Mantenha uma visão das operações realizadas a partir do seu espaço.","Miej wgląd w operacje wykonane z Twojej strefy.","Следите за операциями, выполненными из вашего кабинета.","Houd zicht op de transacties die vanuit uw omgeving zijn uitgevoerd.","Alanınızdan gerçekleştirilen işlemleri takip edin."],"Gardez vos identifiants confidentiels et utilisez uniquement les canaux officiels.":["Keep your credentials confidential and use official channels only.","Mantenga confidenciales sus credenciales y utilice únicamente los canales oficiales.","Mantenga riservate le sue credenziali e utilizzi solo i canali ufficiali.","Halten Sie Ihre Zugangsdaten geheim und nutzen Sie ausschließlich offizielle Kanäle.","Mantenha as suas credenciais confidenciais e utilize apenas os canais oficiais.","Zachowaj poufność danych logowania i korzystaj wyłącznie z oficjalnych kanałów.","Храните учётные данные в тайне и пользуйтесь только официальными каналами.","Houd uw inloggegevens geheim en gebruik uitsluitend officiële kanalen.","Giriş bilgilerinizi gizli tutun ve yalnızca resmi kanalları kullanın."],"INTERNATIONAL":["INTERNATIONAL","INTERNACIONAL","INTERNAZIONALE","INTERNATIONAL","INTERNACIONAL","MIĘDZYNARODOWY","МЕЖДУНАРОДНЫЙ","INTERNATIONAAL","ULUSLARARASI"],"Indiquez le montant, le bénéficiaire ou les informations nécessaires à l'opération.":["Enter the amount, the beneficiary or the information needed for the transaction.","Indique el importe, el beneficiario o la información necesaria para la operación.","Indichi l’importo, il beneficiario o le informazioni necessarie per l’operazione.","Geben Sie Betrag, Empfänger oder die für den Vorgang nötigen Angaben ein.","Indique o montante, o beneficiário ou as informações necessárias para a operação.","Podaj kwotę, odbiorcę lub inne informacje potrzebne do operacji.","Укажите сумму, получателя или другие данные, необходимые для операции.","Geef het bedrag, de begunstigde of de benodigde gegevens voor de transactie op.","Tutarı, alıcıyı veya işlem için gerekli bilgileri girin."],"Inscription":["Sign up","Registro","Registrazione","Registrierung","Registo","Rejestracja","Регистрация","Registratie","Kayıt"],"La sécurité de vos informations reste une priorité.":["The security of your information remains a priority.","La seguridad de su información sigue siendo una prioridad.","La sicurezza delle sue informazioni resta una priorità.","Die Sicherheit Ihrer Daten bleibt eine Priorität.","A segurança das suas informações continua a ser uma prioridade.","Bezpieczeństwo Twoich danych pozostaje priorytetem.","Безопасность ваших данных остаётся приоритетом.","De veiligheid van uw gegevens blijft een prioriteit.","Bilgilerinizin güvenliği önceliğimiz olmaya devam ediyor."],"La sécurité fait partie intégrante de l'expérience Sorevia Bank.":["Security is an integral part of the Sorevia Bank experience.","La seguridad forma parte integral de la experiencia Sorevia Bank.","La sicurezza è parte integrante dell’esperienza Sorevia Bank.","Sicherheit ist fester Bestandteil des Sorevia-Bank-Erlebnisses.","A segurança faz parte integrante da experiência Sorevia Bank.","Bezpieczeństwo jest integralną częścią doświadczenia Sorevia Bank.","Безопасность — неотъемлемая часть сервиса Sorevia Bank.","Veiligheid is een integraal onderdeel van de Sorevia Bank-ervaring.","Güvenlik, Sorevia Bank deneyiminin ayrılmaz bir parçasıdır."],"Les opérations sensibles peuvent nécessiter une vérification supplémentaire.":["Sensitive transactions may require additional verification.","Las operaciones sensibles pueden requerir una verificación adicional.","Le operazioni sensibili possono richiedere una verifica aggiuntiva.","Sensible Vorgänge können eine zusätzliche Verifizierung erfordern.","As operações sensíveis podem exigir uma verificação adicional.","Operacje wrażliwe mogą wymagać dodatkowej weryfikacji.","Для важных операций может потребоваться дополнительная проверка.","Gevoelige transacties kunnen extra verificatie vereisen.","Hassas işlemler ek doğrulama gerektirebilir."],"Les services essentiels sont accessibles directement depuis votre espace.":["Essential services are available directly from your account area.","Los servicios esenciales son accesibles directamente desde su espacio.","I servizi essenziali sono accessibili direttamente dal suo spazio.","Die wichtigsten Services sind direkt in Ihrem Bereich erreichbar.","Os serviços essenciais são acessíveis diretamente a partir do seu espaço.","Najważniejsze usługi są dostępne bezpośrednio w Twojej strefie.","Основные услуги доступны прямо в вашем кабинете.","De essentiële diensten zijn rechtstreeks bereikbaar vanuit uw omgeving.","Temel hizmetlere doğrudan alanınızdan erişebilirsiniz."],"Mobile":["Mobile","Móvil","Mobile","Mobil","Móvel","Mobilnie","Мобильность","Mobiel","Mobil"],"Multi-destinations":["Multiple destinations","Múltiples destinos","Più destinazioni","Mehrere Zielländer","Múltiplos destinos","Wiele kierunków","Множество направлений","Meerdere bestemmingen","Çoklu varış noktası"],"Opération bancaire":["Banking operation","Operación bancaria","Operazione bancaria","Bankvorgang","Operação bancária","Operacja bankowa","Банковская операция","Bankverrichting","Bankacılık işlemi"],"Ouvrir mon compte Sorevia":["Open my Sorevia account","Abrir mi cuenta Sorevia","Apri il mio conto Sorevia","Mein Sorevia-Konto eröffnen","Abrir a minha conta Sorevia","Załóż moje konto Sorevia","Открыть счёт Sorevia","Mijn Sorevia-rekening openen","Sorevia hesabımı aç"],"Ouvrir un compte":["Open an account","Abrir una cuenta","Apri un conto","Konto eröffnen","Abrir uma conta","Załóż konto","Открыть счёт","Rekening openen","Hesap aç"],"PAIEMENT CONFIRMÉ":["PAYMENT CONFIRMED","PAGO CONFIRMADO","PAGAMENTO CONFERMATO","ZAHLUNG BESTÄTIGT","PAGAMENTO CONFIRMADO","PŁATNOŚĆ POTWIERDZONA","ПЛАТЁЖ ПОДТВЕРЖДЁН","BETALING BEVESTIGD","ÖDEME ONAYLANDI"],"Paiement digital moderne":["Modern digital payment","Pago digital moderno","Pagamento digitale moderno","Modernes digitales Bezahlen","Pagamento digital moderno","Nowoczesna płatność cyfrowa","Современная цифровая оплата","Modern digitaal betalen","Modern dijital ödeme"],"Paiement marchand":["Merchant payment","Pago a comercios","Pagamento ai commercianti","Händlerzahlung","Pagamento a comerciantes","Płatność u sprzedawcy","Оплата в магазинах","Betaling bij winkeliers","Üye işyeri ödemesi"],"Pensé pour le smartphone":["Designed for smartphones","Pensado para el smartphone","Pensato per lo smartphone","Für das Smartphone gemacht","Pensado para o smartphone","Stworzony na smartfony","Создано для смартфона","Ontworpen voor de smartphone","Akıllı telefon için tasarlandı"],"Plus qu'un paiement,":["More than a payment,","Más que un pago,","Più di un pagamento,","Mehr als eine Zahlung,","Mais do que um pagamento,","Więcej niż płatność,","Больше, чем платёж,","Meer dan een betaling,","Bir ödemeden fazlası,"],"Profitez d'un parcours de paiement conçu pour réduire les étapes inutiles et vous permettre de garder une vision claire de chaque opération.":["Enjoy a payment flow designed to cut unnecessary steps and let you keep a clear view of every transaction.","Disfrute de un proceso de pago diseñado para reducir pasos innecesarios y mantener una visión clara de cada operación.","Goda di un percorso di pagamento pensato per ridurre i passaggi inutili e mantenere una visione chiara di ogni operazione.","Nutzen Sie einen Zahlungsablauf ohne unnötige Schritte, der Ihnen bei jedem Vorgang den Überblick lässt.","Desfrute de um processo de pagamento concebido para reduzir passos desnecessários e manter uma visão clara de cada operação.","Korzystaj z procesu płatności bez zbędnych kroków, który pozwala zachować jasny wgląd w każdą operację.","Пользуйтесь платёжным процессом без лишних шагов, который сохраняет наглядность каждой операции.","Geniet van een betaalproces zonder overbodige stappen, zodat u elke transactie duidelijk in beeld houdt.","Gereksiz adımları azaltan ve her işlemi net biçimde görmenizi sağlayan bir ödeme akışından yararlanın."],"Protection":["Protection","Protección","Protezione","Schutz","Proteção","Ochrona","Защита","Bescherming","Koruma"],"Protection des informations sensibles":["Protection of sensitive information","Protección de la información sensible","Protezione delle informazioni sensibili","Schutz sensibler Daten","Proteção das informações sensíveis","Ochrona danych wrażliwych","Защита конфиденциальных данных","Bescherming van gevoelige gegevens","Hassas bilgilerin korunması"],"Rapidité":["Speed","Rapidez","Rapidità","Schnelligkeit","Rapidez","Szybkość","Скорость","Snelheid","Hız"],"Rejoignez l'expérience Sorevia Bank et découvrez une nouvelle manière de gérer vos paiements, transferts et opérations financières.":["Join the Sorevia Bank experience and discover a new way to manage your payments, transfers and financial operations.","Únase a la experiencia Sorevia Bank y descubra una nueva forma de gestionar sus pagos, transferencias y operaciones financieras.","Si unisca all’esperienza Sorevia Bank e scopra un nuovo modo di gestire pagamenti, trasferimenti e operazioni finanziarie.","Erleben Sie Sorevia Bank und entdecken Sie eine neue Art, Zahlungen, Überweisungen und Finanzvorgänge zu verwalten.","Junte-se à experiência Sorevia Bank e descubra uma nova forma de gerir os seus pagamentos, transferências e operações financeiras.","Dołącz do Sorevia Bank i odkryj nowy sposób zarządzania płatnościami, przelewami i operacjami finansowymi.","Присоединяйтесь к Sorevia Bank и откройте новый способ управлять платежами, переводами и финансовыми операциями.","Word onderdeel van de Sorevia Bank-ervaring en ontdek een nieuwe manier om uw betalingen, overschrijvingen en financiële transacties te beheren.","Sorevia Bank deneyimine katılın ve ödemelerinizi, transferlerinizi ve finansal işlemlerinizi yönetmenin yeni bir yolunu keşfedin."],"Renseignez les informations":["Enter the details","Indique la información","Inserisca le informazioni","Geben Sie die Daten ein","Preencha as informações","Podaj dane","Укажите данные","Vul de gegevens in","Bilgileri girin"],"Retour":["Back","Volver","Indietro","Zurück","Voltar","Wstecz","Назад","Terug","Geri"],"Retrouvez les informations utiles et les canaux d'assistance disponibles.":["Find useful information and the available support channels.","Encuentre la información útil y los canales de asistencia disponibles.","Trovi le informazioni utili e i canali di assistenza disponibili.","Finden Sie hilfreiche Informationen und die verfügbaren Supportkanäle.","Encontre as informações úteis e os canais de assistência disponíveis.","Znajdź przydatne informacje i dostępne kanały wsparcia.","Найдите полезную информацию и доступные каналы поддержки.","Vind nuttige informatie en de beschikbare ondersteuningskanalen.","Faydalı bilgilere ve mevcut destek kanallarına ulaşın."],"SOLDE DISPONIBLE":["AVAILABLE BALANCE","SALDO DISPONIBLE","SALDO DISPONIBILE","VERFÜGBARER SALDO","SALDO DISPONÍVEL","DOSTĘPNE ŚRODKI","ДОСТУПНЫЙ ОСТАТОК","BESCHIKBAAR SALDO","KULLANILABİLİR BAKİYE"],"SOREVIA BANK • PAIEMENTS DIGITAUX":["SOREVIA BANK • DIGITAL PAYMENTS","SOREVIA BANK • PAGOS DIGITALES","SOREVIA BANK • PAGAMENTI DIGITALI","SOREVIA BANK • DIGITALE ZAHLUNGEN","SOREVIA BANK • PAGAMENTOS DIGITAIS","SOREVIA BANK • PŁATNOŚCI CYFROWE","SOREVIA BANK • ЦИФРОВЫЕ ПЛАТЕЖИ","SOREVIA BANK • DIGITALE BETALINGEN","SOREVIA BANK • DİJİTAL ÖDEMELER"],"Services":["Services","Servicios","Servizi","Services","Serviços","Usługi","Услуги","Diensten","Hizmetler"],"Sorevia Bank - Paiements, virements, transferts et change de devises.":["Sorevia Bank - Payments, transfers and currency exchange.","Sorevia Bank - Pagos, transferencias y cambio de divisas.","Sorevia Bank - Pagamenti, bonifici, trasferimenti e cambio valuta.","Sorevia Bank - Zahlungen, Überweisungen, Transfers und Währungsumtausch.","Sorevia Bank - Pagamentos, transferências e câmbio de moedas.","Sorevia Bank - Płatności, przelewy, transfery i wymiana walut.","Sorevia Bank - платежи, переводы и обмен валют.","Sorevia Bank - Betalingen, overschrijvingen, transfers en valutawissel.","Sorevia Bank - Ödemeler, havaleler, transferler ve döviz işlemleri."],"Sorevia Bank | Paiements & Transferts":["Sorevia Bank | Payments & Transfers","Sorevia Bank | Pagos y transferencias","Sorevia Bank | Pagamenti e trasferimenti","Sorevia Bank | Zahlungen & Überweisungen","Sorevia Bank | Pagamentos e transferências","Sorevia Bank | Płatności i przelewy","Sorevia Bank | Платежи и переводы","Sorevia Bank | Betalingen & overschrijvingen","Sorevia Bank | Ödemeler ve transferler"],"Sorevia Market • Carte •••• 4582":["Sorevia Market • Card •••• 4582","Sorevia Market • Tarjeta •••• 4582","Sorevia Market • Carta •••• 4582","Sorevia Market • Karte •••• 4582","Sorevia Market • Cartão •••• 4582","Sorevia Market • Karta •••• 4582","Sorevia Market • Карта •••• 4582","Sorevia Market • Kaart •••• 4582","Sorevia Market • Kart •••• 4582"],"Suivi des mouvements":["Tracking of movements","Seguimiento de movimientos","Monitoraggio dei movimenti","Nachverfolgung der Bewegungen","Acompanhamento dos movimentos","Śledzenie ruchów na koncie","Контроль движений по счёту","Opvolging van bewegingen","Hareketlerin takibi"],"Sélectionnez un virement, un transfert, un change ou un paiement marchand.":["Select a transfer, a remittance, a currency exchange or a merchant payment.","Seleccione una transferencia, un envío, un cambio o un pago a comercios.","Selezioni un bonifico, un trasferimento, un cambio o un pagamento a un commerciante.","Wählen Sie eine Überweisung, einen Transfer, einen Währungsumtausch oder eine Händlerzahlung.","Selecione uma transferência, um envio, um câmbio ou um pagamento a comerciante.","Wybierz przelew, transfer, wymianę walut lub płatność u sprzedawcy.","Выберите перевод, обмен валют или оплату в магазине.","Selecteer een overschrijving, transfer, valutawissel of betaling bij een winkelier.","Bir havale, transfer, döviz işlemi veya üye işyeri ödemesi seçin."],"TRANSFERT RAPIDE":["FAST TRANSFER","TRANSFERENCIA RÁPIDA","TRASFERIMENTO RAPIDO","SCHNELLTRANSFER","TRANSFERÊNCIA RÁPIDA","SZYBKI TRANSFER","БЫСТРЫЙ ПЕРЕВОД","SNELLE TRANSFER","HIZLI TRANSFER"],"Tout commence en":["Everything starts in","Todo empieza en","Tutto inizia in","Alles beginnt in","Tudo começa em","Wszystko zaczyna się w","Всё начинается с","Alles begint in","Her şey"],"Transfert rapide":["Fast transfer","Transferencia rápida","Trasferimento rapido","Schnelltransfer","Transferência rápida","Szybki transfer","Быстрый перевод","Snelle transfer","Hızlı transfer"],"Transférer →":["Transfer →","Transferir →","Trasferisci →","Überweisen →","Transferir →","Przelej →","Перевести →","Overmaken →","Transfer et →"],"Transférez vos fonds vers l'étranger et gardez une vision claire de votre opération et de son statut.":["Transfer your funds abroad and keep a clear view of your transaction and its status.","Transfiera sus fondos al extranjero y mantenga una visión clara de su operación y de su estado.","Trasferisca i suoi fondi all’estero e mantenga una visione chiara dell’operazione e del suo stato.","Überweisen Sie Ihr Geld ins Ausland und behalten Sie Vorgang und Status klar im Blick.","Transfira os seus fundos para o estrangeiro e mantenha uma visão clara da operação e do seu estado.","Przelewaj środki za granicę i miej jasny wgląd w operację i jej status.","Переводите средства за границу и наглядно отслеживайте операцию и её статус.","Maak uw geld over naar het buitenland en houd een duidelijk overzicht van uw transactie en de status ervan.","Paranızı yurt dışına gönderin ve işleminizi ve durumunu net bir şekilde takip edin."],"USD • Dollar":["USD • US dollar","USD • Dólar","USD • Dollaro","USD • Dollar","USD • Dólar","USD • Dolar","USD • Доллар","USD • Dollar","USD • Dolar"],"Un accompagnement":["Support","Un acompañamiento","Assistenza","Begleitung","Um acompanhamento","Wsparcie","Сопровождение","Begeleiding","Destek"],"Un paiement":["A payment","Un pago","Un pagamento","Eine Zahlung,","Um pagamento","Płatność,","Платёж,","Een betaling","Basit"],"Un parcours simplifié pour envoyer rapidement des fonds lorsque le temps compte.":["A simplified process to send funds quickly when time matters.","Un proceso simplificado para enviar fondos rápidamente cuando el tiempo cuenta.","Un percorso semplificato per inviare rapidamente fondi quando il tempo conta.","Ein vereinfachter Ablauf, um Geld schnell zu senden, wenn es auf Zeit ankommt.","Um processo simplificado para enviar fundos rapidamente quando o tempo conta.","Uproszczona ścieżka szybkiego wysyłania środków, gdy liczy się czas.","Упрощённый процесс для быстрой отправки средств, когда дорога каждая минута.","Een vereenvoudigd proces om snel geld te versturen wanneer tijd telt.","Zamanın önemli olduğu durumlarda hızlıca para göndermek için sadeleştirilmiş bir süreç."],"Une banque qui suit":["A bank that moves at","Un banco que sigue","Una banca che segue","Eine Bank, die Ihrem","Um banco que acompanha","Bank, który dopasowuje się do","Банк, который подстраивается под","Een bank die uw ritme","Ritminize"],"Une expérience bancaire digitale conçue pour vous accompagner dans vos paiements, virements, transferts et opérations en devises.":["A digital banking experience designed to support you in your payments, transfers and foreign-currency operations.","Una experiencia bancaria digital diseñada para acompañarle en sus pagos, transferencias y operaciones en divisas.","Un’esperienza bancaria digitale pensata per accompagnarla nei pagamenti, bonifici, trasferimenti e operazioni in valuta.","Ein digitales Bankerlebnis, das Sie bei Zahlungen, Überweisungen, Transfers und Fremdwährungsvorgängen begleitet.","Uma experiência bancária digital concebida para o acompanhar nos seus pagamentos, transferências e operações em moeda estrangeira.","Cyfrowa bankowość stworzona, by wspierać Cię w płatnościach, przelewach, transferach i operacjach walutowych.","Цифровой банковский сервис, который сопровождает вас в платежах, переводах и валютных операциях.","Een digitale bankervaring ontworpen om u te ondersteunen bij betalingen, overschrijvingen, transfers en transacties in vreemde valuta.","Ödemelerinizde, havalelerinizde, transferlerinizde ve döviz işlemlerinizde size eşlik etmek için tasarlanmış dijital bir bankacılık deneyimi."],"Une expérience conçue pour rester simple même lorsque l'opération est importante.":["An experience designed to stay simple even when the transaction is important.","Una experiencia diseñada para seguir siendo sencilla incluso cuando la operación es importante.","Un’esperienza progettata per restare semplice anche quando l’operazione è importante.","Ein Erlebnis, das einfach bleibt – auch wenn der Vorgang wichtig ist.","Uma experiência concebida para se manter simples mesmo quando a operação é importante.","Doświadczenie, które pozostaje proste, nawet gdy operacja jest ważna.","Сервис, который остаётся простым, даже когда операция важна.","Een ervaring die eenvoudig blijft, ook wanneer de transactie belangrijk is.","İşlem önemli olduğunda bile sade kalacak şekilde tasarlanmış bir deneyim."],"Une expérience moderne pour payer auprès des commerçants participants.":["A modern way to pay at participating merchants.","Una experiencia moderna para pagar en los comercios participantes.","Un’esperienza moderna per pagare presso i commercianti aderenti.","Ein modernes Erlebnis, um bei teilnehmenden Händlern zu bezahlen.","Uma experiência moderna para pagar nos comerciantes participantes.","Nowoczesny sposób płacenia u partnerskich sprzedawców.","Современный способ оплаты у партнёрских магазинов.","Een moderne manier om te betalen bij deelnemende winkeliers.","Katılımcı işyerlerinde ödeme yapmanın modern bir yolu."],"Une expérience pensée pour être utilisée depuis votre smartphone.":["An experience designed to be used from your smartphone.","Una experiencia pensada para usarse desde su smartphone.","Un’esperienza pensata per essere utilizzata dallo smartphone.","Ein Erlebnis, das für die Nutzung per Smartphone gemacht ist.","Uma experiência pensada para ser utilizada a partir do smartphone.","Doświadczenie stworzone do korzystania ze smartfona.","Сервис, созданный для использования со смартфона.","Een ervaring ontworpen voor gebruik op uw smartphone.","Akıllı telefonunuzdan kullanılmak üzere tasarlanmış bir deneyim."],"Une interface adaptée aux petits écrans et aux interactions tactiles.":["An interface adapted to small screens and touch interactions.","Una interfaz adaptada a pantallas pequeñas e interacciones táctiles.","Un’interfaccia adatta agli schermi piccoli e alle interazioni touch.","Eine Oberfläche, die auf kleine Bildschirme und Touch-Bedienung abgestimmt ist.","Uma interface adaptada a ecrãs pequenos e a interações táteis.","Interfejs dostosowany do małych ekranów i obsługi dotykowej.","Интерфейс, адаптированный к небольшим экранам и сенсорному управлению.","Een interface afgestemd op kleine schermen en aanraakbediening.","Küçük ekranlara ve dokunmatik kullanıma uyarlanmış bir arayüz."],"Une interface conçue autour de la simplicité et du confort.":["An interface built around simplicity and comfort.","Una interfaz diseñada en torno a la sencillez y la comodidad.","Un’interfaccia progettata attorno a semplicità e comfort.","Eine Oberfläche, die auf Einfachheit und Komfort ausgelegt ist.","Uma interface concebida em torno da simplicidade e do conforto.","Interfejs oparty na prostocie i wygodzie.","Интерфейс, построенный на простоте и удобстве.","Een interface gebouwd rond eenvoud en comfort.","Sadelik ve konfor etrafında tasarlanmış bir arayüz."],"Une interface conçue pour le quotidien.":["An interface designed for everyday life.","Una interfaz diseñada para el día a día.","Un’interfaccia progettata per la quotidianità.","Eine Oberfläche für den Alltag.","Uma interface concebida para o dia a dia.","Interfejs stworzony do codziennego użytku.","Интерфейс для повседневной жизни.","Een interface ontworpen voor het dagelijks leven.","Günlük yaşam için tasarlanmış bir arayüz."],"Une opération. Une interface. Aucun détour.":["One operation. One interface. No detours.","Una operación. Una interfaz. Sin rodeos.","Un’operazione. Un’interfaccia. Nessun giro.","Ein Vorgang. Eine Oberfläche. Keine Umwege.","Uma operação. Uma interface. Sem desvios.","Jedna operacja. Jeden interfejs. Bez zbędnych kroków.","Одна операция. Один интерфейс. Без лишних шагов.","Eén transactie. Eén interface. Geen omwegen.","Tek işlem. Tek arayüz. Dolambaçsız."],"Une vision claire":["A clear view","Una visión clara","Una visione chiara","Ein klarer Überblick","Uma visão clara","Jasny obraz","Наглядность","Een helder overzicht","Net bir görünüm"],"VIREMENT NATIONAL":["DOMESTIC TRANSFER","TRANSFERENCIA NACIONAL","BONIFICO NAZIONALE","INLANDSÜBERWEISUNG","TRANSFERÊNCIA NACIONAL","PRZELEW KRAJOWY","ПЕРЕВОД ПО СТРАНЕ","BINNENLANDSE OVERSCHRIJVING","YURT İÇİ HAVALE"],"VOUS DONNEZ":["YOU SEND","USTED ENTREGA","LEI DÀ","SIE GEBEN","VOCÊ ENTREGA","OTRZYMUJESZ OD CIEBIE","ВЫ ОТДАЁТЕ","U GEEFT","VERDİĞİNİZ"],"VOUS RECEVEZ":["YOU RECEIVE","USTED RECIBE","LEI RICEVE","SIE ERHALTEN","VOCÊ RECEBE","OTRZYMUJESZ","ВЫ ПОЛУЧАЕТЕ","U ONTVANGT","ALDIĞINIZ"],"Validation des opérations":["Transaction validation","Validación de operaciones","Convalida delle operazioni","Bestätigung von Vorgängen","Validação das operações","Zatwierdzanie operacji","Подтверждение операций","Validatie van transacties","İşlemlerin onaylanması"],"Virement international":["International transfer","Transferencia internacional","Bonifico internazionale","Auslandsüberweisung","Transferência internacional","Przelew zagraniczny","Международный перевод","Internationale overschrijving","Uluslararası havale"],"Virement national":["Domestic transfer","Transferencia nacional","Bonifico nazionale","Inlandsüberweisung","Transferência nacional","Przelew krajowy","Перевод по стране","Binnenlandse overschrijving","Yurt içi havale"],"Virements, transferts, paiements et change de devises : gérez vos opérations financières dans une expérience moderne conçue pour vous accompagner partout.":["Transfers, payments and currency exchange: manage your financial operations in a modern experience designed to go wherever you go.","Transferencias, pagos y cambio de divisas: gestione sus operaciones financieras en una experiencia moderna pensada para acompañarle en todas partes.","Bonifici, trasferimenti, pagamenti e cambio valuta: gestisca le sue operazioni finanziarie in un’esperienza moderna pensata per accompagnarla ovunque.","Überweisungen, Transfers, Zahlungen und Währungsumtausch: Verwalten Sie Ihre Finanzen in einem modernen Erlebnis, das Sie überallhin begleitet.","Transferências, pagamentos e câmbio de moedas: gira as suas operações financeiras numa experiência moderna concebida para o acompanhar em qualquer lugar.","Przelewy, transfery, płatności i wymiana walut: zarządzaj finansami w nowoczesnym środowisku, które towarzyszy Ci wszędzie.","Переводы, платежи и обмен валют: управляйте финансовыми операциями в современном сервисе, который всегда рядом.","Overschrijvingen, transfers, betalingen en valutawissel: beheer uw financiële transacties in een moderne ervaring die u overal vergezelt.","Havaleler, transferler, ödemeler ve döviz işlemleri: finansal işlemlerinizi sizinle her yere gelen modern bir deneyimle yönetin."],"Visualisez vos conversions et gérez vos opérations en devises depuis une interface claire.":["View your conversions and manage your foreign-currency operations from a clear interface.","Visualice sus conversiones y gestione sus operaciones en divisas desde una interfaz clara.","Visualizzi le sue conversioni e gestisca le operazioni in valuta da un’interfaccia chiara.","Sehen Sie Ihre Umrechnungen ein und verwalten Sie Fremdwährungsvorgänge in einer klaren Oberfläche.","Visualize as suas conversões e gira as operações em moeda estrangeira a partir de uma interface clara.","Podglądaj przeliczenia i zarządzaj operacjami walutowymi w przejrzystym interfejsie.","Просматривайте конвертации и управляйте валютными операциями в понятном интерфейсе.","Bekijk uw omrekeningen en beheer uw transacties in vreemde valuta vanuit een duidelijke interface.","Dönüşümlerinizi görüntüleyin ve döviz işlemlerinizi net bir arayüzden yönetin."],"Vos achats,":["Your purchases,","Sus compras,","I suoi acquisti,","Ihre Einkäufe,","As suas compras,","Twoje zakupy,","Ваши покупки,","Uw aankopen,","Alışverişleriniz,"],"Vos opérations méritent":["Your transactions deserve","Sus operaciones merecen","Le sue operazioni meritano","Ihre Vorgänge verdienen","As suas operações merecem","Twoje operacje zasługują na","Ваши операции заслуживают","Uw transacties verdienen","İşlemleriniz"],"Votre argent mérite une expérience":["Your money deserves an experience","Su dinero merece una experiencia","Il suo denaro merita un’esperienza","Ihr Geld verdient ein Erlebnis","O seu dinheiro merece uma experiência","Twoje pieniądze zasługują na doświadczenie","Ваши деньги заслуживают сервиса","Uw geld verdient een ervaring","Paranız, olağanüstü bir deneyimi"],"Votre argent.":["Your money.","Su dinero.","Il suo denaro.","Ihr Geld.","O seu dinheiro.","Twoje pieniądze.","Ваши деньги.","Uw geld.","Paranız."],"Votre banque dans votre poche.":["Your bank in your pocket.","Su banco en su bolsillo.","La sua banca in tasca.","Ihre Bank in der Tasche.","O seu banco no bolso.","Twój bank w kieszeni.","Ваш банк в кармане.","Uw bank in uw zak.","Bankanız cebinizde."],"Votre liberté.":["Your freedom.","Su libertad.","La sua libertà.","Ihre Freiheit.","A sua liberdade.","Twoja wolność.","Ваша свобода.","Uw vrijheid.","Özgürlüğünüz."],"Voyagez avec votre argent,":["Travel with your money,","Viaje con su dinero,","Viaggi con il suo denaro,","Reisen Sie mit Ihrem Geld,","Viaje com o seu dinheiro,","Podróżuj ze swoimi pieniędzmi,","Путешествуйте со своими деньгами,","Reis met uw geld,","Paranızla seyahat edin,"],"Vérifiez et confirmez":["Review and confirm","Verifique y confirme","Verifichi e confermi","Prüfen und bestätigen","Verifique e confirme","Sprawdź i potwierdź","Проверьте и подтвердите","Controleer en bevestig","Kontrol edin ve onaylayın"],"autrement.":["differently.","de otra manera.","in modo diverso.","anders.","de outra forma.","inaczej.","по-новому.","anders.","artık farklı."],"exceptionnelle.":["exceptional.","excepcional.","eccezionale.","der Extraklasse.","excecional.","wyjątkowe.","исключительного уровня.","die uitzonderlijk is.","hak ediyor."],"quelques étapes.":["a few steps.","unos pocos pasos.","pochi passaggi.","wenigen Schritten.","poucos passos.","kilku krokach.","нескольких шагов.","een paar stappen.","birkaç adımda başlar."],"sans perdre le contrôle.":["without losing control.","sin perder el control.","senza perdere il controllo.","ohne die Kontrolle zu verlieren.","sem perder o controlo.","nie tracąc kontroli.","не теряя контроля.","zonder de controle te verliezen.","kontrolü kaybetmeden."],"simple.":["made simple.","sencillo.","semplice.","einfach.","simples.","prosta.","простой.","die eenvoudig is.","bir ödeme."],"toute notre attention.":["our full attention.","toda nuestra atención.","tutta la nostra attenzione.","unsere volle Aufmerksamkeit.","toda a nossa atenção.","naszej pełnej uwagi.","всего нашего внимания.","onze volledige aandacht.","tüm dikkatimizi hak ediyor."],"une expérience.":["an experience.","una experiencia.","un’esperienza.","ein Erlebnis.","uma experiência.","doświadczenie.","целый сервис.","een ervaring.","bir deneyim."],"votre rythme.":["your pace.","su ritmo.","il suo ritmo.","Tempo folgt.","o seu ritmo.","Twojego tempa.","ваш ритм.","volgt.","ayak uyduran bir banka."],"© 2026 Sorevia Bank — Tous droits réservés.":["© 2026 Sorevia Bank — All rights reserved.","© 2026 Sorevia Bank — Todos los derechos reservados.","© 2026 Sorevia Bank — Tutti i diritti riservati.","© 2026 Sorevia Bank — Alle Rechte vorbehalten.","© 2026 Sorevia Bank — Todos os direitos reservados.","© 2026 Sorevia Bank — Wszelkie prawa zastrzeżone.","© 2026 Sorevia Bank — Все права защищены.","© 2026 Sorevia Bank — Alle rechten voorbehouden.","© 2026 Sorevia Bank — Tüm hakları saklıdır."]};
+function pick(){
+  var q=null;try{q=new URLSearchParams(location.search).get("lang");}catch(e){}
+  if(q){q=String(q).toLowerCase().slice(0,2);if(SUP.indexOf(q)>-1)return{l:q,tag:DEF[q]};}
+  var list=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||"en"];
+  for(var i=0;i<list.length;i++){var tag=String(list[i]||"");var p=tag.toLowerCase().slice(0,2);if(SUP.indexOf(p)>-1)return{l:p,tag:tag};}
+  return{l:"en",tag:"en-US"};
+}
+var P=pick(),L=P.l,idx=SUP.indexOf(L)-1,LOC=P.tag;
+try{new Intl.NumberFormat(LOC);}catch(e){LOC=DEF[L];}
+window.LANG=L;window.LOCALE=LOC;
+var AMT=/(\d{1,3}(?:[\s\u00a0\u202f]\d{3})*(?:,\d+)?)[\s\u00a0\u202f]*(€|\$)/g;
+function fmt(num,cur){
+  var v=parseFloat(num.replace(/[\s\u00a0\u202f]/g,"").replace(",","."));var dec=(num.split(",")[1]||"").length;
+  try{return new Intl.NumberFormat(LOC,{style:"currency",currency:cur==="€"?"EUR":"USD",minimumFractionDigits:dec,maximumFractionDigits:dec}).format(v);}
+  catch(e){return num+" "+cur;}
+}
+function tr(src){
+  var a=[];var key=src.replace(AMT,function(m,n,c){a.push([n,c]);return"§"+a.length;});
+  var m=/^(\d+) mois$/.exec(key);if(m&&D["mois"])return m[1]+" "+D["mois"][idx];
+  var t=D[key];
+  if(t===undefined){if(!a.length)return src;t=key;}else{t=t[idx];}
+  return t.replace(/§(\d)/g,function(x,i){var z=a[i-1];return z?fmt(z[0],z[1]):x;});
+}
+window.T=function(s){if(L==="fr")return s;return tr(String(s).replace(/\s+/g," ").trim());};
+if(L==="fr")return;
+document.documentElement.setAttribute("lang",L);
+try{
+  var w=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT,null),n,nodes=[];
+  while((n=w.nextNode()))nodes.push(n);
+  nodes.forEach(function(n){
+    var p=n.parentNode&&n.parentNode.nodeName;if(p==="SCRIPT"||p==="STYLE"||p==="NOSCRIPT")return;
+    var raw=n.nodeValue,src=raw.replace(/\s+/g," ").trim();if(!src)return;
+    var out=tr(src);if(out!==src)n.nodeValue=raw.match(/^\s*/)[0]+out+raw.match(/\s*$/)[0];
+  });
+  ["placeholder","aria-label","title","alt"].forEach(function(at){
+    document.querySelectorAll("["+at+"]").forEach(function(e){var v=e.getAttribute(at).replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)e.setAttribute(at,o);});
+  });
+  var md=document.querySelector('meta[name="description"]');
+  if(md){var v=md.getAttribute("content").replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)md.setAttribute("content",o);}
+}catch(e){if(window.console)console.error("i18n",e);}
+})();
+
+</script>
+<script>
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add("show");observer.unobserve(entry.target)}
+});
+},{threshold:.12});
+reveals.forEach(el=>observer.observe(el));
+
+const topBtn=document.getElementById("topBtn");
+window.addEventListener("scroll",()=>{
+if(window.scrollY>450){topBtn.classList.add("visible")}else{topBtn.classList.remove("visible")}
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+link.addEventListener("click",function(e){
+const target=document.querySelector(this.getAttribute("href"));
+if(target){e.preventDefault();target.scrollIntoView({behavior:"smooth"})}
+});
+});
+</script>
+
+</body>
+</html>

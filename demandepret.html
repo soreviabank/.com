@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Demande de prêt - Sorevia Bank</title>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#f3f7fa;color:#142d38}.topbar{background:#123f52;color:#fff;text-align:center;padding:9px;font-size:13px}.header{background:#fff;border-bottom:1px solid #dce7ec;position:sticky;top:0;z-index:20}.nav{max-width:1100px;margin:auto;min-height:75px;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:25px;font-weight:800;color:#123f52}.brand-logo{width:43px;height:43px;flex:0 0 43px;border-radius:13px;background:linear-gradient(145deg,#0aa3df,#07537c);color:#fff;display:grid;place-items:center;font:bold 27px Georgia;box-shadow:0 5px 14px #07537c30}.brand-name{display:block}.brand small{display:block;font-size:9px;letter-spacing:3px;color:#278fc0}.nav-links{display:flex;gap:10px}.nav-links a{text-decoration:none;color:#17546b;font-weight:700;font-size:14px;padding:10px 13px;border-radius:9px}.nav-login{border:1px solid #1685bd}.nav-open{background:#1685bd!important;color:#fff!important}.hero{max-width:1100px;margin:25px auto 18px;padding:35px 25px;border-radius:25px;background:linear-gradient(135deg,#0e526b,#1688bd);color:#fff}.hero h1{font-size:38px;margin-bottom:10px}.hero p{font-size:15px;color:#e6f7fc}.form-wrap{max-width:820px;margin:auto;padding:0 20px 35px}.form-card{background:#fff;border-radius:25px;padding:30px;box-shadow:0 12px 40px rgba(24,65,82,.08);border:1px solid #e1eaee}.form-title{text-align:center;margin-bottom:25px}.form-title h2{font-size:28px;color:#147db5}.form-title p{font-size:14px;color:#71838b}.progress{display:flex;gap:6px;margin-bottom:25px}.progress span{height:5px;flex:1;border-radius:10px;background:#dce8ed}.progress span.active{background:#1685bd}.section-title{font-size:18px;color:#123f52;margin:28px 0 17px;padding-bottom:8px;border-bottom:1px solid #e3ecef}.field{margin-bottom:18px}.field label{display:block;font-weight:700;font-size:15px;margin-bottom:7px}.required{color:#e34b4b}.field input,.field select,.field textarea{width:100%;border:1px solid #ccd6da;border-radius:13px;padding:15px 16px;background:#fff;color:#17262c;outline:none;transition:.2s}.field input:focus,.field select:focus,.field textarea:focus{border-color:#1685bd;box-shadow:0 0 0 3px rgba(22,133,189,.1)}.field textarea{min-height:135px;resize:vertical}.date-selects{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:10px}.date-selects select{min-width:0;width:100%;border:1px solid #ccd6da;border-radius:13px;padding:15px 12px;background:#fff;color:#17262c;outline:none;font-size:14px}.date-selects select:focus{border-color:#1685bd;box-shadow:0 0 0 3px rgba(22,133,189,.1)}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.notice{font-size:11px;color:#77868c;margin-top:10px}.simulator{background:#f4f9fb;border:1px solid #dbe9ee;border-radius:17px;padding:20px;margin-top:22px}.simulator h3{font-size:17px;margin-bottom:5px}.simulator p{font-size:12px;color:#708189;margin-bottom:15px}.simulation-result{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.result-box{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid #e2eaed}.result-box span{display:block;font-size:11px;color:#75858b}.result-box strong{display:block;color:#147db5;font-size:17px;margin-top:3px}.checks{background:#f4f9fb;border:1px solid #dce9ee;border-radius:15px;padding:15px;margin:20px 0}.check{display:flex;gap:10px;align-items:flex-start;margin:10px 0;font-size:13px;color:#52656d}.check input{margin-top:4px;accent-color:#1685bd}.submit-btn{width:100%;border:0;border-radius:14px;padding:17px;background:linear-gradient(135deg,#0d75ad,#168dca);color:#fff;font-weight:800;font-size:16px;cursor:pointer}.submit-btn:disabled{opacity:.65;cursor:wait}.message{display:none;margin-top:16px;padding:14px;border-radius:12px;text-align:center;font-size:14px}.message.success{display:block;background:#eaf8f0;color:#197044;border:1px solid #bde5ce}.message.error{display:block;background:#fff0f0;color:#a52b2b;border:1px solid #efc0c0}.footer{background:#123f52;color:#fff;margin-top:20px}.footer-inner{max-width:1100px;margin:auto;padding:25px 20px 18px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:25px}.footer h3{font-size:16px;margin-bottom:10px}.footer .footer-brand{display:flex;align-items:center;gap:9px}.footer .brand-logo{width:34px;height:34px;flex-basis:34px;font-size:21px}.footer p,.footer a{font-size:12px;color:#c9dce3;text-decoration:none}.footer a{display:block;margin:6px 0}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px;font-size:11px;color:#aec5ce}@media(max-width:700px){.date-selects{gap:6px}.date-selects select{padding:13px 7px;font-size:12px}.nav{padding:10px 14px}.nav-links a{padding:8px;font-size:12px}.brand{font-size:20px}.hero{margin:15px 10px;padding:28px 20px}.hero h1{font-size:30px}.form-wrap{padding:0 10px 25px}.form-card{padding:22px 16px}.grid-2{grid-template-columns:1fr}.simulation-result{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">🔐 Vos informations sont transmises de manière sécurisée</div>
+
+<header class="header">
+<nav class="nav">
+<a class="brand" href="index.html" aria-label="Sorevia Bank - Accueil"><span class="brand-logo">S</span><span class="brand-name">Sorevia Bank<small>DIGITAL BANKING</small></span></a>
+<div class="nav-links">
+<a class="nav-login" href="connecter.html">Se connecter</a>
+<a class="nav-open" href="inscription.html">Ouvrir un compte</a>
+<a href="index.html">Accueil</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Demande de prêt</h1>
+<p>Présentez votre projet de financement en remplissant simplement le formulaire ci-dessous.</p>
+</section>
+
+<div class="form-wrap">
+<div class="form-card">
+
+<div class="form-title">
+<h2>Votre demande de financement</h2>
+<p>Veuillez renseigner les informations nécessaires à l'étude de votre projet.</p>
+</div>
+
+<div class="progress">
+<span class="active"></span>
+<span class="active"></span>
+<span class="active"></span>
+<span></span>
+</div>
+
+<form id="loanForm">
+
+<h3 class="section-title">👤 Informations personnelles</h3>
+
+<div class="field">
+<label for="fullname">Nom et prénom <span class="required">*</span></label>
+<input type="text" id="fullname" name="fullname" placeholder="Votre nom et prénom" required>
+</div>
+
+<div class="grid-2">
+
+<div class="field">
+<label for="gender">Genre <span class="required">*</span></label>
+<select id="gender" name="gender" required>
+<option value="">Sélectionnez</option>
+<option value="Homme">Homme</option>
+<option value="Femme">Femme</option>
+</select>
+</div>
+
+<div class="field">
+<label>Date de naissance <span class="required">*</span></label>
+<div class="date-selects" data-date-group="birthdate"><select id="birth_day" aria-label="Jour de naissance" required><option value="">Jour</option></select><select id="birth_month" aria-label="Mois de naissance" required><option value="">Mois</option></select><select id="birth_year" aria-label="Année de naissance" required><option value="">Année</option></select></div>
+</div>
+
+</div>
+
+<div class="field">
+<label for="email">Adresse email <span class="required">*</span></label>
+<input type="email" id="email" name="email" placeholder="exemple@gmail.com" required>
+</div>
+
+<div class="field">
+<label for="phone">Téléphone / WhatsApp <span class="required">*</span></label>
+<input type="tel" id="phone" name="phone" placeholder="+33 X XX XX XX XX" required>
+</div>
+
+<div class="field">
+<label for="income">Revenu mensuel <span class="required">*</span></label>
+<input type="number" id="income" name="income" min="0" placeholder="Ex : 250000" required>
+</div>
+
+<h3 class="section-title">💳 Projet de financement</h3>
+
+<div class="field">
+<label for="loanType">Type de prêt <span class="required">*</span></label>
+<select id="loanType" name="loanType" required>
+<option value="">Sélectionnez le type de prêt</option>
+<option value="Prêt personnel">Prêt personnel</option>
+<option value="Prêt aux entreprises">Prêt aux entreprises</option>
+<option value="Prêt automobile">Prêt automobile</option>
+<option value="Prêt hypothécaire">Prêt hypothécaire</option>
+<option value="Prêt étudiant">Prêt étudiant</option>
+<option value="Prêt à la consommation">Prêt à la consommation</option>
+</select>
+</div>
+
+<div class="field">
+<label for="continent">Continent <span class="required">*</span></label>
+<select id="continent" name="continent" required>
+<option value="">Choisissez un continent</option>
+<option value="Africa">Africa</option>
+<option value="America">Amérique</option>
+<option value="Asia">Asia</option>
+<option value="Europe">Europe</option>
+<option value="Oceania">Oceania</option>
+</select>
+</div>
+
+<div class="grid-2">
+
+<div class="field">
+<label for="country">Pays <span class="required">*</span></label>
+<select id="country" name="country" required disabled>
+<option value="">Choisissez d'abord un continent</option>
+</select>
+</div>
+
+<div class="field">
+<label for="currency">Devise <span class="required">*</span></label>
+<input type="text" id="currency" name="currency" placeholder="Automatique" readonly>
+</div>
+
+</div>
+
+<div class="grid-2">
+
+<div class="field">
+<label for="amount">Montant souhaité <span class="required">*</span></label>
+<input type="number" id="amount" name="amount" min="1" placeholder="Ex : 2000" required>
+</div>
+
+<div class="field">
+<label for="duration">Durée du prêt <span class="required">*</span></label>
+<select id="duration" name="duration" required>
+<option value="">Sélectionnez</option>
+<option value="6">6 mois</option>
+<option value="12">12 mois</option>
+<option value="18">18 mois</option>
+<option value="24">24 mois</option>
+<option value="36">36 mois</option>
+<option value="48">48 mois</option>
+<option value="60">60 mois</option>
+<option value="72">72 mois</option>
+<option value="84">84 mois</option>
+<option value="120">120 mois</option>
+<option value="180">180 mois</option>
+<option value="240">240 mois</option>
+</select>
+</div>
+
+</div>
+
+<div class="field">
+<label for="purpose">Motif <span class="required">*</span></label>
+<textarea id="purpose" name="purpose" placeholder="Expliquez brièvement votre projet..." required></textarea>
+</div>
+
+<div class="field">
+<label for="employment">Situation professionnelle <span class="required">*</span></label>
+<select id="employment" name="employment" required>
+<option value="">Sélectionnez</option>
+<option value="Salarié">Salarié</option>
+<option value="Fonctionnaire">Fonctionnaire</option>
+<option value="Indépendant">Indépendant</option>
+<option value="Entrepreneur">Entrepreneur</option>
+<option value="Commerçant">Commerçant</option>
+<option value="Retraité">Retraité</option>
+<option value="Autre">Autre</option>
+</select>
+</div>
+
+<div class="field">
+<label for="address">Adresse</label>
+<input type="text" id="address" name="address" placeholder="Votre adresse">
+</div>
+
+<div class="simulator">
+
+<h3>📊 Estimation indicative</h3>
+
+<p>Cette estimation est fournie uniquement à titre indicatif.</p>
+
+<div class="simulation-result">
+
+<div class="result-box">
+<span>Type de prêt</span>
+<strong id="resultLoanType">—</strong>
+</div>
+
+<div class="result-box">
+<span>Montant demandé</span>
+<strong id="resultAmount">—</strong>
+</div>
+
+<div class="result-box">
+<span>Durée du prêt</span>
+<strong id="resultDuration">—</strong>
+</div>
+
+</div>
+
+<div class="notice">
+L'estimation ne constitue pas une offre de crédit.
+</div>
+
+</div>
+
+<div class="checks">
+
+<div class="check">
+<input type="checkbox" id="consent" required>
+<label for="consent">J'autorise le traitement des informations fournies pour l'étude de ma demande. <span class="required">*</span></label>
+</div>
+
+<div class="check">
+<input type="checkbox" id="accuracy" required>
+<label for="accuracy">Je certifie l'exactitude des informations renseignées. <span class="required">*</span></label>
+</div>
+
+</div>
+
+<button type="submit" class="submit-btn" id="submitBtn">
+SOUMETTRE MA DEMANDE DE PRÊT
+</button>
+
+<div id="formMessage" class="message"></div>
+
+</form>
+</div>
+</div>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div>
+<h3 class="footer-brand"><span class="brand-logo">S</span> Sorevia Bank</h3>
+<p>Des solutions bancaires pensées pour accompagner vos projets et votre quotidien.</p>
+</div>
+
+<div>
+<h3>Navigation</h3>
+<a href="index.html">Accueil</a>
+<a href="courant.html">Compte courant</a>
+<a href="epargne.html">Épargne</a>
+<a href="credit.html">Crédits / Prêts</a>
+</div>
+
+<div>
+<h3>Services</h3>
+<a href="bancaire.html">Cartes bancaires</a>
+<a href="paiement.html">Transfert & paiement</a>
+<a href="remboursement.html">Remboursement</a>
+<a href="assurance.html">Assurance</a>
+</div>
+
+<div>
+<h3>Contact</h3>
+<a href="mailto:contact@soreviabank.com">📧 Email</a>
+<a href="https://wa.me/22900000000" target="_blank">💬 WhatsApp</a>
+<a href="info.html">Plus d'informations</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2015 Sorevia Bank — Tous droits réservés.
+</div>
+
+</footer>
+
+<script>
+(function(){
+var SUP=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var DEF={fr:"fr-FR",en:"en-US",es:"es-ES",it:"it-IT",de:"de-DE",pt:"pt-BR",pl:"pl-PL",ru:"ru-RU",nl:"nl-NL",tr:"tr-TR"};
+var D={"Accueil":["Home","Inicio","Home","Startseite","Início","Strona główna","Главная","Home","Ana sayfa"],"Adresse":["Address","Dirección","Indirizzo","Adresse","Morada","Adres","Адрес","Adres","Adres"],"Adresse email":["Email address","Correo electrónico","Indirizzo email","E-Mail-Adresse","Endereço de e-mail","Adres e-mail","Адрес электронной почты","E-mailadres","E-posta adresi"],"Africa":["Africa","África","Africa","Afrika","África","Afryka","Африка","Afrika","Afrika"],"Amérique":["America","América","America","Amerika","América","Ameryka","Америка","Amerika","Amerika"],"Année":["Year","Año","Anno","Jahr","Ano","Rok","Год","Jaar","Yıl"],"Année de naissance":["Year of birth","Año de nacimiento","Anno di nascita","Geburtsjahr","Ano de nascimento","Rok urodzenia","Год рождения","Geboortejaar","Doğum yılı"],"Asia":["Asia","Asia","Asia","Asien","Ásia","Azja","Азия","Azië","Asya"],"Assurance":["Insurance","Seguros","Assicurazione","Versicherung","Seguros","Ubezpieczenia","Страхование","Verzekering","Sigorta"],"Automatique":["Automatic","Automática","Automatica","Automatisch","Automática","Automatycznie","Автоматически","Automatisch","Otomatik"],"Autre":["Other","Otro","Altro","Sonstiges","Outro","Inne","Другое","Anders","Diğer"],"Cartes bancaires":["Bank cards","Tarjetas bancarias","Carte bancarie","Bankkarten","Cartões bancários","Karty bankowe","Банковские карты","Bankkaarten","Banka kartları"],"Cette estimation est fournie uniquement à titre indicatif.":["This estimate is provided for information purposes only.","Esta estimación se ofrece únicamente a título orientativo.","Questa stima è fornita esclusivamente a titolo indicativo.","Diese Schätzung dient ausschließlich zur Orientierung.","Esta estimativa é fornecida apenas a título indicativo.","To szacunek podany wyłącznie w celach informacyjnych.","Этот расчёт носит исключительно ознакомительный характер.","Deze raming is uitsluitend indicatief.","Bu hesaplama yalnızca bilgilendirme amaçlıdır."],"Choisissez d'abord un continent":["First choose a continent","Primero elija un continente","Scelga prima un continente","Bitte zuerst einen Kontinent wählen","Escolha primeiro um continente","Najpierw wybierz kontynent","Сначала выберите континент","Kies eerst een continent","Önce bir kıta seçiniz"],"Choisissez un continent":["Choose a continent","Elija un continente","Scelga un continente","Kontinent wählen","Escolha um continente","Wybierz kontynent","Выберите континент","Kies een continent","Bir kıta seçiniz"],"Choisissez un pays":["Choose a country","Elija un país","Scelga un paese","Land wählen","Escolha um país","Wybierz kraj","Выберите страну","Kies een land","Bir ülke seçiniz"],"Commerçant":["Shopkeeper","Comerciante","Commerciante","Händler","Comerciante","Kupiec","Торговец","Handelaar","Esnaf"],"Compte courant":["Current account","Cuenta corriente","Conto corrente","Girokonto","Conta à ordem","Rachunek bieżący","Текущий счёт","Betaalrekening","Vadesiz hesap"],"Contact":["Contact","Contacto","Contatti","Kontakt","Contacto","Kontakt","Контакты","Contact","İletişim"],"Continent":["Continent","Continente","Continente","Kontinent","Continente","Kontynent","Континент","Continent","Kıta"],"Crédits / Prêts":["Credits / Loans","Créditos / Préstamos","Crediti / Prestiti","Kredite / Darlehen","Créditos / Empréstimos","Kredyty / Pożyczki","Кредиты / Займы","Kredieten / Leningen","Krediler"],"Date de naissance":["Date of birth","Fecha de nacimiento","Data di nascita","Geburtsdatum","Data de nascimento","Data urodzenia","Дата рождения","Geboortedatum","Doğum tarihi"],"Demande de prêt":["Loan application","Solicitud de préstamo","Richiesta di prestito","Kreditantrag","Pedido de empréstimo","Wniosek o pożyczkę","Заявка на кредит","Leningaanvraag","Kredi başvurusu"],"Demande de prêt - Sorevia Bank":["Loan application - Sorevia Bank","Solicitud de préstamo - Sorevia Bank","Richiesta di prestito - Sorevia Bank","Kreditantrag - Sorevia Bank","Pedido de empréstimo - Sorevia Bank","Wniosek o pożyczkę - Sorevia Bank","Заявка на кредит - Sorevia Bank","Leningaanvraag - Sorevia Bank","Kredi başvurusu - Sorevia Bank"],"Des solutions bancaires pensées pour accompagner vos projets et votre quotidien.":["Banking solutions designed to support your projects and your daily life.","Soluciones bancarias pensadas para acompañar sus proyectos y su día a día.","Soluzioni bancarie pensate per accompagnare i suoi progetti e la sua quotidianità.","Banklösungen, die Ihre Projekte und Ihren Alltag begleiten.","Soluções bancárias pensadas para acompanhar os seus projetos e o seu dia a dia.","Rozwiązania bankowe stworzone, by wspierać Twoje projekty i codzienne życie.","Банковские решения, созданные для ваших проектов и повседневной жизни.","Bankoplossingen ontworpen om uw projecten en uw dagelijks leven te ondersteunen.","Projelerinize ve günlük yaşamınıza eşlik etmek için tasarlanmış bankacılık çözümleri."],"Devise":["Currency","Divisa","Valuta","Währung","Moeda","Waluta","Валюта","Valuta","Para birimi"],"Durée du prêt":["Loan term","Duración del préstamo","Durata del prestito","Kreditlaufzeit","Prazo do empréstimo","Okres pożyczki","Срок кредита","Looptijd van de lening","Kredi vadesi"],"ENVOI DE LA DEMANDE...":["SENDING APPLICATION...","ENVIANDO SOLICITUD...","INVIO DELLA RICHIESTA...","ANTRAG WIRD GESENDET...","A ENVIAR PEDIDO...","WYSYŁANIE WNIOSKU...","ОТПРАВКА ЗАЯВКИ...","AANVRAAG WORDT VERZONDEN...","BAŞVURU GÖNDERİLİYOR..."],"Entrepreneur":["Entrepreneur","Empresario","Imprenditore","Unternehmer","Empreendedor","Przedsiębiorca","Предприниматель","Ondernemer","Girişimci"],"Europe":["Europe","Europa","Europa","Europa","Europa","Europa","Европа","Europa","Avrupa"],"Ex : 2000":["e.g. 2000","Ej.: 2000","Es.: 2000","z. B. 2000","Ex.: 2000","Np. 2000","Напр.: 2000","Bijv. 2000","Örn: 2000"],"Ex : 250000":["e.g. 250000","Ej.: 250000","Es.: 250000","z. B. 250000","Ex.: 250000","Np. 250000","Напр.: 250000","Bijv. 250000","Örn: 250000"],"Expliquez brièvement votre projet...":["Briefly describe your project...","Explique brevemente su proyecto...","Spieghi brevemente il suo progetto...","Beschreiben Sie Ihr Vorhaben kurz...","Explique brevemente o seu projeto...","Opisz krótko swój projekt...","Кратко опишите ваш проект...","Beschrijf uw project in het kort...","Projenizi kısaca açıklayınız..."],"Femme":["Female","Mujer","Donna","Weiblich","Mulher","Kobieta","Женский","Vrouw","Kadın"],"Fonctionnaire":["Civil servant","Funcionario","Dipendente pubblico","Beamter","Funcionário público","Urzędnik państwowy","Госслужащий","Ambtenaar","Memur"],"Genre":["Gender","Género","Genere","Geschlecht","Género","Płeć","Пол","Geslacht","Cinsiyet"],"Homme":["Male","Hombre","Uomo","Männlich","Homem","Mężczyzna","Мужской","Man","Erkek"],"Indépendant":["Self-employed","Autónomo","Libero professionista","Selbstständig","Trabalhador independente","Samozatrudniony","Самозанятый","Zelfstandige","Serbest çalışan"],"J'autorise le traitement des informations fournies pour l'étude de ma demande.":["I authorize the processing of the information provided in order to review my application.","Autorizo el tratamiento de la información facilitada para el estudio de mi solicitud.","Autorizzo il trattamento delle informazioni fornite per l’esame della mia richiesta.","Ich erlaube die Verarbeitung der angegebenen Daten zur Prüfung meines Antrags.","Autorizo o tratamento das informações fornecidas para a análise do meu pedido.","Wyrażam zgodę na przetwarzanie podanych informacji w celu rozpatrzenia mojego wniosku.","Я разрешаю обработку предоставленных данных для рассмотрения моей заявки.","Ik geef toestemming voor de verwerking van de verstrekte gegevens voor de beoordeling van mijn aanvraag.","Başvurumun incelenmesi için verdiğim bilgilerin işlenmesine izin veriyorum."],"Je certifie l'exactitude des informations renseignées.":["I certify that the information provided is accurate.","Certifico la exactitud de la información indicada.","Certifico l’esattezza delle informazioni inserite.","Ich bestätige die Richtigkeit der gemachten Angaben.","Certifico a exatidão das informações indicadas.","Oświadczam, że podane informacje są prawdziwe.","Подтверждаю достоверность указанных сведений.","Ik verklaar dat de ingevulde gegevens juist zijn.","Girdiğim bilgilerin doğru olduğunu beyan ederim."],"Jour":["Day","Día","Giorno","Tag","Dia","Dzień","День","Dag","Gün"],"Jour de naissance":["Day of birth","Día de nacimiento","Giorno di nascita","Geburtstag","Dia de nascimento","Dzień urodzenia","День рождения","Geboortedag","Doğum günü"],"L'estimation ne constitue pas une offre de crédit.":["The estimate does not constitute a credit offer.","La estimación no constituye una oferta de crédito.","La stima non costituisce un’offerta di credito.","Die Schätzung stellt kein Kreditangebot dar.","A estimativa não constitui uma oferta de crédito.","Szacunek nie stanowi oferty kredytowej.","Расчёт не является предложением о кредите.","De raming vormt geen kredietaanbod.","Bu hesaplama bir kredi teklifi değildir."],"La demande est réservée aux personnes majeures.":["This application is reserved for adults.","La solicitud está reservada a personas mayores de edad.","La richiesta è riservata alle persone maggiorenni.","Der Antrag ist Volljährigen vorbehalten.","O pedido é reservado a pessoas maiores de idade.","Wniosek mogą składać wyłącznie osoby pełnoletnie.","Заявку могут подавать только совершеннолетние.","De aanvraag is alleen voor meerderjarigen.","Başvuru yalnızca reşit kişilere açıktır."],"Mois":["Month","Mes","Mese","Monat","Mês","Miesiąc","Месяц","Maand","Ay"],"Mois de naissance":["Month of birth","Mes de nacimiento","Mese di nascita","Geburtsmonat","Mês de nascimento","Miesiąc urodzenia","Месяц рождения","Geboortemaand","Doğum ayı"],"Montant demandé":["Amount requested","Importe solicitado","Importo richiesto","Beantragter Betrag","Montante solicitado","Wnioskowana kwota","Запрошенная сумма","Gevraagd bedrag","Talep edilen tutar"],"Montant souhaité":["Requested amount","Importe deseado","Importo desiderato","Gewünschter Betrag","Montante pretendido","Oczekiwana kwota","Желаемая сумма","Gewenst bedrag","İstenen tutar"],"Motif":["Purpose","Motivo","Motivo","Verwendungszweck","Motivo","Cel","Цель","Doel","Amaç"],"Navigation":["Navigation","Navegación","Navigazione","Navigation","Navegação","Nawigacja","Навигация","Navigatie","Gezinme"],"Nom et prénom":["Full name","Nombre y apellidos","Nome e cognome","Vor- und Nachname","Nome completo","Imię i nazwisko","Фамилия и имя","Voor- en achternaam","Ad ve soyad"],"Oceania":["Oceania","Oceanía","Oceania","Ozeanien","Oceânia","Oceania","Океания","Oceanië","Okyanusya"],"Ouvrir un compte":["Open an account","Abrir una cuenta","Apri un conto","Konto eröffnen","Abrir uma conta","Załóż konto","Открыть счёт","Rekening openen","Hesap aç"],"Pays":["Country","País","Paese","Land","País","Kraj","Страна","Land","Ülke"],"Plus d'informations":["More information","Más información","Maggiori informazioni","Weitere Informationen","Mais informações","Więcej informacji","Подробнее","Meer informatie","Daha fazla bilgi"],"Présentez votre projet de financement en remplissant simplement le formulaire ci-dessous.":["Present your financing project by simply filling in the form below.","Presente su proyecto de financiación rellenando sencillamente el siguiente formulario.","Presenti il suo progetto di finanziamento compilando semplicemente il modulo qui sotto.","Stellen Sie Ihr Finanzierungsvorhaben vor, indem Sie einfach das untenstehende Formular ausfüllen.","Apresente o seu projeto de financiamento preenchendo simplesmente o formulário abaixo.","Przedstaw swój projekt finansowy, wypełniając prosty formularz poniżej.","Расскажите о своём проекте, просто заполнив форму ниже.","Presenteer uw financieringsproject door eenvoudig het onderstaande formulier in te vullen.","Aşağıdaki formu doldurarak finansman projenizi kolayca sunun."],"Prêt automobile":["Car loan","Préstamo para automóvil","Prestito auto","Autokredit","Empréstimo automóvel","Kredyt samochodowy","Автокредит","Autolening","Taşıt kredisi"],"Prêt aux entreprises":["Business loan","Préstamo para empresas","Prestito alle imprese","Firmenkredit","Empréstimo empresarial","Pożyczka dla firm","Кредит для бизнеса","Zakelijke lening","Ticari kredi"],"Prêt hypothécaire":["Mortgage loan","Préstamo hipotecario","Mutuo ipotecario","Hypothekendarlehen","Crédito à habitação","Kredyt hipoteczny","Ипотечный кредит","Hypothecaire lening","Konut kredisi"],"Prêt personnel":["Personal loan","Préstamo personal","Prestito personale","Privatkredit","Empréstimo pessoal","Pożyczka osobista","Личный кредит","Persoonlijke lening","Bireysel kredi"],"Prêt à la consommation":["Consumer loan","Préstamo al consumo","Credito al consumo","Konsumentenkredit","Crédito ao consumo","Kredyt konsumencki","Потребительский кредит","Consumptief krediet","İhtiyaç kredisi"],"Prêt étudiant":["Student loan","Préstamo estudiantil","Prestito studentesco","Studienkredit","Empréstimo estudantil","Kredyt studencki","Студенческий кредит","Studielening","Öğrenci kredisi"],"Remboursement":["Repayment","Reembolso","Rimborso","Rückzahlung","Reembolso","Spłata","Погашение","Terugbetaling","Geri ödeme"],"Retraité":["Retired","Jubilado","Pensionato","Rentner","Reformado","Emeryt","Пенсионер","Gepensioneerd","Emekli"],"Revenu mensuel":["Monthly income","Ingresos mensuales","Reddito mensile","Monatliches Einkommen","Rendimento mensal","Miesięczny dochód","Ежемесячный доход","Maandinkomen","Aylık gelir"],"SOUMETTRE MA DEMANDE DE PRÊT":["SUBMIT MY LOAN APPLICATION","ENVIAR MI SOLICITUD DE PRÉSTAMO","INVIA LA MIA RICHIESTA DI PRESTITO","KREDITANTRAG ABSENDEN","ENVIAR O MEU PEDIDO DE EMPRÉSTIMO","WYŚLIJ WNIOSEK O POŻYCZKĘ","ОТПРАВИТЬ ЗАЯВКУ НА КРЕДИТ","LENINGAANVRAAG INDIENEN","KREDİ BAŞVURUMU GÖNDER"],"Salarié":["Employee","Asalariado","Dipendente","Angestellter","Empregado","Pracownik","Наёмный работник","Werknemer","Çalışan"],"Se connecter":["Log in","Iniciar sesión","Accedi","Anmelden","Entrar","Zaloguj się","Войти","Inloggen","Giriş yap"],"Services":["Services","Servicios","Servizi","Services","Serviços","Usługi","Услуги","Diensten","Hizmetler"],"Situation professionnelle":["Employment status","Situación laboral","Situazione professionale","Berufliche Situation","Situação profissional","Sytuacja zawodowa","Профессиональный статус","Beroepssituatie","Çalışma durumu"],"Sorevia Bank - Accueil":["Sorevia Bank - Home","Sorevia Bank - Inicio","Sorevia Bank - Home","Sorevia Bank - Startseite","Sorevia Bank - Início","Sorevia Bank - Strona główna","Sorevia Bank - Главная","Sorevia Bank - Home","Sorevia Bank - Ana sayfa"],"Sélectionnez":["Select","Seleccione","Seleziona","Bitte wählen","Selecione","Wybierz","Выберите","Selecteer","Seçiniz"],"Sélectionnez le type de prêt":["Select the loan type","Seleccione el tipo de préstamo","Selezioni il tipo di prestito","Kreditart wählen","Selecione o tipo de empréstimo","Wybierz rodzaj pożyczki","Выберите тип кредита","Selecteer het type lening","Kredi türünü seçiniz"],"Transfert & paiement":["Transfers & payments","Transferencias y pagos","Trasferimenti e pagamenti","Überweisungen & Zahlungen","Transferências e pagamentos","Przelewy i płatności","Переводы и платежи","Overschrijvingen & betalingen","Transfer ve ödeme"],"Type de prêt":["Loan type","Tipo de préstamo","Tipo di prestito","Kreditart","Tipo de empréstimo","Rodzaj pożyczki","Тип кредита","Type lening","Kredi türü"],"Téléphone / WhatsApp":["Phone / WhatsApp","Teléfono / WhatsApp","Telefono / WhatsApp","Telefon / WhatsApp","Telefone / WhatsApp","Telefon / WhatsApp","Телефон / WhatsApp","Telefoon / WhatsApp","Telefon / WhatsApp"],"Veuillez choisir une date de naissance valide.":["Please choose a valid date of birth.","Elija una fecha de nacimiento válida.","Scelga una data di nascita valida.","Bitte wählen Sie ein gültiges Geburtsdatum.","Escolha uma data de nascimento válida.","Wybierz prawidłową datę urodzenia.","Выберите корректную дату рождения.","Kies een geldige geboortedatum.","Lütfen geçerli bir doğum tarihi seçiniz."],"Veuillez renseigner les informations nécessaires à l'étude de votre projet.":["Please provide the information needed to review your project.","Indique la información necesaria para estudiar su proyecto.","Inserisca le informazioni necessarie per l’esame del suo progetto.","Bitte geben Sie die für die Prüfung Ihres Vorhabens erforderlichen Angaben ein.","Indique as informações necessárias para a análise do seu projeto.","Podaj informacje niezbędne do rozpatrzenia Twojego projektu.","Укажите сведения, необходимые для рассмотрения вашего проекта.","Vul de gegevens in die nodig zijn voor de beoordeling van uw project.","Projenizin incelenmesi için gerekli bilgileri giriniz."],"Votre adresse":["Your address","Su dirección","Il suo indirizzo","Ihre Adresse","A sua morada","Twój adres","Ваш адрес","Uw adres","Adresiniz"],"Votre demande de financement":["Your financing request","Su solicitud de financiación","La sua richiesta di finanziamento","Ihr Finanzierungsantrag","O seu pedido de financiamento","Twój wniosek o finansowanie","Ваша заявка на финансирование","Uw financieringsaanvraag","Finansman talebiniz"],"Votre nom et prénom":["Your full name","Su nombre y apellidos","Il suo nome e cognome","Ihr Vor- und Nachname","O seu nome completo","Twoje imię i nazwisko","Ваши фамилия и имя","Uw voor- en achternaam","Adınız ve soyadınız"],"exemple@gmail.com":["example@gmail.com","ejemplo@gmail.com","esempio@gmail.com","beispiel@gmail.com","exemplo@gmail.com","przyklad@gmail.com","primer@gmail.com","voorbeeld@gmail.com","ornek@gmail.com"],"mois":["months","meses","mesi","Monate","meses","mies.","мес.","maanden","ay"],"© 2015 Sorevia Bank — Tous droits réservés.":["© 2015 Sorevia Bank — All rights reserved.","© 2015 Sorevia Bank — Todos los derechos reservados.","© 2015 Sorevia Bank — Tutti i diritti riservati.","© 2015 Sorevia Bank — Alle Rechte vorbehalten.","© 2015 Sorevia Bank — Todos os direitos reservados.","© 2015 Sorevia Bank — Wszelkie prawa zastrzeżone.","© 2015 Sorevia Bank — Все права защищены.","© 2015 Sorevia Bank — Alle rechten voorbehouden.","© 2015 Sorevia Bank — Tüm hakları saklıdır."],"Épargne":["Savings","Ahorro","Risparmio","Sparen","Poupança","Oszczędności","Сбережения","Sparen","Tasarruf"],"❌ L'envoi a échoué. Vérifiez votre configuration EmailJS.":["❌ Sending failed. Please check your EmailJS configuration.","❌ El envío ha fallado. Compruebe su configuración de EmailJS.","❌ Invio non riuscito. Verifichi la configurazione di EmailJS.","❌ Das Senden ist fehlgeschlagen. Prüfen Sie Ihre EmailJS-Konfiguration.","❌ O envio falhou. Verifique a configuração do EmailJS.","❌ Wysyłanie nie powiodło się. Sprawdź konfigurację EmailJS.","❌ Не удалось отправить. Проверьте настройки EmailJS.","❌ Verzenden mislukt. Controleer uw EmailJS-configuratie.","❌ Gönderim başarısız oldu. EmailJS yapılandırmanızı kontrol ediniz."],"❌ Veuillez sélectionner un continent et un pays.":["❌ Please select a continent and a country.","❌ Seleccione un continente y un país.","❌ Selezioni un continente e un paese.","❌ Bitte wählen Sie einen Kontinent und ein Land.","❌ Selecione um continente e um país.","❌ Wybierz kontynent i kraj.","❌ Выберите континент и страну.","❌ Selecteer een continent en een land.","❌ Lütfen bir kıta ve bir ülke seçiniz."],"❌ Veuillez sélectionner une date de naissance valide (jour, mois et année).":["❌ Please select a valid date of birth (day, month and year).","❌ Seleccione una fecha de nacimiento válida (día, mes y año).","❌ Selezioni una data di nascita valida (giorno, mese e anno).","❌ Bitte wählen Sie ein gültiges Geburtsdatum (Tag, Monat und Jahr).","❌ Selecione uma data de nascimento válida (dia, mês e ano).","❌ Wybierz prawidłową datę urodzenia (dzień, miesiąc i rok).","❌ Выберите корректную дату рождения (день, месяц и год).","❌ Selecteer een geldige geboortedatum (dag, maand en jaar).","❌ Lütfen geçerli bir doğum tarihi seçiniz (gün, ay ve yıl)."],"👤 Informations personnelles":["👤 Personal information","👤 Información personal","👤 Informazioni personali","👤 Persönliche Angaben","👤 Informações pessoais","👤 Dane osobowe","👤 Личные данные","👤 Persoonlijke gegevens","👤 Kişisel bilgiler"],"💳 Projet de financement":["💳 Financing project","💳 Proyecto de financiación","💳 Progetto di finanziamento","💳 Finanzierungsvorhaben","💳 Projeto de financiamento","💳 Projekt finansowania","💳 Проект финансирования","💳 Financieringsproject","💳 Finansman projesi"],"📊 Estimation indicative":["📊 Indicative estimate","📊 Estimación orientativa","📊 Stima indicativa","📊 Unverbindliche Schätzung","📊 Estimativa indicativa","📊 Szacunek orientacyjny","📊 Ориентировочный расчёт","📊 Indicatieve raming","📊 Tahmini hesaplama"],"📧 Email":["📧 Email","📧 Correo electrónico","📧 Email","📧 E-Mail","📧 E-mail","📧 E-mail","📧 Эл. почта","📧 E-mail","📧 E-posta"],"🔐 Vos informations sont transmises de manière sécurisée":["🔐 Your information is transmitted securely","🔐 Su información se transmite de forma segura","🔐 Le sue informazioni vengono trasmesse in modo sicuro","🔐 Ihre Daten werden sicher übertragen","🔐 As suas informações são transmitidas de forma segura","🔐 Twoje dane są przesyłane w bezpieczny sposób","🔐 Ваши данные передаются безопасным способом","🔐 Uw gegevens worden veilig verzonden","🔐 Bilgileriniz güvenli bir şekilde iletilir"]};
+function pick(){
+  var q=null;try{q=new URLSearchParams(location.search).get("lang");}catch(e){}
+  if(q){q=String(q).toLowerCase().slice(0,2);if(SUP.indexOf(q)>-1)return{l:q,tag:DEF[q]};}
+  var list=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||"en"];
+  for(var i=0;i<list.length;i++){var tag=String(list[i]||"");var p=tag.toLowerCase().slice(0,2);if(SUP.indexOf(p)>-1)return{l:p,tag:tag};}
+  return{l:"en",tag:"en-US"};
+}
+var P=pick(),L=P.l,idx=SUP.indexOf(L)-1,LOC=P.tag;
+try{new Intl.NumberFormat(LOC);}catch(e){LOC=DEF[L];}
+window.LANG=L;window.LOCALE=LOC;
+var AMT=/(\d{1,3}(?:[\s\u00a0\u202f]\d{3})*(?:,\d+)?)[\s\u00a0\u202f]*(€|\$)/g;
+function fmt(num,cur){
+  var v=parseFloat(num.replace(/[\s\u00a0\u202f]/g,"").replace(",","."));var dec=(num.split(",")[1]||"").length;
+  try{return new Intl.NumberFormat(LOC,{style:"currency",currency:cur==="€"?"EUR":"USD",minimumFractionDigits:dec,maximumFractionDigits:dec}).format(v);}
+  catch(e){return num+" "+cur;}
+}
+function tr(src){
+  var a=[];var key=src.replace(AMT,function(m,n,c){a.push([n,c]);return"§"+a.length;});
+  var m=/^(\d+) mois$/.exec(key);if(m&&D["mois"])return m[1]+" "+D["mois"][idx];
+  var t=D[key];
+  if(t===undefined){if(!a.length)return src;t=key;}else{t=t[idx];}
+  return t.replace(/§(\d)/g,function(x,i){var z=a[i-1];return z?fmt(z[0],z[1]):x;});
+}
+window.T=function(s){if(L==="fr")return s;return tr(String(s).replace(/\s+/g," ").trim());};
+if(L==="fr")return;
+document.documentElement.setAttribute("lang",L);
+try{
+  var w=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT,null),n,nodes=[];
+  while((n=w.nextNode()))nodes.push(n);
+  nodes.forEach(function(n){
+    var p=n.parentNode&&n.parentNode.nodeName;if(p==="SCRIPT"||p==="STYLE"||p==="NOSCRIPT")return;
+    var raw=n.nodeValue,src=raw.replace(/\s+/g," ").trim();if(!src)return;
+    var out=tr(src);if(out!==src)n.nodeValue=raw.match(/^\s*/)[0]+out+raw.match(/\s*$/)[0];
+  });
+  ["placeholder","aria-label","title","alt"].forEach(function(at){
+    document.querySelectorAll("["+at+"]").forEach(function(e){var v=e.getAttribute(at).replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)e.setAttribute(at,o);});
+  });
+  var md=document.querySelector('meta[name="description"]');
+  if(md){var v=md.getAttribute("content").replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)md.setAttribute("content",o);}
+}catch(e){if(window.console)console.error("i18n",e);}
+})();
+
+var ISO={"Afrique du Sud":"ZA","Algérie":"DZ","Angola":"AO","Bénin":"BJ","Botswana":"BW","Burkina Faso":"BF","Burundi":"BI","Cameroun":"CM","Cap-Vert":"CV","Comores":"KM","Côte d'Ivoire":"CI","Égypte":"EG","Érythrée":"ER","Eswatini":"SZ","Éthiopie":"ET","Gabon":"GA","Gambie":"GM","Ghana":"GH","Guinée":"GN","Guinée-Bissau":"GW","Guinée équatoriale":"GQ","Kenya":"KE","Lesotho":"LS","Liberia":"LR","Libye":"LY","Madagascar":"MG","Malawi":"MW","Mali":"ML","Maroc":"MA","Maurice":"MU","Mauritanie":"MR","Mozambique":"MZ","Namibie":"NA","Niger":"NE","Nigeria":"NG","Ouganda":"UG","République centrafricaine":"CF","République démocratique du Congo":"CD","République du Congo":"CG","Rwanda":"RW","Sao Tomé-et-Principe":"ST","Sénégal":"SN","Seychelles":"SC","Sierra Leone":"SL","Somalie":"SO","Soudan":"SD","Soudan du Sud":"SS","Tanzanie":"TZ","Tchad":"TD","Togo":"TG","Tunisie":"TN","Zambie":"ZM","Zimbabwe":"ZW","Argentine":"AR","Bahamas":"BS","Barbade":"BB","Belize":"BZ","Bolivie":"BO","Brésil":"BR","Canada":"CA","Chili":"CL","Colombie":"CO","Costa Rica":"CR","Cuba":"CU","Dominique":"DM","Équateur":"EC","États-Unis":"US","Guatemala":"GT","Guyana":"GY","Haïti":"HT","Honduras":"HN","Jamaïque":"JM","Mexique":"MX","Nicaragua":"NI","Panama":"PA","Paraguay":"PY","Pérou":"PE","République dominicaine":"DO","Saint-Kitts-et-Nevis":"KN","Saint-Vincent-et-les-Grenadines":"VC","Sainte-Lucie":"LC","Suriname":"SR","Trinité-et-Tobago":"TT","Uruguay":"UY","Venezuela":"VE","Afghanistan":"AF","Arabie saoudite":"SA","Arménie":"AM","Azerbaïdjan":"AZ","Bahreïn":"BH","Bangladesh":"BD","Bhoutan":"BT","Brunei":"BN","Cambodge":"KH","Chine":"CN","Corée du Nord":"KP","Corée du Sud":"KR","Émirats arabes unis":"AE","Géorgie":"GE","Inde":"IN","Indonésie":"ID","Irak":"IQ","Iran":"IR","Israël":"IL","Japon":"JP","Jordanie":"JO","Kazakhstan":"KZ","Koweït":"KW","Laos":"LA","Liban":"LB","Malaisie":"MY","Maldives":"MV","Mongolie":"MN","Myanmar":"MM","Népal":"NP","Oman":"OM","Ouzbékistan":"UZ","Pakistan":"PK","Philippines":"PH","Qatar":"QA","Singapour":"SG","Sri Lanka":"LK","Syrie":"SY","Tadjikistan":"TJ","Thaïlande":"TH","Timor oriental":"TL","Turkménistan":"TM","Turquie":"TR","Vietnam":"VN","Yémen":"YE","Albanie":"AL","Allemagne":"DE","Andorre":"AD","Autriche":"AT","Belgique":"BE","Biélorussie":"BY","Bosnie-Herzégovine":"BA","Bulgarie":"BG","Chypre":"CY","Croatie":"HR","Danemark":"DK","Espagne":"ES","Estonie":"EE","Finlande":"FI","France":"FR","Grèce":"GR","Hongrie":"HU","Islande":"IS","Irlande":"IE","Italie":"IT","Lettonie":"LV","Liechtenstein":"LI","Lituanie":"LT","Luxembourg":"LU","Macédoine du Nord":"MK","Malte":"MT","Moldavie":"MD","Monaco":"MC","Monténégro":"ME","Norvège":"NO","Pays-Bas":"NL","Pologne":"PL","Portugal":"PT","République tchèque":"CZ","Roumanie":"RO","Royaume-Uni":"GB","Russie":"RU","Saint-Marin":"SM","Serbie":"RS","Slovaquie":"SK","Slovénie":"SI","Suède":"SE","Suisse":"CH","Ukraine":"UA","Vatican":"VA","Australie":"AU","Fidji":"FJ","Kiribati":"KI","Îles Marshall":"MH","Micronésie":"FM","Nauru":"NR","Nouvelle-Zélande":"NZ","Palau":"PW","Papouasie-Nouvelle-Guinée":"PG","Samoa":"WS","Salomon":"SB","Tonga":"TO","Tuvalu":"TV","Vanuatu":"VU"};
+var _dnR,_dnC;
+function countryLabel(name){
+  if(LANG==="fr")return name;
+  try{_dnR=_dnR||new Intl.DisplayNames([LOCALE],{type:"region"});var c=ISO[name.trim()];var r=c&&_dnR.of(c);if(r&&r!==c)return r;}catch(e){}
+  return name.trim();
+}
+function currencyLabel(code,fr){
+  if(LANG==="fr")return fr;
+  try{_dnC=_dnC||new Intl.DisplayNames([LOCALE],{type:"currency"});var r=_dnC.of(code);if(r&&r!==code)return r.charAt(0).toLocaleUpperCase(LOCALE)+r.slice(1);}catch(e){}
+  return fr;
+}
+function monthNames(){
+  var f=["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+  if(LANG==="fr")return f;
+  try{var fm=new Intl.DateTimeFormat(LOCALE,{month:"long"});var a=[];
+    for(var i=0;i<12;i++){var s=fm.format(new Date(2000,i,15));a.push(s.charAt(0).toLocaleUpperCase(LOCALE)+s.slice(1));}
+    return a;}catch(e){return f;}
+}
+
+</script>
+<script>
+
+/* ============================
+   DONNEES CONTINENTS / PAYS / DEVISES
+============================ */
+
+const locations={
+
+Africa:{
+"Afrique du Sud":["ZAR","Rand sud-africain"],
+"Algérie":["DZD","Dinar algérien"],
+"Angola":["AOA","Kwanza angolais"],
+"Bénin":["XOF","Franc CFA BCEAO"],
+"Botswana":["BWP","Pula botswanais"],
+"Burkina Faso":["XOF","Franc CFA BCEAO"],
+"Burundi":["BIF","Franc burundais"],
+"Cameroun":["XAF","Franc CFA BEAC"],
+"Cap-Vert":["CVE","Escudo cap-verdien"],
+"Comores":["KMF","Franc comorien"],
+"Côte d'Ivoire":["XOF","Franc CFA BCEAO"],
+"Égypte":["EGP","Livre égyptienne"],
+"Érythrée":["ERN","Nakfa"],
+"Eswatini":["SZL","Lilangeni"],
+"Éthiopie":["ETB","Birr éthiopien"],
+"Gabon":["XAF","Franc CFA BEAC"],
+"Gambie":["GMD","Dalasi gambien"],
+"Ghana":["GHS","Cedi ghanéen"],
+"Guinée":["GNF","Franc guinéen"],
+"Guinée-Bissau":["XOF","Franc CFA BCEAO"],
+"Guinée équatoriale":["XAF","Franc CFA BEAC"],
+"Kenya":["KES","Shilling kényan"],
+"Lesotho":["LSL","Loti"],
+"Liberia":["LRD","Dollar libérien"],
+"Libye":["LYD","Dinar libyen"],
+"Madagascar":["MGA","Ariary"],
+"Malawi":["MWK","Kwacha malawite"],
+"Mali":["XOF","Franc CFA BCEAO"],
+"Maroc":["MAD","Dirham marocain"],
+"Maurice":["MUR","Roupie mauricienne"],
+"Mauritanie":["MRU","Ouguiya"],
+"Mozambique":["MZN","Metical"],
+"Namibie":["NAD","Dollar namibien"],
+"Niger":["XOF","Franc CFA BCEAO"],
+"Nigeria":["NGN","Naira nigérian"],
+"Ouganda":["UGX","Shilling ougandais"],
+"République centrafricaine":["XAF","Franc CFA BEAC"],
+"République démocratique du Congo":["CDF","Franc congolais"],
+"République du Congo":["XAF","Franc CFA BEAC"],
+"Rwanda":["RWF","Franc rwandais"],
+"Sao Tomé-et-Principe":["STN","Dobra"],
+"Sénégal":["XOF","Franc CFA BCEAO"],
+"Seychelles":["SCR","Roupie seychelloise"],
+"Sierra Leone":["SLE","Leone"],
+"Somalie":["SOS","Shilling somalien"],
+"Soudan":["SDG","Livre soudanaise"],
+"Soudan du Sud":["SSP","Livre sud-soudanaise"],
+"Tanzanie":["TZS","Shilling tanzanien"],
+"Tchad":["XAF","Franc CFA BEAC"],
+"Togo":["XOF","Franc CFA BCEAO"],
+"Tunisie":["TND","Dinar tunisien"],
+"Zambie":["ZMW","Kwacha zambien"],
+"Zimbabwe":["ZWL","Dollar zimbabwéen"]
+},
+
+America:{
+"Argentine":["ARS","Peso argentin"],
+"Bahamas":["BSD","Dollar bahaméen"],
+"Barbade":["BBD","Dollar barbadien"],
+"Belize":["BZD","Dollar bélizien"],
+"Bolivie":["BOB","Boliviano"],
+"Brésil":["BRL","Réal brésilien"],
+"Canada":["CAD","Dollar canadien"],
+"Chili":["CLP","Peso chilien"],
+"Colombie":["COP","Peso colombien"],
+"Costa Rica":["CRC","Colón costaricien"],
+"Cuba":["CUP","Peso cubain"],
+"Dominique":["XCD","Dollar des Caraïbes orientales"],
+"Équateur":["USD","Dollar américain"],
+"États-Unis":["USD","Dollar américain"],
+"Guatemala":["GTQ","Quetzal"],
+"Guyana":["GYD","Dollar guyanien"],
+"Haïti":["HTG","Gourde"],
+"Honduras":["HNL","Lempira"],
+"Jamaïque":["JMD","Dollar jamaïcain"],
+"Mexique":["MXN","Peso mexicain"],
+"Nicaragua":["NIO","Córdoba"],
+"Panama":["PAB","Balboa"],
+"Paraguay":["PYG","Guaraní"],
+"Pérou":["PEN","Sol"],
+"République dominicaine":["DOP","Peso dominicain"],
+"Saint-Kitts-et-Nevis":["XCD","Dollar des Caraïbes orientales"],
+"Saint-Vincent-et-les-Grenadines":["XCD","Dollar des Caraïbes orientales"],
+"Sainte-Lucie":["XCD","Dollar des Caraïbes orientales"],
+"Suriname":["SRD","Dollar surinamais"],
+"Trinité-et-Tobago":["TTD","Dollar de Trinité-et-Tobago"],
+"Uruguay":["UYU","Peso uruguayen"],
+"Venezuela":["VES","Bolívar"]
+},
+
+Asia:{
+"Afghanistan":["AFN","Afghani"],
+"Arabie saoudite":["SAR","Riyal saoudien"],
+"Arménie":["AMD","Dram arménien"],
+"Azerbaïdjan":["AZN","Manat"],
+"Bahreïn":["BHD","Dinar bahreïni"],
+"Bangladesh":["BDT","Taka"],
+"Bhoutan":["BTN","Ngultrum"],
+"Brunei":["BND","Dollar de Brunei"],
+"Cambodge":["KHR","Riel"],
+"Chine":["CNY","Yuan"],
+"Corée du Nord":["KPW","Won nord-coréen"],
+"Corée du Sud":["KRW","Won sud-coréen"],
+"Émirats arabes unis":["AED","Dirham"],
+"Géorgie":["GEL","Lari"],
+"Inde":["INR","Roupie indienne"],
+"Indonésie":["IDR","Roupie indonésienne"],
+"Irak":["IQD","Dinar irakien"],
+"Iran":["IRR","Rial iranien"],
+"Israël":["ILS","Nouveau shekel"],
+"Japon":["JPY","Yen"],
+"Jordanie":["JOD","Dinar jordanien"],
+" Kazakhstan":["KZT","Tenge"],
+"Koweït":["KWD","Dinar koweïtien"],
+"Laos":["LAK","Kip"],
+"Liban":["LBP","Livre libanaise"],
+"Malaisie":["MYR","Ringgit"],
+"Maldives":["MVR","Rufiyaa"],
+"Mongolie":["MNT","Tugrik"],
+"Myanmar":["MMK","Kyat"],
+"Népal":["NPR","Roupie népalaise"],
+"Oman":["OMR","Rial omanais"],
+"Ouzbékistan":["UZS","Sum"],
+"Pakistan":["PKR","Roupie pakistanaise"],
+"Philippines":["PHP","Peso philippin"],
+"Qatar":["QAR","Rial qatari"],
+"Singapour":["SGD","Dollar de Singapour"],
+"Sri Lanka":["LKR","Roupie sri-lankaise"],
+"Syrie":["SYP","Livre syrienne"],
+"Tadjikistan":["TJS","Somoni"],
+"Thaïlande":["THB","Baht"],
+"Timor oriental":["USD","Dollar américain"],
+"Turkménistan":["TMT","Manat"],
+"Turquie":["TRY","Livre turque"],
+"Vietnam":["VND","Đồng"],
+"Yémen":["YER","Rial yéménite"]
+},
+
+Europe:{
+"Albanie":["ALL","Lek"],
+"Allemagne":["EUR","Euro"],
+"Andorre":["EUR","Euro"],
+"Autriche":["EUR","Euro"],
+"Belgique":["EUR","Euro"],
+"Biélorussie":["BYN","Rouble biélorusse"],
+"Bosnie-Herzégovine":["BAM","Mark convertible"],
+"Bulgarie":["BGN","Lev"],
+"Chypre":["EUR","Euro"],
+"Croatie":["EUR","Euro"],
+"Danemark":["DKK","Couronne danoise"],
+"Espagne":["EUR","Euro"],
+"Estonie":["EUR","Euro"],
+"Finlande":["EUR","Euro"],
+"France":["EUR","Euro"],
+"Grèce":["EUR","Euro"],
+"Hongrie":["HUF","Forint"],
+"Islande":["ISK","Couronne islandaise"],
+"Irlande":["EUR","Euro"],
+"Italie":["EUR","Euro"],
+"Lettonie":["EUR","Euro"],
+"Liechtenstein":["CHF","Franc suisse"],
+"Lituanie":["EUR","Euro"],
+"Luxembourg":["EUR","Euro"],
+"Macédoine du Nord":["MKD","Denar"],
+"Malte":["EUR","Euro"],
+"Moldavie":["MDL","Leu moldave"],
+"Monaco":["EUR","Euro"],
+"Monténégro":["EUR","Euro"],
+"Norvège":["NOK","Couronne norvégienne"],
+"Pays-Bas":["EUR","Euro"],
+"Pologne":["PLN","Zloty"],
+"Portugal":["EUR","Euro"],
+"République tchèque":["CZK","Couronne tchèque"],
+"Roumanie":["RON","Leu roumain"],
+"Royaume-Uni":["GBP","Livre sterling"],
+"Russie":["RUB","Rouble russe"],
+"Saint-Marin":["EUR","Euro"],
+"Serbie":["RSD","Dinar serbe"],
+"Slovaquie":["EUR","Euro"],
+"Slovénie":["EUR","Euro"],
+"Suède":["SEK","Couronne suédoise"],
+"Suisse":["CHF","Franc suisse"],
+"Ukraine":["UAH","Hryvnia"],
+"Vatican":["EUR","Euro"]
+},
+
+
+Oceania:{
+"Australie":["AUD","Dollar australien"],
+"Fidji":["FJD","Dollar fidjien"],
+"Kiribati":["AUD","Dollar australien"],
+"Îles Marshall":["USD","Dollar américain"],
+"Micronésie":["USD","Dollar américain"],
+"Nauru":["AUD","Dollar australien"],
+"Nouvelle-Zélande":["NZD","Dollar néo-zélandais"],
+"Palau":["USD","Dollar américain"],
+"Papouasie-Nouvelle-Guinée":["PGK","Kina"],
+"Samoa":["WST","Tala"],
+"Salomon":["SBD","Dollar des îles Salomon"],
+"Tonga":["TOP","Pa'anga"],
+"Tuvalu":["AUD","Dollar australien"],
+"Vanuatu":["VUV","Vatu"]
+}
+
+};
+
+
+/* ============================
+   ELEMENTS
+============================ */
+
+const continent=document.getElementById("continent");
+const country=document.getElementById("country");
+const currency=document.getElementById("currency");
+
+const loanType=document.getElementById("loanType");
+const amount=document.getElementById("amount");
+const duration=document.getElementById("duration");
+
+const resultLoanType=document.getElementById("resultLoanType");
+const resultAmount=document.getElementById("resultAmount");
+const resultDuration=document.getElementById("resultDuration");
+
+
+/* ============================
+   CONTINENT → PAYS
+============================ */
+
+continent.addEventListener("change",function(){
+
+country.innerHTML=
+'<option value="">'+T("Choisissez un pays")+'</option>';
+
+currency.value="";currency.dataset.fr="";
+
+const selected=locations[this.value];
+
+if(!selected){
+
+country.disabled=true;
+
+return;
+
+}
+
+country.disabled=false;
+
+Object.keys(selected).sort(function(a,b){return countryLabel(a).localeCompare(countryLabel(b),LOCALE);}).forEach(function(name){
+
+const option=document.createElement("option");
+
+option.value=name;
+
+option.textContent=countryLabel(name);
+
+country.appendChild(option);
+
+});
+
+updateSimulation();
+
+});
+
+
+/* ============================
+   PAYS → DEVISE AUTOMATIQUE
+============================ */
+
+country.addEventListener("change",function(){
+
+const selected=locations[continent.value];
+
+if(selected&&selected[this.value]){
+
+const code=selected[this.value][0];
+
+const name=selected[this.value][1];
+
+currency.value=code+" — "+currencyLabel(code,name);
+
+currency.dataset.fr=code+" — "+name;
+
+}else{
+
+currency.value="";currency.dataset.fr="";
+
+}
+
+updateSimulation();
+
+});
+
+
+/* ============================
+   ESTIMATION
+============================ */
+
+function updateSimulation(){
+
+resultLoanType.textContent=
+loanType.value?loanType.options[loanType.selectedIndex].text:"—";
+
+const amountValue=
+Number(amount.value)||0;
+
+const selectedCurrency=
+currency.value;
+
+if(amountValue&&selectedCurrency){
+
+const code=
+selectedCurrency.split(" — ")[0];
+
+resultAmount.textContent=
+new Intl.NumberFormat(LOCALE).format(amountValue)+" "+code;
+
+}else{
+
+resultAmount.textContent="—";
+
+}
+
+resultDuration.textContent=
+duration.value
+?duration.value+" "+T("mois")
+:"—";
+
+}
+
+
+loanType.addEventListener(
+"change",
+updateSimulation
+);
+
+amount.addEventListener(
+"input",
+updateSimulation
+);
+
+duration.addEventListener(
+"change",
+updateSimulation
+);
+
+
+/* ============================
+   EMAILJS
+============================ */
+
+const EMAILJS_PUBLIC_KEY = "2f3T6gBdWfD4h1opD";
+const EMAILJS_SERVICE_ID = "service_8ofeqlg";
+const EMAILJS_TEMPLATE_ID = "template_8oa0tne";
+
+if (EMAILJS_PUBLIC_KEY !== "VOTRE_PUBLIC_KEY") {
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+
+const form=document.getElementById("loanForm");
+const submitBtn=document.getElementById("submitBtn");
+const formMessage=document.getElementById("formMessage");
+
+
+form.addEventListener("submit",async function(e){
+
+e.preventDefault();
+
+if (!getDateValue("birth")) {
+  formMessage.className = "message error";
+  formMessage.textContent = T("❌ Veuillez sélectionner une date de naissance valide (jour, mois et année).");
+  return;
+}
+
+validateBirthDate();
+if(!form.checkValidity()){
+
+form.reportValidity();
+
+return;
+
+}
+
+if(!country.value||!currency.value){
+
+formMessage.className="message error";
+
+formMessage.textContent=
+T("❌ Veuillez sélectionner un continent et un pays.");
+
+return;
+
+}
+
+submitBtn.disabled=true;
+
+submitBtn.textContent=
+T("ENVOI DE LA DEMANDE...");
+
+const birthDateFormatted = getDateValue("birth");
+
+const templateParams = {
+  fullname: document.getElementById("fullname").value,
+  gender: document.getElementById("gender").value,
+  birthdate: birthDateFormatted,
+  email: document.getElementById("email").value,
+  phone: document.getElementById("phone").value,
+  income: document.getElementById("income").value,
+  loanType: document.getElementById("loanType").value,
+  continent: document.getElementById("continent").value,
+  country: document.getElementById("country").value,
+  currency: currency.dataset.fr||document.getElementById("currency").value,
+  amount: document.getElementById("amount").value,
+  duration: document.getElementById("duration").value,
+  purpose: document.getElementById("purpose").value,
+  employment: document.getElementById("employment").value,
+  address: document.getElementById("address").value || "Non renseignée",
+  event_time: new Date().toLocaleString("fr-FR"),
+  application_type: "Demande de prêt"
+};
+
+
+try{
+
+if (EMAILJS_PUBLIC_KEY === "VOTRE_PUBLIC_KEY" ||
+    EMAILJS_SERVICE_ID === "VOTRE_SERVICE_ID" ||
+    EMAILJS_TEMPLATE_ID === "VOTRE_TEMPLATE_ID") {
+  throw new Error("Veuillez renseigner les identifiants EmailJS dans le fichier.");
+}
+
+await emailjs.send(
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  templateParams
+);
+
+window.location.href = "merci.html";
+
+}catch(error){
+
+console.error(error);
+
+formMessage.className=
+"message error";
+
+formMessage.textContent=
+T("❌ L'envoi a échoué. Vérifiez votre configuration EmailJS.");
+
+formMessage.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+submitBtn.disabled=false;
+submitBtn.textContent=
+T("SOUMETTRE MA DEMANDE DE PRÊT");
+
+}
+
+});
+
+
+/* ============================
+   DATE DE NAISSANCE
+============================ */
+
+const today = new Date();
+
+function fillDateSelects(prefix, firstYear, lastYear) {
+  const day = document.getElementById(prefix + "_day");
+  const month = document.getElementById(prefix + "_month");
+  const year = document.getElementById(prefix + "_year");
+
+  for (let d = 1; d <= 31; d++) {
+    const option = document.createElement("option");
+    option.value = String(d).padStart(2, "0");
+    option.textContent = String(d).padStart(2, "0");
+    day.appendChild(option);
+  }
+
+  monthNames().forEach((name, i) => {
+    const option = document.createElement("option");
+    option.value = String(i + 1).padStart(2, "0");
+    option.textContent = name;
+    month.appendChild(option);
+  });
+
+  for (let y = lastYear; y >= firstYear; y--) {
+    const option = document.createElement("option");
+    option.value = String(y);
+    option.textContent = String(y);
+    year.appendChild(option);
+  }
+}
+
+function getDateValue(prefix) {
+  const day = document.getElementById(prefix + "_day").value;
+  const month = document.getElementById(prefix + "_month").value;
+  const year = document.getElementById(prefix + "_year").value;
+  if (!day || !month || !year) return "";
+  const date = new Date(Number(year), Number(month) - 1, Number(day));
+  if (date.getFullYear() !== Number(year) ||
+      date.getMonth() !== Number(month) - 1 ||
+      date.getDate() !== Number(day)) return "";
+  return year + "-" + month + "-" + day;
+}
+
+fillDateSelects("birth", 1900, today.getFullYear());
+
+function validateBirthDate() {
+  const value = getDateValue("birth");
+  const dayControl = document.getElementById("birth_day");
+  if (!value) {
+    dayControl.setCustomValidity(T("Veuillez choisir une date de naissance valide."));
+    return;
+  }
+  const birth = new Date(value + "T00:00:00");
+  const limit = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+  dayControl.setCustomValidity(birth > limit ? T("La demande est réservée aux personnes majeures.") : "");
+}
+["birth_day", "birth_month", "birth_year"].forEach(id =>
+  document.getElementById(id).addEventListener("change", validateBirthDate)
+);
+
+updateSimulation();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#061b28">
+<meta name="description" content="Sorevia Bank - Remboursements et gestion des échéances">
+<title>Sorevia Bank | Remboursement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#f5f8fa;color:#102b38;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:root{--blue:#087fc4;--dark:#061b28;--cyan:#72ddf5;--gold:#d5ad5c;--muted:#758990}
+.container{width:calc(100% - 30px);max-width:650px;margin:auto}
+.header{height:74px;background:#fff;border-bottom:1px solid #e4edef;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #0619250c}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:43px;height:43px;border-radius:12px;background:linear-gradient(145deg,#0ba5df,#07527a);color:#fff;display:grid;place-items:center;font:700 25px Georgia;box-shadow:0 8px 20px #087fc42c}
+.logo-text strong{display:block;font:700 18px Georgia;color:#0a2531;line-height:1}
+.logo-text small{display:block;font-size:6px;letter-spacing:3px;color:#8b9da3;margin-top:6px}
+.header-link{font-size:8px;font-weight:800;color:#0879b9;display:flex;align-items:center;gap:6px}
+.hero{min-height:690px;background:linear-gradient(145deg,#03131e,#06384d 58%,#08738d);color:#fff;position:relative;overflow:hidden;padding:45px 0 35px}
+.hero:before{content:"";position:absolute;width:400px;height:400px;border-radius:50%;right:-270px;top:-130px;border:1px solid #ffffff12}
+.hero-content{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff1d;background:#ffffff0a;padding:8px 12px;border-radius:50px;color:#9be8f9;font-size:7px;font-weight:800;letter-spacing:1.3px}
+.hero h1{font:700 37px/1.08 "Playfair Display",Georgia,serif;margin-top:19px}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:9px;line-height:1.9;color:#b8cdd4;margin-top:14px}
+.hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:23px}
+.hero-buttons a{height:46px;border-radius:9px;display:flex;justify-content:center;align-items:center;gap:7px;font-size:8px;font-weight:800}
+.primary{background:#0888d0;color:#fff;box-shadow:0 12px 25px #0003}
+.secondary{background:#fff;color:#0879b9}
+.hero-visual{height:270px;margin-top:28px;border-radius:20px;overflow:hidden;position:relative;background:url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:0 25px 50px #0005}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#03131e08,#03131ebd)}
+.payment-card{position:absolute;z-index:2;left:14px;right:14px;bottom:14px;background:#ffffff18;border:1px solid #ffffff2b;border-radius:15px;padding:15px;backdrop-filter:blur(12px)}
+.payment-card small{font-size:6px;color:#c1d8df;letter-spacing:1px}
+.payment-card strong{display:block;font:700 22px Georgia;margin-top:5px}
+.payment-card span{font-size:6px;color:#b4c9d0}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}
+.trust{background:#ffffff0b;border:1px solid #ffffff12;border-radius:11px;padding:11px 5px;text-align:center}
+.trust i{color:#70dbf4;font-size:13px;margin-bottom:6px}
+.trust span{display:block;font-size:6px;color:#abc1c9}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-mark">S</div>
+<div class="logo-text"><strong>Sorevia Bank</strong><small>DIGITAL BANKING</small></div>
+</a>
+<a href="index.html" class="header-link"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero-content">
+<div class="eyebrow"><i class="fa-solid fa-rotate-left"></i> SOREVIA BANK • REMBOURSEMENT</div>
+<h1>Gérez vos remboursements avec <span>clarté.</span></h1>
+<p>Suivez vos échéances, visualisez vos paiements et gardez une meilleure maîtrise de vos engagements financiers.</p>
+<div class="hero-buttons">
+<a href="#solutions" class="primary">Découvrir <i class="fa-solid fa-arrow-down"></i></a>
+<a href="inscription.html" class="secondary">Mon espace <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+<div class="hero-visual">
+<div class="payment-card">
+<small>ESPACE REMBOURSEMENT SOREVIA</small>
+<strong>Une échéance à la fois.</strong>
+<span>Organisez vos remboursements et avancez sereinement.</span>
+</div>
+</div>
+<div class="trust-row">
+<div class="trust"><i class="fa-solid fa-calendar-check"></i><span>Échéances</span></div>
+<div class="trust"><i class="fa-solid fa-chart-line"></i><span>Suivi</span></div>
+<div class="trust"><i class="fa-solid fa-shield-halved"></i><span>Sécurité</span></div>
+</div>
+</div>
+</section>
+
+<style>
+.solutions{background:#fff;padding:58px 0}
+.label{font-size:7px;font-weight:800;letter-spacing:1.7px;color:#087fc4}
+.title{font:700 30px/1.12 "Playfair Display",Georgia,serif;color:#092633;margin-top:7px}
+.title span{color:#087fc4}
+.desc{font-size:8px;line-height:1.9;color:#74878e;margin-top:10px}
+.solution-grid{display:grid;gap:12px;margin-top:25px}
+.solution{background:#fff;border:1px solid #e0e9ec;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px #0619250a}
+.solution-img{height:160px;background-size:cover;background-position:center;position:relative}
+.solution-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2800,#061b28ad)}
+.loan-img{background-image:url("https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1000&q=85")}
+.card-img{background-image:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85")}
+.schedule-img{background-image:url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=85")}
+.transfer-img{background-image:url("https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1000&q=85")}
+.solution-tag{position:absolute;z-index:2;left:12px;top:12px;background:#ffffffdf;color:#0879b9;padding:7px 9px;border-radius:30px;font-size:6px;font-weight:800;letter-spacing:1px}
+.solution-body{padding:16px}
+.solution-icon{width:40px;height:40px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:14px;margin-bottom:12px}
+.solution h3{font:700 19px Georgia;color:#15333f}
+.solution p{font-size:7px;line-height:1.8;color:#74878f;margin-top:7px}
+.solution-link{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #edf1f2}
+.solution-link span{font-size:6px;color:#83969d}
+.solution-link a{font-size:7px;font-weight:800;color:#087fc4}
+.highlight{margin-top:25px;background:linear-gradient(145deg,#061b28,#075873);border-radius:19px;padding:20px;color:#fff;position:relative;overflow:hidden}
+.highlight:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-120px;top:-90px;border:1px solid #ffffff12}
+.highlight small{font-size:6px;color:#72ddf5;font-weight:800;letter-spacing:1.5px}
+.highlight h3{font:700 22px Georgia;margin-top:8px;position:relative;z-index:2}
+.highlight p{font-size:7px;line-height:1.8;color:#abc4cc;margin-top:7px;position:relative;z-index:2}
+</style>
+
+<section class="solutions" id="solutions">
+<div class="container">
+
+<div class="label">01 • SOLUTIONS</div>
+<h2 class="title">Un remboursement<br><span>simple à suivre.</span></h2>
+<p class="desc">Retrouvez plusieurs outils pour mieux organiser vos différentes échéances.</p>
+
+<div class="solution-grid">
+
+<article class="solution reveal">
+<div class="solution-img loan-img"><span class="solution-tag">CRÉDIT</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+<h3>Remboursement de crédit</h3>
+<p>Gardez une vision claire de vos échéances et du montant restant à rembourser.</p>
+<div class="solution-link"><span>Suivi des échéances</span><a href="inscription.html">Accéder →</a></div>
+</div>
+</article>
+
+<article class="solution reveal">
+<div class="solution-img card-img"><span class="solution-tag">CARTE</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-credit-card"></i></div>
+<h3>Paiement de carte</h3>
+<p>Suivez les opérations liées à votre carte et gardez le contrôle de vos paiements.</p>
+<div class="solution-link"><span>Gestion simplifiée</span><a href="inscription.html">Découvrir →</a></div>
+</div>
+</article>
+
+<article class="solution reveal">
+<div class="solution-img schedule-img"><span class="solution-tag">PLANIFICATION</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-calendar-days"></i></div>
+<h3>Calendrier des échéances</h3>
+<p>Visualisez les prochaines dates importantes pour mieux anticiper vos paiements.</p>
+<div class="solution-link"><span>Organisation</span><a href="inscription.html">Voir →</a></div>
+</div>
+</article>
+
+<article class="solution reveal">
+<div class="solution-img transfer-img"><span class="solution-tag">TRANSFERT</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+<h3>Remboursement anticipé</h3>
+<p>Explorez les possibilités disponibles lorsque vous souhaitez réduire plus rapidement un engagement.</p>
+<div class="solution-link"><span>Selon conditions</span><a href="inscription.html">En savoir plus →</a></div>
+</div>
+</article>
+
+</div>
+
+<div class="highlight reveal">
+<small>SOREVIA PAYMENT EXPERIENCE</small>
+<h3>Anticipez aujourd'hui pour mieux gérer demain.</h3>
+<p>Une bonne visibilité sur les échéances aide à organiser son budget et à éviter les mauvaises surprises.</p>
+</div>
+
+</div>
+</section>
+
+<style>
+.dashboard{background:#f2f7f9;padding:58px 0}
+.payment-box{background:#fff;border:1px solid #e0e9ec;border-radius:19px;padding:18px;margin-top:23px;box-shadow:0 15px 30px #0619250b}
+.payment-top{display:flex;justify-content:space-between;align-items:center}
+.payment-title{display:flex;align-items:center;gap:9px}
+.payment-title i{width:39px;height:39px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center}
+.payment-title strong{font-size:8px;color:#29444e}
+.payment-title small{display:block;font-size:6px;color:#84969c;margin-top:4px}
+.status{background:#e8f7ef;color:#168154;padding:6px 8px;border-radius:30px;font-size:6px;font-weight:800}
+.amount{font:700 28px Georgia;color:#102e3b;margin-top:19px}
+.amount small{font:400 8px Inter;color:#84969c}
+.progress{height:9px;background:#e9eff1;border-radius:20px;margin-top:15px;overflow:hidden}
+.progress i{display:block;width:62%;height:100%;background:linear-gradient(90deg,#087fc4,#72ddf5);border-radius:20px}
+.payment-info{display:flex;justify-content:space-between;margin-top:8px;font-size:6px;color:#83969d}
+.payment-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:17px}
+.payment-actions a{height:40px;border-radius:9px;display:flex;justify-content:center;align-items:center;gap:6px;font-size:7px;font-weight:800}
+.pay-main{background:#087fc4;color:#fff}
+.pay-alt{border:1px solid #dbe6e9;color:#0879b9}
+.timeline{background:#fff;padding:58px 0}
+.timeline-list{margin-top:24px;display:grid;gap:11px}
+.timeline-item{display:flex;gap:12px}
+.timeline-dot{width:38px;height:38px;border-radius:50%;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:10px;flex:none}
+.timeline-content{flex:1;border-bottom:1px solid #e9eff0;padding-bottom:12px}
+.timeline-content strong{font-size:8px;color:#29444e}
+.timeline-content small{display:block;font-size:6px;color:#889aa0;margin-top:4px}
+.timeline-content span{display:block;font-size:8px;font-weight:800;color:#15333f;margin-top:6px}
+.tips{background:linear-gradient(145deg,#061b28,#075873);padding:58px 0;color:#fff}
+.tip-grid{display:grid;gap:9px;margin-top:23px}
+.tip{background:#ffffff0b;border:1px solid #ffffff12;border-radius:14px;padding:15px;display:flex;gap:10px}
+.tip i{width:36px;height:36px;border-radius:10px;background:#ffffff0d;color:#72ddf5;display:grid;place-items:center;flex:none}
+.tip strong{display:block;font-size:7px}
+.tip p{font-size:6px;line-height:1.7;color:#9fb8c0;margin-top:4px}
+</style>
+
+<section class="dashboard">
+<div class="container">
+
+<div class="label">02 • SUIVI</div>
+<h2 class="title">Visualisez vos<br><span>échéances.</span></h2>
+<p class="desc">Voici un exemple de présentation de votre progression de remboursement.</p>
+
+<div class="payment-box reveal">
+<div class="payment-top">
+<div class="payment-title">
+<i class="fa-solid fa-file-invoice"></i>
+<div><strong>Engagement en cours</strong><small>Exemple de suivi</small></div>
+</div>
+<div class="status">EN COURS</div>
+</div>
+
+<div class="amount">3 720 € <small>/ 6 000 €</small></div>
+
+<div class="progress"><i></i></div>
+
+<div class="payment-info">
+<span>3 720 € remboursés</span>
+<span>2 280 € restants</span>
+</div>
+
+<div class="payment-actions">
+<a href="inscription.html" class="pay-main">Gérer mon suivi</a>
+<a href="inscription.html" class="pay-alt">Détails</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="timeline">
+<div class="container">
+
+<div class="label">03 • CALENDRIER</div>
+<h2 class="title">Gardez vos dates<br><span>en mémoire.</span></h2>
+<p class="desc">Un aperçu illustratif des étapes d'un calendrier de remboursement.</p>
+
+<div class="timeline-list">
+
+<div class="timeline-item reveal">
+<div class="timeline-dot"><i class="fa-solid fa-check"></i></div>
+<div class="timeline-content">
+<strong>Échéance précédente</strong>
+<small>15 juillet</small>
+<span>450 € — Paiement effectué</span>
+</div>
+</div>
+
+<div class="timeline-item reveal">
+<div class="timeline-dot"><i class="fa-solid fa-calendar"></i></div>
+<div class="timeline-content">
+<strong>Prochaine échéance</strong>
+<small>15 août</small>
+<span>450 € — À venir</span>
+</div>
+</div>
+
+<div class="timeline-item reveal">
+<div class="timeline-dot"><i class="fa-solid fa-calendar"></i></div>
+<div class="timeline-content">
+<strong>Échéance suivante</strong>
+<small>15 septembre</small>
+<span>450 € — Planifiée</span>
+</div>
+</div>
+
+<div class="timeline-item reveal">
+<div class="timeline-dot"><i class="fa-solid fa-flag-checkered"></i></div>
+<div class="timeline-content">
+<strong>Objectif final</strong>
+<small>Selon calendrier contractuel</small>
+<span>Engagement terminé</span>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="tips">
+<div class="container">
+
+<div class="label" style="color:#72ddf5">04 • BONNES PRATIQUES</div>
+<h2 class="title" style="color:#fff">Mieux gérer ses<br><span>échéances.</span></h2>
+<p class="desc" style="color:#abc1c9">Quelques habitudes simples peuvent faciliter votre organisation financière.</p>
+
+<div class="tip-grid">
+
+<div class="tip reveal">
+<i class="fa-solid fa-calendar-check"></i>
+<div><strong>Anticipez les dates</strong><p>Gardez une vision des prochaines échéances afin de préparer votre budget.</p></div>
+</div>
+
+<div class="tip reveal">
+<i class="fa-solid fa-wallet"></i>
+<div><strong>Surveillez votre budget</strong><p>Conservez une marge suffisante pour vos dépenses et engagements réguliers.</p></div>
+</div>
+
+<div class="tip reveal">
+<i class="fa-solid fa-bell"></i>
+<div><strong>Restez attentif</strong><p>Consultez régulièrement vos opérations et vos informations de paiement.</p></div>
+</div>
+
+<div class="tip reveal">
+<i class="fa-solid fa-comments"></i>
+<div><strong>Demandez conseil</strong><p>En cas de difficulté, contactez votre établissement bancaire avant une échéance.</p></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.digital{background:#fff;padding:58px 0}
+.digital-photo{height:245px;border-radius:19px;background:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85") center/cover;position:relative;overflow:hidden;margin-top:23px}
+.digital-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2805,#061b28ba)}
+.digital-card{position:absolute;z-index:2;left:13px;right:13px;bottom:13px;background:#ffffffed;border-radius:13px;padding:14px}
+.digital-card small{font-size:6px;color:#087fc4;font-weight:800;letter-spacing:1px}
+.digital-card strong{display:block;font:700 20px Georgia;color:#15333f;margin-top:5px}
+.digital-card span{display:block;font-size:6px;color:#71858c;margin-top:4px}
+.feature-grid{display:grid;gap:9px;margin-top:18px}
+.feature{display:flex;gap:10px;padding:13px;border:1px solid #e0e9ec;border-radius:12px}
+.feature i{width:35px;height:35px;border-radius:10px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:11px;flex:none}
+.feature strong{font-size:7px;display:block;color:#29444e}
+.feature p{font-size:6px;color:#81939a;line-height:1.7;margin-top:4px}
+.security{background:#f2f7f9;padding:58px 0}
+.security-box{margin-top:23px;background:#fff;border:1px solid #e0e9ec;border-radius:19px;padding:18px}
+.security-head{display:flex;align-items:center;gap:11px}
+.security-head i{width:42px;height:42px;border-radius:12px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center}
+.security-head strong{font:700 18px Georgia;color:#17343f}
+.security-box>p{font-size:7px;line-height:1.8;color:#758990;margin-top:12px}
+.security-list{display:grid;gap:8px;margin-top:16px}
+.security-item{border:1px solid #e6edef;border-radius:10px;padding:11px;display:flex;gap:9px;align-items:center}
+.security-item i{color:#087fc4;font-size:10px;width:20px;text-align:center}
+.security-item span{font-size:7px;color:#526b74;font-weight:600}
+.info{background:linear-gradient(145deg,#061b28,#075873);color:#fff;padding:58px 0}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:23px}
+.info-card{background:#ffffff0b;border:1px solid #ffffff12;border-radius:14px;padding:15px}
+.info-card i{color:#72ddf5;font-size:13px}
+.info-card strong{display:block;font-size:7px;margin-top:7px}
+.info-card p{font-size:6px;line-height:1.7;color:#9fb8c0;margin-top:4px}
+</style>
+
+<section class="digital">
+<div class="container">
+
+<div class="label">05 • ESPACE DIGITAL</div>
+<h2 class="title">Votre suivi, partout<br><span>où vous allez.</span></h2>
+<p class="desc">Une expérience pensée pour consulter vos informations depuis votre smartphone.</p>
+
+<div class="digital-photo reveal">
+<div class="digital-card">
+<small>SOREVIA DIGITAL</small>
+<strong>Une vision claire de vos paiements.</strong>
+<span>Consultez vos informations et gardez le contrôle de votre budget.</span>
+</div>
+</div>
+
+<div class="feature-grid">
+
+<div class="feature reveal">
+<i class="fa-solid fa-chart-column"></i>
+<div><strong>Progression</strong><p>Visualisez l'évolution de vos remboursements.</p></div>
+</div>
+
+<div class="feature reveal">
+<i class="fa-solid fa-calendar-days"></i>
+<div><strong>Échéances</strong><p>Retrouvez les dates importantes au même endroit.</p></div>
+</div>
+
+<div class="feature reveal">
+<i class="fa-solid fa-file-lines"></i>
+<div><strong>Informations</strong><p>Consultez les détails liés à vos engagements.</p></div>
+</div>
+
+<div class="feature reveal">
+<i class="fa-solid fa-mobile-screen-button"></i>
+<div><strong>Mobile</strong><p>Une interface pensée pour un usage sur smartphone.</p></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="security">
+<div class="container">
+
+<div class="label">06 • SÉCURITÉ</div>
+<h2 class="title">Protégez votre<br><span>espace bancaire.</span></h2>
+<p class="desc">La sécurité de vos informations reste essentielle lorsque vous gérez vos opérations.</p>
+
+<div class="security-box reveal">
+
+<div class="security-head">
+<i class="fa-solid fa-shield-halved"></i>
+<strong>Quelques réflexes essentiels</strong>
+</div>
+
+<p>Ne communiquez jamais vos identifiants, mots de passe ou codes de sécurité à une autre personne.</p>
+
+<div class="security-list">
+<div class="security-item"><i class="fa-solid fa-lock"></i><span>Gardez vos identifiants confidentiels</span></div>
+<div class="security-item"><i class="fa-solid fa-mobile-screen"></i><span>Utilisez un appareil sécurisé</span></div>
+<div class="security-item"><i class="fa-solid fa-eye"></i><span>Vérifiez régulièrement vos opérations</span></div>
+<div class="security-item"><i class="fa-solid fa-triangle-exclamation"></i><span>Signalez toute activité inhabituelle</span></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="info">
+<div class="container">
+
+<div class="label" style="color:#72ddf5">07 • ACCOMPAGNEMENT</div>
+<h2 class="title" style="color:#fff">Besoin de mieux<br><span>vous organiser ?</span></h2>
+<p class="desc" style="color:#abc1c9">Sorevia Bank vous accompagne dans la gestion de vos services bancaires.</p>
+
+<div class="info-grid">
+
+<div class="info-card reveal">
+<i class="fa-solid fa-headset"></i>
+<strong>Accompagnement</strong>
+<p>Retrouvez les informations utiles depuis votre espace.</p>
+</div>
+
+<div class="info-card reveal">
+<i class="fa-solid fa-file-circle-check"></i>
+<strong>Clarté</strong>
+<p>Une présentation simple pour suivre vos engagements.</p>
+</div>
+
+<div class="info-card reveal">
+<i class="fa-solid fa-clock"></i>
+<strong>Disponibilité</strong>
+<p>Consultez vos informations quand vous en avez besoin.</p>
+</div>
+
+<div class="info-card reveal">
+<i class="fa-solid fa-shield"></i>
+<strong>Confiance</strong>
+<p>Adoptez les bonnes pratiques pour sécuriser votre espace.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<style>
+.final-cta{background:#fff;padding:60px 0;text-align:center}
+.final-icon{width:58px;height:58px;border-radius:16px;background:#e8f6fa;color:#087fc4;display:grid;place-items:center;margin:0 auto 15px;font-size:20px}
+.final-cta .title{font-size:30px}
+.final-cta p{font-size:8px;line-height:1.9;color:#758991;margin:11px auto 20px;max-width:500px}
+.final-cta a{display:flex;justify-content:center;align-items:center;gap:7px;background:#087fc4;color:#fff;border-radius:10px;padding:14px;font-size:8px;font-weight:800;max-width:500px;margin:auto;box-shadow:0 12px 25px #087fc42e}
+.footer{background:#03131e;color:#fff;padding:40px 0 18px}
+.footer-logo{display:flex;align-items:center;gap:9px}
+.footer-logo .logo-mark{box-shadow:none}
+.footer-logo strong{display:block;font:700 17px Georgia}
+.footer-logo small{display:block;font-size:6px;letter-spacing:2px;color:#6e8790;margin-top:5px}
+.footer-description{font-size:7px;line-height:1.8;color:#6e8790;margin:15px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;border-top:1px solid #ffffff0d;padding-top:20px}
+.footer-col h4{font:700 14px Georgia;margin-bottom:11px}
+.footer-col a{display:block;font-size:7px;color:#82989f;margin:8px 0}
+.footer-bottom{border-top:1px solid #ffffff0d;margin-top:22px;padding-top:14px;text-align:center;font-size:6px;color:#506972;line-height:1.8}
+.floating{position:fixed;bottom:17px;right:15px;width:45px;height:45px;border-radius:50%;background:#087fc4;color:#fff;display:grid;place-items:center;box-shadow:0 8px 25px #0004;z-index:500;font-size:13px;opacity:0;pointer-events:none;transition:.3s}
+.floating.visible{opacity:1;pointer-events:auto}
+@media(min-width:500px){.solution-grid{grid-template-columns:1fr 1fr}.solution:last-child{grid-column:1/-1}}
+</style>
+
+<section class="final-cta">
+<div class="container">
+
+<div class="final-icon"><i class="fa-solid fa-rotate-left"></i></div>
+
+<div class="label">08 • COMMENCER</div>
+
+<h2 class="title">Gardez le contrôle<br><span>de vos remboursements.</span></h2>
+
+<p>Accédez à l'univers Sorevia Bank et retrouvez les services adaptés à votre parcours bancaire.</p>
+
+<a href="inscription.html">Accéder à mon espace <i class="fa-solid fa-arrow-right"></i></a>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+
+<div class="footer-logo">
+<div class="logo-mark">S</div>
+<div>
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</div>
+
+<p class="footer-description">Des solutions bancaires digitales pensées pour accompagner votre quotidien, vos projets et vos ambitions.</p>
+
+<div class="footer-grid">
+
+<div class="footer-col">
+<h4>Services</h4>
+<a href="courant.html">Compte courant</a>
+<a href="epargne.html">Épargne</a>
+<a href="bancaire.html">Cartes bancaires</a>
+<a href="paiement.html">Paiements</a>
+<a href="assurance.html">Assurances</a>
+</div>
+
+<div class="footer-col">
+<h4>Sorevia</h4>
+<a href="index.html">Accueil</a>
+<a href="entreprise.html">Entreprise</a>
+<a href="remboursement.html">Remboursement</a>
+<a href="inscription.html">Inscription</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Sorevia Bank — Tous droits réservés.<br>
+Les montants affichés dans les exemples sont illustratifs et ne constituent pas une offre bancaire ou un engagement contractuel.
+</div>
+
+</div>
+</footer>
+
+<a href="#" class="floating" id="topBtn"><i class="fa-solid fa-arrow-up"></i></a>
+
+</main>
+
+<script>
+(function(){
+var SUP=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var DEF={fr:"fr-FR",en:"en-US",es:"es-ES",it:"it-IT",de:"de-DE",pt:"pt-BR",pl:"pl-PL",ru:"ru-RU",nl:"nl-NL",tr:"tr-TR"};
+var D={"/ §1":["/ §1","/ §1","/ §1","/ §1","/ §1","/ §1","/ §1","/ §1","/ §1"],"01 • SOLUTIONS":["01 • SOLUTIONS","01 • SOLUCIONES","01 • SOLUZIONI","01 • LÖSUNGEN","01 • SOLUÇÕES","01 • ROZWIĄZANIA","01 • РЕШЕНИЯ","01 • OPLOSSINGEN","01 • ÇÖZÜMLER"],"02 • SUIVI":["02 • TRACKING","02 • SEGUIMIENTO","02 • MONITORAGGIO","02 • VERFOLGUNG","02 • ACOMPANHAMENTO","02 • ŚLEDZENIE","02 • КОНТРОЛЬ","02 • OPVOLGING","02 • TAKİP"],"03 • CALENDRIER":["03 • CALENDAR","03 • CALENDARIO","03 • CALENDARIO","03 • KALENDER","03 • CALENDÁRIO","03 • KALENDARZ","03 • КАЛЕНДАРЬ","03 • KALENDER","03 • TAKVİM"],"04 • BONNES PRATIQUES":["04 • GOOD PRACTICES","04 • BUENAS PRÁCTICAS","04 • BUONE PRATICHE","04 • BEWÄHRTE VORGEHENSWEISEN","04 • BOAS PRÁTICAS","04 • DOBRE PRAKTYKI","04 • ПОЛЕЗНЫЕ ПРИВЫЧКИ","04 • GOEDE GEWOONTEN","04 • İYİ UYGULAMALAR"],"05 • ESPACE DIGITAL":["05 • DIGITAL AREA","05 • ESPACIO DIGITAL","05 • SPAZIO DIGITALE","05 • DIGITALER BEREICH","05 • ESPAÇO DIGITAL","05 • STREFA CYFROWA","05 • ЦИФРОВОЙ КАБИНЕТ","05 • DIGITALE OMGEVING","05 • DİJİTAL ALAN"],"06 • SÉCURITÉ":["06 • SECURITY","06 • SEGURIDAD","06 • SICUREZZA","06 • SICHERHEIT","06 • SEGURANÇA","06 • BEZPIECZEŃSTWO","06 • БЕЗОПАСНОСТЬ","06 • VEILIGHEID","06 • GÜVENLİK"],"07 • ACCOMPAGNEMENT":["07 • SUPPORT","07 • ACOMPAÑAMIENTO","07 • ASSISTENZA","07 • BEGLEITUNG","07 • ACOMPANHAMENTO","07 • WSPARCIE","07 • СОПРОВОЖДЕНИЕ","07 • BEGELEIDING","07 • DESTEK"],"08 • COMMENCER":["08 • GET STARTED","08 • EMPEZAR","08 • INIZIA","08 • LOSLEGEN","08 • COMEÇAR","08 • ZACZNIJ","08 • НАЧАТЬ","08 • BEGINNEN","08 • BAŞLAYIN"],"15 août":["August 15","15 de agosto","15 agosto","15. August","15 de agosto","15 sierpnia","15 августа","15 augustus","15 Ağustos"],"15 juillet":["July 15","15 de julio","15 luglio","15. Juli","15 de julho","15 lipca","15 июля","15 juli","15 Temmuz"],"15 septembre":["September 15","15 de septiembre","15 settembre","15. September","15 de setembro","15 września","15 сентября","15 september","15 Eylül"],"Accompagnement":["Support","Acompañamiento","Assistenza","Begleitung","Acompanhamento","Wsparcie","Сопровождение","Begeleiding","Destek"],"Accueil":["Home","Inicio","Home","Startseite","Início","Strona główna","Главная","Home","Ana sayfa"],"Accéder à mon espace":["Go to my account","Acceder a mi espacio","Accedi al mio spazio","Zu meinem Bereich","Aceder ao meu espaço","Przejdź do mojej strefy","Перейти в мой кабинет","Naar mijn omgeving","Alanıma git"],"Accéder →":["Access →","Acceder →","Accedi →","Öffnen →","Aceder →","Przejdź →","Перейти →","Openen →","Eriş →"],"Accédez à l'univers Sorevia Bank et retrouvez les services adaptés à votre parcours bancaire.":["Step into the Sorevia Bank world and find the services suited to your banking journey.","Acceda al universo Sorevia Bank y encuentre los servicios adaptados a su trayectoria bancaria.","Entri nell’universo Sorevia Bank e trovi i servizi adatti al suo percorso bancario.","Betreten Sie die Welt von Sorevia Bank und finden Sie die Services, die zu Ihrem Bankweg passen.","Aceda ao universo Sorevia Bank e encontre os serviços adaptados ao seu percurso bancário.","Wejdź do świata Sorevia Bank i znajdź usługi dopasowane do Twojej drogi z bankiem.","Откройте для себя мир Sorevia Bank и найдите услуги, подходящие вашему банковскому пути.","Stap in de wereld van Sorevia Bank en vind de diensten die passen bij uw bankreis.","Sorevia Bank dünyasına adım atın ve bankacılık yolculuğunuza uygun hizmetleri bulun."],"Adoptez les bonnes pratiques pour sécuriser votre espace.":["Adopt good practices to secure your account area.","Adopte buenas prácticas para proteger su espacio.","Adotti le buone pratiche per proteggere il suo spazio.","Beachten Sie bewährte Vorgehensweisen zum Schutz Ihres Bereichs.","Adote boas práticas para proteger o seu espaço.","Stosuj dobre praktyki, aby chronić swoją strefę.","Следуйте рекомендациям, чтобы защитить свой кабинет.","Hanteer goede gewoonten om uw omgeving te beveiligen.","Alanınızı korumak için iyi uygulamaları benimseyin."],"Anticipez aujourd'hui pour mieux gérer demain.":["Plan ahead today to manage tomorrow better.","Anticípese hoy para gestionar mejor el mañana.","Anticipi oggi per gestire meglio il domani.","Planen Sie heute voraus, um morgen besser zu steuern.","Antecipe hoje para gerir melhor o amanhã.","Planuj już dziś, by lepiej zarządzać jutrem.","Планируйте сегодня, чтобы лучше управлять завтрашним днём.","Anticipeer vandaag om morgen beter te beheren.","Bugünden planlayın, yarını daha iyi yönetin."],"Anticipez les dates":["Plan for the dates","Anticipe las fechas","Anticipi le date","Planen Sie die Termine voraus","Antecipe as datas","Planuj terminy z wyprzedzeniem","Планируйте даты заранее","Anticipeer op de data","Tarihleri önceden planlayın"],"Assurances":["Insurance","Seguros","Assicurazioni","Versicherungen","Seguros","Ubezpieczenia","Страхование","Verzekeringen","Sigortalar"],"Besoin de mieux":["Need to get","¿Necesita organizarse","Ha bisogno di organizzarsi","Möchten Sie sich","Precisa de se organizar","Potrzebujesz lepszej","Нужно лучше","Wilt u zich","Daha iyi organize"],"CARTE":["CARD","TARJETA","CARTA","KARTE","CARTÃO","KARTA","КАРТА","KAART","KART"],"CRÉDIT":["CREDIT","CRÉDITO","CREDITO","KREDIT","CRÉDITO","KREDYT","КРЕДИТ","KREDIET","KREDİ"],"Calendrier des échéances":["Due date calendar","Calendario de vencimientos","Calendario delle scadenze","Fälligkeitskalender","Calendário de prestações","Kalendarz terminów","Календарь платежей","Vervalkalender","Vade takvimi"],"Cartes bancaires":["Bank cards","Tarjetas bancarias","Carte bancarie","Bankkarten","Cartões bancários","Karty bankowe","Банковские карты","Bankkaarten","Banka kartları"],"Clarté":["Clarity","Claridad","Chiarezza","Klarheit","Clareza","Przejrzystość","Ясность","Duidelijkheid","Netlik"],"Compte courant":["Current account","Cuenta corriente","Conto corrente","Girokonto","Conta à ordem","Rachunek bieżący","Текущий счёт","Betaalrekening","Vadesiz hesap"],"Confiance":["Trust","Confianza","Fiducia","Vertrauen","Confiança","Zaufanie","Доверие","Vertrouwen","Güven"],"Conservez une marge suffisante pour vos dépenses et engagements réguliers.":["Keep a sufficient margin for your regular expenses and commitments.","Conserve un margen suficiente para sus gastos y compromisos habituales.","Conservi un margine sufficiente per le spese e gli impegni regolari.","Halten Sie einen ausreichenden Spielraum für Ihre laufenden Ausgaben und Verpflichtungen bereit.","Mantenha uma margem suficiente para as suas despesas e compromissos regulares.","Zachowaj wystarczający margines na regularne wydatki i zobowiązania.","Оставляйте достаточный запас на регулярные расходы и обязательства.","Houd voldoende marge voor uw vaste uitgaven en verplichtingen.","Düzenli harcamalarınız ve yükümlülükleriniz için yeterli bir pay bırakın."],"Consultez les détails liés à vos engagements.":["View the details linked to your commitments.","Consulte los detalles vinculados a sus compromisos.","Consulti i dettagli relativi ai suoi impegni.","Sehen Sie die Details zu Ihren Verpflichtungen ein.","Consulte os detalhes ligados aos seus compromissos.","Sprawdź szczegóły dotyczące swoich zobowiązań.","Просматривайте сведения о ваших обязательствах.","Raadpleeg de details van uw verplichtingen.","Yükümlülüklerinize ilişkin ayrıntıları görüntüleyin."],"Consultez régulièrement vos opérations et vos informations de paiement.":["Regularly review your transactions and payment information.","Consulte con regularidad sus operaciones y su información de pago.","Consulti regolarmente le sue operazioni e le informazioni di pagamento.","Prüfen Sie regelmäßig Ihre Vorgänge und Zahlungsinformationen.","Consulte regularmente as suas operações e informações de pagamento.","Regularnie sprawdzaj operacje i informacje o płatnościach.","Регулярно проверяйте операции и платёжные данные.","Raadpleeg regelmatig uw transacties en betaalgegevens.","İşlemlerinizi ve ödeme bilgilerinizi düzenli olarak kontrol edin."],"Consultez vos informations et gardez le contrôle de votre budget.":["Check your information and stay in control of your budget.","Consulte su información y mantenga el control de su presupuesto.","Consulti le sue informazioni e mantenga il controllo del budget.","Sehen Sie Ihre Daten ein und behalten Sie die Kontrolle über Ihr Budget.","Consulte as suas informações e mantenha o controlo do seu orçamento.","Sprawdzaj informacje i zachowaj kontrolę nad budżetem.","Просматривайте данные и контролируйте свой бюджет.","Raadpleeg uw gegevens en houd uw budget onder controle.","Bilgilerinizi görüntüleyin ve bütçenizin kontrolünü elinizde tutun."],"Consultez vos informations quand vous en avez besoin.":["Check your information whenever you need it.","Consulte su información cuando la necesite.","Consulti le sue informazioni quando ne ha bisogno.","Rufen Sie Ihre Daten ab, wann immer Sie sie brauchen.","Consulte as suas informações quando precisar.","Sprawdzaj informacje, kiedy tylko ich potrzebujesz.","Просматривайте данные, когда они вам нужны.","Raadpleeg uw gegevens wanneer u ze nodig hebt.","Bilgilerinize ihtiyaç duyduğunuzda ulaşın."],"Demandez conseil":["Ask for advice","Pida consejo","Chieda un consiglio","Lassen Sie sich beraten","Peça aconselhamento","Poproś o radę","Обратитесь за советом","Vraag advies","Tavsiye isteyin"],"Des solutions bancaires digitales pensées pour accompagner votre quotidien, vos projets et vos ambitions.":["Digital banking solutions designed to support your daily life, your projects and your ambitions.","Soluciones bancarias digitales pensadas para acompañar su día a día, sus proyectos y sus ambiciones.","Soluzioni bancarie digitali pensate per accompagnare la sua quotidianità, i suoi progetti e le sue ambizioni.","Digitale Banklösungen, die Ihren Alltag, Ihre Projekte und Ihre Ziele begleiten.","Soluções bancárias digitais pensadas para acompanhar o seu dia a dia, os seus projetos e as suas ambições.","Cyfrowe rozwiązania bankowe stworzone, by wspierać Twoją codzienność, projekty i ambicje.","Цифровые банковские решения для вашей повседневной жизни, проектов и амбиций.","Digitale bankoplossingen ontworpen om uw dagelijks leven, uw projecten en uw ambities te ondersteunen.","Günlük yaşamınıza, projelerinize ve hedeflerinize eşlik etmek için tasarlanmış dijital bankacılık çözümleri."],"Disponibilité":["Availability","Disponibilidad","Disponibilità","Verfügbarkeit","Disponibilidade","Dostępność","Доступность","Beschikbaarheid","Erişilebilirlik"],"Découvrir":["Discover","Descubrir","Scopri","Entdecken","Descobrir","Odkryj","Узнать больше","Ontdekken","Keşfet"],"Découvrir →":["Discover →","Descubrir →","Scopri →","Entdecken →","Descobrir →","Odkryj →","Узнать больше →","Ontdekken →","Keşfet →"],"Détails":["Details","Detalles","Dettagli","Details","Detalhes","Szczegóły","Подробности","Details","Ayrıntılar"],"EN COURS":["IN PROGRESS","EN CURSO","IN CORSO","LÄUFT","EM CURSO","W TOKU","В ПРОЦЕССЕ","LOPEND","DEVAM EDİYOR"],"ESPACE REMBOURSEMENT SOREVIA":["SOREVIA REPAYMENT AREA","ESPACIO DE REEMBOLSO SOREVIA","SPAZIO RIMBORSO SOREVIA","SOREVIA-RÜCKZAHLUNGSBEREICH","ESPAÇO DE REEMBOLSO SOREVIA","STREFA SPŁAT SOREVIA","КАБИНЕТ ПОГАШЕНИЯ SOREVIA","SOREVIA TERUGBETAALOMGEVING","SOREVIA GERİ ÖDEME ALANI"],"En cas de difficulté, contactez votre établissement bancaire avant une échéance.":["If you run into difficulty, contact your bank before a due date.","En caso de dificultad, contacte con su entidad bancaria antes de un vencimiento.","In caso di difficoltà, contatti il suo istituto bancario prima di una scadenza.","Bei Schwierigkeiten wenden Sie sich vor einer Fälligkeit an Ihre Bank.","Em caso de dificuldade, contacte a sua instituição bancária antes de uma prestação.","W razie trudności skontaktuj się z bankiem przed terminem płatności.","При затруднениях свяжитесь с банком до наступления срока платежа.","Neem bij moeilijkheden contact op met uw bank vóór een vervaldatum.","Zorluk yaşarsanız, vade tarihinden önce bankanızla iletişime geçin."],"En savoir plus →":["Learn more →","Saber más →","Scopri di più →","Mehr erfahren →","Saber mais →","Dowiedz się więcej →","Подробнее →","Meer weten →","Daha fazla bilgi →"],"Engagement en cours":["Ongoing commitment","Compromiso en curso","Impegno in corso","Laufende Verpflichtung","Compromisso em curso","Zobowiązanie w toku","Текущее обязательство","Lopende verplichting","Devam eden yükümlülük"],"Engagement terminé":["Commitment completed","Compromiso finalizado","Impegno concluso","Verpflichtung erfüllt","Compromisso concluído","Zobowiązanie zakończone","Обязательство выполнено","Verplichting afgerond","Yükümlülük tamamlandı"],"Entreprise":["Business","Empresa","Impresa","Unternehmen","Empresa","Firma","Для бизнеса","Zakelijk","Kurumsal"],"Exemple de suivi":["Tracking example","Ejemplo de seguimiento","Esempio di monitoraggio","Beispiel für die Verfolgung","Exemplo de acompanhamento","Przykład śledzenia","Пример контроля","Voorbeeld van opvolging","Takip örneği"],"Explorez les possibilités disponibles lorsque vous souhaitez réduire plus rapidement un engagement.":["Explore the options available when you want to reduce a commitment more quickly.","Explore las posibilidades disponibles cuando desee reducir un compromiso más rápidamente.","Esplori le possibilità disponibili quando desidera ridurre più rapidamente un impegno.","Entdecken Sie die Möglichkeiten, wenn Sie eine Verpflichtung schneller verringern möchten.","Explore as possibilidades disponíveis quando pretender reduzir mais rapidamente um compromisso.","Poznaj dostępne możliwości, gdy chcesz szybciej zmniejszyć swoje zobowiązanie.","Узнайте о доступных возможностях, если хотите быстрее сократить обязательство.","Ontdek de beschikbare mogelijkheden als u een verplichting sneller wilt verminderen.","Bir yükümlülüğü daha hızlı azaltmak istediğinizde mevcut seçenekleri keşfedin."],"Gardez le contrôle":["Stay in control","Mantenga el control","Mantenga il controllo","Behalten Sie die Kontrolle","Mantenha o controlo","Zachowaj kontrolę","Держите под контролем","Houd controle","Geri ödemelerinizin"],"Gardez une vision claire de vos échéances et du montant restant à rembourser.":["Keep a clear view of your due dates and the amount left to repay.","Mantenga una visión clara de sus vencimientos y del importe pendiente de reembolso.","Mantenga una visione chiara delle scadenze e dell’importo ancora da rimborsare.","Behalten Sie Ihre Fälligkeiten und den noch zurückzuzahlenden Betrag klar im Blick.","Mantenha uma visão clara das suas prestações e do montante que falta reembolsar.","Miej jasny wgląd w terminy i pozostałą do spłaty kwotę.","Сохраняйте ясное представление о сроках платежей и остатке к погашению.","Houd een duidelijk overzicht van uw vervaldata en het nog terug te betalen bedrag.","Vadelerinizi ve geri ödenecek kalan tutarı net bir şekilde görün."],"Gardez une vision des prochaines échéances afin de préparer votre budget.":["Keep an eye on upcoming due dates so you can prepare your budget.","Mantenga una visión de los próximos vencimientos para preparar su presupuesto.","Tenga una visione delle prossime scadenze per preparare il budget.","Behalten Sie die nächsten Fälligkeiten im Blick, um Ihr Budget vorzubereiten.","Mantenha uma visão das próximas prestações para preparar o seu orçamento.","Miej na oku nadchodzące terminy, aby przygotować budżet.","Следите за ближайшими платежами, чтобы заранее подготовить бюджет.","Houd de komende vervaldata in het oog om uw budget voor te bereiden.","Bütçenizi hazırlamak için yaklaşan vadeleri göz önünde bulundurun."],"Gardez vos dates":["Keep your dates","Mantenga sus fechas","Tenga sempre presenti","Behalten Sie Ihre Termine","Guarde as suas datas","Zapamiętaj swoje terminy","Помните свои даты","Onthoud uw data","Tarihlerinizi"],"Gardez vos identifiants confidentiels":["Keep your credentials confidential","Mantenga confidenciales sus credenciales","Mantenga riservate le sue credenziali","Halten Sie Ihre Zugangsdaten geheim","Mantenha as suas credenciais confidenciais","Zachowaj poufność danych logowania","Храните учётные данные в тайне","Houd uw inloggegevens geheim","Giriş bilgilerinizi gizli tutun"],"Gestion simplifiée":["Simplified management","Gestión simplificada","Gestione semplificata","Vereinfachte Verwaltung","Gestão simplificada","Uproszczone zarządzanie","Упрощённое управление","Vereenvoudigd beheer","Kolay yönetim"],"Gérer mon suivi":["Manage my tracking","Gestionar mi seguimiento","Gestisci il mio monitoraggio","Meine Verfolgung verwalten","Gerir o meu acompanhamento","Zarządzaj moim śledzeniem","Управлять контролем","Mijn opvolging beheren","Takibimi yönet"],"Gérez vos remboursements avec":["Manage your repayments with","Gestione sus reembolsos con","Gestisca i suoi rimborsi con","Verwalten Sie Ihre Rückzahlungen mit","Gira os seus reembolsos com","Zarządzaj spłatami z","Управляйте погашением с","Beheer uw terugbetalingen met","Geri ödemelerinizi"],"Informations":["Information","Información","Informazioni","Informationen","Informações","Informacje","Информация","Informatie","Bilgiler"],"Inscription":["Sign up","Registro","Registrazione","Registrierung","Registo","Rejestracja","Регистрация","Registratie","Kayıt"],"La sécurité de vos informations reste essentielle lorsque vous gérez vos opérations.":["The security of your information remains essential when you manage your transactions.","La seguridad de su información sigue siendo esencial cuando gestiona sus operaciones.","La sicurezza delle sue informazioni resta essenziale quando gestisce le sue operazioni.","Die Sicherheit Ihrer Daten bleibt bei der Verwaltung Ihrer Vorgänge entscheidend.","A segurança das suas informações continua essencial quando gere as suas operações.","Bezpieczeństwo Twoich danych pozostaje kluczowe podczas zarządzania operacjami.","Безопасность ваших данных остаётся ключевой при управлении операциями.","De veiligheid van uw gegevens blijft essentieel wanneer u uw transacties beheert.","İşlemlerinizi yönetirken bilgilerinizin güvenliği çok önemlidir."],"Les montants affichés dans les exemples sont illustratifs et ne constituent pas une offre bancaire ou un engagement contractuel.":["The amounts shown in the examples are illustrative and do not constitute a banking offer or a contractual commitment.","Los importes que figuran en los ejemplos son ilustrativos y no constituyen una oferta bancaria ni un compromiso contractual.","Gli importi mostrati negli esempi sono illustrativi e non costituiscono un’offerta bancaria né un impegno contrattuale.","Die in den Beispielen gezeigten Beträge sind illustrativ und stellen weder ein Bankangebot noch eine vertragliche Verpflichtung dar.","Os montantes apresentados nos exemplos são ilustrativos e não constituem uma oferta bancária nem um compromisso contratual.","Kwoty pokazane w przykładach mają charakter poglądowy i nie stanowią oferty bankowej ani zobowiązania umownego.","Суммы в примерах носят иллюстративный характер и не являются банковским предложением или договорным обязательством.","De in de voorbeelden getoonde bedragen zijn illustratief en vormen geen bankaanbod of contractuele verplichting.","Örneklerde gösterilen tutarlar açıklayıcıdır ve bir bankacılık teklifi veya sözleşmesel taahhüt oluşturmaz."],"Mieux gérer ses":["Better manage your","Gestione mejor sus","Gestisca meglio le sue","Verwalten Sie Ihre","Gira melhor as suas","Lepiej planuj swoje","Лучше управляйте","Beheer uw","Vadelerinizi daha iyi"],"Mobile":["Mobile","Móvil","Mobile","Mobil","Móvel","Mobilnie","Мобильность","Mobiel","Mobil"],"Mon espace":["My account","Mi espacio","Il mio spazio","Mein Bereich","O meu espaço","Moja strefa","Мой кабинет","Mijn omgeving","Alanım"],"Ne communiquez jamais vos identifiants, mots de passe ou codes de sécurité à une autre personne.":["Never share your credentials, passwords or security codes with anyone else.","No comunique nunca sus credenciales, contraseñas o códigos de seguridad a otra persona.","Non comunichi mai le sue credenziali, password o codici di sicurezza a un’altra persona.","Geben Sie Ihre Zugangsdaten, Passwörter oder Sicherheitscodes niemals an andere weiter.","Nunca comunique as suas credenciais, palavras-passe ou códigos de segurança a outra pessoa.","Nigdy nie udostępniaj nikomu danych logowania, haseł ani kodów bezpieczeństwa.","Никогда не сообщайте учётные данные, пароли и коды безопасности другим лицам.","Deel uw inloggegevens, wachtwoorden of beveiligingscodes nooit met anderen.","Giriş bilgilerinizi, şifrelerinizi veya güvenlik kodlarınızı asla başkalarıyla paylaşmayın."],"Objectif final":["Final goal","Objetivo final","Obiettivo finale","Endziel","Objetivo final","Cel końcowy","Конечная цель","Einddoel","Nihai hedef"],"Organisation":["Organization","Organización","Organizzazione","Organisation","Organização","Organizacja","Организация","Organisatie","Organizasyon"],"Organisez vos remboursements et avancez sereinement.":["Organize your repayments and move forward with peace of mind.","Organice sus reembolsos y avance con tranquilidad.","Organizzi i suoi rimborsi e proceda con serenità.","Organisieren Sie Ihre Rückzahlungen und gehen Sie gelassen voran.","Organize os seus reembolsos e avance com tranquilidade.","Uporządkuj spłaty i idź naprzód ze spokojem.","Организуйте погашение и двигайтесь вперёд спокойно.","Organiseer uw terugbetalingen en ga gerust vooruit.","Geri ödemelerinizi düzenleyin ve gönül rahatlığıyla ilerleyin."],"PLANIFICATION":["PLANNING","PLANIFICACIÓN","PIANIFICAZIONE","PLANUNG","PLANEAMENTO","PLANOWANIE","ПЛАНИРОВАНИЕ","PLANNING","PLANLAMA"],"Paiement de carte":["Card payment","Pago de tarjeta","Pagamento della carta","Kartenzahlung","Pagamento do cartão","Spłata karty","Платёж по карте","Kaartbetaling","Kart ödemesi"],"Paiements":["Payments","Pagos","Pagamenti","Zahlungen","Pagamentos","Płatności","Платежи","Betalingen","Ödemeler"],"Prochaine échéance":["Next due date","Próximo vencimiento","Prossima scadenza","Nächste Fälligkeit","Próxima prestação","Następny termin","Ближайший платёж","Volgende vervaldatum","Sonraki vade"],"Progression":["Progress","Progreso","Progressi","Fortschritt","Progresso","Postęp","Прогресс","Voortgang","İlerleme"],"Protégez votre":["Protect your","Proteja su","Protegga il suo","Schützen Sie Ihren","Proteja o seu","Chroń swoją","Защитите свой","Bescherm uw","Bankacılık alanınızı"],"Quelques habitudes simples peuvent faciliter votre organisation financière.":["A few simple habits can make your financial organization easier.","Algunos hábitos sencillos pueden facilitar su organización financiera.","Alcune semplici abitudini possono facilitare la sua organizzazione finanziaria.","Einige einfache Gewohnheiten können Ihre finanzielle Organisation erleichtern.","Alguns hábitos simples podem facilitar a sua organização financeira.","Kilka prostych nawyków może ułatwić organizację finansów.","Несколько простых привычек помогут вам лучше организовать финансы.","Een paar eenvoudige gewoonten kunnen uw financiële organisatie vergemakkelijken.","Birkaç basit alışkanlık mali organizasyonunuzu kolaylaştırabilir."],"Quelques réflexes essentiels":["A few essential reflexes","Algunos reflejos esenciales","Alcuni riflessi essenziali","Einige wichtige Grundregeln","Alguns reflexos essenciais","Kilka podstawowych nawyków","Несколько важных правил","Enkele essentiële reflexen","Birkaç temel refleks"],"Remboursement":["Repayment","Reembolso","Rimborso","Rückzahlung","Reembolso","Spłata","Погашение","Terugbetaling","Geri ödeme"],"Remboursement anticipé":["Early repayment","Reembolso anticipado","Rimborso anticipato","Vorzeitige Rückzahlung","Reembolso antecipado","Wcześniejsza spłata","Досрочное погашение","Vervroegde terugbetaling","Erken geri ödeme"],"Remboursement de crédit":["Loan repayment","Reembolso de crédito","Rimborso del credito","Kreditrückzahlung","Reembolso de crédito","Spłata kredytu","Погашение кредита","Kredietaflossing","Kredi geri ödemesi"],"Restez attentif":["Stay attentive","Manténgase atento","Resti attento","Bleiben Sie aufmerksam","Mantenha-se atento","Zachowaj czujność","Будьте внимательны","Blijf alert","Dikkatli olun"],"Retour":["Back","Volver","Indietro","Zurück","Voltar","Wstecz","Назад","Terug","Geri"],"Retrouvez les dates importantes au même endroit.":["Find the important dates in one place.","Encuentre las fechas importantes en un solo lugar.","Trovi le date importanti in un unico posto.","Finden Sie die wichtigen Termine an einem Ort.","Encontre as datas importantes no mesmo local.","Znajdź ważne daty w jednym miejscu.","Все важные даты — в одном месте.","Vind de belangrijke data op één plek.","Önemli tarihleri tek bir yerde bulun."],"Retrouvez les informations utiles depuis votre espace.":["Find useful information from your account area.","Encuentre la información útil desde su espacio.","Trovi le informazioni utili dal suo spazio.","Finden Sie hilfreiche Informationen in Ihrem Bereich.","Encontre as informações úteis a partir do seu espaço.","Znajdź przydatne informacje w swojej strefie.","Находите полезную информацию в своём кабинете.","Vind nuttige informatie vanuit uw omgeving.","Faydalı bilgilere alanınızdan ulaşın."],"Retrouvez plusieurs outils pour mieux organiser vos différentes échéances.":["Find several tools to better organize your various due dates.","Encuentre varias herramientas para organizar mejor sus distintos vencimientos.","Trovi diversi strumenti per organizzare meglio le sue varie scadenze.","Finden Sie mehrere Werkzeuge, um Ihre verschiedenen Fälligkeiten besser zu organisieren.","Encontre várias ferramentas para organizar melhor as suas diferentes prestações.","Znajdź narzędzia, które pomogą lepiej uporządkować różne terminy płatności.","Воспользуйтесь инструментами, которые помогут лучше организовать ваши платежи по срокам.","Vind meerdere hulpmiddelen om uw verschillende vervaldata beter te organiseren.","Farklı vadelerinizi daha iyi düzenlemenize yardımcı olacak çeşitli araçlar bulun."],"SOREVIA BANK • REMBOURSEMENT":["SOREVIA BANK • REPAYMENT","SOREVIA BANK • REEMBOLSO","SOREVIA BANK • RIMBORSO","SOREVIA BANK • RÜCKZAHLUNG","SOREVIA BANK • REEMBOLSO","SOREVIA BANK • SPŁATA","SOREVIA BANK • ПОГАШЕНИЕ","SOREVIA BANK • TERUGBETALING","SOREVIA BANK • GERİ ÖDEME"],"SOREVIA DIGITAL":["SOREVIA DIGITAL","SOREVIA DIGITAL","SOREVIA DIGITAL","SOREVIA DIGITAL","SOREVIA DIGITAL","SOREVIA DIGITAL","SOREVIA DIGITAL","SOREVIA DIGITAL","SOREVIA DIGITAL"],"SOREVIA PAYMENT EXPERIENCE":["SOREVIA PAYMENT EXPERIENCE","SOREVIA PAYMENT EXPERIENCE","SOREVIA PAYMENT EXPERIENCE","SOREVIA PAYMENT EXPERIENCE","SOREVIA PAYMENT EXPERIENCE","SOREVIA PAYMENT EXPERIENCE","SOREVIA PAYMENT EXPERIENCE","SOREVIA PAYMENT EXPERIENCE","SOREVIA PAYMENT EXPERIENCE"],"Selon calendrier contractuel":["According to the contractual schedule","Según calendario contractual","Secondo il calendario contrattuale","Gemäß vertraglichem Zeitplan","Conforme o calendário contratual","Zgodnie z harmonogramem umownym","Согласно договорному графику","Volgens het contractuele schema","Sözleşme takvimine göre"],"Selon conditions":["Subject to conditions","Según condiciones","Secondo le condizioni","Je nach Bedingungen","Sujeito a condições","Zgodnie z warunkami","На определённых условиях","Onder voorwaarden","Koşullara bağlı"],"Services":["Services","Servicios","Servizi","Services","Serviços","Usługi","Услуги","Diensten","Hizmetler"],"Signalez toute activité inhabituelle":["Report any unusual activity","Informe de cualquier actividad inusual","Segnali qualsiasi attività insolita","Melden Sie jede ungewöhnliche Aktivität","Comunique qualquer atividade invulgar","Zgłaszaj każdą nietypową aktywność","Сообщайте о любой необычной активности","Meld elke ongebruikelijke activiteit","Olağan dışı her hareketi bildirin"],"Sorevia Bank - Remboursements et gestion des échéances":["Sorevia Bank - Repayments and payment schedule management","Sorevia Bank - Reembolsos y gestión de vencimientos","Sorevia Bank - Rimborsi e gestione delle scadenze","Sorevia Bank - Rückzahlungen und Fälligkeitsverwaltung","Sorevia Bank - Reembolsos e gestão de prestações","Sorevia Bank - Spłaty i zarządzanie terminami","Sorevia Bank - погашение и управление платежами по графику","Sorevia Bank - Terugbetalingen en beheer van vervaldata","Sorevia Bank - Geri ödemeler ve vade yönetimi"],"Sorevia Bank vous accompagne dans la gestion de vos services bancaires.":["Sorevia Bank supports you in managing your banking services.","Sorevia Bank le acompaña en la gestión de sus servicios bancarios.","Sorevia Bank la accompagna nella gestione dei suoi servizi bancari.","Sorevia Bank begleitet Sie bei der Verwaltung Ihrer Bankdienstleistungen.","O Sorevia Bank acompanha-o na gestão dos seus serviços bancários.","Sorevia Bank wspiera Cię w zarządzaniu usługami bankowymi.","Sorevia Bank сопровождает вас в управлении банковскими услугами.","Sorevia Bank begeleidt u bij het beheer van uw bankdiensten.","Sorevia Bank, bankacılık hizmetlerinizi yönetirken yanınızda."],"Sorevia Bank | Remboursement":["Sorevia Bank | Repayment","Sorevia Bank | Reembolso","Sorevia Bank | Rimborso","Sorevia Bank | Rückzahlung","Sorevia Bank | Reembolso","Sorevia Bank | Spłata","Sorevia Bank | Погашение","Sorevia Bank | Terugbetaling","Sorevia Bank | Geri ödeme"],"Suivez les opérations liées à votre carte et gardez le contrôle de vos paiements.":["Follow the transactions linked to your card and stay in control of your payments.","Siga las operaciones vinculadas a su tarjeta y mantenga el control de sus pagos.","Segua le operazioni legate alla sua carta e mantenga il controllo dei pagamenti.","Verfolgen Sie die Vorgänge Ihrer Karte und behalten Sie Ihre Zahlungen unter Kontrolle.","Acompanhe as operações associadas ao seu cartão e mantenha o controlo dos seus pagamentos.","Śledź operacje powiązane z kartą i zachowaj kontrolę nad płatnościami.","Следите за операциями по вашей карте и контролируйте платежи.","Volg de transacties met uw kaart en houd uw betalingen onder controle.","Kartınızla ilgili işlemleri takip edin ve ödemelerinizin kontrolünü elinizde tutun."],"Suivez vos échéances, visualisez vos paiements et gardez une meilleure maîtrise de vos engagements financiers.":["Track your due dates, view your payments and keep better control of your financial commitments.","Siga sus vencimientos, visualice sus pagos y mantenga un mejor control de sus compromisos financieros.","Segua le sue scadenze, visualizzi i pagamenti e mantenga un maggiore controllo sui suoi impegni finanziari.","Verfolgen Sie Ihre Fälligkeiten, sehen Sie Ihre Zahlungen ein und behalten Sie Ihre finanziellen Verpflichtungen besser im Griff.","Acompanhe as suas prestações, visualize os seus pagamentos e controle melhor os seus compromissos financeiros.","Śledź terminy, podglądaj płatności i lepiej kontroluj swoje zobowiązania finansowe.","Следите за сроками платежей, просматривайте платежи и лучше контролируйте свои финансовые обязательства.","Volg uw vervaldata, bekijk uw betalingen en houd uw financiële verplichtingen beter onder controle.","Vadelerinizi takip edin, ödemelerinizi görüntüleyin ve mali yükümlülüklerinizi daha iyi kontrol edin."],"Suivi":["Tracking","Seguimiento","Monitoraggio","Verfolgung","Acompanhamento","Śledzenie","Контроль","Opvolging","Takip"],"Suivi des échéances":["Due date tracking","Seguimiento de vencimientos","Monitoraggio delle scadenze","Verfolgung der Fälligkeiten","Acompanhamento das prestações","Śledzenie terminów","Контроль сроков","Opvolging van vervaldata","Vade takibi"],"Surveillez votre budget":["Watch your budget","Vigile su presupuesto","Tenga d’occhio il budget","Behalten Sie Ihr Budget im Auge","Vigie o seu orçamento","Pilnuj swojego budżetu","Следите за бюджетом","Houd uw budget in de gaten","Bütçenizi izleyin"],"Sécurité":["Security","Seguridad","Sicurezza","Sicherheit","Segurança","Bezpieczeństwo","Безопасность","Veiligheid","Güvenlik"],"TRANSFERT":["TRANSFER","TRANSFERENCIA","TRASFERIMENTO","ÜBERWEISUNG","TRANSFERÊNCIA","PRZELEW","ПЕРЕВОД","OVERSCHRIJVING","TRANSFER"],"Un aperçu illustratif des étapes d'un calendrier de remboursement.":["An illustrative overview of the stages of a repayment schedule.","Una vista ilustrativa de las etapas de un calendario de reembolso.","Una panoramica illustrativa delle fasi di un piano di rimborso.","Eine anschauliche Übersicht über die Etappen eines Rückzahlungsplans.","Uma visão ilustrativa das etapas de um calendário de reembolso.","Poglądowy przegląd etapów harmonogramu spłat.","Наглядный обзор этапов графика погашения.","Een illustratief overzicht van de stappen in een terugbetalingsschema.","Bir geri ödeme takvimindeki aşamalara dair açıklayıcı bir genel bakış."],"Un remboursement":["A repayment","Un reembolso","Un rimborso","Eine Rückzahlung,","Um reembolso","Spłata,","Погашение,","Een terugbetaling","Takibi"],"Une bonne visibilité sur les échéances aide à organiser son budget et à éviter les mauvaises surprises.":["Good visibility over due dates helps you organize your budget and avoid unpleasant surprises.","Una buena visibilidad de los vencimientos ayuda a organizar el presupuesto y a evitar sorpresas desagradables.","Una buona visibilità sulle scadenze aiuta a organizzare il budget ed evitare brutte sorprese.","Ein guter Überblick über die Fälligkeiten hilft, das Budget zu planen und unangenehme Überraschungen zu vermeiden.","Uma boa visibilidade das prestações ajuda a organizar o orçamento e a evitar más surpresas.","Dobra widoczność terminów pomaga zaplanować budżet i uniknąć niemiłych niespodzianek.","Чёткое представление о сроках платежей помогает планировать бюджет и избегать неприятных сюрпризов.","Een goed overzicht van de vervaldata helpt om uw budget te organiseren en onaangename verrassingen te vermijden.","Vadeleri net görmek, bütçenizi düzenlemenize ve kötü sürprizlerden kaçınmanıza yardımcı olur."],"Une expérience pensée pour consulter vos informations depuis votre smartphone.":["An experience designed for viewing your information from your smartphone.","Una experiencia pensada para consultar su información desde su smartphone.","Un’esperienza pensata per consultare le sue informazioni dallo smartphone.","Ein Erlebnis, das für den Abruf Ihrer Daten auf dem Smartphone gemacht ist.","Uma experiência pensada para consultar as suas informações a partir do smartphone.","Doświadczenie stworzone do przeglądania informacji na smartfonie.","Сервис, созданный для просмотра ваших данных со смартфона.","Een ervaring ontworpen om uw gegevens op uw smartphone te raadplegen.","Bilgilerinize akıllı telefonunuzdan ulaşmak için tasarlanmış bir deneyim."],"Une interface pensée pour un usage sur smartphone.":["An interface designed for use on a smartphone.","Una interfaz pensada para usarse en smartphone.","Un’interfaccia pensata per l’uso su smartphone.","Eine Oberfläche, die für die Nutzung am Smartphone gemacht ist.","Uma interface pensada para utilização no smartphone.","Interfejs stworzony do korzystania ze smartfona.","Интерфейс, созданный для использования на смартфоне.","Een interface ontworpen voor gebruik op een smartphone.","Akıllı telefonda kullanım için tasarlanmış bir arayüz."],"Une présentation simple pour suivre vos engagements.":["A simple layout to follow your commitments.","Una presentación sencilla para seguir sus compromisos.","Una presentazione semplice per seguire i suoi impegni.","Eine einfache Darstellung, um Ihre Verpflichtungen zu verfolgen.","Uma apresentação simples para acompanhar os seus compromissos.","Prosta prezentacja do śledzenia zobowiązań.","Простое представление для контроля ваших обязательств.","Een eenvoudige weergave om uw verplichtingen te volgen.","Yükümlülüklerinizi takip etmek için basit bir sunum."],"Une vision claire de vos paiements.":["A clear view of your payments.","Una visión clara de sus pagos.","Una visione chiara dei suoi pagamenti.","Ein klarer Überblick über Ihre Zahlungen.","Uma visão clara dos seus pagamentos.","Jasny obraz Twoich płatności.","Ясное представление о ваших платежах.","Een helder overzicht van uw betalingen.","Ödemelerinize dair net bir görünüm."],"Une échéance à la fois.":["One payment at a time.","Un vencimiento a la vez.","Una scadenza alla volta.","Eine Fälligkeit nach der anderen.","Uma prestação de cada vez.","Jedna rata naraz.","Один платёж за раз.","Eén vervaldatum tegelijk.","Her seferinde bir vade."],"Utilisez un appareil sécurisé":["Use a secure device","Utilice un dispositivo seguro","Utilizzi un dispositivo sicuro","Verwenden Sie ein sicheres Gerät","Utilize um dispositivo seguro","Korzystaj z bezpiecznego urządzenia","Пользуйтесь защищённым устройством","Gebruik een beveiligd apparaat","Güvenli bir cihaz kullanın"],"Visualisez l'évolution de vos remboursements.":["View the progress of your repayments.","Visualice la evolución de sus reembolsos.","Visualizzi l’andamento dei suoi rimborsi.","Sehen Sie den Verlauf Ihrer Rückzahlungen.","Visualize a evolução dos seus reembolsos.","Podglądaj postępy swoich spłat.","Следите за ходом погашения.","Bekijk de voortgang van uw terugbetalingen.","Geri ödemelerinizin gelişimini görüntüleyin."],"Visualisez les prochaines dates importantes pour mieux anticiper vos paiements.":["View the upcoming important dates to better anticipate your payments.","Visualice las próximas fechas importantes para anticipar mejor sus pagos.","Visualizzi le prossime date importanti per anticipare meglio i pagamenti.","Sehen Sie die nächsten wichtigen Termine, um Ihre Zahlungen besser vorauszuplanen.","Visualize as próximas datas importantes para antecipar melhor os seus pagamentos.","Podejrzyj najbliższe ważne daty, aby lepiej planować płatności.","Просматривайте ближайшие важные даты, чтобы лучше планировать платежи.","Bekijk de komende belangrijke data om uw betalingen beter te anticiperen.","Ödemelerinizi daha iyi planlamak için yaklaşan önemli tarihleri görüntüleyin."],"Visualisez vos":["View your","Visualice sus","Visualizzi le sue","Sehen Sie Ihre","Visualize as suas","Podglądaj swoje","Следите за","Bekijk uw","Vadelerinizi"],"Voici un exemple de présentation de votre progression de remboursement.":["Here is an example of how your repayment progress is presented.","Este es un ejemplo de presentación de su progreso de reembolso.","Ecco un esempio di presentazione dei progressi del suo rimborso.","Hier ein Beispiel für die Darstellung Ihres Rückzahlungsfortschritts.","Eis um exemplo de apresentação do progresso do seu reembolso.","Oto przykład prezentacji postępu Twojej spłaty.","Вот пример отображения хода вашего погашения.","Hier is een voorbeeld van hoe uw terugbetalingsvoortgang wordt weergegeven.","Geri ödeme ilerlemenizin nasıl gösterildiğine dair bir örnek."],"Voir →":["View →","Ver →","Vedi →","Ansehen →","Ver →","Zobacz →","Смотреть →","Bekijken →","Gör →"],"Votre suivi, partout":["Your tracking, wherever","Su seguimiento, allá","Il suo monitoraggio, ovunque","Ihre Verfolgung, überall,","O seu acompanhamento, onde","Twoje śledzenie, gdziekolwiek","Ваш контроль, где бы","Uw opvolging, overal","Takibiniz, nereye"],"Vérifiez régulièrement vos opérations":["Check your transactions regularly","Verifique con regularidad sus operaciones","Verifichi regolarmente le sue operazioni","Prüfen Sie Ihre Vorgänge regelmäßig","Verifique regularmente as suas operações","Regularnie sprawdzaj swoje operacje","Регулярно проверяйте свои операции","Controleer uw transacties regelmatig","İşlemlerinizi düzenli olarak kontrol edin"],"clarté.":["clarity.","claridad.","chiarezza.","Klarheit.","clareza.","przejrzystością.","ясностью.","duidelijkheid.","netlikle yönetin."],"de vos remboursements.":["of your repayments.","de sus reembolsos.","dei suoi rimborsi.","über Ihre Rückzahlungen.","dos seus reembolsos.","nad swoimi spłatami.","своё погашение.","over uw terugbetalingen.","kontrolü sizde olsun."],"en mémoire.":["in mind.","en mente.","le sue date.","im Gedächtnis.","em mente.","w pamięci.","в памяти.","goed.","aklınızda tutun."],"espace bancaire.":["banking area.","espacio bancario.","spazio bancario.","Bankbereich.","espaço bancário.","strefę bankową.","банковский кабинет.","bankomgeving.","koruyun."],"où vous allez.":["you go.","donde vaya.","lei vada.","wohin Sie gehen.","quer que vá.","jesteś.","вы ни были.","waar u ook gaat.","giderseniz yanınızda."],"simple à suivre.":["that’s easy to follow.","fácil de seguir.","facile da seguire.","die leicht nachzuverfolgen ist.","fácil de acompanhar.","którą łatwo śledzić.","которое легко отслеживать.","die eenvoudig te volgen is.","kolay bir geri ödeme."],"vous organiser ?":["better organized?","mejor?","meglio?","besser organisieren?","melhor?","organizacji?","организоваться?","beter organiseren?","olmaya mı ihtiyacınız var?"],"§1 remboursés":["§1 repaid","§1 reembolsados","§1 rimborsati","§1 zurückgezahlt","§1 reembolsados","§1 spłacone","§1 погашено","§1 terugbetaald","§1 geri ödendi"],"§1 restants":["§1 remaining","§1 restantes","§1 rimanenti","§1 verbleibend","§1 restantes","§1 pozostało","§1 осталось","§1 resterend","§1 kaldı"],"§1 — Paiement effectué":["§1 — Payment made","§1 — Pago realizado","§1 — Pagamento effettuato","§1 — Zahlung erfolgt","§1 — Pagamento efetuado","§1 — Płatność zrealizowana","§1 — Платёж выполнен","§1 — Betaling uitgevoerd","§1 — Ödeme yapıldı"],"§1 — Planifiée":["§1 — Scheduled","§1 — Planificado","§1 — Pianificata","§1 — Geplant","§1 — Planeada","§1 — Zaplanowana","§1 — Запланирован","§1 — Gepland","§1 — Planlandı"],"§1 — À venir":["§1 — Upcoming","§1 — Próximo","§1 — In arrivo","§1 — Bevorstehend","§1 — A vencer","§1 — Nadchodząca","§1 — Предстоит","§1 — Binnenkort","§1 — Yaklaşan"],"© 2026 Sorevia Bank — Tous droits réservés.":["© 2026 Sorevia Bank — All rights reserved.","© 2026 Sorevia Bank — Todos los derechos reservados.","© 2026 Sorevia Bank — Tutti i diritti riservati.","© 2026 Sorevia Bank — Alle Rechte vorbehalten.","© 2026 Sorevia Bank — Todos os direitos reservados.","© 2026 Sorevia Bank — Wszelkie prawa zastrzeżone.","© 2026 Sorevia Bank — Все права защищены.","© 2026 Sorevia Bank — Alle rechten voorbehouden.","© 2026 Sorevia Bank — Tüm hakları saklıdır."],"Échéance précédente":["Previous due date","Vencimiento anterior","Scadenza precedente","Vorherige Fälligkeit","Prestação anterior","Poprzedni termin","Предыдущий платёж","Vorige vervaldatum","Önceki vade"],"Échéance suivante":["Following due date","Siguiente vencimiento","Scadenza successiva","Folgende Fälligkeit","Prestação seguinte","Kolejny termin","Следующий платёж","Daaropvolgende vervaldatum","Ardından gelen vade"],"Échéances":["Due dates","Vencimientos","Scadenze","Fälligkeiten","Prestações","Terminy","Сроки","Vervaldata","Vadeler"],"Épargne":["Savings","Ahorro","Risparmio","Sparen","Poupança","Oszczędności","Сбережения","Sparen","Tasarruf"],"échéances.":["due dates.","vencimientos.","scadenze.","Fälligkeiten.","prestações.","terminy.","сроками платежей.","vervaldata.","takip edin."]};
+function pick(){
+  var q=null;try{q=new URLSearchParams(location.search).get("lang");}catch(e){}
+  if(q){q=String(q).toLowerCase().slice(0,2);if(SUP.indexOf(q)>-1)return{l:q,tag:DEF[q]};}
+  var list=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||"en"];
+  for(var i=0;i<list.length;i++){var tag=String(list[i]||"");var p=tag.toLowerCase().slice(0,2);if(SUP.indexOf(p)>-1)return{l:p,tag:tag};}
+  return{l:"en",tag:"en-US"};
+}
+var P=pick(),L=P.l,idx=SUP.indexOf(L)-1,LOC=P.tag;
+try{new Intl.NumberFormat(LOC);}catch(e){LOC=DEF[L];}
+window.LANG=L;window.LOCALE=LOC;
+var AMT=/(\d{1,3}(?:[\s\u00a0\u202f]\d{3})*(?:,\d+)?)[\s\u00a0\u202f]*(€|\$)/g;
+function fmt(num,cur){
+  var v=parseFloat(num.replace(/[\s\u00a0\u202f]/g,"").replace(",","."));var dec=(num.split(",")[1]||"").length;
+  try{return new Intl.NumberFormat(LOC,{style:"currency",currency:cur==="€"?"EUR":"USD",minimumFractionDigits:dec,maximumFractionDigits:dec}).format(v);}
+  catch(e){return num+" "+cur;}
+}
+function tr(src){
+  var a=[];var key=src.replace(AMT,function(m,n,c){a.push([n,c]);return"§"+a.length;});
+  var m=/^(\d+) mois$/.exec(key);if(m&&D["mois"])return m[1]+" "+D["mois"][idx];
+  var t=D[key];
+  if(t===undefined){if(!a.length)return src;t=key;}else{t=t[idx];}
+  return t.replace(/§(\d)/g,function(x,i){var z=a[i-1];return z?fmt(z[0],z[1]):x;});
+}
+window.T=function(s){if(L==="fr")return s;return tr(String(s).replace(/\s+/g," ").trim());};
+if(L==="fr")return;
+document.documentElement.setAttribute("lang",L);
+try{
+  var w=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT,null),n,nodes=[];
+  while((n=w.nextNode()))nodes.push(n);
+  nodes.forEach(function(n){
+    var p=n.parentNode&&n.parentNode.nodeName;if(p==="SCRIPT"||p==="STYLE"||p==="NOSCRIPT")return;
+    var raw=n.nodeValue,src=raw.replace(/\s+/g," ").trim();if(!src)return;
+    var out=tr(src);if(out!==src)n.nodeValue=raw.match(/^\s*/)[0]+out+raw.match(/\s*$/)[0];
+  });
+  ["placeholder","aria-label","title","alt"].forEach(function(at){
+    document.querySelectorAll("["+at+"]").forEach(function(e){var v=e.getAttribute(at).replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)e.setAttribute(at,o);});
+  });
+  var md=document.querySelector('meta[name="description"]');
+  if(md){var v=md.getAttribute("content").replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)md.setAttribute("content",o);}
+}catch(e){if(window.console)console.error("i18n",e);}
+})();
+
+</script>
+<script>
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+}
+});
+},{threshold:.12});
+reveals.forEach(el=>observer.observe(el));
+
+const topBtn=document.getElementById("topBtn");
+window.addEventListener("scroll",()=>{
+if(window.scrollY>450){topBtn.classList.add("visible")}
+else{topBtn.classList.remove("visible")}
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+link.addEventListener("click",function(e){
+const target=document.querySelector(this.getAttribute("href"));
+if(target){
+e.preventDefault();
+target.scrollIntoView({behavior:"smooth"});
+}
+});
+});
+</script>
+
+</body>
+</html>

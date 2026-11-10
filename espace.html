@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#06202f">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sorevia">
+<title>Sorevia Bank — Mon espace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#06202f;--deep:#0a3a52;--brand:#0b7fc4;--sky:#5fd3f0;--paper:#f4f7f9;--card:#fff;--ink:#0f2431;--mute:#67808c;--line:#dde7ec;--ok:#17915f;--okbg:#e6f6ee;--warn:#b97a0a;--warnbg:#fff4d9;--bad:#cf4545;--badbg:#fdeceb;--r:14px}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--paper);color:var(--ink);font:500 15px/1.5 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}.hidden{display:none!important}
+:focus-visible{outline:3px solid #0b7fc455;outline-offset:2px}
+.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+#loadingScreen{position:fixed;inset:0;z-index:900;background:var(--navy);color:#fff;display:grid;place-items:center;padding:24px;text-align:center}
+.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(145deg,#12a5e0,#08507a);display:grid;place-items:center;font-weight:800;font-size:24px;color:#fff;flex:none}
+.spin{width:28px;height:28px;border:3px solid #fff3;border-top-color:var(--sky);border-radius:50%;animation:sp .8s linear infinite;margin:22px auto 0}@keyframes sp{to{transform:rotate(360deg)}}
+.errBox{background:#fff;color:var(--ink);border-radius:18px;padding:26px;max-width:380px}.errBox h3{margin:0 0 8px;font-size:19px}.errBox p{margin:0 0 16px;color:var(--mute);font-size:14px}
+#app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+.side{background:var(--navy);color:#a9c2cd;padding:22px 14px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:6px;overflow:auto;background-image:repeating-radial-gradient(circle at 0 100%,transparent 0 16px,#5fd3f00c 16px 17px)}
+.brand{display:flex;gap:11px;align-items:center;padding:4px 10px 22px;color:#fff;text-decoration:none}.brand b{display:block;font-size:17px;letter-spacing:-.2px}.brand small{font-size:12px;color:#7fa0ae;font-weight:500}
+.nav{display:flex;align-items:center;gap:12px;width:100%;border:0;background:none;color:inherit;padding:11px 12px;border-radius:11px;text-align:left;font-weight:600;font-size:14.5px;position:relative}
+.nav:hover{background:#ffffff0f;color:#fff}.nav.on{background:#ffffff17;color:#fff}.nav.on:before{content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:4px;border-radius:0 4px 4px 0;background:var(--sky)}
+.sep{height:1px;background:#ffffff14;margin:10px 8px}.sp1{flex:1}
+.who{display:flex;gap:11px;align-items:center;padding:12px;border-radius:12px;background:#ffffff0d;color:#fff}.who small{display:block;color:#7fa0ae;font-size:12px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.who b{font-size:14px}
+.av{width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#12a5e0,#08507a);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.main{min-width:0}.top{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:#fffc;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.top h1{margin:0;font-size:19px;letter-spacing:-.2px}.ib{width:42px;height:42px;border:1px solid var(--line);background:#fff;border-radius:12px;display:grid;place-items:center;position:relative;color:#46606c}
+.bdg{position:absolute;top:-6px;right:-6px;min-width:19px;height:19px;border-radius:10px;background:var(--bad);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;padding:0 5px}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 32px 60px}.panel{display:none}.panel.on{display:block}
+.head{margin:0 0 20px}.head h2{margin:0;font-size:26px;letter-spacing:-.5px;line-height:1.2}.head p{margin:5px 0 0;color:var(--mute);font-size:14px;max-width:60ch}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--ok);background:var(--okbg);border-radius:20px;padding:5px 12px}.pill:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.g2{display:grid;grid-template-columns:1.6fr 1fr;gap:16px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.hero{border-radius:20px;padding:26px;color:#fff;position:relative;overflow:hidden;background:linear-gradient(135deg,#06202f,#0a4a6b 70%,#0b7fc4);background-image:repeating-radial-gradient(circle at 100% 0,transparent 0 11px,#ffffff0d 11px 12px),repeating-radial-gradient(circle at 0 100%,transparent 0 17px,#5fd3f012 17px 18px),linear-gradient(135deg,#06202f,#0a4a6b 70%,#0b7fc4)}
+.hero small{color:#a9d3e4;font-size:13px}.big{font-size:40px;font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin:6px 0 22px}
+.acc{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:2px;font-size:15px}.acc button{border:0;background:#ffffff1f;color:#fff;border-radius:8px;width:30px;height:30px;display:grid;place-items:center}
+.hfoot{display:flex;gap:28px;margin-top:20px;padding-top:16px;border-top:1px solid #ffffff22;font-size:13px;color:#a9d3e4}.hfoot b{display:block;color:#fff;font-size:16px}
+.qa{display:flex;flex-direction:column;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 8px;font-weight:700;font-size:13.5px;transition:border-color .15s,transform .15s}
+.qa:hover{border-color:var(--brand);transform:translateY(-2px)}.ico{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#e7f4fb;color:var(--brand)}
+.t-deposit .ico{background:var(--okbg);color:var(--ok)}.t-transfer .ico{background:#e7f4fb;color:var(--brand)}.t-savings .ico{background:var(--warnbg);color:var(--warn)}.t-loan .ico{background:#ecebfb;color:#5a55b8}
+.stat span{display:block;color:var(--mute);font-size:13px}.stat b{font-size:22px;letter-spacing:-.5px}
+.list{display:grid}.tx{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.tx:last-child{border:0}
+.tx b{display:block;font-size:15px}.tx small{display:block;color:var(--mute);font-size:12.5px;line-height:1.45}.amt{text-align:right;font-weight:800;font-size:15px}.amt.in{color:var(--ok)}
+.st{display:inline-block;margin-top:4px;font-size:11.5px;font-weight:700;border-radius:20px;padding:2px 9px}.st.ok{background:var(--okbg);color:var(--ok)}.st.pend{background:var(--warnbg);color:var(--warn)}
+.empty{text-align:center;color:var(--mute);padding:38px 12px}.empty b{display:block;color:var(--ink);margin-bottom:4px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.chip{border:1px solid var(--line);background:#fff;border-radius:20px;padding:7px 15px;font-weight:700;font-size:13.5px;color:#46606c}.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.form{max-width:640px}.note{display:flex;gap:12px;background:#eaf5fb;border-radius:12px;padding:14px;margin-bottom:20px;color:#2c5a73;font-size:13.5px}.note b{display:block;color:var(--ink)}.note .i{color:var(--brand);margin-top:2px}
+.f{margin-bottom:16px}.f label{display:block;font-weight:700;font-size:13.5px;margin-bottom:6px}
+.in,select,textarea{width:100%;height:50px;border:1px solid var(--line);border-radius:12px;padding:0 14px;background:#fff;outline:0}textarea{height:92px;padding:12px 14px;resize:vertical}
+.in:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 4px #0b7fc41f}.in[readonly]{background:#f1f5f7;color:var(--mute)}
+.mn{position:relative}.mn .in{padding-right:64px}.mn span{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-weight:800;font-size:13px;color:var(--brand)}
+.hint{font-size:13px;color:var(--mute);margin-top:6px}.err{font-size:13px;color:var(--bad);font-weight:700;margin-top:6px}
+.btn{height:50px;border-radius:12px;border:0;padding:0 22px;font-weight:700;background:var(--brand);color:#fff;width:100%;transition:background .15s}.btn:hover{background:#096aa6}.btn:disabled{opacity:.6;cursor:wait}
+.btn.ghost{background:#fff;color:#46606c;border:1px solid var(--line)}.btn.ghost:hover{background:#f4f7f9}.btn.sm{width:auto;height:40px;padding:0 16px;font-size:14px}
+.msg{border-radius:12px;padding:14px 16px;margin-top:14px;font-size:14px;background:var(--okbg);color:#145c40;position:relative}.msg b{display:block}.msg button{position:absolute;right:10px;top:8px;border:0;background:none;font-size:20px;color:inherit}
+.warn{background:var(--warnbg);color:#7a5200;border-radius:12px;padding:13px 15px;font-size:13.5px;margin-bottom:16px}
+.bcard{width:100%;max-width:440px;aspect-ratio:1.586;border-radius:20px;padding:24px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;box-shadow:0 24px 50px #06202f33;background-image:repeating-radial-gradient(circle at 100% 0,transparent 0 10px,#ffffff0d 10px 11px),repeating-radial-gradient(circle at 0 100%,transparent 0 15px,#5fd3f014 15px 16px),linear-gradient(135deg,#06202f,#0a4a6b 65%,#0b7fc4)}
+.bcard .tp{display:flex;justify-content:space-between;align-items:center;font-weight:800;letter-spacing:.5px}.mc{display:flex}.mc i{width:28px;height:28px;border-radius:50%;background:#f04b35}.mc i+i{background:#ffca28;margin-left:-11px;opacity:.95}
+.chipc{width:44px;height:33px;border-radius:7px;background:linear-gradient(145deg,#d9c99e,#f6e7b4)}.bn{font-size:clamp(16px,4.4vw,22px);font-weight:700;letter-spacing:2.5px}
+.bb{display:flex;gap:26px}.bb small{display:block;font-size:11px;color:#a9d3e4}.bb b{font-size:14px;letter-spacing:.5px}
+.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.kv div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 15px}.kv span{display:block;color:var(--mute);font-size:12.5px}.kv b{font-size:14.5px;word-break:break-word}
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:640px}.menu button{display:flex;gap:13px;align-items:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:15px;font-weight:700}.menu small{display:block;color:var(--mute);font-weight:500;font-size:12.5px}
+.modal{position:fixed;inset:0;background:#031521cc;display:grid;place-items:center;padding:18px;z-index:700}.mb{background:#fff;border-radius:20px;width:100%;max-width:420px;padding:26px;position:relative}.mb h3{margin:12px 0 6px;font-size:20px}.mb p{margin:0;color:var(--mute);font-size:14px}
+.x{position:absolute;right:14px;top:14px;width:32px;height:32px;border:0;border-radius:50%;background:#eef3f5;font-size:20px}
+.bar{height:8px;background:#e6edf0;border-radius:8px;overflow:hidden;margin:18px 0 6px}.bar div{height:100%;background:linear-gradient(90deg,var(--brand),var(--sky));transition:width .4s}
+.code{height:56px;text-align:center;font-size:24px;letter-spacing:12px;margin:12px 0}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.done{text-align:center}.done .ico{margin:0 auto;background:var(--okbg);color:var(--ok)}
+.pgate{position:fixed;inset:0;background:#031521f2;display:grid;place-items:center;padding:18px;z-index:790}.pgate .mb{text-align:center}.pgate .pic{font-size:44px;line-height:1}.pgate .btn{width:100%;margin-top:14px}.pgate .lnk{background:none;border:0;color:#6b7c85;margin-top:14px;font-size:13px;text-decoration:underline;cursor:pointer}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,160px);opacity:0;visibility:hidden;pointer-events:none;background:var(--navy);color:#fff;padding:12px 18px;border-radius:12px;font-size:14px;z-index:800;transition:transform .3s,opacity .3s,visibility .3s;max-width:90%;text-align:center}.toast.show{transform:translate(-50%,0);opacity:1;visibility:visible}
+.menu a,.f2{display:flex;gap:13px;align-items:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:15px;font-weight:700;color:inherit;text-decoration:none}a.nav{text-decoration:none}.mb p+p{margin-top:10px}
+.lbig{font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1.2;margin:2px 0}.neg{color:var(--bad)}.lstat{font-size:13.5px;color:var(--mute);font-weight:600}.lbl{color:var(--mute);font-size:13px}.bt{margin:0 0 14px;font-size:17px}
+.sim{background:#f4f7f9;border-radius:12px;padding:12px 14px;margin:0 0 16px;font-size:13.5px;text-align:left}.sim div{display:flex;justify-content:space-between;gap:12px;padding:4px 0}.sim span{color:var(--mute)}.sim b{text-align:right}
+.lnk{border:0;background:none;color:var(--brand);font-weight:700;padding:0;text-decoration:underline}.hfoot{flex-wrap:wrap;gap:14px 28px}.btn.pink{background:#e83e8c}.btn.pink:hover{background:#cf2f79}
+.gate{max-width:460px;margin:24px auto;background:#fff;border:1px solid var(--line);border-radius:20px;padding:36px 26px;text-align:center}.gt{font-size:27px;font-weight:800;letter-spacing:.4px;line-height:1.25;margin:0 0 14px}.gs{font-size:12.5px;color:var(--bad);font-weight:600;margin:0 0 24px}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:#eef3f5;border-radius:12px;padding:4px;margin:14px 0 18px}.seg button{border:0;background:none;border-radius:9px;height:44px;font-weight:700;color:#46606c}.seg button.on{background:#fff;color:var(--brand);box-shadow:0 1px 5px #06202f22}
+.tpage{position:fixed;inset:0;z-index:750;background:#f1f3f8;overflow:auto;font-family:Poppins,Manrope,system-ui,sans-serif;color:#111}
+.tphead{background:#0b76d3;color:#fff;font-size:clamp(19px,4.8vw,26px);font-weight:500;padding:clamp(26px,7vw,36px) 5vw}
+.tpbody{max-width:600px;margin:0 auto;padding:clamp(30px,10vw,48px) 3.6vw 40px}
+.tptrack{height:clamp(30px,7.2vw,40px);background:#ebebeb;border-radius:8px;overflow:hidden}.tptrack div{height:100%;width:0;background:#00c853}
+.tpstate{text-align:center;color:#d32f2f;font-weight:700;font-size:clamp(15px,4.2vw,20px);margin:clamp(16px,5vw,24px) 0 clamp(12px,3.5vw,18px)}
+.tppct{text-align:center;color:#d32f2f;font-weight:700;font-size:clamp(20px,5.6vw,26px);margin-bottom:clamp(26px,8vw,40px)}
+.tpcard{background:#fff;border:1px solid #e0e2e8}.tpct{text-align:center;font-weight:700;font-size:clamp(16px,4.3vw,20px);padding:clamp(20px,5.5vw,28px) 10px;border-bottom:1px solid #e0e2e8}
+.tpin{padding:clamp(18px,5vw,26px) clamp(14px,4vw,24px) clamp(18px,5vw,26px);text-align:center}.tpload{font-size:clamp(15px,4vw,19px);margin:0 0 clamp(16px,4.5vw,24px)}
+.tpwarn{background:#fdf6dd;border:1px solid #f1d977;padding:clamp(14px,4vw,26px)}.tpwarn p,#tpDone p{font-size:clamp(14px,3.9vw,18px);line-height:1.75;margin:0 0 clamp(14px,4vw,22px)}
+.tpwarn input{width:100%;height:clamp(48px,12vw,58px);border:1px solid #d5d8de;border-radius:6px;padding:0 16px;font:inherit;font-size:clamp(15px,4vw,18px);background:#fff;margin-bottom:clamp(10px,3vw,16px);outline:0}.tpwarn input:focus{border-color:#0b76d3}
+.tpbtns{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,3vw,16px)}.tpb{height:clamp(46px,11vw,56px);border:0;color:#fff;font:inherit;font-size:clamp(15px,4vw,18px)}.tpb.blue{background:#0b76d3}.tpb.amber{background:#f5b400}
+.mnav{display:none}.foot{color:var(--mute);font-size:12.5px;text-align:center;margin-top:36px}
+@media(max-width:900px){#app{display:block}.side{display:none}.top{padding:0 18px}.wrap{padding:20px 16px 110px}.g2{grid-template-columns:1fr}.g4{grid-template-columns:repeat(2,1fr)}
+.mnav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);z-index:60;padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+.mnav button{border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11.5px;font-weight:700;color:var(--mute);padding:6px 0}.mnav button.on{color:var(--brand)}}
+@media(max-width:560px){.big{font-size:32px}.g3{grid-template-columns:1fr 1fr}.kv{grid-template-columns:1fr 1fr}.menu{grid-template-columns:1fr}.head h2{font-size:23px}.tx{grid-template-columns:40px 1fr}.tx .amt{grid-column:2;text-align:left}.two.stack{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation-duration:.01ms!important}}
+</style>
+<style id="theme">
+:root{--navy:#0a1f44;--deep:#12356b;--brand:#1650b8;--sky:#d4a73f;--gold:#d4a73f;--gold2:#f3d98b;--paper:#eef2f8;--ink:#14243f;--mute:#667896;--line:#dde5f0;--shadow:0 12px 30px -14px #0a1f4440}
+h1,h2,h3,.big,.lbig,.gt,.stat b{font-family:Poppins,Manrope,system-ui,sans-serif}
+.logo{background:linear-gradient(145deg,#f3d98b,#c4932c);color:#0a1f44;box-shadow:0 6px 16px -6px #c4932c99}
+.av{background:linear-gradient(145deg,#1d5fd0,#0a2c6b)}
+.ubar{display:flex;justify-content:space-between;align-items:center;gap:12px;background:linear-gradient(90deg,#071733,#0a1f44);color:#b9c8e3;font-size:12.5px;padding:7px 32px}
+.ubar span{display:inline-flex;gap:7px;align-items:center}.ubar b{color:var(--gold2);font-weight:700}.ubar .i{width:14px;height:14px}
+.side{background:linear-gradient(180deg,#0a1f44 0%,#071733 100%);border-right:3px solid var(--gold)}
+.nav.on{background:#ffffff1a}
+.top{border-bottom:0;box-shadow:0 1px 0 var(--line)}
+.top:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#0a1f44,#1650b8 60%,var(--gold))}
+.top h1{font-weight:600}
+.ib{border-radius:50%}
+.bdg{background:#e5484d;box-shadow:0 0 0 2px #fff}
+.head h2{font-weight:600;position:relative;padding-bottom:12px}
+.head h2:after{content:"";position:absolute;left:0;bottom:0;width:48px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--brand),var(--gold))}
+.head p{margin-top:8px}
+.box{border-radius:16px;border-color:#e3eaf4;box-shadow:var(--shadow)}
+.pill{background:#e3f6ec}
+.hero{border-radius:22px;padding:30px 28px 24px;background:radial-gradient(circle at 92% 0,#ffffff1a,transparent 42%),linear-gradient(135deg,#071733 0%,#0f3a80 62%,#1650b8 100%);box-shadow:0 26px 50px -22px #0a1f4499}
+.hero:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold))}
+.hero:after{content:"";position:absolute;right:-70px;top:-70px;width:250px;height:250px;border-radius:50%;border:36px solid #ffffff0c;pointer-events:none}
+.hero small{color:#b9c8e3;text-transform:uppercase;letter-spacing:1px;font-size:12px;font-weight:700}
+.big{font-weight:700}
+.hfoot{border-top:1px solid #ffffff2a;color:#b9c8e3}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 16px}
+.trust div{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:11px 13px;font-size:12.5px;font-weight:700;color:#34496b}
+.trust .i{color:var(--brand)}
+.qa{border-radius:16px;box-shadow:var(--shadow);border-top:3px solid transparent}
+.qa:hover{border-color:#dde5f0;border-top-color:var(--gold)}
+.ico{background:#e8eefb;color:var(--brand)}
+.note{background:#eef3fc;color:#2b4670;border-left:4px solid var(--brand)}.note .i{color:var(--brand)}
+.warn{border-left:4px solid var(--gold)}
+.btn{background:linear-gradient(180deg,#1b5fd1,#1244a0);box-shadow:0 8px 18px -10px #1650b8}
+.btn:hover{background:linear-gradient(180deg,#1856c0,#0e3a8c)}
+.btn.ghost{background:#fff;box-shadow:none}.btn.ghost:hover{background:#f4f7fc}
+.btn.pink{background:linear-gradient(180deg,#e8508f,#cf2f79)}
+.in:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 4px #1650b822}
+.chip.on,.seg button.on{background:var(--navy);color:#fff}.seg button.on{background:#fff;color:var(--brand)}
+.mn span{color:var(--brand)}
+.tx{border-radius:10px;transition:background .15s}.tx:hover{background:#f6f9fd}
+.bcard{background:radial-gradient(circle at 88% 8%,#ffffff22,transparent 42%),linear-gradient(135deg,#071733,#0f3a80 65%,#1650b8);box-shadow:0 26px 50px -22px #0a1f44aa}
+.bcard:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold))}
+.chipc{background:linear-gradient(145deg,#c9a24b,#f6e3a1)}
+.gate{border-top:6px solid var(--gold);box-shadow:var(--shadow)}
+.mb{border-top:5px solid var(--gold)}
+.foot{border-top:1px solid var(--line);padding-top:16px}
+.mnav{box-shadow:0 -10px 26px -16px #0a1f4455}
+.lrow{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;align-items:start}.lrow>.box{min-width:0}
+@media(max-width:900px){.ubar{padding:7px 18px}.trust{grid-template-columns:1fr}}
+@media(max-width:560px){.ubr{display:none}}
+@media(max-width:700px){.lrow{gap:8px}.lrow>.box{padding:12px}.lrow .bt{font-size:14px;margin-bottom:10px}.lrow .f{margin-bottom:10px}.lrow .f label{font-size:12px}.lrow .in,.lrow select{height:42px;padding:0 9px;font-size:13px}.lrow textarea{height:70px;padding:9px;font-size:13px}.lrow .mn .in{padding-right:40px}.lrow .mn span{font-size:10.5px;right:8px}.lrow .sim{font-size:11.5px;padding:8px}.lrow .sim div{flex-direction:column;gap:0;align-items:flex-start}.lrow .sim b{text-align:left}.lrow .btn{height:44px;font-size:13px;padding:0 8px}.lrow .hint{font-size:11.5px}.lrow .warn{font-size:12px;padding:9px}}
+</style>
+<style id="theme2">
+#dashboard>.row.head{flex-wrap:nowrap;align-items:flex-start;gap:12px}
+#dashboard>.row.head .pill{flex:none;white-space:nowrap;margin-top:4px}
+.lrow>.lcard{padding:0;overflow:hidden}
+.lhead{display:flex;gap:12px;align-items:center;padding:16px 18px;color:#fff;background:linear-gradient(135deg,#0a1f44,#12356b);border-bottom:3px solid var(--gold)}
+.lcard.rep .lhead{background:linear-gradient(135deg,#0b3d33,#17915f)}
+.lico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none;background:linear-gradient(145deg,#f3d98b,#c4932c);color:#0a1f44}
+.lhead h3{margin:0;font-size:16px;color:#fff;font-weight:600}
+.lhead small{display:block;margin-top:2px;font-size:12px;color:#cfdcf2}
+.lbody{padding:18px}
+.lcard .sim{background:#f7f9fd;border:1px solid var(--line);border-radius:12px;padding:4px 14px}
+.lcard .sim div{padding:9px 0;border-bottom:1px dashed #d5deec}.lcard .sim div:last-child{border-bottom:0}
+.lcard.rep .btn{background:linear-gradient(180deg,#1fa36d,#127a50);box-shadow:0 8px 18px -10px #127a50}
+@media(max-width:700px){.lhead{padding:11px 10px;gap:8px}.lico{width:30px;height:30px;border-radius:9px}.lico .i{width:15px;height:15px}.lhead h3{font-size:13px;line-height:1.25}.lhead small{font-size:10.5px}.lbody{padding:10px}.lcard .sim{padding:2px 8px}.lcard .sim div{padding:6px 0}}
+</style>
+<style id="theme4">
+.bandlink{display:flex;align-items:center;gap:16px;width:100%;margin-top:14px;padding:20px 22px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);color:var(--ink);transition:border-color .15s,transform .15s}
+.bandlink:hover{border-color:var(--brand);transform:translateY(-1px)}
+.bico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;flex:none;background:#eef2f8;color:#14243f}
+.bt2 b{display:block;font-family:Poppins,Manrope,sans-serif;font-weight:600;font-size:17px;line-height:1.3}
+.bt2 small{display:block;color:var(--mute);font-size:13px;margin-top:2px;font-weight:500}
+.bandlink .chv{margin-left:auto;color:#8a9ab3}
+.subtop{margin-bottom:14px}
+.back{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:10px;height:38px;padding:0 14px 0 8px;font-weight:700;color:#46606c}
+.back:hover{border-color:var(--brand);color:var(--brand)}
+#dashboard .head p{display:none}
+#dashboard>.row.head{margin-bottom:12px}
+#dashboard .hero{padding:20px 20px 14px}
+#dashboard .big{font-size:32px;margin:4px 0 12px}
+#dashboard .hfoot{margin-top:12px;padding-top:10px;gap:6px 22px}
+#dashboard .hfoot b{font-size:14px}
+#dashboard .g4{grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+#dashboard .qa{padding:14px 4px;gap:7px;font-size:13px}
+@media(max-width:700px){
+.ubar{display:none}.top{height:56px}
+#dashboard .hero{padding:16px 14px 12px;border-radius:18px}
+#dashboard .big{font-size:27px;margin:2px 0 8px}
+#dashboard .acc{font-size:13px;letter-spacing:1.5px}
+#dashboard .hfoot{font-size:11px;gap:4px 14px}#dashboard .hfoot b{font-size:12.5px}
+#dashboard .g4{gap:6px;margin:10px 0}
+#dashboard .qa{padding:10px 2px;font-size:11.5px;border-radius:13px}
+#dashboard .qa .ico{width:36px;height:36px;border-radius:11px}
+.wrap{padding-top:14px}
+.bandlink{padding:16px 14px;gap:12px}.bico{width:40px;height:40px}.bt2 b{font-size:15px}
+}
+</style>
+<script src="i18n.js"></script>
+<style id="pushgate-style">
+/* Fenêtre d'autorisation des notifications */
+#pushGate{background:#000000a6}
+#pushGate .mb{background:#3f4447;border:0;border-radius:6px;max-width:400px;padding:28px 22px 22px;color:#fff;text-align:center;box-shadow:0 20px 50px #0008}
+#pushGate .pbell{width:44px;height:44px;color:#e0a458;display:block;margin:0 auto 14px}
+#pushGate h3{color:#fff;font-size:19px;line-height:1.4;margin:0 0 22px;font-weight:500}
+#pushGate h3 b{font-weight:800}
+#pushGate p,#pushGate li{color:#e8ecee;font-size:14px;line-height:1.5}
+#pushGate .pgbtn{display:block;width:100%;margin:0 0 8px;padding:17px 12px;border:0;border-radius:10px;background:#ffdfc0;color:#1c1c1c;font:inherit;font-weight:600;font-size:15px;letter-spacing:.2px;text-transform:uppercase;cursor:pointer;box-shadow:none}
+#pushGate .pgbtn:active{filter:brightness(.93)}
+#pushGate .pgbtn:disabled{opacity:.6}
+#pushGate .pgbtn.alt{background:transparent;color:#fff;border:1px solid #ffffff55;text-transform:none;font-weight:500}
+#pushGate ol{text-align:left;margin:0 0 16px;padding-left:20px}
+#pushGate li{margin-bottom:8px}
+#pushGate .pgnote{font-size:13px;color:#ffd9b0;margin:0 0 12px}
+#pushGate .pgerr{font-size:13px;color:#ffb4a8;margin:-10px 0 14px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-vault" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5V6M12 18v-2.5"/></symbol>
+<symbol id="i-loan" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0112 0c0 6 2 7 2 8H4c0-1 2-2 2-8zM10 21h4"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></symbol>
+<symbol id="i-out" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-chevr" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+<symbol id="i-chevl" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+</defs></svg>
+
+<div id="loadingScreen"><div>
+<div class="logo" style="margin:auto;width:60px;height:60px;font-size:30px">S</div>
+<h2 style="margin:16px 0 4px">Sorevia Bank</h2><div style="color:#7fa0ae;font-size:14px">Chargement de votre espace…</div><div class="spin"></div>
+</div></div>
+
+<div id="app" class="hidden">
+<aside class="side">
+<a class="brand" href="index.html"><span class="logo">S</span><span><b>Sorevia Bank</b><small>Banque digitale</small></span></a>
+<button class="nav on" data-go="dashboard"><svg class="i"><use href="#i-home"/></svg>Accueil</button>
+<button class="nav" data-go="history"><svg class="i"><use href="#i-list"/></svg>Historique</button>
+<div class="sep"></div>
+<button class="nav" data-go="transfer"><svg class="i"><use href="#i-send"/></svg>Transfert</button>
+<button class="nav" data-go="deposit"><svg class="i"><use href="#i-plus"/></svg>Recharger</button>
+<button class="nav" data-go="savings"><svg class="i"><use href="#i-vault"/></svg>Épargne</button>
+<button class="nav" data-go="loan"><svg class="i"><use href="#i-loan"/></svg>Emprunt</button>
+<button class="nav" data-go="card"><svg class="i"><use href="#i-card"/></svg>Ma carte</button>
+<div class="sep"></div>
+<button class="nav" data-go="profile"><svg class="i"><use href="#i-user"/></svg>Mon profil</button>
+<button class="nav" data-go="settings"><svg class="i"><use href="#i-shield"/></svg>Sécurité</button>
+<a class="nav" href="mailto:soreviabank@gmail.com"><svg class="i"><use href="#i-mail"/></svg>Assistance</a>
+<div class="sp1"></div>
+<div class="who"><span class="av" id="avatar">S</span><span><b id="sideName">Client</b><small id="sideEmail">—</small></span></div>
+<button class="nav" id="logoutBtn"><svg class="i"><use href="#i-out"/></svg>Se déconnecter</button>
+</aside>
+
+<div class="main">
+<div class="ubar"><span><svg class="i"><use href="#i-lock"/></svg><b>Espace personnel sécurisé</b></span><span class="ubr"><svg class="i"><use href="#i-mail"/></svg>Assistance : soreviabank@gmail.com</span></div>
+<header class="top"><h1 id="pageTitle">Accueil</h1>
+<button class="ib" id="notificationBtn" aria-label="Notifications"><svg class="i"><use href="#i-bell"/></svg><span class="bdg hidden" id="notificationCount">0</span></button></header>
+<div class="wrap">
+
+<section id="dashboard" class="panel on">
+<div class="row head"><div><h2>Bonjour, <span id="welcomeName">Client</span></h2><p>Voici la situation de vos comptes.</p></div><span class="pill">Compte actif</span></div>
+<div id="loanAlert" class="warn hidden" style="margin-bottom:16px"></div>
+<div id="pushBanner" class="warn hidden" style="margin-bottom:16px"><b>Alertes sur votre téléphone</b><div id="pushMsg" style="margin-top:4px"></div><div style="margin-top:10px"><button class="btn" id="pushBtn">Activer les notifications</button></div></div>
+<div>
+<div class="hero">
+<small>Solde disponible</small><div class="big" id="balance">0 XOF</div>
+<div class="acc"><span id="accountNumber">0000000000000000</span><button id="copyAcc" aria-label="Copier le numéro de compte"><svg class="i" style="width:16px;height:16px"><use href="#i-copy"/></svg></button></div>
+<div class="hfoot"><span>Épargne<b id="heroSavings">0 XOF</b></span><span>Carte<b id="heroCard">0 XOF</b></span><span>Emprunt<b id="heroLoan">0 XOF</b></span><span>Devise<b id="currencyLabel">XOF</b></span></div>
+</div>
+</div>
+<div class="g4" style="margin:16px 0">
+<button class="qa" data-go="transfer"><span class="ico"><svg class="i"><use href="#i-send"/></svg></span>Transfert</button>
+<button class="qa" data-go="deposit"><span class="ico"><svg class="i"><use href="#i-plus"/></svg></span>Recharger</button>
+<button class="qa" data-go="savings"><span class="ico"><svg class="i"><use href="#i-vault"/></svg></span>Épargne</button>
+<button class="qa" data-go="loan"><span class="ico"><svg class="i"><use href="#i-loan"/></svg></span>Emprunt</button>
+</div>
+<div class="box" id="liveChartBox" style="margin-bottom:16px;padding:22px 18px 16px;position:relative">
+<h3 style="margin:0 0 10px;font-size:22px;font-weight:600;text-transform:uppercase;color:#4a4a4a;letter-spacing:.2px;line-height:1.3">Activité du compte en direct</h3>
+<div id="lcWrap" style="position:relative;width:100%"><svg id="lcSvg" viewBox="0 0 360 290" style="width:100%;height:auto;display:block;pointer-events:none;touch-action:auto;font-family:Poppins,Manrope,sans-serif"></svg>
+<div id="lcTip" style="position:absolute;display:none;pointer-events:none;background:#fff;border-radius:8px;box-shadow:0 4px 18px #0003;padding:9px 13px;font-size:13px;color:#444;white-space:nowrap;z-index:5"></div></div>
+<div style="display:flex;justify-content:center;align-items:center;gap:8px;font-size:14px;color:#555;margin-top:4px"><svg width="26" height="12"><line x1="0" y1="6" x2="26" y2="6" stroke="#29b6f6" stroke-width="3"/><circle cx="13" cy="6" r="5" fill="#29b6f6"/></svg>Solde</div>
+</div>
+<div class="box"><div class="row" style="margin-bottom:4px"><b style="font-size:17px">Dernières opérations</b><button class="btn ghost sm" data-go="history">Tout voir</button></div><div class="list" id="recentList"></div></div>
+</section>
+
+<section id="history" class="panel">
+<div class="head"><h2>Historique</h2><p>Toutes vos opérations, de la plus récente à la plus ancienne.</p></div>
+<div class="chips" id="filters"><button class="chip on" data-f="all">Tout</button><button class="chip" data-f="deposit">Dépôts</button><button class="chip" data-f="transfer">Transferts</button><button class="chip" data-f="savings">Épargne</button><button class="chip" data-f="loan">Emprunts</button><button class="chip" data-f="card">Carte</button></div>
+<div class="box"><div class="list" id="historyList"><div class="empty"><b>Chargement…</b>Récupération de vos opérations.</div></div></div>
+</section>
+
+<section id="deposit" class="panel">
+<div class="head"><h2>Recharger mon compte</h2><p>Envoyez une demande de dépôt. Un conseiller vous contactera pour la suite.</p></div>
+<div class="box form">
+<div class="note"><svg class="i"><use href="#i-shield"/></svg><div><b>Demande sécurisée</b>Elle sera enregistrée dans votre espace et traitée par la banque.</div></div>
+<div class="f"><label>Compte à créditer</label><input class="in" id="depositAccount" readonly></div>
+<div class="f"><label>Montant du dépôt</label><div class="mn"><input class="in" id="depositAmount" type="number" min="1" inputmode="decimal" placeholder="Ex. 50000"><span id="depositCurrency">XOF</span></div></div>
+<button class="btn" id="depositBtn">Envoyer la demande</button>
+</div>
+</section>
+
+<section id="transfer" class="panel">
+<div class="head"><h2>Effectuer un transfert</h2><p>Renseignez le bénéficiaire. Une double validation est demandée avant l'envoi.</p></div>
+<div class="box form">
+<div class="note"><svg class="i"><use href="#i-lock"/></svg><div><b>Validation renforcée</b>Deux codes de sécurité sont nécessaires pour confirmer l'opération.</div></div>
+<div class="f"><label>Montant</label><div class="mn"><input class="in" id="transferAmount" type="number" min="1" inputmode="decimal" placeholder="Ex. 100000"><span id="transferCurrency">XOF</span></div><div id="transferBalanceError" class="err hidden">Solde insuffisant</div></div>
+<div class="f"><label>Nom du bénéficiaire</label><input class="in" id="beneficiaryName" placeholder="Nom complet"></div>
+<div class="f"><label>IBAN du bénéficiaire</label><input class="in" id="beneficiaryIban" placeholder="IBAN" autocomplete="off"></div>
+<div class="f"><label>Code BIC / SWIFT</label><input class="in" id="beneficiaryBic" placeholder="BIC / SWIFT" autocomplete="off"></div>
+<div class="f"><label>Date d'exécution</label><select id="executionDate"><option value="">Sélectionner</option><option value="immediate">Immédiatement</option><option value="tomorrow">Demain</option><option value="2days">Dans 2 jours</option><option value="3days">Dans 3 jours</option><option value="7days">Dans 7 jours</option></select></div>
+<div class="f"><label>Motif du transfert</label><textarea id="transferReason" placeholder="Motif de l'opération"></textarea></div>
+<button class="btn" id="transferBtn">Confirmer le transfert</button>
+</div>
+</section>
+
+<section id="savings" class="panel">
+<div class="head"><h2>Mon épargne</h2><p>Déplacez votre argent entre le compte courant et le coffre d'épargne, dans les deux sens.</p></div>
+<div class="g3" style="grid-template-columns:1fr 1fr;margin-bottom:16px;max-width:640px"><div class="box stat"><span>Compte courant</span><b id="mainSavingsBalance">0 XOF</b></div><div class="box stat"><span>Compte épargne</span><b id="savingsBalance">0 XOF</b></div></div>
+<div id="savingsLockInfo" class="warn hidden" style="max-width:640px"><b>Épargne bloquée</b><div id="savingsLockText"></div></div>
+<button type="button" class="bandlink" data-go="savIn"><span class="bico"><svg class="i"><use href="#i-vault"/></svg></span><span class="bt2"><b>Épargner</b><small>Du compte courant vers l'épargne</small></span><svg class="i chv"><use href="#i-chevr"/></svg></button>
+<button type="button" class="bandlink" data-go="savOut"><span class="bico"><svg class="i"><use href="#i-send"/></svg></span><span class="bt2"><b>Retirer</b><small>De l'épargne vers le compte courant</small></span><svg class="i chv"><use href="#i-chevr"/></svg></button>
+</section>
+
+<section id="loan" class="panel">
+<div class="head"><h2>Emprunt</h2><p>Demandez un financement et suivez son remboursement. Taux appliqué : 0,8333 % par mois.</p></div>
+<div class="box"><span class="lbl">Solde de l'emprunt</span><div class="lbig" id="loanBalanceBig">0 XOF</div><div class="lstat" id="loanStatus">Aucun emprunt en cours.</div>
+<div class="kv" style="margin-top:14px"><div><span>Capital emprunté</span><b id="lnPrincipal">—</b></div><div><span>Durée</span><b id="lnMonths">—</b></div><div><span>Échéance</span><b id="lnDue">—</b></div></div></div>
+<button type="button" class="bandlink" data-go="loanReq"><span class="bico"><svg class="i"><use href="#i-loan"/></svg></span><span class="bt2"><b>Demander un emprunt</b><small>Financement à 0,8333 % par mois</small></span><svg class="i chv"><use href="#i-chevr"/></svg></button>
+<button type="button" class="bandlink" data-go="loanRepay"><span class="bico"><svg class="i"><use href="#i-check"/></svg></span><span class="bt2"><b>Rembourser mon emprunt</b><small>Sans frais de remboursement</small></span><svg class="i chv"><use href="#i-chevr"/></svg></button>
+</section>
+
+<section id="card" class="panel">
+<div id="cardGate" class="gate">
+<h2 class="gt">ACTIVER VOTRE CARTE BANCAIRE</h2>
+<p class="gs">Veuillez contacter votre banque pour recevoir votre code d'activation</p>
+<input class="in code" id="pinInput" type="password" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off" aria-label="Code d'activation à 4 chiffres">
+<div id="pinError" class="err hidden" style="text-align:center">Code erroné</div>
+<div class="two" style="margin-top:20px"><button class="btn pink" id="pinOk">Activer</button><button class="btn" data-go="dashboard">Retour</button></div>
+</div>
+<div id="cardSpace" class="hidden">
+<div class="head"><h2>Ma carte bancaire</h2><p>Consultez votre carte et alimentez son solde depuis votre compte courant.</p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:center">
+<div>
+<div class="bcard"><div class="tp"><span>SOREVIA BANK</span><span class="mc"><i></i><i></i></span></div><div class="chipc"></div><div class="bn" id="cardNumber">•••• •••• •••• ••••</div>
+<div class="bb"><span><small>Titulaire</small><b id="cardHolder">CLIENT</b></span><span><small>Expire</small><b id="cardExpiry">--/--</b></span><span><small>CVV</small><b id="cardCvv">•••</b></span></div></div>
+<div style="margin:16px 0 0"><button class="btn ghost sm" id="toggleCard"><svg class="i" style="vertical-align:-5px;margin-right:8px"><use href="#i-eye"/></svg><span id="toggleCardTxt">Afficher les informations</span></button></div>
+</div>
+<div class="box"><div class="g3" style="grid-template-columns:1fr 1fr;gap:10px"><div class="stat"><span>Compte courant</span><b id="cardMainBal" style="font-size:18px">0 XOF</b></div><div class="stat"><span>Solde de la carte</span><b id="cardBalance" style="font-size:18px">0 XOF</b></div></div></div>
+</div>
+<div class="kv" style="grid-template-columns:1fr 1fr;margin-top:16px"><div><span>Compte lié</span><b id="cardAccount">—</b></div><div><span>Statut</span><b style="color:var(--ok)">Active</b></div></div>
+<button type="button" class="bandlink" data-go="cardLoad"><span class="bico"><svg class="i"><use href="#i-plus"/></svg></span><span class="bt2"><b>Recharger ma carte virtuelle</b><small>Du compte courant vers la carte</small></span><svg class="i chv"><use href="#i-chevr"/></svg></button>
+<button type="button" class="bandlink" data-go="cardSend"><span class="bico"><svg class="i"><use href="#i-send"/></svg></span><span class="bt2"><b>Transférer</b><small>De la carte vers le compte courant</small></span><svg class="i chv"><use href="#i-chevr"/></svg></button>
+</div>
+</section>
+
+<section id="loanReq" class="panel">
+<div class="subtop"><button type="button" class="back" data-go="loan"><svg class="i"><use href="#i-chevl"/></svg>Retour</button></div>
+<div class="head"><h2>Demander un emprunt</h2><p>Taux appliqué : 0,8333 % par mois.</p></div>
+<div class="box form"><div id="loanNotice" class="warn hidden"></div>
+<div class="f"><label>Montant à emprunter</label><div class="mn"><input class="in" id="loanAmount" type="number" min="1" inputmode="decimal" placeholder="Ex. 2000"><span id="loanCurrency">XOF</span></div></div>
+<div class="f"><label>Durée de remboursement</label><select id="loanDuration"></select></div>
+<div id="loanSimBox"></div>
+<div class="f"><label>Motif de l'emprunt</label><textarea id="loanReason" placeholder="Décrivez votre projet"></textarea></div>
+<button class="btn" id="loanBtn">Envoyer ma demande</button></div>
+</section>
+<section id="loanRepay" class="panel">
+<div class="subtop"><button type="button" class="back" data-go="loan"><svg class="i"><use href="#i-chevl"/></svg>Retour</button></div>
+<div class="head"><h2>Rembourser mon emprunt</h2><p>Le remboursement est prélevé sur votre compte courant.</p></div>
+<div class="box form"><div id="repayInfo"></div>
+<div class="f"><label>Montant du remboursement</label><div class="mn"><input class="in" id="repayAmount" type="number" min="1" inputmode="decimal" placeholder="Ex. 500"><span id="repayCurrency">XOF</span></div><div class="hint"><button type="button" class="lnk" id="repayAll">Tout rembourser</button></div></div>
+<button class="btn" id="repayBtn">Rembourser</button>
+<div class="hint" style="margin-top:12px">Le remboursement est prélevé sur votre compte courant, sans frais. Après l'échéance, 0,8333 % du capital s'ajoutent chaque mois tant que l'emprunt n'est pas soldé.</div></div>
+</section>
+<section id="cardLoad" class="panel">
+<div class="subtop"><button type="button" class="back" data-go="card"><svg class="i"><use href="#i-chevl"/></svg>Retour</button></div>
+<div class="head"><h2>Recharger ma carte virtuelle</h2><p>Transférez de l'argent de votre compte courant vers votre carte.</p></div>
+<div class="box form"><div id="cardLoadSlot"><div id="cardForm"><input type="hidden" id="cardOp" value="toCard">
+<div class="f"><label>Montant</label><div class="mn"><input class="in" id="cardAmount" type="number" min="1" inputmode="decimal" placeholder="Ex. 25000"><span id="cardCurrency">XOF</span></div><div class="hint" id="cardAvail"></div><div class="hint" id="cardFee"></div></div>
+<button class="btn" id="cardBtn">Confirmer le transfert</button></div></div></div>
+</section>
+<section id="cardSend" class="panel">
+<div class="subtop"><button type="button" class="back" data-go="card"><svg class="i"><use href="#i-chevl"/></svg>Retour</button></div>
+<div class="head"><h2>Transférer</h2><p>Transférez de l'argent de votre carte vers votre compte courant.</p></div>
+<div class="box form"><div id="cardSendSlot"></div></div>
+</section>
+<section id="savIn" class="panel">
+<div class="subtop"><button type="button" class="back" data-go="savings"><svg class="i"><use href="#i-chevl"/></svg>Retour</button></div>
+<div class="head"><h2>Épargner</h2><p>Du compte courant vers le compte épargne : 0 % de frais.</p></div>
+<div class="box form"><div id="savInSlot"><div id="savForm"><input type="hidden" id="savingsOperation" value="toSavings">
+<div class="f"><label>Montant</label><div class="mn"><input class="in" id="savingsAmount" type="number" min="1" inputmode="decimal" placeholder="Ex. 50000"><span id="savingsCurrency">XOF</span></div><div class="hint" id="savAvail"></div><div class="hint" id="savFee"></div></div>
+<div class="f" id="lockField"><label>Bloquer l'épargne après ce transfert</label><select id="savingsLock"><option value="none">Ne pas bloquer</option><option value="7">7 jours</option><option value="30">30 jours</option><option value="90">90 jours</option><option value="180">180 jours</option><option value="365">1 an</option><option value="730">2 ans</option></select></div>
+<div class="warn"><b>Taux appliqués</b><br>Compte → Épargne : 0 %, aucun frais.<br>Épargne → Compte : 5 % si l'épargne n'est pas bloquée ; si elle a été bloquée 1 an ou plus, 5 % par année de blocage ; si le blocage est inférieur à 1 an, 0 %.<br>Tant que l'épargne est bloquée, tout retrait avant l'échéance est refusé.</div>
+<button class="btn" id="savingsBtn">Confirmer l'opération</button></div></div></div>
+</section>
+<section id="savOut" class="panel">
+<div class="subtop"><button type="button" class="back" data-go="savings"><svg class="i"><use href="#i-chevl"/></svg>Retour</button></div>
+<div class="head"><h2>Retirer</h2><p>De l'épargne vers votre compte courant.</p></div>
+<div class="box form"><div id="savOutSlot"></div></div>
+</section>
+<section id="notifications" class="panel">
+<div class="head"><h2>Notifications</h2><p>Les dernières informations sur votre espace.</p></div>
+<div class="box"><div class="list" id="notificationsList"></div></div>
+</section>
+
+<section id="profile" class="panel">
+<div class="head"><h2>Mon profil</h2><p>Les informations associées à votre espace.</p></div>
+<div class="box row" style="justify-content:flex-start;margin-bottom:14px"><span class="av" id="bigAvatar" style="width:64px;height:64px;font-size:24px">S</span><div><b style="font-size:20px" id="profileFullName">Client</b><div><span class="pill">Compte actif</span></div></div></div>
+<div class="kv">
+<div><span>Nom</span><b id="profileNom">—</b></div><div><span>Prénom</span><b id="profilePrenom">—</b></div><div><span>Date de naissance</span><b id="profileDate">—</b></div>
+<div><span>Nationalité</span><b id="profileNationality">—</b></div><div><span>Sexe</span><b id="profileSexe">—</b></div><div><span>E-mail</span><b id="profileEmail">—</b></div>
+<div><span>Téléphone</span><b id="profilePhone">—</b></div><div><span>Continent</span><b id="profileContinent">—</b></div><div><span>Pays</span><b id="profileCountry">—</b></div>
+<div><span>Ville</span><b id="profileCity">—</b></div><div><span>Adresse</span><b id="profileAddress">—</b></div><div><span>Profession</span><b id="profileProfession">—</b></div>
+<div><span>Revenus</span><b id="profileIncome">—</b></div><div><span>Devise</span><b id="profileCurrency">—</b></div><div><span>Numéro de compte</span><b id="profileAccount">—</b></div>
+</div>
+</section>
+
+<section id="settings" class="panel">
+<div class="head"><h2>Menu et sécurité</h2><p>Accédez à tous vos services et gérez votre session.</p></div>
+<div class="menu">
+<button data-go="profile"><span class="ico"><svg class="i"><use href="#i-user"/></svg></span><span>Mon profil<small>Informations personnelles</small></span></button>
+<button data-go="notifications"><span class="ico"><svg class="i"><use href="#i-bell"/></svg></span><span>Notifications<small>Alertes de votre espace</small></span></button>
+<button id="pushMenuBtn"><span class="ico"><svg class="i"><use href="#i-bell"/></svg></span><span>Alertes sur téléphone<small>Activer les notifications</small></span></button>
+<button data-go="deposit"><span class="ico"><svg class="i"><use href="#i-plus"/></svg></span><span>Recharger<small>Demander un dépôt</small></span></button>
+<button data-go="savings"><span class="ico"><svg class="i"><use href="#i-vault"/></svg></span><span>Épargne<small>Gérer votre coffre</small></span></button>
+<button data-go="loan"><span class="ico"><svg class="i"><use href="#i-loan"/></svg></span><span>Emprunt<small>Demander un financement</small></span></button>
+<a href="mailto:soreviabank@gmail.com"><span class="ico"><svg class="i"><use href="#i-mail"/></svg></span><span>Assistance<small>Écrire à notre équipe</small></span></a>
+<button id="settingsLogout"><span class="ico"><svg class="i"><use href="#i-out"/></svg></span><span>Se déconnecter<small>Fermer la session</small></span></button>
+</div>
+<div class="note" style="margin-top:18px;max-width:640px"><svg class="i"><use href="#i-shield"/></svg><div><b>Conseils de sécurité</b>Ne communiquez jamais vos codes de validation. Sorevia Bank ne vous les demandera jamais par téléphone ou par message.</div></div>
+</section>
+
+<div class="foot">© 2015 Sorevia Bank — Espace personnel sécurisé</div>
+</div></div>
+
+<nav class="mnav">
+<button class="on" data-go="dashboard"><svg class="i"><use href="#i-home"/></svg>Accueil</button>
+<button data-go="history"><svg class="i"><use href="#i-list"/></svg>Historique</button>
+<button data-go="transfer"><svg class="i"><use href="#i-send"/></svg>Transfert</button>
+<button data-go="card"><svg class="i"><use href="#i-card"/></svg>Carte</button>
+<button data-go="settings"><svg class="i"><use href="#i-grid"/></svg>Menu</button>
+</nav>
+
+<div id="transferPage" class="tpage hidden">
+<div class="tphead">Traitement du transfert</div>
+<div class="tpbody">
+<div class="tptrack"><div id="tpBar"></div></div>
+<div class="tpstate" id="tpState">TRANSFERT EN COURS...</div>
+<div class="tppct" id="tpPct">0%</div>
+<div class="tpcard">
+<div class="tpct">SUIVI DU TRANSFERT</div>
+<div class="tpin">
+<p class="tpload" id="tpLoad">Chargement du transfert...</p>
+<div id="tpWait" class="tpwarn">
+<p>Le code d'activation du transfert est manquant pour finaliser votre transaction. Si vous ne possédez pas ce code, veuillez contacter notre équipe technique par WhatsApp ou par e-mail.</p>
+<input id="tpCode" type="password" inputmode="numeric" maxlength="4" placeholder="Code sécurisé" autocomplete="off">
+<div class="tpbtns"><button class="tpb blue" id="tpOk">Valider</button><button class="tpb amber" id="tpCancel">Annuler</button></div>
+</div>
+<div id="tpDone" class="hidden"><p>Votre transfert est en cours de traitement bancaire. Délai : 2 à 4 jours ouvrables.</p><p><b>Statut : en attente</b></p><button class="tpb blue" id="tpBack" style="width:100%">Retour à l'accueil</button></div>
+</div></div></div></div>
+
+<div id="doneModal" class="modal hidden"><div class="mb done">
+<span class="ico"><svg class="i"><use href="#i-shield"/></svg></span><h3 id="doneTitle">Demande envoyée</h3>
+<div id="doneText" style="margin-top:6px;color:var(--mute);font-size:14px"></div>
+<button class="btn" id="doneBack" style="margin-top:22px">Retour</button>
+</div></div>
+<div id="pushGate" class="pgate hidden" role="dialog" aria-modal="true" aria-labelledby="pgTitle"><div class="mb">
+<svg class="pbell" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22a2.4 2.4 0 0 0 2.4-2.4H9.6A2.4 2.4 0 0 0 12 22zm7-6.2V11a7 7 0 0 0-5.2-6.8V3.5a1.8 1.8 0 0 0-3.6 0v.7A7 7 0 0 0 5 11v4.8l-1.7 1.7V19h17.4v-1.5z"/></svg>
+<div id="pgAsk"><h3 id="pgTitle">Autoriser <b>Sorevia Bank</b> à vous envoyer des notifications ?</h3><div id="pgErr" class="pgerr hidden"></div><button class="pgbtn" id="pgYes" type="button">Autoriser</button><button class="pgbtn" id="pgNo" type="button">Ne pas autoriser</button></div>
+<div id="pgGuide" class="hidden"><h3 id="pgGTitle">Notifications bloquées</h3><p id="pgGText" style="margin:-10px 0 14px">Chrome bloque les notifications. Activez-les, puis revenez ici : l'activation se terminera automatiquement.</p>
+<ol><li id="pgS1">Touchez l'icône à gauche de l'adresse du site, puis <b>Autorisations</b> (ou <b>Paramètres du site</b>).</li><li id="pgS2">Choisissez <b>Notifications</b> puis <b>Autoriser</b>.</li><li id="pgS3">Si rien n'apparaît : Réglages Android → Applications → Chrome → Notifications → Activer.</li></ol>
+<div id="pgFallback" class="pgnote hidden">L'ouverture automatique des réglages n'est pas possible sur cet appareil. Suivez les étapes ci-dessus.</div>
+<button class="pgbtn" id="pgSettings" type="button">Ouvrir les réglages</button><button class="pgbtn alt" id="pgCheck" type="button">J'ai terminé, vérifier</button><button class="pgbtn alt" id="pgLater" type="button">Plus tard</button></div>
+</div></div>
+<div id="toast" class="toast"></div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth,onAuthStateChanged,signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore,collection,doc,getDoc,getDocs,setDoc,updateDoc,addDoc,query,where,limit,serverTimestamp,runTransaction,onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { pushStatus,enablePush,refreshPush,disablePush,onForeground,showLocal } from "./push.js";
+
+const firebaseConfig={apiKey:"AIzaSyA_iq7zGnD4100DM06D9sXgMjbCwfqq3JU",authDomain:"sorevia-bank.firebaseapp.com",projectId:"sorevia-bank",storageBucket:"sorevia-bank.firebasestorage.app",messagingSenderId:"729316261396",appId:"1:729316261396:web:bfeebed60e968c65433101",measurementId:"G-HF074LQR8Y"};
+const auth=getAuth(initializeApp(firebaseConfig)),db=getFirestore(auth.app);
+
+let currentUser=null,currentUserData=null,currentAccount="",transferData=null,transferStage=0,txRows=[],filter="all",cardShown=false,notifRows=[];
+const $=id=>document.getElementById(id);
+const set=(id,v)=>{const e=$(id);if(e)e.textContent=v};
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const ic=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
+const money=(v,c="XOF")=>new Intl.NumberFormat("fr-FR",{maximumFractionDigits:0}).format(Number(v)||0)+" "+c;
+const initials=(p="",n="")=>((p.trim().charAt(0)+n.trim().charAt(0))||"C").toUpperCase();
+const rnd=n=>Array.from({length:n},()=>Math.floor(Math.random()*10)).join("");
+const normalizeAccountNumber=n=>{const c=String(n||"").replace(/\D/g,"");return c.length>=16?c.slice(0,16):rnd(16)};
+const formatCardNumber=(n="")=>{let c=String(n).replace(/\D/g,"");if(!c)return"•••• •••• •••• ••••";return c.slice(0,16).padEnd(16,"•").replace(/(.{4})/g,"$1 ").trim()};
+const maskCard=n=>{const c=String(n||"").replace(/\D/g,"");return c?"•••• •••• •••• "+c.slice(-4):"•••• •••• •••• ••••"};
+function generateCardData(){const d=new Date();return{number:rnd(16),cvv:String(100+Math.floor(Math.random()*900)),expiry:String(d.getMonth()+1).padStart(2,"0")+"/"+String(d.getFullYear()+2).slice(-2)}}
+function showToast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(window.tt);window.tt=setTimeout(()=>t.classList.remove("show"),2000)}
+const EX={immediate:"Immédiatement",tomorrow:"Demain","2days":"Dans 2 jours","3days":"Dans 3 jours","7days":"Dans 7 jours"};
+const executionText=c=>EX[c]||"Non définie";
+function dateLabelFromChoice(c){const d=new Date(),n={tomorrow:1,"2days":2,"3days":3,"7days":7}[c]||0;d.setDate(d.getDate()+n);return d.toLocaleDateString("fr-FR")}
+
+/* ---------- Navigation ---------- */
+const PARENT={loanReq:"loan",loanRepay:"loan",cardLoad:"card",cardSend:"card",savIn:"savings",savOut:"savings"},FORMOP={cardLoad:["cardForm","cardOp","toCard"],cardSend:["cardForm","cardOp","toMain"],savIn:["savForm","savingsOperation","toSavings"],savOut:["savForm","savingsOperation","toMain"]};
+const TITLES={loanReq:"Demander un emprunt",loanRepay:"Rembourser mon emprunt",cardLoad:"Recharger ma carte virtuelle",cardSend:"Transférer",savIn:"Épargner",savOut:"Retirer",dashboard:"Accueil",history:"Historique",deposit:"Recharger",transfer:"Transfert",savings:"Épargne",loan:"Emprunt",card:"Ma carte",notifications:"Notifications",profile:"Mon profil",settings:"Menu et sécurité"};
+window.openSection=function(s){
+document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("on",p.id===s));
+document.querySelectorAll(".nav[data-go],.mnav button").forEach(b=>b.classList.toggle("on",b.dataset.go===(PARENT[s]||s)));
+const fo=FORMOP[s];if(fo){$(s+"Slot").appendChild($(fo[0]));$(fo[1]).value=fo[2];refreshAvail()}
+set("pageTitle",TITLES[s]||"");window.scrollTo({top:0,behavior:"smooth"});
+if(s==="notifications")markNotifSeen();
+};
+document.addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g)openSection(g.dataset.go)});
+
+/* ---------- Données utilisateur ---------- */
+async function loadUser(){
+if(!currentUser)throw new Error("Utilisateur non connecté.");
+const ref=doc(db,"users",currentUser.uid),snap=await getDoc(ref);
+if(!snap.exists())throw Object.assign(new Error("Ce compte n'existe plus ou a été supprimé. Pour toute question, contactez l'assistance : soreviabank@gmail.com."),{code:"account-closed"});
+const d=currentUserData=snap.data(),fix={};
+if(d.disabled===true)throw Object.assign(new Error("Votre compte a été désactivé. Pour le réactiver, contactez l'assistance : soreviabank@gmail.com."),{code:"account-closed"});
+if(!d.uid)fix.uid=currentUser.uid;
+if(typeof d.balance!=="number")fix.balance=0;
+if(typeof d.savingsBalance!=="number")fix.savingsBalance=0;
+if(typeof d.cardBalance!=="number")d.cardBalance=0;
+if(typeof d.loanBalance!=="number")d.loanBalance=0;
+if(!d.status)fix.status="Actif";
+if(!d.accountNumber||String(d.accountNumber).replace(/\D/g,"").length!==16)fix.accountNumber=normalizeAccountNumber(d.accountNumber);
+if(!d.card)fix.card=generateCardData();
+for(const k in fix){d[k]=fix[k];try{await updateDoc(ref,{[k]:fix[k]})}catch(e){console.warn("Champ non enregistré :",k,e)}}
+await accrueLoan();currentAccount=d.accountNumber;
+renderUser();
+$("loadingScreen").classList.add("hidden");$("app").classList.remove("hidden");
+loadHistory().catch(e=>console.error("Erreur historique :",e));
+loadNotifications().catch(e=>console.error("Erreur notifications :",e));
+startBeat();
+}
+
+function renderUser(){
+const d=currentUserData||{},name=((d.prenom||"")+" "+(d.nom||"")).trim()||"Client",cur=d.devise||"XOF",bal=Number(d.balance)||0,sav=Number(d.savingsBalance)||0,ini=initials(d.prenom,d.nom),mail=d.email||currentUser?.email||"—";
+set("welcomeName",d.prenom||"Client");set("sideName",name);set("sideEmail",mail);set("profileFullName",name);set("avatar",ini);set("bigAvatar",ini);
+set("accountNumber",d.accountNumber||"0000000000000000");set("profileAccount",d.accountNumber||"—");set("cardAccount",d.accountNumber||"—");
+set("balance",money(bal,cur));set("heroSavings",money(sav,cur));set("currencyLabel",cur);set("dashboardCurrency",cur);
+set("mainSavingsBalance",money(bal,cur));set("savingsBalance",money(sav,cur));set("cardBalance",money(Number(d.cardBalance)||0,cur));set("heroCard",money(Number(d.cardBalance)||0,cur));set("cardMainBal",money(bal,cur));
+["transferCurrency","depositCurrency","savingsCurrency","loanCurrency","cardCurrency","repayCurrency"].forEach(i=>set(i,cur));
+$("depositAccount").value=d.accountNumber||"";
+const m={Nom:d.nom,Prenom:d.prenom,Date:d.dateNaissance,Nationality:d.nationalite,Sexe:d.sexe,Phone:d.telephone,Continent:d.continent,Country:d.pays,City:d.ville,Address:d.adresse,Profession:d.profession};
+for(const k in m)set("profile"+k,m[k]||"—");
+set("profileEmail",mail);set("profileCurrency",d.deviseComplete||cur);set("profileIncome",d.revenus?money(d.revenus,cur):"—");
+set("cardHolder",name.toUpperCase());paintCard();paintCardGate();updateSavingsLockDisplay();refreshAvail();paintLoan();
+}
+
+function paintCard(){
+const c=currentUserData?.card||{};
+set("cardNumber",cardShown?formatCardNumber(c.number):maskCard(c.number));
+set("miniCard",maskCard(c.number));
+set("cardExpiry",c.expiry||"--/--");set("cardCvv",cardShown?(c.cvv||"•••"):"•••");
+set("toggleCardTxt",cardShown?"Masquer les informations":"Afficher les informations");
+}
+$("toggleCard").onclick=()=>{cardShown=!cardShown;paintCard()};
+$("copyAcc").onclick=()=>navigator.clipboard?.writeText(currentAccount).then(()=>showToast("Numéro de compte copié."),()=>showToast("Copie impossible."));
+
+function lockDateOf(){
+const l=currentUserData?.savingsLockedUntil;if(!l)return null;
+const d=l.toDate?l.toDate():(typeof l==="string"?new Date(l):l instanceof Date?l:null);
+return d&&!isNaN(d.getTime())?d:null;
+}
+function updateSavingsLockDisplay(){
+const d=lockDateOf(),box=$("savingsLockInfo");
+if(!d||Date.now()>=d.getTime()){box.classList.add("hidden");return}
+box.classList.remove("hidden");
+set("savingsLockText","Votre épargne est bloquée jusqu'au "+d.toLocaleString("fr-FR")+". Aucun retrait vers le compte courant n'est possible avant cette date.");
+}
+
+/* ---------- Historique ---------- */
+function txHtml(d){
+const T={deposit:["plus","Dépôt"],transfer:["send","Transfert"],savings:["vault","Épargne"],loan:["loan","Demande d'emprunt"],card:["card","Carte"],adjustment:["shield","Ajustement"],repayment:["loan","Remboursement d'emprunt"]},[icon,title]=T[d.type]||["send","Opération"];
+const cur=d.currency||currentUserData?.devise||"XOF",a=Number(d.amount||0),sign=d.type==="deposit"||d.direction==="credit"?"+ ":d.type==="transfer"||d.direction==="debit"?"− ":"";
+const st=d.status||"Enregistré",cls=/attente/i.test(st)?"pend":"ok";
+const date=d.createdAt?.toDate?d.createdAt.toDate().toLocaleString("fr-FR"):"Date indisponible";
+let x="";
+if(d.beneficiaryName)x+=`Bénéficiaire : ${esc(d.beneficiaryName)}<br>`;
+if(d.beneficiaryIban)x+=`IBAN : ${esc(d.beneficiaryIban)}<br>`;
+if(d.executionLabel)x+=`Exécution : ${esc(d.executionLabel)}<br>`;
+if(d.durationMonths)x+=`Durée : ${esc(d.durationMonths)} mois<br>`;
+if(d.fee>0)x+=`Frais : ${esc(money(d.fee,cur))}<br>`;
+if(d.reference)x+=`Réf. : ${esc(d.reference)}<br>`;
+return`<div class="tx t-${esc(d.type)}"><span class="ico">${ic(icon)}</span><div><b>${title}</b><small>${esc(d.description||"Opération enregistrée")}<br>${x}${date}</small></div><div class="amt ${d.type==="deposit"||d.direction==="credit"?"in":""}">${a>0?sign+money(a,cur):"—"}<br><span class="st ${cls}">${esc(st)}</span></div></div>`;
+}
+const emptyHtml=(t,s)=>`<div class="empty"><b>${t}</b>${s}</div>`;
+function renderHistory(){
+const rows=txRows.filter(r=>filter==="all"||r.type===filter||(filter==="loan"&&r.type==="repayment"));
+$("historyList").innerHTML=rows.length?rows.slice(0,50).map(txHtml).join(""):emptyHtml("Aucune opération","Vos opérations apparaîtront ici dès qu'elles seront enregistrées.");
+$("recentList").innerHTML=txRows.length?txRows.slice(0,4).map(txHtml).join(""):emptyHtml("Aucune opération","Faites votre premier dépôt ou transfert depuis l'accueil.");
+paintLoan();
+}
+document.getElementById("filters").addEventListener("click",e=>{
+const b=e.target.closest("[data-f]");if(!b)return;
+filter=b.dataset.f;document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c===b));renderHistory();
+});
+async function loadHistory(){
+if(!currentUser)return;
+try{
+const snap=await getDocs(query(collection(db,"transactions"),where("uid","==",currentUser.uid),limit(100)));
+txRows=[];snap.forEach(i=>{const d=i.data();txRows.push({...d,id:i.id,_t:d.createdAt?.toMillis?d.createdAt.toMillis():0})});
+txRows.sort((a,b)=>b._t-a._t);
+set("operationCount",String(txRows.length));
+set("pendingCount",String(txRows.filter(r=>/attente/i.test(r.status||"")).length));
+renderHistory();
+}catch(e){
+console.error("Erreur historique :",e);
+$("historyList").innerHTML=emptyHtml("Historique indisponible","Impossible de récupérer vos opérations. Réessayez dans un instant.");
+$("recentList").innerHTML="";set("operationCount","0");
+}
+}
+
+function showDone(h,t){set("doneTitle",t||"Demande envoyée");$("doneText").innerHTML=h;$("doneModal").classList.remove("hidden")}
+$("doneBack").onclick=()=>{$("doneModal").classList.add("hidden");openSection("dashboard")};
+/* ---------- Frais, emprunts, notifications détaillées ---------- */
+const RATE=0.1/12,FEE_CARD=0.005,FEE_FREE=0.05,FEE_LOCK=0.05;
+const pct=n=>(Math.round(n*1000000)/10000).toLocaleString("fr-FR",{maximumFractionDigits:4})+" %";
+const mkRef=()=>"SRV-"+Date.now().toString(36).toUpperCase()+Math.floor(Math.random()*1296).toString(36).toUpperCase().padStart(2,"0");
+const nowStr=()=>new Date().toLocaleString("fr-FR");
+const curr=()=>currentUserData?.devise||"XOF";
+function addM(d,k){const x=new Date(d);x.setMonth(x.getMonth()+k);return x}
+function lateMonths(due){let k=0;while(k<600&&addM(due,k+1)<=new Date())k++;return k}
+const dueDateOf=()=>{const t=currentUserData?.loanDueAt;return t?.toDate?t.toDate():null};
+const loanDebt=()=>Math.max(0,-(Number(currentUserData?.loanBalance)||0));
+const loanOverdue=()=>{const d=dueDateOf();return loanDebt()>0&&!!d&&d<=new Date()};
+function blockedMsg(){if(loanOverdue()){showToast("Emprunt échu : remboursez-le pour reprendre vos opérations.");return true}return false}
+const kvLines=p=>p.filter(Boolean).map(([k,v])=>k+" : "+v).join("\n");
+const kvBox=p=>`<div class="sim">${p.filter(Boolean).map(([k,v])=>`<div><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join("")}</div>`;
+const notifyOp=(title,pairs)=>addDoc(collection(db,"notifications"),{uid:currentUser.uid,title,message:kvLines(pairs),read:false,createdAt:serverTimestamp()});
+async function accrueLoan(){
+const d=currentUserData;if(!d||!(d.loanBalance<0)||!d.loanDueAt?.toDate)return;
+if(lateMonths(d.loanDueAt.toDate())<=(d.loanPenaltyCount||0))return;
+let out=null;
+try{out=await runTransaction(db,async tr=>{
+const r=doc(db,"users",currentUser.uid),s=(await tr.get(r)).data(),dn=s.loanPenaltyCount||0;
+if(!(s.loanBalance<0)||!s.loanDueAt?.toDate)return null;
+const nn=lateMonths(s.loanDueAt.toDate());if(nn<=dn)return null;
+const per=Math.round((s.loanPrincipal||0)*RATE);
+tr.update(r,{loanBalance:s.loanBalance-per*(nn-dn),loanPenaltyCount:nn});
+return{per,dn,nn,bal:s.loanBalance,due:s.loanDueAt.toDate()};
+})}catch(e){console.warn("Pénalités :",e);return}
+if(!out)return;
+let b=out.bal;const c=d.devise||"XOF";
+for(let k=out.dn+1;k<=out.nn;k++){b-=out.per;
+try{await notifyOp("Emprunt en retard : pénalité du mois "+k,[["Pénalité n°",String(k)],["Montant ajouté","+ "+money(out.per,c)+" ("+pct(RATE)+" du capital)"],["Nouveau solde de l'emprunt","− "+money(-b,c)],["Échéance initiale",out.due.toLocaleDateString("fr-FR")],["Date",nowStr()]])}catch(e){console.warn(e)}}
+currentUserData=(await getDoc(doc(db,"users",currentUser.uid))).data();
+}
+function paintLoan(){
+const d=currentUserData||{},c=d.devise||"XOF",debt=loanDebt(),due=dueDateOf(),over=loanOverdue(),txt=debt>0?"− "+money(debt,c):money(0,c);
+const big=$("loanBalanceBig");big.textContent=txt;big.classList.toggle("neg",debt>0);
+const h=$("heroLoan");h.textContent=txt;h.style.color=debt>0?"#ff9b9b":"";
+let st="Aucun emprunt en cours.";
+if(debt>0)st=over?"Échéance dépassée depuis le "+due.toLocaleDateString("fr-FR")+" : "+money(Math.round((d.loanPrincipal||0)*RATE),c)+" (0,8333 % du capital) s'ajoutent chaque mois.":"En cours : échéance le "+(due?due.toLocaleDateString("fr-FR"):"—")+".";
+const s=$("loanStatus");s.textContent=st;s.style.color=over?"var(--bad)":"";
+set("lnPrincipal",debt>0?money(d.loanPrincipal,c):"—");set("lnMonths",debt>0&&d.loanMonths?d.loanMonths+" mois":"—");set("lnDue",debt>0&&due?due.toLocaleDateString("fr-FR"):"—");
+$("repayInfo").innerHTML=kvBox([["Reste à rembourser",txt],["Disponible (compte courant)",money(d.balance,c)]]);
+$("repayBtn").disabled=debt<=0;
+const pend=txRows.some(t=>t.type==="loan"&&/attente/i.test(t.status||"")),n=$("loanNotice");
+n.classList.toggle("hidden",!(debt>0||pend));n.textContent=debt>0?"Vous avez un emprunt en cours : remboursez-le avant d'en demander un nouveau.":"Une demande d'emprunt est en cours de traitement.";
+const la=$("loanAlert");la.classList.toggle("hidden",!over);la.textContent=over?"Votre emprunt est échu (solde : − "+money(debt,c)+"). Vos transferts et opérations d'épargne et de carte sont suspendus jusqu'au remboursement. Rendez-vous dans « Emprunt ».":"";
+simulateLoan();
+}
+/* ---------- Dépôt ---------- */
+$("depositBtn").onclick=async function(){
+const b=this,amount=Number($("depositAmount").value);
+if(!amount||amount<=0)return showToast("Veuillez saisir un montant valide.");
+if(!currentUser)return showToast("Votre session a expiré.");
+b.disabled=true;b.textContent="Enregistrement…";
+try{
+const cur=currentUserData.devise||"XOF",requestId=currentUser.uid+"_deposit_"+Date.now();
+await setDoc(doc(db,"depositRequests",requestId),{uid:currentUser.uid,accountNumber:currentAccount,amount,currency:cur,status:"En attente",createdAt:serverTimestamp()});
+const reference=mkRef();
+await addDoc(collection(db,"transactions"),{uid:currentUser.uid,reference,type:"deposit",amount,currency:cur,status:"En attente",description:"Demande de dépôt financier",requestId,createdAt:serverTimestamp()});
+await notifyOp("Demande de dépôt enregistrée",[["Référence",reference],["Opération","Demande de dépôt"],["Montant",money(amount,cur)],["Compte à créditer",currentAccount],["Statut","En attente de traitement"],["Date",nowStr()]]);
+$("depositAmount").value="";showDone("<p>Un expert financier vous contactera pour vous expliquer la suite des démarches.</p><p>Veuillez nous contacter par e-mail dans un délai de 24 h si votre demande n'est pas traitée.</p>");
+await loadHistory();await loadNotifications();showToast("Votre demande de dépôt a été enregistrée.");
+}catch(e){console.error("Erreur dépôt :",e);showToast("Impossible d'enregistrer la demande.")}
+b.disabled=false;b.textContent="Envoyer la demande";
+};
+
+/* ---------- Transfert ---------- */
+function getTransferForm(){
+const c=$("executionDate").value;
+return{amount:Number($("transferAmount").value),iban:$("beneficiaryIban").value.trim(),bic:$("beneficiaryBic").value.trim(),name:$("beneficiaryName").value.trim(),execution:c,executionLabel:executionText(c),executionDate:c?dateLabelFromChoice(c):"",reason:$("transferReason").value.trim()};
+}
+function validateTransferForm(){
+const d=getTransferForm(),bal=Number(currentUserData?.balance)||0;
+$("transferBalanceError").classList.add("hidden");
+if(!d.amount||d.amount<=0)return showToast("Veuillez saisir un montant."),false;
+if(d.amount>bal)return $("transferBalanceError").classList.remove("hidden"),showToast("Solde insuffisant"),false;
+if(!d.name)return showToast("Veuillez renseigner le bénéficiaire."),false;
+if(!d.iban)return showToast("Veuillez renseigner l'IBAN."),false;
+if(!d.bic)return showToast("Veuillez renseigner le code BIC / SWIFT."),false;
+if(!d.execution)return showToast("Veuillez choisir la date d'exécution."),false;
+if(!d.reason)return showToast("Veuillez renseigner le motif."),false;
+return true;
+}
+$("transferAmount").addEventListener("input",function(){$("transferBalanceError").classList.toggle("hidden",!((Number(this.value)||0)>(Number(currentUserData?.balance)||0)))});
+let tpTimer=null,tpPct=0,tpWaiting=false;
+const tpSet=p=>{tpPct=p;$("tpBar").style.width=p+"%";set("tpPct",Math.floor(p)+"%")};
+function tpRun(to,ms,done){clearInterval(tpTimer);const from=tpPct,t0=Date.now();tpTimer=setInterval(()=>{const k=Math.min(1,(Date.now()-t0)/ms);tpSet(from+(to-from)*k);if(k>=1){clearInterval(tpTimer);done&&done()}},150)}
+function tpOpen(){
+tpSet(0);tpWaiting=false;transferStage=1;
+$("tpWait").classList.remove("hidden");$("tpDone").classList.add("hidden");
+set("tpState","TRANSFERT EN COURS...");set("tpLoad","Chargement du transfert...");$("tpState").style.color="";$("tpCode").value="";
+$("transferPage").classList.remove("hidden");document.body.style.overflow="hidden";
+tpRun(40,14000,()=>{tpWaiting=true;$("tpCode").focus()});
+}
+function tpClose(){clearInterval(tpTimer);$("transferPage").classList.add("hidden");document.body.style.overflow="";transferData=null;transferStage=0}
+$("transferBtn").onclick=()=>{if(blockedMsg()||!validateTransferForm())return;transferData=getTransferForm();tpOpen()};
+$("tpCancel").onclick=tpClose;
+$("tpBack").onclick=()=>{tpClose();openSection("dashboard")};
+$("tpCode").addEventListener("input",function(){this.value=this.value.replace(/\D/g,"").slice(0,4)});
+$("tpOk").onclick=()=>{
+if(!tpWaiting)return showToast("Traitement en cours, veuillez patienter.");
+const code=$("tpCode").value.trim();
+if(transferStage===1){
+if(code!=="6166")return showToast("Code incorrect. Veuillez réessayer.");
+tpWaiting=false;transferStage=2;$("tpCode").value="";tpRun(86,11000,()=>{tpWaiting=true;$("tpCode").focus()});return}
+if(code!=="9541"){showToast("Code incorrect. Le transfert est annulé.");return tpClose()}
+tpWaiting=false;$("tpCode").value="";tpRun(100,7000,finalizeTransfer);
+};
+async function finalizeTransfer(){
+if(!transferData||!currentUser)return tpClose();
+const t=transferData,reference=mkRef();
+try{
+await addDoc(collection(db,"transactions"),{uid:currentUser.uid,reference,type:"transfer",amount:t.amount,currency:currentUserData.devise||"XOF",status:"En attente",description:"Transfert bancaire",beneficiaryName:t.name,beneficiaryIban:t.iban,beneficiaryBic:t.bic,executionDate:t.executionDate,executionLabel:t.executionLabel,reason:t.reason,createdAt:serverTimestamp()});
+await notifyOp("Transfert enregistré",[["Référence",reference],["Opération","Transfert bancaire"],["Montant",money(t.amount,curr())],["Bénéficiaire",t.name],["IBAN",t.iban],["BIC / SWIFT",t.bic],["Exécution",t.executionLabel+(t.executionDate?" ("+t.executionDate+")":"")],["Motif",t.reason],["Statut","En attente de traitement"],["Date",nowStr()]]);
+await loadHistory();await loadNotifications();
+["transferAmount","beneficiaryIban","beneficiaryBic","beneficiaryName","executionDate","transferReason"].forEach(i=>$(i).value="");
+$("tpWait").classList.add("hidden");$("tpDone").classList.remove("hidden");
+set("tpState","TRANSFERT TERMINÉ");$("tpState").style.color="#00a152";set("tpLoad","Transfert enregistré");transferData=null;transferStage=0;
+}catch(e){console.error("Erreur transfert :",e);tpClose();showToast("Impossible d'enregistrer le transfert.")}
+}
+
+/* ---------- Épargne ---------- */
+function savFee(a){
+const toMain=$("savingsOperation").value==="toMain",m=Number(currentUserData?.savingsLockMonths)||0;
+if(!toMain)return{fee:0,label:"Frais : 0 % (compte courant → épargne)"};
+if(m>=12){const y=Math.floor(m/12),r=FEE_LOCK*y;return{fee:Math.min(a,Math.round(a*r)),label:"Épargne bloquée "+y+" an"+(y>1?"s":"")+" : "+pct(FEE_LOCK)+" × "+y+" = "+pct(r)}}
+if(m>0)return{fee:0,label:"Épargne bloquée moins d'1 an : 0 %"};
+return{fee:Math.round(a*FEE_FREE),label:"Épargne non bloquée : "+pct(FEE_FREE)};
+}
+function savPreview(){
+const a=Math.round(Number($("savingsAmount").value))||0,f=savFee(a),c=curr(),toMain=$("savingsOperation").value==="toMain";
+set("savFee",f.label+(a>0?" — frais : "+money(f.fee,c)+(toMain?" · montant reçu : "+money(a-f.fee,c):""):""));
+}
+$("savingsAmount").addEventListener("input",savPreview);
+$("savingsBtn").onclick=async function(){
+const b=this,amount=Math.round(Number($("savingsAmount").value)),op=$("savingsOperation").value,days=Number($("savingsLock").value)||0;
+if(blockedMsg())return;
+if(!amount||amount<=0)return showToast("Veuillez saisir un montant valide.");
+const d=currentUserData,main=Number(d.balance)||0,sav=Number(d.savingsBalance)||0,toS=op==="toSavings";
+if(toS&&amount>main)return showToast("Solde insuffisant sur le compte courant.");
+if(!toS){
+const l=lockDateOf();
+if(l&&Date.now()<l.getTime()){showToast("Votre épargne est encore bloquée.");return updateSavingsLockDisplay()}
+if(amount>sav)return showToast("Solde insuffisant sur le compte épargne.");
+}
+const f=savFee(amount),fee=f.fee,net=amount-fee,c=d.devise||"XOF";
+b.disabled=true;b.textContent="Traitement…";
+try{
+const nm=toS?main-amount:main+net,ns=toS?sav+amount:sav-amount;
+let lock=lockDateOf(),months=Number(d.savingsLockMonths)||0;
+if(toS&&days>0){lock=new Date();lock.setDate(lock.getDate()+days);months=Math.max(1,Math.round(days/30.4375))}
+if(!toS){lock=null;months=0}
+await updateDoc(doc(db,"users",currentUser.uid),{balance:nm,savingsBalance:ns,savingsLockedUntil:lock,savingsLockMonths:months});
+Object.assign(d,{balance:nm,savingsBalance:ns,savingsLockedUntil:lock,savingsLockMonths:months});
+const reference=mkRef();
+await addDoc(collection(db,"transactions"),{uid:currentUser.uid,reference,type:"savings",amount,fee,net,currency:c,status:"Effectué",description:toS?"Transfert du compte courant vers l'épargne":"Retrait de l'épargne vers le compte courant",createdAt:serverTimestamp()});
+const pairs=[["Référence",reference],["Opération",toS?"Compte courant → Compte épargne":"Compte épargne → Compte courant"],["Montant débité",money(amount,c)],["Frais",money(fee,c)+" ("+f.label+")"],["Montant crédité",money(toS?amount:net,c)],toS&&days>0?["Épargne bloquée jusqu'au",lock.toLocaleDateString("fr-FR")+" ("+months+" mois)"]:null,["Solde du compte courant",money(nm,c)],["Solde de l'épargne",money(ns,c)],["Date",nowStr()]];
+await notifyOp("Opération d'épargne effectuée",pairs);
+renderUser();await loadHistory();await loadNotifications();
+$("savingsAmount").value="";$("savingsLock").value="none";savPreview();
+showDone(kvBox(pairs),"Opération effectuée");
+}catch(e){console.error("Erreur épargne :",e);showToast("Opération impossible ("+(e.code||"erreur")+").")}
+b.disabled=false;b.textContent="Confirmer l'opération";
+};
+
+/* ---------- Emprunt ---------- */
+for(let i=1;i<=60;i++){const o=document.createElement("option");o.value=i;o.textContent=i+" mois";$("loanDuration").appendChild(o)}
+$("loanDuration").value="3";
+const loanTerms=(a,n)=>{const interest=Math.round(a*RATE*n);return{interest,total:a+interest,due:addM(new Date(),n)}};
+function simulateLoan(){
+const a=Math.round(Number($("loanAmount").value))||0,n=Number($("loanDuration").value)||1,c=curr();
+if(!(a>0)){$("loanSimBox").innerHTML=kvBox([["Intérêts ("+pct(RATE)+" × "+n+" mois)","—"],["Total à rembourser","—"]]);return}
+const t=loanTerms(a,n);
+$("loanSimBox").innerHTML=kvBox([["Capital emprunté",money(a,c)],["Intérêts ("+pct(RATE)+" × "+n+" mois)",money(t.interest,c)],["Total à rembourser","− "+money(t.total,c)],["Échéance",t.due.toLocaleDateString("fr-FR")],["Mensualité indicative",money(t.total/n,c)]]);
+}
+$("loanAmount").addEventListener("input",simulateLoan);$("loanDuration").addEventListener("change",simulateLoan);
+$("loanBtn").onclick=async function(){
+const b=this,amount=Math.round(Number($("loanAmount").value)),dur=Number($("loanDuration").value),reason=$("loanReason").value.trim();
+if(loanDebt()>0)return showToast("Vous avez déjà un emprunt en cours. Remboursez-le avant d'en demander un nouveau.");
+if(txRows.some(t=>t.type==="loan"&&/attente/i.test(t.status||"")))return showToast("Une demande d'emprunt est déjà en cours de traitement.");
+if(!amount||amount<=0)return showToast("Veuillez saisir le montant à emprunter.");
+if(!dur||dur<1||dur>60)return showToast("Veuillez sélectionner une durée entre 1 et 60 mois.");
+if(!reason)return showToast("Veuillez renseigner le motif de l'emprunt.");
+b.disabled=true;b.textContent="Enregistrement…";
+try{
+const c=curr(),t=loanTerms(amount,dur),reference=mkRef();
+await addDoc(collection(db,"loanRequests"),{uid:currentUser.uid,reference,accountNumber:currentAccount,amount,currency:c,durationMonths:dur,interest:t.interest,total:t.total,rate:5,reason,status:"En attente",createdAt:serverTimestamp()});
+await addDoc(collection(db,"transactions"),{uid:currentUser.uid,reference,type:"loan",amount,currency:c,durationMonths:dur,status:"En attente",description:"Demande d'emprunt",createdAt:serverTimestamp()});
+const pairs=[["Référence",reference],["Opération","Demande d'emprunt"],["Capital demandé",money(amount,c)],["Durée",dur+" mois"],["Taux",pct(RATE)+" par mois"],["Intérêts estimés",money(t.interest,c)],["Total à rembourser","− "+money(t.total,c)],["Échéance estimée",t.due.toLocaleDateString("fr-FR")],["Motif",reason],["Statut","En attente d'approbation"],["Date",nowStr()]];
+await notifyOp("Demande d'emprunt enregistrée",pairs);
+$("loanAmount").value="";$("loanReason").value="";$("loanDuration").value="3";
+await loadHistory();await loadNotifications();
+showDone(kvBox(pairs)+"<p style='margin-top:10px'>Elle est en cours de traitement. Vous recevrez une confirmation par e-mail.</p>","Demande envoyée");
+}catch(e){console.error("Erreur emprunt :",e);showToast("Impossible d'envoyer votre demande.")}
+b.disabled=false;b.textContent="Envoyer ma demande";
+};
+$("repayAll").onclick=()=>{const v=Math.min(loanDebt(),Math.floor(Number(currentUserData.balance)||0));$("repayAmount").value=v>0?v:""};
+$("repayBtn").onclick=async function(){
+const b=this,debt=loanDebt(),amount=Math.round(Number($("repayAmount").value)),bal=Number(currentUserData.balance)||0;
+if(debt<=0)return showToast("Aucun emprunt à rembourser.");
+if(!amount||amount<=0)return showToast("Veuillez saisir un montant valide.");
+if(amount>debt)return showToast("Le montant dépasse le solde de l'emprunt.");
+if(amount>bal)return showToast("Solde insuffisant sur le compte courant.");
+b.disabled=true;b.textContent="Traitement…";
+try{
+const c=curr(),nb=bal-amount,nl=debt-amount>0?-(debt-amount):0,reference=mkRef();
+await updateDoc(doc(db,"users",currentUser.uid),{balance:nb,loanBalance:nl});
+Object.assign(currentUserData,{balance:nb,loanBalance:nl});
+await addDoc(collection(db,"transactions"),{uid:currentUser.uid,reference,type:"repayment",direction:"debit",amount,currency:c,status:"Effectué",description:"Remboursement d'emprunt",createdAt:serverTimestamp()});
+const pairs=[["Référence",reference],["Opération","Remboursement d'emprunt"],["Montant remboursé",money(amount,c)],["Frais",money(0,c)],["Solde de l'emprunt",nl<0?"− "+money(-nl,c):money(0,c)+" (soldé)"],["Solde du compte courant",money(nb,c)],["Date",nowStr()]];
+await notifyOp("Remboursement d'emprunt effectué",pairs);
+renderUser();await loadHistory();await loadNotifications();$("repayAmount").value="";
+showDone(kvBox(pairs),"Remboursement effectué");
+}catch(e){console.error("Erreur remboursement :",e);showToast("Remboursement impossible ("+(e.code||"erreur")+").")}
+b.disabled=false;b.textContent="Rembourser";
+};
+
+/* ---------- Notifications ---------- */
+async function loadNotifications(){
+if(!currentUser)return;
+const list=$("notificationsList"),badge=$("notificationCount");
+try{
+const snap=await getDocs(query(collection(db,"notifications"),where("uid","==",currentUser.uid),limit(50)));
+if(snap.empty){notifRows=[];paintBadge();list.innerHTML=emptyHtml("Aucune notification","Vous êtes à jour.");return}
+const rows=[];snap.forEach(i=>{const d=i.data();rows.push({...d,_t:d.createdAt?.toMillis?d.createdAt.toMillis():0})});
+rows.sort((a,b)=>b._t-a._t);
+const seen=seenMs();notifRows=rows;paintBadge();
+list.innerHTML=rows.slice(0,20).map(d=>`<div class="tx" style="grid-template-columns:44px 1fr"><span class="ico">${ic("bell")}</span><div><b>${esc(d.title||"Notification")}</b><small style="white-space:pre-line">${esc(d.message||"")}${d.createdAt?.toDate?"<br>"+d.createdAt.toDate().toLocaleString("fr-FR"):""}</small></div></div>`).join("");
+if($("notifications").classList.contains("on"))markNotifSeen();
+}catch(e){console.error("Erreur notifications :",e);badge.classList.add("hidden")}
+}
+const seenMs=()=>{const t=currentUserData?.notifSeenAt;return t?.toMillis?t.toMillis():(t instanceof Date?t.getTime():0)};
+function paintBadge(){
+const n=notifRows.filter(r=>r._t>seenMs()).length,b=$("notificationCount");
+b.textContent=n>99?"99+":String(n);b.classList.toggle("hidden",n===0);
+}
+async function markNotifSeen(){
+if(!currentUser||!currentUserData)return;
+const mx=notifRows.reduce((m,r)=>Math.max(m,r._t),0);
+if(mx<=seenMs())return;
+currentUserData.notifSeenAt=new Date(mx);paintBadge();
+try{await updateDoc(doc(db,"users",currentUser.uid),{notifSeenAt:serverTimestamp()})}catch(e){console.warn("Notifications lues non enregistrées :",e)}
+}
+/* ---------- Présence en ligne ---------- */
+function beat(){if(!currentUser||document.hidden)return;updateDoc(doc(db,"users",currentUser.uid),{lastSeen:serverTimestamp()}).catch(e=>console.warn("Présence :",e.code||e))}
+function startBeat(){clearInterval(window.hb);beat();window.hb=setInterval(beat,45000)}
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)beat()});
+$("notificationBtn").onclick=()=>openSection("notifications");
+
+/* ---------- Carte ---------- */
+function paintCardGate(){const on=currentUserData?.cardActivated===true;$("cardGate").classList.toggle("hidden",on);$("cardSpace").classList.toggle("hidden",!on)}
+$("pinInput").addEventListener("input",function(){this.value=this.value.replace(/\D/g,"").slice(0,4);$("pinError").classList.add("hidden")});
+$("pinInput").addEventListener("keydown",e=>{if(e.key==="Enter")$("pinOk").click()});
+$("pinOk").onclick=async function(){
+const inp=$("pinInput"),b=this;
+if(inp.value!=="6935"){$("pinError").classList.remove("hidden");inp.value="";return}
+b.disabled=true;
+try{await updateDoc(doc(db,"users",currentUser.uid),{cardActivated:true});currentUserData.cardActivated=true;inp.value="";paintCardGate();showToast("Votre carte est activée.")}
+catch(e){console.error("Erreur activation :",e);showToast("Activation impossible ("+(e.code||"erreur")+").")}
+b.disabled=false;
+};
+function refreshAvail(){
+const c=currentUserData?.devise||"XOF",d=currentUserData||{};
+set("savAvail","Disponible : "+money($("savingsOperation").value==="toSavings"?d.balance:d.savingsBalance,c));
+set("cardAvail","Disponible : "+money($("cardOp").value==="toCard"?d.balance:d.cardBalance,c));
+$("lockField").classList.toggle("hidden",$("savingsOperation").value!=="toSavings");savPreview();cardPreview();
+}
+document.querySelectorAll(".seg").forEach(g=>g.addEventListener("click",e=>{
+const b=e.target.closest("button");if(!b)return;
+g.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));$(g.dataset.t).value=b.dataset.v;refreshAvail();
+}));
+function cardPreview(){
+const a=Math.round(Number($("cardAmount").value))||0,f=Math.round(a*FEE_CARD),c=curr();
+set("cardFee","Frais de "+pct(FEE_CARD)+" sur chaque opération de carte"+(a>0?" — frais : "+money(f,c)+" · montant reçu : "+money(a-f,c):"."));
+}
+$("cardAmount").addEventListener("input",cardPreview);
+$("cardBtn").onclick=async function(){
+if(blockedMsg())return;
+const b=this,amount=Math.round(Number($("cardAmount").value)),toCard=$("cardOp").value==="toCard";
+const d=currentUserData,main=Number(d.balance)||0,card=Number(d.cardBalance)||0,c=d.devise||"XOF";
+if(!amount||amount<=0)return showToast("Veuillez saisir un montant valide.");
+if(amount>(toCard?main:card))return showToast(toCard?"Solde insuffisant sur le compte courant.":"Solde insuffisant sur la carte.");
+const fee=Math.round(amount*FEE_CARD),net=amount-fee;
+b.disabled=true;b.textContent="Traitement…";
+try{
+const nm=toCard?main-amount:main+net,nc=toCard?card+net:card-amount,reference=mkRef();
+await updateDoc(doc(db,"users",currentUser.uid),{balance:nm,cardBalance:nc});
+Object.assign(d,{balance:nm,cardBalance:nc});
+await addDoc(collection(db,"transactions"),{uid:currentUser.uid,reference,type:"card",amount,fee,net,currency:c,status:"Effectué",description:toCard?"Transfert du compte courant vers la carte":"Transfert de la carte vers le compte courant",createdAt:serverTimestamp()});
+const pairs=[["Référence",reference],["Opération",toCard?"Compte courant → Carte":"Carte → Compte courant"],["Montant débité",money(amount,c)],["Frais ("+pct(FEE_CARD)+")",money(fee,c)],["Montant crédité",money(net,c)],["Solde du compte courant",money(nm,c)],["Solde de la carte",money(nc,c)],["Date",nowStr()]];
+await notifyOp("Opération de carte effectuée",pairs);
+renderUser();await loadHistory();await loadNotifications();$("cardAmount").value="";cardPreview();
+showDone(kvBox(pairs),"Transfert effectué avec succès");
+}catch(e){console.error("Erreur carte :",e);showToast("Transfert impossible ("+(e.code||"erreur")+").")}
+b.disabled=false;b.textContent="Confirmer le transfert";
+};
+
+/* ---------- Session ---------- */
+$("logoutBtn").onclick=async function(){
+try{clearInterval(window.hb);try{await updateDoc(doc(db,"users",currentUser.uid),{lastSeen:new Date(0)})}catch(_){}try{await disablePush(auth.app,db,currentUser.uid)}catch(_){}await signOut(auth);window.location.href="connecter.html"}
+catch(e){console.error("Erreur déconnexion :",e);showToast("Impossible de fermer la session.")}
+};
+$("settingsLogout").onclick=$("logoutBtn").onclick;
+
+/* ---------- Notifications push ---------- */
+async function paintPush(){
+const st=await pushStatus(),b=$("pushBanner"),btn=$("pushBtn"),m=$("pushMsg");lastPushStatus=st;btn.textContent=TX("Activer les notifications");
+if(st==="granted"||st==="unsupported"){b.classList.add("hidden");return}
+b.classList.remove("hidden");btn.classList.remove("hidden");
+if(st==="ios-install"){m.textContent=TX("Sur iPhone : touchez Partager, puis « Sur l'écran d'accueil », puis ouvrez Sorevia Bank depuis son icône pour activer les alertes.");btn.classList.add("hidden")}
+else if(st==="denied"){m.textContent=TX("Les notifications sont bloquées. Autorisez-les dans les réglages de votre navigateur pour ce site.");btn.textContent=TX("Voir comment les activer")}
+else m.textContent=TX("Soyez alerté sur votre téléphone à chaque opération ou message, même quand le site est fermé.")
+}
+async function liveRefresh(){
+try{const sn=await getDoc(doc(db,"users",currentUser.uid));if(sn.exists()){currentUserData={...currentUserData,...sn.data()};renderUser()}await loadHistory();await loadNotifications()}catch(e){console.warn("Actualisation :",e)}
+}
+let liveUnsub=null;
+function startLive(uid){
+if(liveUnsub)return;
+let first=true;
+liveUnsub=onSnapshot(query(collection(db,"notifications"),where("uid","==",uid)),snap=>{
+if(first){first=false;return}
+const fresh=snap.docChanges().filter(c=>c.type==="added");
+if(!fresh.length)return;
+fresh.slice(0,3).forEach(c=>{
+const d=c.doc.data(),n=window.__i18n.notif({title:d.title,body:d.message}),body=n.body.slice(0,180);
+showToast(n.title+(body?" — "+body:""));
+showLocal(d.title||"Sorevia Bank",String(d.message||""),"./espace.html","notif-"+c.doc.id);
+});
+liveRefresh();
+},e=>console.warn("Écoute en direct :",e));
+}
+async function onPushClick(){
+const st=await pushStatus();
+if(st==="denied"){openGuide();return}
+if(st==="ios-install"||st==="unsupported"){await paintPush();$("pushBanner").classList.remove("hidden");openSection("dashboard");return}
+const r=await activatePush();
+if(r==="error")showToast(TX("Enregistrement impossible, réessayez."));
+else if(r==="denied")openGuide();
+else if(r!=="granted"&&r!=="busy")showToast(TX("Notifications non autorisées."))
+}
+$("pushBtn").onclick=onPushClick;$("pushMenuBtn").onclick=onPushClick;
+/* Fenêtre d'autorisation + guidage vers les réglages Chrome/Android */
+const IS_ANDROID=/Android/i.test(navigator.userAgent);
+let pushBusy=false,lastPushStatus;
+const PENDING_KEY="pushPending";
+const setPending=v=>{try{v?sessionStorage.setItem(PENDING_KEY,"1"):sessionStorage.removeItem(PENDING_KEY)}catch(_){}};
+const isPending=()=>{try{return sessionStorage.getItem(PENDING_KEY)==="1"}catch(_){return false}};
+/* Textes de la fenêtre : traduits avec le moteur existant (window.__i18n.T), [[x]] = gras */
+const TX=s=>(window.__i18n&&window.__i18n.T)?window.__i18n.T(s):s;
+const GT={pgTitle:"Autoriser [[Sorevia Bank]] à vous envoyer des notifications ?",pgYes:"Autoriser",pgNo:"Ne pas autoriser",pgGTitle:"Notifications bloquées",pgGText:"Chrome bloque les notifications. Activez-les, puis revenez ici : l'activation se terminera automatiquement.",pgS1:"Touchez l'icône à gauche de l'adresse du site, puis [[Autorisations]] (ou [[Paramètres du site]]).",pgS2:"Choisissez [[Notifications]] puis [[Autoriser]].",pgS3:"Si rien n'apparaît : Réglages Android → Applications → Chrome → Notifications → Activer.",pgFallback:"L'ouverture automatique des réglages n'est pas possible sur cet appareil. Suivez les étapes ci-dessus.",pgSettings:"Ouvrir les réglages",pgCheck:"J'ai terminé, vérifier",pgLater:"Plus tard"};
+function paintGateTexts(){
+for(const id in GT){const e=$(id);if(!e)continue;
+const h=TX(GT[id]).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\[\[(.+?)\]\]/g,"<b>$1</b>");
+if(e.__h!==h){e.innerHTML=h;e.__h=h}}
+}
+function gateView(v){
+paintGateTexts();
+$("pgAsk").classList.toggle("hidden",v!=="ask");
+$("pgGuide").classList.toggle("hidden",v!=="guide");
+$("pushGate").classList.remove("hidden")
+}
+function gateError(msg){const e=$("pgErr");e.textContent=msg?TX(msg):"";e.classList.toggle("hidden",!msg)}
+function closePushGate(){try{sessionStorage.setItem("pushAsked","1")}catch(_){}$("pushGate").classList.add("hidden")}
+function openGuide(){
+setPending(true);
+$("pgFallback").classList.add("hidden");
+$("pgSettings").classList.toggle("hidden",!IS_ANDROID);
+gateView("guide")
+}
+/* Enregistre réellement l'appareil ; ne confirme que si l'autorisation est bien accordée */
+async function activatePush(){
+if(pushBusy||!currentUser)return"busy";
+pushBusy=true;let err=null,res="";
+try{res=await enablePush(auth.app,db,currentUser.uid);if(res==="error"||res==="config")err=new Error("push:"+res)}catch(e){err=e;console.warn("Activation notifications :",e)}
+finally{pushBusy=false}
+const st=await pushStatus();lastPushStatus=st;
+if(st==="granted"&&!err&&res==="granted"){
+setPending(false);closePushGate();
+showToast(TX("Notifications activées sur cet appareil."));
+try{showLocal("Sorevia Bank","Les notifications sont activées.","./espace.html","test")}catch(_){}
+await paintPush();return"granted"
+}
+await paintPush();
+return err&&st==="granted"?"error":st
+}
+$("pgYes").onclick=async function(){
+const btn=this;btn.disabled=true;gateError("");
+try{
+if((await pushStatus())==="denied"){openGuide();return}
+const r=await activatePush();
+if(r==="granted"||r==="busy")return;
+if(r==="error"){gateError("L'autorisation est accordée, mais l'enregistrement a échoué. Réessayez.");return}
+openGuide()
+}finally{btn.disabled=false}
+};
+$("pgNo").onclick=closePushGate;
+$("pgLater").onclick=closePushGate;
+$("pgCheck").onclick=async function(){
+const st=await pushStatus();
+if(st==="granted"){await activatePush();return}
+showToast(TX("Les notifications ne sont pas encore autorisées."))
+};
+/* Ouverture des réglages de notifications de Chrome (selon ce qu'Android et Chrome permettent) */
+$("pgSettings").onclick=function(){
+setPending(true);
+let left=false;
+const onHide=()=>{if(document.hidden)left=true};
+document.addEventListener("visibilitychange",onHide);
+try{location.href="intent://settings#Intent;action=android.settings.APP_NOTIFICATION_SETTINGS;S.android.provider.extra.APP_PACKAGE=com.android.chrome;end"}catch(_){}
+setTimeout(()=>{document.removeEventListener("visibilitychange",onHide);if(!left)$("pgFallback").classList.remove("hidden")},1800)
+};
+async function paintPushGate(){
+if(!currentUser)return;
+let seen=false;try{seen=sessionStorage.getItem("pushAsked")==="1"}catch(_){}
+const st=await pushStatus();
+if(seen||(st!=="default"&&st!=="denied")){$("pushGate").classList.add("hidden");return}
+gateError("");gateView("ask")
+}
+/* Détection automatique du retour après activation dans les réglages */
+async function recheckPush(){
+if(!currentUser||pushBusy)return;
+const st=await pushStatus();
+if(st==="granted"&&(isPending()||(lastPushStatus&&lastPushStatus!=="granted")))await activatePush();
+else lastPushStatus=st
+}
+window.addEventListener("focus",recheckPush);
+window.addEventListener("pageshow",recheckPush);
+try{navigator.permissions&&navigator.permissions.query({name:"notifications"}).then(p=>{p.onchange=recheckPush}).catch(()=>{})}catch(_){}
+
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&currentUser&&currentUserData){liveRefresh();recheckPush()}});
+
+onAuthStateChanged(auth,async user=>{
+if(!user){window.location.href="connecter.html";return}
+currentUser=user;
+try{await loadUser();refreshPush(auth.app,db,user.uid).catch(()=>{});paintPush().then(()=>{if(isPending())recheckPush()});paintPushGate();startLive(user.uid);onForeground(auth.app,d=>{showToast((d.title||"Sorevia Bank")+(d.body?" — "+d.body:""));liveRefresh()})}
+catch(e){
+console.error("ERREUR CHARGEMENT ESPACE :",e);
+$("loadingScreen").innerHTML=e.code==="account-closed"?`<div class="errBox"><h3>Accès indisponible</h3><p>${esc(e.message)}</p><button class="btn" id="closedOut">Se déconnecter</button></div>`:`<div class="errBox"><h3>Impossible de charger votre espace</h3><p>Une erreur est survenue pendant la récupération de vos données. Vérifiez votre connexion et réessayez.</p><p style="font-size:12px;color:#8a9ba3;word-break:break-word">Détail : ${esc(e.code||e.message||"inconnu")}</p><button class="btn" onclick="location.reload()">Réessayer</button></div>`;
+if(e.code==="account-closed")$("closedOut").onclick=()=>signOut(auth);
+}
+});
+
+/* ===== Graphique activité du compte ===== */
+(function(){
+const svg=document.getElementById("lcSvg"),tip=document.getElementById("lcTip"),wrap=document.getElementById("lcWrap");if(!svg)return;
+const NS="http://www.w3.org/2000/svg",C="#29b6f6";let sig="",pts=[];
+function series(){
+const bal=Number(currentUserData?.balance)||0,rows=(typeof txRows!=="undefined"?txRows:[]).filter(t=>!/attente/i.test(t.status||"")).slice(0,29);
+const delta=t=>{const a=Number(t.amount)||0;if(t.type==="deposit"||t.direction==="credit")return a;if(t.type==="transfer"||t.type==="repayment"||t.direction==="debit")return -a;return 0};
+let v=[bal],cur=bal;for(const t of rows){cur-=delta(t);v.unshift(cur)}
+if(v.length<2)v=[bal,bal];return v;
+}
+function nice(max,min){const r=Math.max(max-min,1),st=Math.pow(10,Math.floor(Math.log10(r/3))),m=[1,2,2.5,5,10].find(k=>r/(k*st)<=4)||10,step=m*st;const lo=Math.floor(min/step)*step,hi=Math.ceil(max/step)*step;return{lo,hi:hi===lo?lo+step:hi,step}}
+const fmt=n=>Math.abs(n)>=1e6?(n/1e6).toFixed(1).replace(/\.0$/,"")+"M":Math.abs(n)>=1e3?(n/1e3).toFixed(1).replace(/\.0$/,"")+"k":String(Math.round(n));
+function el(n,a,p){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+function draw(){
+const v=series(),ns=JSON.stringify(v)+(currentUserData?.devise||"");if(ns===sig)return;sig=ns;
+svg.innerHTML="";const L=58,R=16,T=14,B=44,W=360,H=290,pw=W-L-R,ph=H-T-B,mn=Math.min(...v),mx=Math.max(...v),{lo,hi,step}=nice(mx,mn);
+const X=i=>L+(v.length===1?pw/2:i*pw/(v.length-1)),Y=x=>T+ph-(x-lo)/(hi-lo)*ph;
+for(let g=lo;g<=hi+step/2;g+=step){const y=Y(g);el("line",{x1:L,x2:W-R,y1:y,y2:y,stroke:"#e3e8ec"});const t=el("text",{x:L-8,y:y+5,"text-anchor":"end","font-size":14,fill:"#555"});t.textContent=fmt(g)}
+el("line",{x1:L,x2:W-R,y1:T+ph,y2:T+ph,stroke:"#333"});
+const n=v.length,every=Math.max(1,Math.ceil(n/5));
+for(let i=0;i<n;i+=every){el("line",{x1:X(i),x2:X(i),y1:T+ph,y2:T+ph+6,stroke:"#333"});const t=el("text",{x:X(i),y:T+ph+24,"text-anchor":"middle","font-size":14,fill:"#555"});t.textContent=i+1}
+const yl=el("text",{transform:`translate(14 ${T+ph/2}) rotate(-90)`,"text-anchor":"middle","font-size":13,fill:"#666"});yl.textContent="Solde ("+(currentUserData?.devise||"XOF")+")";
+const path=el("path",{d:v.map((x,i)=>(i?"L":"M")+X(i)+" "+Y(x)).join(""),fill:"none",stroke:C,"stroke-width":3,"stroke-linejoin":"round","stroke-linecap":"round"});
+const len=path.getTotalLength();path.style.strokeDasharray=len;path.style.strokeDashoffset=len;path.getBoundingClientRect();path.style.transition="stroke-dashoffset .9s ease";path.style.strokeDashoffset=0;
+const halo=el("circle",{r:16,fill:C,opacity:0,"pointer-events":"none"});
+pts=v.map((x,i)=>{const c=el("circle",{cx:X(i),cy:Y(x),r:5,fill:C});c.style.transition="r .15s";return c});
+function show(i){pts.forEach((c,j)=>c.setAttribute("r",j===i?9:5));halo.setAttribute("cx",X(i));halo.setAttribute("cy",Y(v[i]));halo.setAttribute("opacity",.25);
+const cur=currentUserData?.devise||"XOF";tip.innerHTML=`<div style="font-size:13px">${i+1}</div><div><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${C};margin-right:6px"></span>Solde : <b style="color:#222">${Math.round(v[i]).toLocaleString("fr-FR")} ${cur}</b></div>`;
+tip.style.display="block";const r=svg.getBoundingClientRect(),k=r.width/W;let left=X(i)*k-tip.offsetWidth/2;left=Math.max(0,Math.min(r.width-tip.offsetWidth,left));tip.style.left=left+"px";tip.style.top=Math.max(0,Y(v[i])*k-tip.offsetHeight-16)+"px"}
+function move(e){const r=svg.getBoundingClientRect(),cx=(e.touches?e.touches[0].clientX:e.clientX),x=(cx-r.left)*W/r.width;let b=0,d=1e9;for(let i=0;i<n;i++){const dd=Math.abs(X(i)-x);if(dd<d){d=dd;b=i}}show(b)}
+
+}
+draw();setInterval(draw,1500);
+})();
+</script>
+</body>
+</html>

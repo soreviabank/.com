@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#061b28">
+<meta name="description" content="Sorevia Bank - Compte courant">
+<title>Sorevia Bank | Compte courant</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#f5f8fa;color:#102b38;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:root{--blue:#087fc4;--dark:#061b28;--deep:#03131e;--cyan:#72ddf5;--gold:#d5ad5c;--muted:#758990}
+.container{width:calc(100% - 30px);max-width:650px;margin:auto}
+.header{height:74px;background:#fff;border-bottom:1px solid #e4edef;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #0619250c}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:43px;height:43px;border-radius:12px;background:linear-gradient(145deg,#0ba5df,#07527a);color:#fff;display:grid;place-items:center;font:700 25px Georgia;box-shadow:0 8px 20px #087fc42c}
+.logo-text strong{display:block;font:700 18px Georgia;color:#0a2531;line-height:1}
+.logo-text small{display:block;font-size:6px;letter-spacing:3px;color:#8b9da3;margin-top:6px}
+.header-link{font-size:8px;font-weight:800;color:#0879b9;display:flex;align-items:center;gap:6px}
+.hero{min-height:700px;background:linear-gradient(145deg,#03131e 0%,#06384d 55%,#08738d 100%);color:#fff;position:relative;overflow:hidden;padding:45px 0 35px}
+.hero:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:-240px;top:-100px;border:1px solid #ffffff12}
+.hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;left:-190px;bottom:20px;border:1px solid #ffffff0b}
+.hero-content{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff1d;background:#ffffff0a;padding:8px 12px;border-radius:50px;color:#9be8f9;font-size:7px;font-weight:800;letter-spacing:1.3px}
+.hero h1{font:700 37px/1.08 "Playfair Display",Georgia,serif;margin-top:19px}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:9px;line-height:1.9;color:#b8cdd4;margin-top:14px}
+.hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:23px}
+.hero-buttons a{height:46px;border-radius:9px;display:flex;justify-content:center;align-items:center;gap:7px;font-size:8px;font-weight:800}
+.primary{background:#0888d0;color:#fff;box-shadow:0 12px 25px #0003}
+.secondary{background:#fff;color:#0879b9}
+.hero-visual{height:285px;margin-top:28px;border-radius:20px;overflow:hidden;position:relative;background:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:0 25px 50px #0005}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#03131e08,#03131ebd)}
+.account-card{position:absolute;z-index:2;left:14px;right:14px;bottom:14px;background:#ffffff18;border:1px solid #ffffff2b;border-radius:15px;padding:15px;backdrop-filter:blur(12px)}
+.account-card small{font-size:6px;color:#c1d8df;letter-spacing:1px}
+.account-card strong{display:block;font:700 23px Georgia;margin-top:5px}
+.account-card span{font-size:6px;color:#b4c9d0}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}
+.trust{background:#ffffff0b;border:1px solid #ffffff12;border-radius:11px;padding:11px 5px;text-align:center}
+.trust i{color:#70dbf4;font-size:13px;margin-bottom:6px}
+.trust span{display:block;font-size:6px;color:#abc1c9}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-mark">S</div>
+<div class="logo-text">
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</a>
+<a href="index.html" class="header-link"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container hero-content">
+
+<div class="eyebrow"><i class="fa-solid fa-wallet"></i> SOREVIA BANK • COMPTE COURANT</div>
+
+<h1>Votre argent au quotidien, <span>simplement.</span></h1>
+
+<p>Un compte courant pensé pour accompagner vos dépenses, vos revenus, vos virements et vos opérations bancaires du quotidien.</p>
+
+<div class="hero-buttons">
+<a href="#fonctionnalites" class="primary">Découvrir <i class="fa-solid fa-arrow-down"></i></a>
+<a href="inscription.html" class="secondary">Ouvrir un compte <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div class="hero-visual">
+<div class="account-card">
+<small>COMPTE COURANT SOREVIA</small>
+<strong>Votre banque. Votre quotidien.</strong>
+<span>Une expérience bancaire claire, moderne et accessible.</span>
+</div>
+</div>
+
+<div class="trust-row">
+<div class="trust"><i class="fa-solid fa-wallet"></i><span>Gestion</span></div>
+<div class="trust"><i class="fa-solid fa-arrow-right-arrow-left"></i><span>Virements</span></div>
+<div class="trust"><i class="fa-solid fa-credit-card"></i><span>Paiements</span></div>
+</div>
+
+</div>
+</section>
+
+<style>
+.fonctionnalites{background:#fff;padding:58px 0}
+.label{font-size:7px;font-weight:800;letter-spacing:1.7px;color:#087fc4}
+.title{font:700 30px/1.12 "Playfair Display",Georgia,serif;color:#092633;margin-top:7px}
+.title span{color:#087fc4}
+.desc{font-size:8px;line-height:1.9;color:#74878e;margin-top:10px}
+.feature-grid{display:grid;gap:12px;margin-top:25px}
+.feature{background:#fff;border:1px solid #e0e9ec;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px #0619250a}
+.feature-img{height:165px;background-size:cover;background-position:center;position:relative}
+.feature-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2800,#061b28ad)}
+.wallet-img{background-image:url("https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=1000&q=85")}
+.transfer-img{background-image:url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1000&q=85")}
+.payment-img{background-image:url("https://images.unsplash.com/photo-1556742111-a301076d3f8d?auto=format&fit=crop&w=1000&q=85")}
+.withdraw-img{background-image:url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1000&q=85")}
+.feature-tag{position:absolute;z-index:2;left:12px;top:12px;background:#ffffffdf;color:#0879b9;padding:7px 9px;border-radius:30px;font-size:6px;font-weight:800;letter-spacing:1px}
+.feature-body{padding:16px}
+.feature-icon{width:40px;height:40px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:14px;margin-bottom:12px}
+.feature h3{font:700 19px Georgia;color:#15333f}
+.feature p{font-size:7px;line-height:1.8;color:#74878f;margin-top:7px}
+.feature-link{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #edf1f2}
+.feature-link span{font-size:6px;color:#83969d}
+.feature-link a{font-size:7px;font-weight:800;color:#087fc4}
+.info-box{margin-top:25px;background:linear-gradient(145deg,#061b28,#075873);border-radius:19px;padding:19px;color:#fff;position:relative;overflow:hidden}
+.info-box:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-120px;top:-90px;border:1px solid #ffffff12}
+.info-box small{font-size:6px;color:#72ddf5;font-weight:800;letter-spacing:1.5px}
+.info-box h3{font:700 22px Georgia;margin-top:8px;position:relative;z-index:2}
+.info-box p{font-size:7px;line-height:1.8;color:#abc4cc;margin-top:7px;position:relative;z-index:2}
+</style>
+
+<section class="fonctionnalites" id="fonctionnalites">
+<div class="container">
+
+<div class="label">01 • VOTRE COMPTE</div>
+<h2 class="title">Tout votre quotidien bancaire<br><span>au même endroit.</span></h2>
+<p class="desc">Un compte courant vous permet de centraliser vos opérations courantes et de garder une meilleure visibilité sur vos finances.</p>
+
+<div class="feature-grid">
+
+<article class="feature reveal">
+<div class="feature-img wallet-img"><span class="feature-tag">GESTION</span></div>
+<div class="feature-body">
+<div class="feature-icon"><i class="fa-solid fa-wallet"></i></div>
+<h3>Gérez votre argent</h3>
+<p>Suivez vos mouvements, consultez votre solde et gardez une vision claire de vos opérations.</p>
+<div class="feature-link"><span>Gestion quotidienne</span><a href="inscription.html">Ouvrir →</a></div>
+</div>
+</article>
+
+<article class="feature reveal">
+<div class="feature-img transfer-img"><span class="feature-tag">VIREMENTS</span></div>
+<div class="feature-body">
+<div class="feature-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+<h3>Effectuez vos virements</h3>
+<p>Transférez de l'argent selon vos besoins et gérez facilement vos bénéficiaires et opérations.</p>
+<div class="feature-link"><span>Transferts</span><a href="paiement.html">Découvrir →</a></div>
+</div>
+</article>
+
+<article class="feature reveal">
+<div class="feature-img payment-img"><span class="feature-tag">PAIEMENTS</span></div>
+<div class="feature-body">
+<div class="feature-icon"><i class="fa-solid fa-credit-card"></i></div>
+<h3>Payez simplement</h3>
+<p>Utilisez les moyens de paiement associés à votre compte pour vos dépenses du quotidien.</p>
+<div class="feature-link"><span>Carte & paiements</span><a href="bancaire.html">Voir les cartes →</a></div>
+</div>
+</article>
+
+<article class="feature reveal">
+<div class="feature-img withdraw-img"><span class="feature-tag">ACCÈS</span></div>
+<div class="feature-body">
+<div class="feature-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+<h3>Dépôts & retraits</h3>
+<p>Accédez à vos fonds selon les moyens et canaux disponibles dans votre environnement bancaire.</p>
+<div class="feature-link"><span>Accès aux fonds</span><a href="inscription.html">Commencer →</a></div>
+</div>
+</article>
+
+</div>
+
+<div class="info-box reveal">
+<small>SOREVIA DAILY BANKING</small>
+<h3>Un compte conçu autour de vos habitudes.</h3>
+<p>Recevez vos revenus, réglez vos dépenses, effectuez vos virements et gardez le contrôle de vos opérations.</p>
+</div>
+
+</div>
+</section>
+
+<style>
+.operations{background:#f2f7f9;padding:58px 0}
+.operation-list{display:grid;gap:9px;margin-top:24px}
+.operation{background:#fff;border:1px solid #e0e9ec;border-radius:14px;padding:14px;display:flex;gap:11px;align-items:center}
+.operation-icon{width:40px;height:40px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:12px;flex:none}
+.operation strong{display:block;font-size:8px;color:#29444e}
+.operation p{font-size:6px;line-height:1.7;color:#81939a;margin-top:4px}
+.operation-arrow{margin-left:auto;color:#9aabb0;font-size:9px}
+.dashboard{background:#fff;padding:58px 0}
+.account-dashboard{margin-top:23px;background:linear-gradient(145deg,#061b28,#075773);border-radius:19px;color:#fff;padding:19px;position:relative;overflow:hidden;box-shadow:0 20px 40px #06192520}
+.account-dashboard:before{content:"";position:absolute;width:270px;height:270px;border-radius:50%;right:-180px;top:-130px;border:1px solid #ffffff0e}
+.dash-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+.dash-top small{font-size:6px;color:#72ddf5;letter-spacing:1.4px;font-weight:800}
+.status{font-size:6px;background:#ffffff0d;border:1px solid #ffffff12;padding:6px 8px;border-radius:30px;color:#b8d2da}
+.dash-balance{margin-top:23px;position:relative;z-index:2}
+.dash-balance small{font-size:6px;color:#9db7c0}
+.dash-balance strong{display:block;font:700 30px Georgia;margin-top:5px}
+.dash-balance span{font-size:6px;color:#9db7c0}
+.progress-title{display:flex;justify-content:space-between;margin-top:22px;font-size:6px;color:#9db7c0;position:relative;z-index:2}
+.progress{height:7px;background:#ffffff0d;border-radius:20px;margin-top:7px;position:relative;z-index:2;overflow:hidden}
+.progress i{display:block;height:100%;width:72%;background:#72ddf5;border-radius:20px}
+.dash-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:18px;position:relative;z-index:2}
+.dash-action{background:#ffffff0b;border:1px solid #ffffff10;border-radius:10px;padding:11px 4px;text-align:center}
+.dash-action i{color:#72ddf5;font-size:11px}
+.dash-action span{display:block;font-size:6px;color:#b1c8cf;margin-top:6px}
+</style>
+
+<section class="operations">
+<div class="container">
+
+<div class="label">02 • OPÉRATIONS</div>
+<h2 class="title">Les opérations essentielles<br><span>à portée de main.</span></h2>
+<p class="desc">Votre compte courant centralise les opérations dont vous avez besoin pour votre vie financière quotidienne.</p>
+
+<div class="operation-list">
+
+<div class="operation reveal">
+<div class="operation-icon"><i class="fa-solid fa-arrow-down"></i></div>
+<div><strong>Recevoir de l'argent</strong><p>Recevez vos revenus, transferts et autres sommes sur votre compte.</p></div>
+<div class="operation-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+</div>
+
+<div class="operation reveal">
+<div class="operation-icon"><i class="fa-solid fa-arrow-up"></i></div>
+<div><strong>Envoyer de l'argent</strong><p>Effectuez vos virements vers vos bénéficiaires selon vos besoins.</p></div>
+<div class="operation-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+</div>
+
+<div class="operation reveal">
+<div class="operation-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+<div><strong>Régler vos achats</strong><p>Utilisez vos moyens de paiement pour vos dépenses quotidiennes.</p></div>
+<div class="operation-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+</div>
+
+<div class="operation reveal">
+<div class="operation-icon"><i class="fa-solid fa-file-invoice"></i></div>
+<div><strong>Payer vos factures</strong><p>Organisez vos règlements et gardez une trace de vos opérations.</p></div>
+<div class="operation-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+</div>
+
+<div class="operation reveal">
+<div class="operation-icon"><i class="fa-solid fa-chart-line"></i></div>
+<div><strong>Suivre vos finances</strong><p>Consultez vos opérations et surveillez l'évolution de votre compte.</p></div>
+<div class="operation-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="dashboard">
+<div class="container">
+
+<div class="label">03 • ESPACE DIGITAL</div>
+<h2 class="title">Une vision claire de<br><span>votre compte.</span></h2>
+<p class="desc">Un environnement digital imaginé pour rendre vos opérations plus simples à suivre.</p>
+
+<div class="account-dashboard reveal">
+
+<div class="dash-top">
+<small>MON COMPTE COURANT</small>
+<span class="status"><i class="fa-solid fa-circle-check"></i> Disponible</span>
+</div>
+
+<div class="dash-balance">
+<small>SOLDE DISPONIBLE</small>
+<strong>12 480,00 €</strong>
+<span>Exemple de présentation</span>
+</div>
+
+<div class="progress-title">
+<span>Activité mensuelle</span>
+<span>72%</span>
+</div>
+
+<div class="progress"><i></i></div>
+
+<div class="dash-actions">
+<div class="dash-action"><i class="fa-solid fa-arrow-right-arrow-left"></i><span>Virement</span></div>
+<div class="dash-action"><i class="fa-solid fa-credit-card"></i><span>Paiement</span></div>
+<div class="dash-action"><i class="fa-solid fa-file-lines"></i><span>Relevé</span></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.advantages{background:#fff;padding:58px 0}
+.advantage-photo{height:245px;border-radius:19px;background:url("https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1000&q=85") center/cover;position:relative;overflow:hidden;margin-top:22px}
+.advantage-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2805,#061b28b5)}
+.photo-card{position:absolute;z-index:2;left:13px;right:13px;bottom:13px;background:#ffffffed;border-radius:13px;padding:14px}
+.photo-card small{font-size:6px;color:#087fc4;font-weight:800;letter-spacing:1px}
+.photo-card strong{display:block;font:700 20px Georgia;color:#15333f;margin-top:5px}
+.photo-card span{display:block;font-size:6px;color:#71858c;margin-top:4px}
+.advantage-list{display:grid;gap:9px;margin-top:18px}
+.advantage{padding:13px;border:1px solid #e0e9ec;border-radius:12px;display:flex;gap:10px}
+.advantage i{width:34px;height:34px;border-radius:10px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:11px;flex:none}
+.advantage strong{font-size:7px;display:block;color:#29444e}
+.advantage p{font-size:6px;color:#81939a;line-height:1.7;margin-top:4px}
+.security{background:#f3f7f9;padding:58px 0}
+.security-box{margin-top:23px;background:#fff;border:1px solid #e0e9ec;border-radius:19px;padding:18px;box-shadow:0 15px 30px #0619250b}
+.security-head{display:flex;align-items:center;gap:11px}
+.security-head i{width:42px;height:42px;border-radius:12px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center}
+.security-head strong{font:700 18px Georgia;color:#17343f}
+.security-box>p{font-size:7px;line-height:1.8;color:#758990;margin-top:12px}
+.security-list{display:grid;gap:8px;margin-top:16px}
+.security-item{border:1px solid #e6edef;border-radius:10px;padding:11px;display:flex;gap:9px;align-items:center}
+.security-item i{color:#087fc4;font-size:10px;width:20px;text-align:center}
+.security-item span{font-size:7px;color:#526b74;font-weight:600}
+.protection{background:linear-gradient(145deg,#061b28,#075873);color:#fff;padding:58px 0;position:relative;overflow:hidden}
+.protection:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:-220px;top:-130px;border:1px solid #ffffff0b}
+.protection .title{color:#fff}
+.protection .title span{color:#72ddf5}
+.protection .desc{color:#abc1c9}
+.protection-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:22px}
+.protection-item{background:#ffffff0b;border:1px solid #ffffff12;border-radius:12px;padding:13px;position:relative;z-index:2}
+.protection-item i{color:#72ddf5;font-size:13px}
+.protection-item strong{display:block;font-size:7px;margin-top:7px}
+.protection-item p{font-size:6px;color:#9db6bf;line-height:1.6;margin-top:4px}
+</style>
+
+<section class="advantages">
+<div class="container">
+
+<div class="label">04 • LES AVANTAGES</div>
+<h2 class="title">Un compte pensé pour<br><span>vous simplifier la vie.</span></h2>
+<p class="desc">Une expérience bancaire moderne pour mieux organiser votre quotidien.</p>
+
+<div class="advantage-photo reveal">
+<div class="photo-card">
+<small>SOREVIA DAILY</small>
+<strong>Votre quotidien, mieux organisé.</strong>
+<span>Une expérience bancaire conçue pour aller à l'essentiel.</span>
+</div>
+</div>
+
+<div class="advantage-list">
+
+<div class="advantage reveal">
+<i class="fa-solid fa-mobile-screen-button"></i>
+<div><strong>Accessible depuis votre smartphone</strong><p>Consultez votre environnement bancaire depuis votre appareil mobile.</p></div>
+</div>
+
+<div class="advantage reveal">
+<i class="fa-solid fa-clock"></i>
+<div><strong>Disponible quand vous en avez besoin</strong><p>Gardez un accès pratique à vos informations bancaires.</p></div>
+</div>
+
+<div class="advantage reveal">
+<i class="fa-solid fa-list-check"></i>
+<div><strong>Des opérations mieux organisées</strong><p>Retrouvez vos mouvements et opérations avec davantage de clarté.</p></div>
+</div>
+
+<div class="advantage reveal">
+<i class="fa-solid fa-bell"></i>
+<div><strong>Suivi des mouvements</strong><p>Restez attentif aux opérations effectuées sur votre compte.</p></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="security">
+<div class="container">
+
+<div class="label">05 • SÉCURITÉ</div>
+<h2 class="title">Votre compte mérite<br><span>une attention particulière.</span></h2>
+<p class="desc">Quelques bonnes pratiques permettent de renforcer la sécurité de votre environnement bancaire.</p>
+
+<div class="security-box reveal">
+
+<div class="security-head">
+<i class="fa-solid fa-shield-halved"></i>
+<strong>Les bons réflexes</strong>
+</div>
+
+<p>Ne partagez jamais vos identifiants, codes ou informations confidentielles et vérifiez toujours les opérations effectuées.</p>
+
+<div class="security-list">
+<div class="security-item"><i class="fa-solid fa-lock"></i><span>Gardez vos identifiants confidentiels</span></div>
+<div class="security-item"><i class="fa-solid fa-mobile-screen"></i><span>Protégez votre téléphone</span></div>
+<div class="security-item"><i class="fa-solid fa-triangle-exclamation"></i><span>Signalez toute opération inhabituelle</span></div>
+<div class="security-item"><i class="fa-solid fa-globe"></i><span>Utilisez uniquement les canaux officiels</span></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="protection">
+<div class="container">
+
+<div class="label" style="color:#72ddf5">06 • SOREVIA BANK</div>
+<h2 class="title">Plus qu'un compte,<br><span>un point de départ.</span></h2>
+<p class="desc">Votre compte courant peut vous donner accès à différents services bancaires selon votre profil et les offres disponibles.</p>
+
+<div class="protection-grid">
+
+<div class="protection-item reveal">
+<i class="fa-solid fa-credit-card"></i>
+<strong>Cartes bancaires</strong>
+<p>Découvrez les cartes adaptées à vos besoins.</p>
+</div>
+
+<div class="protection-item reveal">
+<i class="fa-solid fa-money-bill-transfer"></i>
+<strong>Paiements</strong>
+<p>Gérez vos transferts et opérations.</p>
+</div>
+
+<div class="protection-item reveal">
+<i class="fa-solid fa-piggy-bank"></i>
+<strong>Épargne</strong>
+<p>Explorez les solutions pour vos projets.</p>
+</div>
+
+<div class="protection-item reveal">
+<i class="fa-solid fa-shield-heart"></i>
+<strong>Assurances</strong>
+<p>Protégez ce qui compte pour vous.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.final-cta{background:#fff;padding:60px 0;text-align:center}
+.final-icon{width:58px;height:58px;border-radius:16px;background:#e8f6fa;color:#087fc4;display:grid;place-items:center;margin:0 auto 15px;font-size:20px}
+.final-cta .title{font-size:30px}
+.final-cta p{font-size:8px;line-height:1.9;color:#758991;margin:11px auto 20px;max-width:500px}
+.final-cta a{display:flex;justify-content:center;align-items:center;gap:7px;background:#087fc4;color:#fff;border-radius:10px;padding:14px;font-size:8px;font-weight:800;max-width:500px;margin:auto;box-shadow:0 12px 25px #087fc42e}
+.footer{background:#03131e;color:#fff;padding:40px 0 18px}
+.footer-logo{display:flex;align-items:center;gap:9px}
+.footer-logo .logo-mark{box-shadow:none}
+.footer-logo strong{display:block;font:700 17px Georgia}
+.footer-logo small{display:block;font-size:6px;letter-spacing:2px;color:#6e8790;margin-top:5px}
+.footer-description{font-size:7px;line-height:1.8;color:#6e8790;margin:15px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;border-top:1px solid #ffffff0d;padding-top:20px}
+.footer-col h4{font:700 14px Georgia;margin-bottom:11px}
+.footer-col a{display:block;font-size:7px;color:#82989f;margin:8px 0}
+.footer-bottom{border-top:1px solid #ffffff0d;margin-top:22px;padding-top:14px;text-align:center;font-size:6px;color:#506972;line-height:1.8}
+.floating{position:fixed;bottom:17px;right:15px;width:45px;height:45px;border-radius:50%;background:#087fc4;color:#fff;display:grid;place-items:center;box-shadow:0 8px 25px #0004;z-index:500;font-size:13px;opacity:0;pointer-events:none;transition:.3s}
+.floating.visible{opacity:1;pointer-events:auto}
+@media(min-width:500px){
+.feature-grid{grid-template-columns:1fr 1fr}
+.feature:last-child{grid-column:1/-1}
+}
+</style>
+
+<section class="final-cta">
+<div class="container">
+
+<div class="final-icon"><i class="fa-solid fa-wallet"></i></div>
+
+<div class="label">07 • OUVERTURE</div>
+
+<h2 class="title">Votre compte courant<br><span>commence ici.</span></h2>
+
+<p>Rejoignez Sorevia Bank et découvrez une expérience bancaire pensée pour votre quotidien.</p>
+
+<a href="inscription.html">Ouvrir mon compte <i class="fa-solid fa-arrow-right"></i></a>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+
+<div class="footer-logo">
+<div class="logo-mark">S</div>
+<div>
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</div>
+
+<p class="footer-description">Des solutions bancaires digitales pensées pour accompagner votre quotidien, vos projets et vos ambitions.</p>
+
+<div class="footer-grid">
+
+<div class="footer-col">
+<h4>Compte</h4>
+<a href="#fonctionnalites">Fonctionnalités</a>
+<a href="#fonctionnalites">Gestion du compte</a>
+<a href="#fonctionnalites">Paiements</a>
+<a href="#fonctionnalites">Virements</a>
+<a href="inscription.html">Ouverture</a>
+</div>
+
+<div class="footer-col">
+<h4>Sorevia</h4>
+<a href="index.html">Accueil</a>
+<a href="bancaire.html">Cartes bancaires</a>
+<a href="paiement.html">Paiements</a>
+<a href="assurance.html">Assurances</a>
+<a href="entreprise.html">Entreprises</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Sorevia Bank — Tous droits réservés.<br>
+Les informations présentées sont indicatives et les conditions applicables dépendent du produit choisi.
+</div>
+
+</div>
+</footer>
+
+<a href="#" class="floating" id="topBtn">
+<i class="fa-solid fa-arrow-up"></i>
+</a>
+
+</main>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+}
+});
+},{threshold:.12});
+
+reveals.forEach(el=>observer.observe(el));
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+if(window.scrollY>450){
+topBtn.classList.add("visible");
+}else{
+topBtn.classList.remove("visible");
+}
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+link.addEventListener("click",function(e){
+const target=document.querySelector(this.getAttribute("href"));
+if(target){
+e.preventDefault();
+target.scrollIntoView({behavior:"smooth"});
+}
+});
+});
+</script>
+
+
+<script>
+/* Traduction automatique : FR, EN, ES, IT, DE, PT, PL, RU, NL, TR — langue du navigateur */
+(function(){
+var D={"Sorevia Bank - Compte courant":{"en":"Sorevia Bank - Current account","es":"Sorevia Bank - Cuenta corriente","it":"Sorevia Bank - Conto corrente","de":"Sorevia Bank - Girokonto","pt":"Sorevia Bank - Conta corrente","pl":"Sorevia Bank - Konto bieżące","ru":"Sorevia Bank - Текущий счёт","nl":"Sorevia Bank - Zichtrekening","tr":"Sorevia Bank - Vadesiz hesap"},"Sorevia Bank | Compte courant":{"en":"Sorevia Bank | Current account","es":"Sorevia Bank | Cuenta corriente","it":"Sorevia Bank | Conto corrente","de":"Sorevia Bank | Girokonto","pt":"Sorevia Bank | Conta corrente","pl":"Sorevia Bank | Konto bieżące","ru":"Sorevia Bank | Текущий счёт","nl":"Sorevia Bank | Zichtrekening","tr":"Sorevia Bank | Vadesiz hesap"},"S":{"en":"S","es":"S","it":"S","de":"S","pt":"S","pl":"S","ru":"S","nl":"S","tr":"S"},"Sorevia Bank":{"en":"Sorevia Bank","es":"Sorevia Bank","it":"Sorevia Bank","de":"Sorevia Bank","pt":"Sorevia Bank","pl":"Sorevia Bank","ru":"Sorevia Bank","nl":"Sorevia Bank","tr":"Sorevia Bank"},"DIGITAL BANKING":{"en":"DIGITAL BANKING","es":"DIGITAL BANKING","it":"DIGITAL BANKING","de":"DIGITAL BANKING","pt":"DIGITAL BANKING","pl":"DIGITAL BANKING","ru":"DIGITAL BANKING","nl":"DIGITAL BANKING","tr":"DIGITAL BANKING"},"Retour":{"en":"Back","es":"Volver","it":"Indietro","de":"Zurück","pt":"Voltar","pl":"Wróć","ru":"Назад","nl":"Terug","tr":"Geri"},"SOREVIA BANK • COMPTE COURANT":{"en":"SOREVIA BANK • CURRENT ACCOUNT","es":"SOREVIA BANK • CUENTA CORRIENTE","it":"SOREVIA BANK • CONTO CORRENTE","de":"SOREVIA BANK • GIROKONTO","pt":"SOREVIA BANK • CONTA CORRENTE","pl":"SOREVIA BANK • KONTO BIEŻĄCE","ru":"SOREVIA BANK • ТЕКУЩИЙ СЧЁТ","nl":"SOREVIA BANK • ZICHTREKENING","tr":"SOREVIA BANK • VADESİZ HESAP"},"Votre argent au quotidien,":{"en":"Your everyday money,","es":"Tu dinero del día a día,","it":"Il tuo denaro di ogni giorno,","de":"Ihr Geld im Alltag,","pt":"O seu dinheiro do dia a dia,","pl":"Twoje pieniądze na co dzień,","ru":"Ваши деньги на каждый день,","nl":"Uw geld voor elke dag,","tr":"Günlük paranız,"},"simplement.":{"en":"simply.","es":"de forma sencilla.","it":"in modo semplice.","de":"ganz einfach.","pt":"de forma simples.","pl":"po prostu.","ru":"просто.","nl":"eenvoudig.","tr":"basitçe."},"Un compte courant pensé pour accompagner vos dépenses, vos revenus, vos virements et vos opérations bancaires du quotidien.":{"en":"A current account designed to support your spending, income, transfers and everyday banking operations.","es":"Una cuenta corriente pensada para acompañar tus gastos, tus ingresos, tus transferencias y tus operaciones bancarias cotidianas.","it":"Un conto corrente pensato per accompagnare le tue spese, le tue entrate, i tuoi bonifici e le tue operazioni bancarie quotidiane.","de":"Ein Girokonto, das Ihre Ausgaben, Einnahmen, Überweisungen und alltäglichen Bankgeschäfte begleitet.","pt":"Uma conta corrente pensada para acompanhar as suas despesas, os seus rendimentos, as suas transferências e as suas operações bancárias do quotidiano.","pl":"Konto bieżące stworzone, by towarzyszyć Twoim wydatkom, dochodom, przelewom i codziennym operacjom bankowym.","ru":"Текущий счёт, созданный для ваших расходов, доходов, переводов и повседневных банковских операций.","nl":"Een zichtrekening ontworpen voor uw uitgaven, inkomsten, overschrijvingen en dagelijkse bankzaken.","tr":"Harcamalarınıza, gelirlerinize, havalelerinize ve günlük bankacılık işlemlerinize eşlik etmek için tasarlanmış bir vadesiz hesap."},"Découvrir":{"en":"Discover","es":"Descubrir","it":"Scopri","de":"Entdecken","pt":"Descobrir","pl":"Poznaj","ru":"Узнать","nl":"Ontdekken","tr":"Keşfedin"},"Ouvrir un compte":{"en":"Open an account","es":"Abrir una cuenta","it":"Apri un conto","de":"Konto eröffnen","pt":"Abrir uma conta","pl":"Otwórz konto","ru":"Открыть счёт","nl":"Een rekening openen","tr":"Hesap aç"},"COMPTE COURANT SOREVIA":{"en":"SOREVIA CURRENT ACCOUNT","es":"CUENTA CORRIENTE SOREVIA","it":"CONTO CORRENTE SOREVIA","de":"SOREVIA GIROKONTO","pt":"CONTA CORRENTE SOREVIA","pl":"KONTO BIEŻĄCE SOREVIA","ru":"ТЕКУЩИЙ СЧЁТ SOREVIA","nl":"SOREVIA ZICHTREKENING","tr":"SOREVIA VADESİZ HESAP"},"Votre banque. Votre quotidien.":{"en":"Your bank. Your daily life.","es":"Tu banco. Tu día a día.","it":"La tua banca. La tua quotidianità.","de":"Ihre Bank. Ihr Alltag.","pt":"O seu banco. O seu quotidiano.","pl":"Twój bank. Twoja codzienność.","ru":"Ваш банк. Ваша повседневность.","nl":"Uw bank. Uw dagelijks leven.","tr":"Bankanız. Günlük yaşamınız."},"Une expérience bancaire claire, moderne et accessible.":{"en":"A clear, modern and accessible banking experience.","es":"Una experiencia bancaria clara, moderna y accesible.","it":"Un'esperienza bancaria chiara, moderna e accessibile.","de":"Ein klares, modernes und zugängliches Bankerlebnis.","pt":"Uma experiência bancária clara, moderna e acessível.","pl":"Przejrzyste, nowoczesne i dostępne doświadczenie bankowe.","ru":"Понятный, современный и доступный банковский опыт.","nl":"Een duidelijke, moderne en toegankelijke bankervaring.","tr":"Net, modern ve erişilebilir bir bankacılık deneyimi."},"Gestion":{"en":"Management","es":"Gestión","it":"Gestione","de":"Verwaltung","pt":"Gestão","pl":"Zarządzanie","ru":"Управление","nl":"Beheer","tr":"Yönetim"},"Virements":{"en":"Transfers","es":"Transferencias","it":"Bonifici","de":"Überweisungen","pt":"Transferências","pl":"Przelewy","ru":"Переводы","nl":"Overschrijvingen","tr":"Havaleler"},"Paiements":{"en":"Payments","es":"Pagos","it":"Pagamenti","de":"Zahlungen","pt":"Pagamentos","pl":"Płatności","ru":"Платежи","nl":"Betalingen","tr":"Ödemeler"},"01 • VOTRE COMPTE":{"en":"01 • YOUR ACCOUNT","es":"01 • TU CUENTA","it":"01 • IL TUO CONTO","de":"01 • IHR KONTO","pt":"01 • A SUA CONTA","pl":"01 • TWOJE KONTO","ru":"01 • ВАШ СЧЁТ","nl":"01 • UW REKENING","tr":"01 • HESABINIZ"},"Tout votre quotidien bancaire":{"en":"All your daily banking","es":"Todo tu día a día bancario","it":"Tutta la tua quotidianità bancaria","de":"Ihr gesamter Bankalltag","pt":"Todo o seu quotidiano bancário","pl":"Cała Twoja bankowa codzienność","ru":"Вся ваша банковская повседневность","nl":"Al uw dagelijkse bankzaken","tr":"Tüm günlük bankacılığınız"},"au même endroit.":{"en":"in one place.","es":"en un solo lugar.","it":"in un unico posto.","de":"an einem Ort.","pt":"num só lugar.","pl":"w jednym miejscu.","ru":"в одном месте.","nl":"op één plek.","tr":"tek bir yerde."},"Un compte courant vous permet de centraliser vos opérations courantes et de garder une meilleure visibilité sur vos finances.":{"en":"A current account lets you centralize your everyday operations and keep better visibility over your finances.","es":"Una cuenta corriente te permite centralizar tus operaciones habituales y mantener una mejor visibilidad de tus finanzas.","it":"Un conto corrente ti permette di centralizzare le tue operazioni correnti e di avere una migliore visibilità sulle tue finanze.","de":"Mit einem Girokonto bündeln Sie Ihre laufenden Geschäfte und behalten Ihre Finanzen besser im Blick.","pt":"Uma conta corrente permite-lhe centralizar as suas operações correntes e ter melhor visibilidade sobre as suas finanças.","pl":"Konto bieżące pozwala skupić codzienne operacje w jednym miejscu i lepiej kontrolować finanse.","ru":"Текущий счёт позволяет собрать повседневные операции в одном месте и лучше видеть свои финансы.","nl":"Met een zichtrekening bundelt u uw lopende verrichtingen en houdt u beter zicht op uw financiën.","tr":"Vadesiz hesap, günlük işlemlerinizi tek bir yerde toplamanıza ve finansmanınızı daha iyi görmenize olanak tanır."},"GESTION":{"en":"MANAGEMENT","es":"GESTIÓN","it":"GESTIONE","de":"VERWALTUNG","pt":"GESTÃO","pl":"ZARZĄDZANIE","ru":"УПРАВЛЕНИЕ","nl":"BEHEER","tr":"YÖNETİM"},"Gérez votre argent":{"en":"Manage your money","es":"Gestiona tu dinero","it":"Gestisci il tuo denaro","de":"Verwalten Sie Ihr Geld","pt":"Gira o seu dinheiro","pl":"Zarządzaj swoimi pieniędzmi","ru":"Управляйте своими деньгами","nl":"Beheer uw geld","tr":"Paranızı yönetin"},"Suivez vos mouvements, consultez votre solde et gardez une vision claire de vos opérations.":{"en":"Track your movements, check your balance and keep a clear view of your operations.","es":"Sigue tus movimientos, consulta tu saldo y mantén una visión clara de tus operaciones.","it":"Segui i tuoi movimenti, consulta il tuo saldo e mantieni una visione chiara delle tue operazioni.","de":"Verfolgen Sie Ihre Bewegungen, prüfen Sie Ihren Kontostand und behalten Sie den Überblick über Ihre Transaktionen.","pt":"Acompanhe os seus movimentos, consulte o seu saldo e mantenha uma visão clara das suas operações.","pl":"Śledź swoje transakcje, sprawdzaj saldo i miej jasny obraz swoich operacji.","ru":"Отслеживайте движения средств, проверяйте баланс и сохраняйте ясное представление о своих операциях.","nl":"Volg uw bewegingen, raadpleeg uw saldo en houd een duidelijk overzicht van uw verrichtingen.","tr":"Hareketlerinizi takip edin, bakiyenizi görüntüleyin ve işlemlerinizi net bir şekilde izleyin."},"Gestion quotidienne":{"en":"Daily management","es":"Gestión diaria","it":"Gestione quotidiana","de":"Tägliche Verwaltung","pt":"Gestão diária","pl":"Codzienne zarządzanie","ru":"Ежедневное управление","nl":"Dagelijks beheer","tr":"Günlük yönetim"},"Ouvrir →":{"en":"Open →","es":"Abrir →","it":"Apri →","de":"Öffnen →","pt":"Abrir →","pl":"Otwórz →","ru":"Открыть →","nl":"Openen →","tr":"Aç →"},"VIREMENTS":{"en":"TRANSFERS","es":"TRANSFERENCIAS","it":"BONIFICI","de":"ÜBERWEISUNGEN","pt":"TRANSFERÊNCIAS","pl":"PRZELEWY","ru":"ПЕРЕВОДЫ","nl":"OVERSCHRIJVINGEN","tr":"HAVALELER"},"Effectuez vos virements":{"en":"Make your transfers","es":"Realiza tus transferencias","it":"Effettua i tuoi bonifici","de":"Überweisungen tätigen","pt":"Efetue as suas transferências","pl":"Wykonuj swoje przelewy","ru":"Совершайте переводы","nl":"Voer uw overschrijvingen uit","tr":"Havalelerinizi yapın"},"Transférez de l'argent selon vos besoins et gérez facilement vos bénéficiaires et opérations.":{"en":"Send money according to your needs and easily manage your beneficiaries and operations.","es":"Transfiere dinero según tus necesidades y gestiona fácilmente tus beneficiarios y operaciones.","it":"Trasferisci denaro secondo le tue esigenze e gestisci facilmente i tuoi beneficiari e le tue operazioni.","de":"Überweisen Sie Geld nach Bedarf und verwalten Sie einfach Ihre Empfänger und Transaktionen.","pt":"Transfira dinheiro de acordo com as suas necessidades e gira facilmente os seus beneficiários e operações.","pl":"Przekazuj pieniądze według potrzeb i łatwo zarządzaj odbiorcami oraz operacjami.","ru":"Переводите деньги по мере необходимости и легко управляйте получателями и операциями.","nl":"Maak geld over volgens uw behoeften en beheer eenvoudig uw begunstigden en verrichtingen.","tr":"İhtiyaçlarınıza göre para gönderin ve alıcılarınızı ve işlemlerinizi kolayca yönetin."},"Transferts":{"en":"Transfers","es":"Transferencias","it":"Trasferimenti","de":"Überweisungen","pt":"Transferências","pl":"Przekazy","ru":"Переводы","nl":"Overdrachten","tr":"Transferler"},"Découvrir →":{"en":"Discover →","es":"Descubrir →","it":"Scopri →","de":"Entdecken →","pt":"Descobrir →","pl":"Poznaj →","ru":"Узнать →","nl":"Ontdekken →","tr":"Keşfedin →"},"PAIEMENTS":{"en":"PAYMENTS","es":"PAGOS","it":"PAGAMENTI","de":"ZAHLUNGEN","pt":"PAGAMENTOS","pl":"PŁATNOŚCI","ru":"ПЛАТЕЖИ","nl":"BETALINGEN","tr":"ÖDEMELER"},"Payez simplement":{"en":"Pay simply","es":"Paga de forma sencilla","it":"Paga in modo semplice","de":"Einfach bezahlen","pt":"Pague de forma simples","pl":"Płać prosto","ru":"Платите просто","nl":"Betaal eenvoudig","tr":"Kolayca ödeyin"},"Utilisez les moyens de paiement associés à votre compte pour vos dépenses du quotidien.":{"en":"Use the payment methods linked to your account for your everyday spending.","es":"Utiliza los medios de pago asociados a tu cuenta para tus gastos del día a día.","it":"Utilizza i mezzi di pagamento associati al tuo conto per le tue spese quotidiane.","de":"Nutzen Sie die mit Ihrem Konto verbundenen Zahlungsmittel für Ihre täglichen Ausgaben.","pt":"Utilize os meios de pagamento associados à sua conta para as suas despesas do dia a dia.","pl":"Korzystaj ze środków płatniczych powiązanych z kontem w codziennych wydatkach.","ru":"Используйте платёжные средства, связанные с вашим счётом, для ежедневных расходов.","nl":"Gebruik de betaalmiddelen die aan uw rekening gekoppeld zijn voor uw dagelijkse uitgaven.","tr":"Günlük harcamalarınız için hesabınıza bağlı ödeme araçlarını kullanın."},"Carte & paiements":{"en":"Card & payments","es":"Tarjeta y pagos","it":"Carta e pagamenti","de":"Karte & Zahlungen","pt":"Cartão e pagamentos","pl":"Karta i płatności","ru":"Карта и платежи","nl":"Kaart en betalingen","tr":"Kart ve ödemeler"},"Voir les cartes →":{"en":"View the cards →","es":"Ver las tarjetas →","it":"Vedi le carte →","de":"Karten ansehen →","pt":"Ver os cartões →","pl":"Zobacz karty →","ru":"Смотреть карты →","nl":"De kaarten bekijken →","tr":"Kartları gör →"},"ACCÈS":{"en":"ACCESS","es":"ACCESO","it":"ACCESSO","de":"ZUGANG","pt":"ACESSO","pl":"DOSTĘP","ru":"ДОСТУП","nl":"TOEGANG","tr":"ERİŞİM"},"Dépôts & retraits":{"en":"Deposits & withdrawals","es":"Ingresos y retiradas","it":"Versamenti e prelievi","de":"Ein- & Auszahlungen","pt":"Depósitos e levantamentos","pl":"Wpłaty i wypłaty","ru":"Пополнение и снятие","nl":"Stortingen en opnames","tr":"Para yatırma ve çekme"},"Accédez à vos fonds selon les moyens et canaux disponibles dans votre environnement bancaire.":{"en":"Access your funds through the means and channels available in your banking environment.","es":"Accede a tus fondos según los medios y canales disponibles en tu entorno bancario.","it":"Accedi ai tuoi fondi secondo i mezzi e i canali disponibili nel tuo ambiente bancario.","de":"Greifen Sie auf Ihre Gelder zu, über die in Ihrem Bankumfeld verfügbaren Mittel und Kanäle.","pt":"Aceda aos seus fundos através dos meios e canais disponíveis no seu ambiente bancário.","pl":"Korzystaj ze swoich środków za pomocą narzędzi i kanałów dostępnych w Twoim środowisku bankowym.","ru":"Получайте доступ к своим средствам с помощью способов и каналов, доступных в вашей банковской среде.","nl":"Krijg toegang tot uw geld via de middelen en kanalen die beschikbaar zijn in uw bankomgeving.","tr":"Bankacılık ortamınızda mevcut olan araç ve kanallarla paranıza erişin."},"Accès aux fonds":{"en":"Access to funds","es":"Acceso a los fondos","it":"Accesso ai fondi","de":"Zugriff auf Gelder","pt":"Acesso aos fundos","pl":"Dostęp do środków","ru":"Доступ к средствам","nl":"Toegang tot uw geld","tr":"Paraya erişim"},"Commencer →":{"en":"Get started →","es":"Empezar →","it":"Inizia →","de":"Loslegen →","pt":"Começar →","pl":"Zacznij →","ru":"Начать →","nl":"Beginnen →","tr":"Başlayın →"},"SOREVIA DAILY BANKING":{"en":"SOREVIA DAILY BANKING","es":"SOREVIA DAILY BANKING","it":"SOREVIA DAILY BANKING","de":"SOREVIA DAILY BANKING","pt":"SOREVIA DAILY BANKING","pl":"SOREVIA DAILY BANKING","ru":"SOREVIA DAILY BANKING","nl":"SOREVIA DAILY BANKING","tr":"SOREVIA DAILY BANKING"},"Un compte conçu autour de vos habitudes.":{"en":"An account built around your habits.","es":"Una cuenta diseñada en torno a tus hábitos.","it":"Un conto progettato attorno alle tue abitudini.","de":"Ein Konto, das sich an Ihren Gewohnheiten orientiert.","pt":"Uma conta concebida em torno dos seus hábitos.","pl":"Konto stworzone wokół Twoich nawyków.","ru":"Счёт, созданный вокруг ваших привычек.","nl":"Een rekening rond uw gewoonten ontworpen.","tr":"Alışkanlıklarınız etrafında tasarlanmış bir hesap."},"Recevez vos revenus, réglez vos dépenses, effectuez vos virements et gardez le contrôle de vos opérations.":{"en":"Receive your income, pay your expenses, make your transfers and stay in control of your operations.","es":"Recibe tus ingresos, paga tus gastos, realiza tus transferencias y mantén el control de tus operaciones.","it":"Ricevi le tue entrate, salda le tue spese, effettua i tuoi bonifici e mantieni il controllo delle tue operazioni.","de":"Erhalten Sie Ihre Einnahmen, begleichen Sie Ihre Ausgaben, tätigen Sie Überweisungen und behalten Sie die Kontrolle über Ihre Transaktionen.","pt":"Receba os seus rendimentos, pague as suas despesas, efetue as suas transferências e mantenha o controlo das suas operações.","pl":"Otrzymuj dochody, reguluj wydatki, wykonuj przelewy i zachowaj kontrolę nad swoimi operacjami.","ru":"Получайте доходы, оплачивайте расходы, совершайте переводы и сохраняйте контроль над своими операциями.","nl":"Ontvang uw inkomsten, betaal uw uitgaven, voer uw overschrijvingen uit en houd de controle over uw verrichtingen.","tr":"Gelirlerinizi alın, harcamalarınızı ödeyin, havalelerinizi yapın ve işlemlerinizin kontrolünü elinizde tutun."},"02 • OPÉRATIONS":{"en":"02 • OPERATIONS","es":"02 • OPERACIONES","it":"02 • OPERAZIONI","de":"02 • TRANSAKTIONEN","pt":"02 • OPERAÇÕES","pl":"02 • OPERACJE","ru":"02 • ОПЕРАЦИИ","nl":"02 • VERRICHTINGEN","tr":"02 • İŞLEMLER"},"Les opérations essentielles":{"en":"The essential operations","es":"Las operaciones esenciales","it":"Le operazioni essenziali","de":"Die wichtigsten Transaktionen","pt":"As operações essenciais","pl":"Najważniejsze operacje","ru":"Основные операции","nl":"De essentiële verrichtingen","tr":"Temel işlemler"},"à portée de main.":{"en":"at your fingertips.","es":"al alcance de tu mano.","it":"a portata di mano.","de":"stets griffbereit.","pt":"ao seu alcance.","pl":"w zasięgu ręki.","ru":"всегда под рукой.","nl":"binnen handbereik.","tr":"elinizin altında."},"Votre compte courant centralise les opérations dont vous avez besoin pour votre vie financière quotidienne.":{"en":"Your current account centralizes the operations you need for your everyday financial life.","es":"Tu cuenta corriente centraliza las operaciones que necesitas para tu vida financiera diaria.","it":"Il tuo conto corrente centralizza le operazioni di cui hai bisogno per la tua vita finanziaria quotidiana.","de":"Ihr Girokonto bündelt die Transaktionen, die Sie für Ihr tägliches Finanzleben benötigen.","pt":"A sua conta corrente centraliza as operações de que precisa para a sua vida financeira diária.","pl":"Twoje konto bieżące skupia operacje potrzebne w codziennym życiu finansowym.","ru":"Ваш текущий счёт объединяет операции, необходимые вам в повседневной финансовой жизни.","nl":"Uw zichtrekening bundelt de verrichtingen die u nodig hebt voor uw dagelijkse financiële leven.","tr":"Vadesiz hesabınız, günlük finansal yaşamınız için ihtiyaç duyduğunuz işlemleri bir araya getirir."},"Recevoir de l'argent":{"en":"Receive money","es":"Recibir dinero","it":"Ricevere denaro","de":"Geld empfangen","pt":"Receber dinheiro","pl":"Odbieraj pieniądze","ru":"Получать деньги","nl":"Geld ontvangen","tr":"Para almak"},"Recevez vos revenus, transferts et autres sommes sur votre compte.":{"en":"Receive your income, transfers and other sums in your account.","es":"Recibe tus ingresos, transferencias y otras sumas en tu cuenta.","it":"Ricevi le tue entrate, i trasferimenti e altre somme sul tuo conto.","de":"Erhalten Sie Ihre Einnahmen, Überweisungen und andere Beträge auf Ihrem Konto.","pt":"Receba os seus rendimentos, transferências e outras quantias na sua conta.","pl":"Otrzymuj dochody, przelewy i inne kwoty na swoje konto.","ru":"Получайте доходы, переводы и другие суммы на свой счёт.","nl":"Ontvang uw inkomsten, overschrijvingen en andere bedragen op uw rekening.","tr":"Gelirlerinizi, transferlerinizi ve diğer tutarları hesabınıza alın."},"Envoyer de l'argent":{"en":"Send money","es":"Enviar dinero","it":"Inviare denaro","de":"Geld senden","pt":"Enviar dinheiro","pl":"Wysyłaj pieniądze","ru":"Отправлять деньги","nl":"Geld verzenden","tr":"Para göndermek"},"Effectuez vos virements vers vos bénéficiaires selon vos besoins.":{"en":"Make transfers to your beneficiaries according to your needs.","es":"Realiza transferencias a tus beneficiarios según tus necesidades.","it":"Effettua bonifici verso i tuoi beneficiari secondo le tue esigenze.","de":"Überweisen Sie nach Bedarf an Ihre Empfänger.","pt":"Efetue transferências para os seus beneficiários de acordo com as suas necessidades.","pl":"Wykonuj przelewy do swoich odbiorców według potrzeb.","ru":"Совершайте переводы своим получателям по мере необходимости.","nl":"Voer overschrijvingen uit naar uw begunstigden volgens uw behoeften.","tr":"İhtiyaçlarınıza göre alıcılarınıza havale yapın."},"Régler vos achats":{"en":"Pay for your purchases","es":"Pagar tus compras","it":"Pagare i tuoi acquisti","de":"Einkäufe bezahlen","pt":"Pagar as suas compras","pl":"Płać za zakupy","ru":"Оплачивать покупки","nl":"Uw aankopen betalen","tr":"Alışverişlerinizi ödemek"},"Utilisez vos moyens de paiement pour vos dépenses quotidiennes.":{"en":"Use your payment methods for your everyday spending.","es":"Utiliza tus medios de pago para tus gastos cotidianos.","it":"Utilizza i tuoi mezzi di pagamento per le spese quotidiane.","de":"Nutzen Sie Ihre Zahlungsmittel für Ihre täglichen Ausgaben.","pt":"Utilize os seus meios de pagamento para as despesas diárias.","pl":"Korzystaj ze swoich środków płatniczych przy codziennych wydatkach.","ru":"Используйте свои платёжные средства для ежедневных расходов.","nl":"Gebruik uw betaalmiddelen voor uw dagelijkse uitgaven.","tr":"Günlük harcamalarınız için ödeme araçlarınızı kullanın."},"Payer vos factures":{"en":"Pay your bills","es":"Pagar tus facturas","it":"Pagare le tue fatture","de":"Rechnungen bezahlen","pt":"Pagar as suas faturas","pl":"Płać rachunki","ru":"Оплачивать счета","nl":"Uw facturen betalen","tr":"Faturalarınızı ödemek"},"Organisez vos règlements et gardez une trace de vos opérations.":{"en":"Organize your payments and keep track of your operations.","es":"Organiza tus pagos y conserva el registro de tus operaciones.","it":"Organizza i tuoi pagamenti e tieni traccia delle tue operazioni.","de":"Organisieren Sie Ihre Zahlungen und behalten Sie Ihre Transaktionen im Blick.","pt":"Organize os seus pagamentos e mantenha o registo das suas operações.","pl":"Organizuj płatności i miej ślad swoich operacji.","ru":"Организуйте свои платежи и сохраняйте историю операций.","nl":"Organiseer uw betalingen en hou een overzicht van uw verrichtingen.","tr":"Ödemelerinizi düzenleyin ve işlemlerinizin kaydını tutun."},"Suivre vos finances":{"en":"Track your finances","es":"Seguir tus finanzas","it":"Seguire le tue finanze","de":"Finanzen verfolgen","pt":"Acompanhar as suas finanças","pl":"Śledź swoje finanse","ru":"Следить за финансами","nl":"Uw financiën opvolgen","tr":"Finansmanınızı takip etmek"},"Consultez vos opérations et surveillez l'évolution de votre compte.":{"en":"Review your operations and monitor your account's evolution.","es":"Consulta tus operaciones y vigila la evolución de tu cuenta.","it":"Consulta le tue operazioni e tieni sotto controllo l'evoluzione del tuo conto.","de":"Sehen Sie Ihre Transaktionen ein und beobachten Sie die Entwicklung Ihres Kontos.","pt":"Consulte as suas operações e acompanhe a evolução da sua conta.","pl":"Przeglądaj operacje i obserwuj zmiany na swoim koncie.","ru":"Просматривайте операции и следите за изменениями на своём счёте.","nl":"Raadpleeg uw verrichtingen en volg de evolutie van uw rekening.","tr":"İşlemlerinizi görüntüleyin ve hesabınızın gelişimini izleyin."},"03 • ESPACE DIGITAL":{"en":"03 • DIGITAL SPACE","es":"03 • ESPACIO DIGITAL","it":"03 • SPAZIO DIGITALE","de":"03 • DIGITALER BEREICH","pt":"03 • ESPAÇO DIGITAL","pl":"03 • STREFA CYFROWA","ru":"03 • ЦИФРОВОЕ ПРОСТРАНСТВО","nl":"03 • DIGITALE OMGEVING","tr":"03 • DİJİTAL ALAN"},"Une vision claire de":{"en":"A clear view of","es":"Una visión clara de","it":"Una visione chiara del","de":"Ein klarer Blick auf","pt":"Uma visão clara da","pl":"Jasny obraz","ru":"Ясное представление о","nl":"Een duidelijk zicht op","tr":"Hesabınıza dair"},"votre compte.":{"en":"your account.","es":"tu cuenta.","it":"tuo conto.","de":"Ihr Konto.","pt":"sua conta.","pl":"Twojego konta.","ru":"вашем счёте.","nl":"uw rekening.","tr":"net bir görünüm."},"Un environnement digital imaginé pour rendre vos opérations plus simples à suivre.":{"en":"A digital environment designed to make your operations easier to follow.","es":"Un entorno digital ideado para que tus operaciones sean más fáciles de seguir.","it":"Un ambiente digitale ideato per rendere le tue operazioni più semplici da seguire.","de":"Eine digitale Umgebung, die Ihre Transaktionen leichter nachvollziehbar macht.","pt":"Um ambiente digital imaginado para tornar as suas operações mais fáceis de acompanhar.","pl":"Środowisko cyfrowe stworzone, by łatwiej śledzić Twoje operacje.","ru":"Цифровая среда, созданная, чтобы вам было проще следить за своими операциями.","nl":"Een digitale omgeving die uw verrichtingen eenvoudiger te volgen maakt.","tr":"İşlemlerinizi daha kolay takip etmeniz için tasarlanmış dijital bir ortam."},"MON COMPTE COURANT":{"en":"MY CURRENT ACCOUNT","es":"MI CUENTA CORRIENTE","it":"IL MIO CONTO CORRENTE","de":"MEIN GIROKONTO","pt":"A MINHA CONTA CORRENTE","pl":"MOJE KONTO BIEŻĄCE","ru":"МОЙ ТЕКУЩИЙ СЧЁТ","nl":"MIJN ZICHTREKENING","tr":"VADESİZ HESABIM"},"Disponible":{"en":"Available","es":"Disponible","it":"Disponibile","de":"Verfügbar","pt":"Disponível","pl":"Dostępne","ru":"Доступно","nl":"Beschikbaar","tr":"Kullanılabilir"},"SOLDE DISPONIBLE":{"en":"AVAILABLE BALANCE","es":"SALDO DISPONIBLE","it":"SALDO DISPONIBILE","de":"VERFÜGBARES GUTHABEN","pt":"SALDO DISPONÍVEL","pl":"DOSTĘPNE SALDO","ru":"ДОСТУПНЫЙ БАЛАНС","nl":"BESCHIKBAAR SALDO","tr":"KULLANILABİLİR BAKİYE"},"Exemple de présentation":{"en":"Presentation example","es":"Ejemplo de presentación","it":"Esempio di presentazione","de":"Beispiel zur Darstellung","pt":"Exemplo de apresentação","pl":"Przykład prezentacji","ru":"Пример для демонстрации","nl":"Voorbeeld van presentatie","tr":"Sunum örneği"},"Activité mensuelle":{"en":"Monthly activity","es":"Actividad mensual","it":"Attività mensile","de":"Monatliche Aktivität","pt":"Atividade mensal","pl":"Aktywność miesięczna","ru":"Активность за месяц","nl":"Maandelijkse activiteit","tr":"Aylık etkinlik"},"Virement":{"en":"Transfer","es":"Transferencia","it":"Bonifico","de":"Überweisung","pt":"Transferência","pl":"Przelew","ru":"Перевод","nl":"Overschrijving","tr":"Havale"},"Paiement":{"en":"Payment","es":"Pago","it":"Pagamento","de":"Zahlung","pt":"Pagamento","pl":"Płatność","ru":"Платёж","nl":"Betaling","tr":"Ödeme"},"Relevé":{"en":"Statement","es":"Extracto","it":"Estratto conto","de":"Kontoauszug","pt":"Extrato","pl":"Wyciąg","ru":"Выписка","nl":"Afschrift","tr":"Ekstre"},"04 • LES AVANTAGES":{"en":"04 • THE BENEFITS","es":"04 • LAS VENTAJAS","it":"04 • I VANTAGGI","de":"04 • DIE VORTEILE","pt":"04 • AS VANTAGENS","pl":"04 • ZALETY","ru":"04 • ПРЕИМУЩЕСТВА","nl":"04 • DE VOORDELEN","tr":"04 • AVANTAJLAR"},"Un compte pensé pour":{"en":"An account designed to","es":"Una cuenta pensada para","it":"Un conto pensato per","de":"Ein Konto, das Ihnen","pt":"Uma conta pensada para","pl":"Konto stworzone, by","ru":"Счёт, созданный, чтобы","nl":"Een rekening bedacht om","tr":"Hayatınızı kolaylaştırmak"},"vous simplifier la vie.":{"en":"simplify your life.","es":"simplificarte la vida.","it":"semplificarti la vita.","de":"das Leben erleichtert.","pt":"simplificar a sua vida.","pl":"ułatwiać Ci życie.","ru":"упростить вам жизнь.","nl":"uw leven te vereenvoudigen.","tr":"için tasarlanmış bir hesap."},"Une expérience bancaire moderne pour mieux organiser votre quotidien.":{"en":"A modern banking experience to better organize your daily life.","es":"Una experiencia bancaria moderna para organizar mejor tu día a día.","it":"Un'esperienza bancaria moderna per organizzare meglio la tua quotidianità.","de":"Ein modernes Bankerlebnis, um Ihren Alltag besser zu organisieren.","pt":"Uma experiência bancária moderna para organizar melhor o seu quotidiano.","pl":"Nowoczesne doświadczenie bankowe, które pomaga lepiej organizować codzienność.","ru":"Современный банковский опыт, чтобы лучше организовать вашу повседневность.","nl":"Een moderne bankervaring om uw dagelijks leven beter te organiseren.","tr":"Günlük yaşamınızı daha iyi düzenlemek için modern bir bankacılık deneyimi."},"SOREVIA DAILY":{"en":"SOREVIA DAILY","es":"SOREVIA DAILY","it":"SOREVIA DAILY","de":"SOREVIA DAILY","pt":"SOREVIA DAILY","pl":"SOREVIA DAILY","ru":"SOREVIA DAILY","nl":"SOREVIA DAILY","tr":"SOREVIA DAILY"},"Votre quotidien, mieux organisé.":{"en":"Your daily life, better organized.","es":"Tu día a día, mejor organizado.","it":"La tua quotidianità, meglio organizzata.","de":"Ihr Alltag, besser organisiert.","pt":"O seu quotidiano, mais bem organizado.","pl":"Twoja codzienność, lepiej zorganizowana.","ru":"Ваша повседневность — лучше организована.","nl":"Uw dagelijks leven, beter georganiseerd.","tr":"Günlük yaşamınız, daha iyi düzenlenmiş."},"Une expérience bancaire conçue pour aller à l'essentiel.":{"en":"A banking experience designed to get to the point.","es":"Una experiencia bancaria diseñada para ir a lo esencial.","it":"Un'esperienza bancaria progettata per andare all'essenziale.","de":"Ein Bankerlebnis, das auf das Wesentliche setzt.","pt":"Uma experiência bancária concebida para ir ao essencial.","pl":"Doświadczenie bankowe skupione na tym, co najważniejsze.","ru":"Банковский опыт, созданный, чтобы идти к главному.","nl":"Een bankervaring ontworpen om naar de essentie te gaan.","tr":"Özüne odaklanmak için tasarlanmış bir bankacılık deneyimi."},"Accessible depuis votre smartphone":{"en":"Accessible from your smartphone","es":"Accesible desde tu smartphone","it":"Accessibile dal tuo smartphone","de":"Zugänglich von Ihrem Smartphone","pt":"Acessível a partir do seu smartphone","pl":"Dostępne z Twojego smartfona","ru":"Доступно с вашего смартфона","nl":"Toegankelijk vanaf uw smartphone","tr":"Akıllı telefonunuzdan erişilebilir"},"Consultez votre environnement bancaire depuis votre appareil mobile.":{"en":"View your banking environment from your mobile device.","es":"Consulta tu entorno bancario desde tu dispositivo móvil.","it":"Consulta il tuo ambiente bancario dal tuo dispositivo mobile.","de":"Sehen Sie Ihr Bankumfeld von Ihrem Mobilgerät aus ein.","pt":"Consulte o seu ambiente bancário a partir do seu dispositivo móvel.","pl":"Sprawdzaj swoje środowisko bankowe na urządzeniu mobilnym.","ru":"Просматривайте свою банковскую среду с мобильного устройства.","nl":"Raadpleeg uw bankomgeving vanaf uw mobiele toestel.","tr":"Bankacılık ortamınızı mobil cihazınızdan görüntüleyin."},"Disponible quand vous en avez besoin":{"en":"Available when you need it","es":"Disponible cuando lo necesites","it":"Disponibile quando ne hai bisogno","de":"Verfügbar, wenn Sie es brauchen","pt":"Disponível quando precisar","pl":"Dostępne, gdy tego potrzebujesz","ru":"Доступно, когда вам нужно","nl":"Beschikbaar wanneer u het nodig hebt","tr":"İhtiyaç duyduğunuzda ulaşılabilir"},"Gardez un accès pratique à vos informations bancaires.":{"en":"Keep practical access to your banking information.","es":"Mantén un acceso práctico a tu información bancaria.","it":"Mantieni un accesso pratico alle tue informazioni bancarie.","de":"Behalten Sie praktischen Zugriff auf Ihre Bankinformationen.","pt":"Mantenha um acesso prático às suas informações bancárias.","pl":"Zachowaj wygodny dostęp do swoich informacji bankowych.","ru":"Сохраняйте удобный доступ к своей банковской информации.","nl":"Behoud praktische toegang tot uw bankgegevens.","tr":"Bankacılık bilgilerinize pratik erişimi koruyun."},"Des opérations mieux organisées":{"en":"Better organized operations","es":"Operaciones mejor organizadas","it":"Operazioni meglio organizzate","de":"Besser organisierte Transaktionen","pt":"Operações mais bem organizadas","pl":"Lepiej zorganizowane operacje","ru":"Лучше организованные операции","nl":"Beter georganiseerde verrichtingen","tr":"Daha iyi düzenlenmiş işlemler"},"Retrouvez vos mouvements et opérations avec davantage de clarté.":{"en":"Find your movements and operations with greater clarity.","es":"Encuentra tus movimientos y operaciones con mayor claridad.","it":"Ritrova i tuoi movimenti e le tue operazioni con maggiore chiarezza.","de":"Finden Sie Ihre Bewegungen und Transaktionen mit mehr Klarheit.","pt":"Reencontre os seus movimentos e operações com maior clareza.","pl":"Odnajduj swoje transakcje i operacje z większą przejrzystością.","ru":"Находите свои движения и операции с большей ясностью.","nl":"Vind uw bewegingen en verrichtingen met meer duidelijkheid terug.","tr":"Hareketlerinizi ve işlemlerinizi daha net şekilde bulun."},"Suivi des mouvements":{"en":"Movement tracking","es":"Seguimiento de movimientos","it":"Monitoraggio dei movimenti","de":"Verfolgung der Bewegungen","pt":"Acompanhamento dos movimentos","pl":"Śledzenie transakcji","ru":"Отслеживание движений","nl":"Opvolging van bewegingen","tr":"Hareket takibi"},"Restez attentif aux opérations effectuées sur votre compte.":{"en":"Stay attentive to the operations carried out on your account.","es":"Mantente atento a las operaciones realizadas en tu cuenta.","it":"Resta attento alle operazioni effettuate sul tuo conto.","de":"Behalten Sie die auf Ihrem Konto ausgeführten Transaktionen im Auge.","pt":"Fique atento às operações efetuadas na sua conta.","pl":"Zwracaj uwagę na operacje wykonywane na Twoim koncie.","ru":"Следите за операциями, совершёнными по вашему счёту.","nl":"Blijf alert voor de verrichtingen op uw rekening.","tr":"Hesabınızda yapılan işlemlere dikkat edin."},"05 • SÉCURITÉ":{"en":"05 • SECURITY","es":"05 • SEGURIDAD","it":"05 • SICUREZZA","de":"05 • SICHERHEIT","pt":"05 • SEGURANÇA","pl":"05 • BEZPIECZEŃSTWO","ru":"05 • БЕЗОПАСНОСТЬ","nl":"05 • VEILIGHEID","tr":"05 • GÜVENLİK"},"Votre compte mérite":{"en":"Your account deserves","es":"Tu cuenta merece","it":"Il tuo conto merita","de":"Ihr Konto verdient","pt":"A sua conta merece","pl":"Twoje konto zasługuje","ru":"Ваш счёт заслуживает","nl":"Uw rekening verdient","tr":"Hesabınız özel bir"},"une attention particulière.":{"en":"special attention.","es":"una atención especial.","it":"un'attenzione particolare.","de":"besondere Aufmerksamkeit.","pt":"uma atenção especial.","pl":"na szczególną uwagę.","ru":"особого внимания.","nl":"bijzondere aandacht.","tr":"dikkati hak ediyor."},"Quelques bonnes pratiques permettent de renforcer la sécurité de votre environnement bancaire.":{"en":"A few good practices help strengthen the security of your banking environment.","es":"Algunas buenas prácticas permiten reforzar la seguridad de tu entorno bancario.","it":"Alcune buone pratiche permettono di rafforzare la sicurezza del tuo ambiente bancario.","de":"Einige bewährte Verfahren helfen, die Sicherheit Ihres Bankumfelds zu stärken.","pt":"Algumas boas práticas permitem reforçar a segurança do seu ambiente bancário.","pl":"Kilka dobrych praktyk pomaga wzmocnić bezpieczeństwo Twojego środowiska bankowego.","ru":"Несколько хороших практик помогают усилить безопасность вашей банковской среды.","nl":"Enkele goede gewoonten helpen de veiligheid van uw bankomgeving te versterken.","tr":"Bazı iyi uygulamalar bankacılık ortamınızın güvenliğini güçlendirmenize yardımcı olur."},"Les bons réflexes":{"en":"Good habits","es":"Los buenos reflejos","it":"I giusti riflessi","de":"Die richtigen Reflexe","pt":"Os bons reflexos","pl":"Dobre nawyki","ru":"Правильные привычки","nl":"De juiste reflexen","tr":"Doğru refleksler"},"Ne partagez jamais vos identifiants, codes ou informations confidentielles et vérifiez toujours les opérations effectuées.":{"en":"Never share your credentials, codes or confidential information and always check the operations carried out.","es":"Nunca compartas tus identificadores, códigos o información confidencial y verifica siempre las operaciones realizadas.","it":"Non condividere mai le tue credenziali, i tuoi codici o le tue informazioni riservate e verifica sempre le operazioni effettuate.","de":"Geben Sie niemals Ihre Zugangsdaten, Codes oder vertraulichen Informationen weiter und prüfen Sie stets die ausgeführten Transaktionen.","pt":"Nunca partilhe os seus identificadores, códigos ou informações confidenciais e verifique sempre as operações efetuadas.","pl":"Nigdy nie udostępniaj danych logowania, kodów ani poufnych informacji i zawsze sprawdzaj wykonane operacje.","ru":"Никогда не делитесь своими учётными данными, кодами или конфиденциальной информацией и всегда проверяйте совершённые операции.","nl":"Deel nooit uw inloggegevens, codes of vertrouwelijke informatie en controleer altijd de uitgevoerde verrichtingen.","tr":"Kimlik bilgilerinizi, kodlarınızı veya gizli bilgilerinizi asla paylaşmayın ve yapılan işlemleri her zaman kontrol edin."},"Gardez vos identifiants confidentiels":{"en":"Keep your credentials confidential","es":"Mantén tus identificadores confidenciales","it":"Mantieni riservate le tue credenziali","de":"Halten Sie Ihre Zugangsdaten vertraulich","pt":"Mantenha os seus identificadores confidenciais","pl":"Zachowaj poufność danych logowania","ru":"Храните свои учётные данные в тайне","nl":"Houd uw inloggegevens vertrouwelijk","tr":"Kimlik bilgilerinizi gizli tutun"},"Protégez votre téléphone":{"en":"Protect your phone","es":"Protege tu teléfono","it":"Proteggi il tuo telefono","de":"Schützen Sie Ihr Telefon","pt":"Proteja o seu telemóvel","pl":"Chroń swój telefon","ru":"Защитите свой телефон","nl":"Bescherm uw telefoon","tr":"Telefonunuzu koruyun"},"Signalez toute opération inhabituelle":{"en":"Report any unusual operation","es":"Comunica cualquier operación inusual","it":"Segnala qualsiasi operazione insolita","de":"Melden Sie jede ungewöhnliche Transaktion","pt":"Comunique qualquer operação invulgar","pl":"Zgłaszaj każdą nietypową operację","ru":"Сообщайте о любой необычной операции","nl":"Meld elke ongewone verrichting","tr":"Olağan dışı her işlemi bildirin"},"Utilisez uniquement les canaux officiels":{"en":"Use only official channels","es":"Utiliza únicamente los canales oficiales","it":"Utilizza solo i canali ufficiali","de":"Nutzen Sie ausschließlich offizielle Kanäle","pt":"Utilize apenas os canais oficiais","pl":"Korzystaj wyłącznie z oficjalnych kanałów","ru":"Используйте только официальные каналы","nl":"Gebruik uitsluitend de officiële kanalen","tr":"Yalnızca resmi kanalları kullanın"},"06 • SOREVIA BANK":{"en":"06 • SOREVIA BANK","es":"06 • SOREVIA BANK","it":"06 • SOREVIA BANK","de":"06 • SOREVIA BANK","pt":"06 • SOREVIA BANK","pl":"06 • SOREVIA BANK","ru":"06 • SOREVIA BANK","nl":"06 • SOREVIA BANK","tr":"06 • SOREVIA BANK"},"Plus qu'un compte,":{"en":"More than an account,","es":"Más que una cuenta,","it":"Più di un conto,","de":"Mehr als ein Konto,","pt":"Mais do que uma conta,","pl":"Więcej niż konto,","ru":"Больше, чем счёт, —","nl":"Meer dan een rekening,","tr":"Bir hesaptan fazlası,"},"un point de départ.":{"en":"a starting point.","es":"un punto de partida.","it":"un punto di partenza.","de":"ein Ausgangspunkt.","pt":"um ponto de partida.","pl":"punkt wyjścia.","ru":"отправная точка.","nl":"een vertrekpunt.","tr":"bir başlangıç noktası."},"Votre compte courant peut vous donner accès à différents services bancaires selon votre profil et les offres disponibles.":{"en":"Your current account can give you access to various banking services depending on your profile and the available offers.","es":"Tu cuenta corriente puede darte acceso a distintos servicios bancarios según tu perfil y las ofertas disponibles.","it":"Il tuo conto corrente può darti accesso a diversi servizi bancari in base al tuo profilo e alle offerte disponibili.","de":"Ihr Girokonto kann Ihnen je nach Profil und verfügbaren Angeboten Zugang zu verschiedenen Bankdienstleistungen geben.","pt":"A sua conta corrente pode dar-lhe acesso a diferentes serviços bancários, consoante o seu perfil e as ofertas disponíveis.","pl":"Twoje konto bieżące może dać Ci dostęp do różnych usług bankowych, w zależności od profilu i dostępnych ofert.","ru":"Ваш текущий счёт может дать доступ к различным банковским услугам в зависимости от вашего профиля и доступных предложений.","nl":"Uw zichtrekening kan u toegang geven tot verschillende bankdiensten, afhankelijk van uw profiel en de beschikbare aanbiedingen.","tr":"Vadesiz hesabınız, profilinize ve mevcut tekliflere göre çeşitli bankacılık hizmetlerine erişim sağlayabilir."},"Cartes bancaires":{"en":"Bank cards","es":"Tarjetas bancarias","it":"Carte bancarie","de":"Bankkarten","pt":"Cartões bancários","pl":"Karty bankowe","ru":"Банковские карты","nl":"Bankkaarten","tr":"Banka kartları"},"Découvrez les cartes adaptées à vos besoins.":{"en":"Discover the cards suited to your needs.","es":"Descubre las tarjetas adaptadas a tus necesidades.","it":"Scopri le carte adatte alle tue esigenze.","de":"Entdecken Sie die Karten, die zu Ihren Bedürfnissen passen.","pt":"Descubra os cartões adaptados às suas necessidades.","pl":"Poznaj karty dopasowane do Twoich potrzeb.","ru":"Узнайте о картах, подходящих вашим потребностям.","nl":"Ontdek de kaarten die bij uw behoeften passen.","tr":"İhtiyaçlarınıza uygun kartları keşfedin."},"Gérez vos transferts et opérations.":{"en":"Manage your transfers and operations.","es":"Gestiona tus transferencias y operaciones.","it":"Gestisci i tuoi trasferimenti e le tue operazioni.","de":"Verwalten Sie Ihre Überweisungen und Transaktionen.","pt":"Giria as suas transferências e operações.","pl":"Zarządzaj przelewami i operacjami.","ru":"Управляйте переводами и операциями.","nl":"Beheer uw overdrachten en verrichtingen.","tr":"Transferlerinizi ve işlemlerinizi yönetin."},"Épargne":{"en":"Savings","es":"Ahorro","it":"Risparmio","de":"Sparen","pt":"Poupança","pl":"Oszczędności","ru":"Сбережения","nl":"Sparen","tr":"Birikim"},"Explorez les solutions pour vos projets.":{"en":"Explore solutions for your projects.","es":"Explora soluciones para tus proyectos.","it":"Esplora le soluzioni per i tuoi progetti.","de":"Entdecken Sie Lösungen für Ihre Projekte.","pt":"Explore soluções para os seus projetos.","pl":"Poznaj rozwiązania dla swoich planów.","ru":"Изучите решения для своих планов.","nl":"Verken oplossingen voor uw plannen.","tr":"Projeleriniz için çözümleri keşfedin."},"Assurances":{"en":"Insurance","es":"Seguros","it":"Assicurazioni","de":"Versicherungen","pt":"Seguros","pl":"Ubezpieczenia","ru":"Страхование","nl":"Verzekeringen","tr":"Sigorta"},"Protégez ce qui compte pour vous.":{"en":"Protect what matters to you.","es":"Protege lo que te importa.","it":"Proteggi ciò che conta per te.","de":"Schützen Sie, was Ihnen wichtig ist.","pt":"Proteja o que conta para si.","pl":"Chroń to, co się dla Ciebie liczy.","ru":"Защитите то, что для вас важно.","nl":"Bescherm wat voor u telt.","tr":"Sizin için önemli olanı koruyun."},"07 • OUVERTURE":{"en":"07 • OPENING","es":"07 • APERTURA","it":"07 • APERTURA","de":"07 • ERÖFFNUNG","pt":"07 • ABERTURA","pl":"07 • OTWARCIE","ru":"07 • ОТКРЫТИЕ","nl":"07 • OPENING","tr":"07 • AÇILIŞ"},"Votre compte courant":{"en":"Your current account","es":"Tu cuenta corriente","it":"Il tuo conto corrente","de":"Ihr Girokonto","pt":"A sua conta corrente","pl":"Twoje konto bieżące","ru":"Ваш текущий счёт","nl":"Uw zichtrekening","tr":"Vadesiz hesabınız"},"commence ici.":{"en":"starts here.","es":"empieza aquí.","it":"inizia qui.","de":"beginnt hier.","pt":"começa aqui.","pl":"zaczyna się tutaj.","ru":"начинается здесь.","nl":"begint hier.","tr":"burada başlıyor."},"Rejoignez Sorevia Bank et découvrez une expérience bancaire pensée pour votre quotidien.":{"en":"Join Sorevia Bank and discover a banking experience designed for your daily life.","es":"Únete a Sorevia Bank y descubre una experiencia bancaria pensada para tu día a día.","it":"Unisciti a Sorevia Bank e scopri un'esperienza bancaria pensata per la tua quotidianità.","de":"Werden Sie Teil von Sorevia Bank und entdecken Sie ein Bankerlebnis, das für Ihren Alltag gemacht ist.","pt":"Junte-se ao Sorevia Bank e descubra uma experiência bancária pensada para o seu quotidiano.","pl":"Dołącz do Sorevia Bank i poznaj doświadczenie bankowe stworzone dla Twojej codzienności.","ru":"Присоединяйтесь к Sorevia Bank и откройте для себя банковский опыт, созданный для вашей повседневной жизни.","nl":"Sluit u aan bij Sorevia Bank en ontdek een bankervaring ontworpen voor uw dagelijks leven.","tr":"Sorevia Bank'a katılın ve günlük yaşamınız için tasarlanmış bir bankacılık deneyimini keşfedin."},"Ouvrir mon compte":{"en":"Open my account","es":"Abrir mi cuenta","it":"Apri il mio conto","de":"Mein Konto eröffnen","pt":"Abrir a minha conta","pl":"Otwórz moje konto","ru":"Открыть мой счёт","nl":"Mijn rekening openen","tr":"Hesabımı aç"},"Des solutions bancaires digitales pensées pour accompagner votre quotidien, vos projets et vos ambitions.":{"en":"Digital banking solutions designed to support your daily life, your projects and your ambitions.","es":"Soluciones bancarias digitales pensadas para acompañar tu día a día, tus proyectos y tus ambiciones.","it":"Soluzioni bancarie digitali pensate per accompagnare la tua quotidianità, i tuoi progetti e le tue ambizioni.","de":"Digitale Banklösungen, die Ihren Alltag, Ihre Projekte und Ihre Ambitionen begleiten.","pt":"Soluções bancárias digitais pensadas para acompanhar o seu quotidiano, os seus projetos e as suas ambições.","pl":"Cyfrowe rozwiązania bankowe stworzone, by towarzyszyć Twojej codzienności, planom i ambicjom.","ru":"Цифровые банковские решения, созданные, чтобы сопровождать вашу повседневность, ваши планы и ваши амбиции.","nl":"Digitale bankoplossingen die uw dagelijks leven, uw plannen en uw ambities begeleiden.","tr":"Günlük yaşamınıza, projelerinize ve hedeflerinize eşlik etmek için tasarlanmış dijital bankacılık çözümleri."},"Compte":{"en":"Account","es":"Cuenta","it":"Conto","de":"Konto","pt":"Conta","pl":"Konto","ru":"Счёт","nl":"Rekening","tr":"Hesap"},"Fonctionnalités":{"en":"Features","es":"Funcionalidades","it":"Funzionalità","de":"Funktionen","pt":"Funcionalidades","pl":"Funkcje","ru":"Функции","nl":"Functies","tr":"Özellikler"},"Gestion du compte":{"en":"Account management","es":"Gestión de la cuenta","it":"Gestione del conto","de":"Kontoverwaltung","pt":"Gestão da conta","pl":"Zarządzanie kontem","ru":"Управление счётом","nl":"Rekeningbeheer","tr":"Hesap yönetimi"},"Ouverture":{"en":"Opening","es":"Apertura","it":"Apertura","de":"Eröffnung","pt":"Abertura","pl":"Otwarcie","ru":"Открытие","nl":"Opening","tr":"Açılış"},"Sorevia":{"en":"Sorevia","es":"Sorevia","it":"Sorevia","de":"Sorevia","pt":"Sorevia","pl":"Sorevia","ru":"Sorevia","nl":"Sorevia","tr":"Sorevia"},"Accueil":{"en":"Home","es":"Inicio","it":"Home","de":"Startseite","pt":"Início","pl":"Strona główna","ru":"Главная","nl":"Home","tr":"Ana sayfa"},"Entreprises":{"en":"Business","es":"Empresas","it":"Imprese","de":"Unternehmen","pt":"Empresas","pl":"Firmy","ru":"Для бизнеса","nl":"Bedrijven","tr":"Şirketler"},"© 2026 Sorevia Bank — Tous droits réservés.":{"en":"© 2026 Sorevia Bank — All rights reserved.","es":"© 2026 Sorevia Bank — Todos los derechos reservados.","it":"© 2026 Sorevia Bank — Tutti i diritti riservati.","de":"© 2026 Sorevia Bank — Alle Rechte vorbehalten.","pt":"© 2026 Sorevia Bank — Todos os direitos reservados.","pl":"© 2026 Sorevia Bank — Wszelkie prawa zastrzeżone.","ru":"© 2026 Sorevia Bank — Все права защищены.","nl":"© 2026 Sorevia Bank — Alle rechten voorbehouden.","tr":"© 2026 Sorevia Bank — Tüm hakları saklıdır."},"Les informations présentées sont indicatives et les conditions applicables dépendent du produit choisi.":{"en":"The information presented is indicative and the applicable conditions depend on the chosen product.","es":"La información presentada es orientativa y las condiciones aplicables dependen del producto elegido.","it":"Le informazioni presentate sono indicative e le condizioni applicabili dipendono dal prodotto scelto.","de":"Die dargestellten Informationen sind unverbindlich; die geltenden Bedingungen hängen vom gewählten Produkt ab.","pt":"As informações apresentadas são indicativas e as condições aplicáveis dependem do produto escolhido.","pl":"Przedstawione informacje mają charakter orientacyjny, a obowiązujące warunki zależą od wybranego produktu.","ru":"Представленная информация носит ориентировочный характер, а применимые условия зависят от выбранного продукта.","nl":"De gepresenteerde informatie is indicatief en de toepasselijke voorwaarden hangen af van het gekozen product.","tr":"Sunulan bilgiler bilgilendirme amaçlıdır ve geçerli koşullar seçilen ürüne bağlıdır."}};
+var L=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var LOC={fr:"fr-FR",en:"en-GB",es:"es-ES",it:"it-IT",de:"de-DE",pt:"pt-PT",pl:"pl-PL",ru:"ru-RU",nl:"nl-NL",tr:"tr-TR"};
+var MONTHS={fr:"mois",en:"months",es:"meses",it:"mesi",de:"Monate",pt:"meses",pl:"miesięcy",ru:"мес.",nl:"maanden",tr:"ay"};
+function pick(){
+  var m=location.search.match(/[?&]lang=([a-z]{2})/i);
+  if(m&&L.indexOf(m[1].toLowerCase())>-1)return m[1].toLowerCase();
+  var c=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||"fr"];
+  for(var i=0;i<c.length;i++){var b=String(c[i]).toLowerCase().split("-")[0];if(L.indexOf(b)>-1)return b;}
+  return "en";
+}
+var lang=pick();
+window.__lang=lang;window.__locale=LOC[lang];window.__monthsWord=MONTHS[lang];
+var N=function(s){return s.replace(/\s+/g," ").trim();};
+function tr(s){var e=D[N(s)];return e&&e[lang]?e[lang]:null;}
+function run(){
+  document.documentElement.setAttribute("lang",lang);
+  if(lang!=="fr"){
+    var w=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT,null,false),n,list=[];
+    while((n=w.nextNode())){
+      var p=n.parentNode&&n.parentNode.nodeName;
+      if(p==="SCRIPT"||p==="STYLE"||!/\S/.test(n.nodeValue))continue;
+      list.push(n);
+    }
+    list.forEach(function(n){
+      var t=tr(n.nodeValue);
+      if(t){var v=n.nodeValue,a=v.match(/^\s*/)[0],b=v.match(/\s*$/)[0];n.nodeValue=a+t+b;}
+    });
+    document.querySelectorAll("[alt],[title],[placeholder],[aria-label]").forEach(function(el){
+      ["alt","title","placeholder","aria-label"].forEach(function(k){
+        var v=el.getAttribute(k);if(v){var t=tr(v);if(t)el.setAttribute(k,t);}
+      });
+    });
+    var md=document.querySelector('meta[name="description"]');
+    if(md){var t=tr(md.getAttribute("content")||"");if(t)md.setAttribute("content",t);}
+  }
+  if(typeof updateSimulator==="function"){try{updateSimulator();}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();
+})();
+</script>
+
+</body>
+</html>

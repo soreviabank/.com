@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#061b28">
+<meta name="description" content="Sorevia Bank - Solutions d'épargne">
+<title>Sorevia Bank | Épargne</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#f5f8fa;color:#102b38;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:root{--blue:#087fc4;--dark:#061b28;--deep:#03131e;--cyan:#72ddf5;--gold:#d5ad5c;--muted:#758990}
+.container{width:calc(100% - 30px);max-width:650px;margin:auto}
+.header{height:74px;background:#fff;border-bottom:1px solid #e4edef;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #0619250c}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:43px;height:43px;border-radius:12px;background:linear-gradient(145deg,#0ba5df,#07527a);color:#fff;display:grid;place-items:center;font:700 25px Georgia;box-shadow:0 8px 20px #087fc42c}
+.logo-text strong{display:block;font:700 18px Georgia;color:#0a2531;line-height:1}
+.logo-text small{display:block;font-size:6px;letter-spacing:3px;color:#8b9da3;margin-top:6px}
+.header-link{font-size:8px;font-weight:800;color:#0879b9;display:flex;align-items:center;gap:6px}
+.hero{min-height:710px;background:linear-gradient(145deg,#03131e 0%,#06384d 55%,#08738d 100%);color:#fff;position:relative;overflow:hidden;padding:45px 0 35px}
+.hero:before{content:"";position:absolute;width:390px;height:390px;border-radius:50%;right:-250px;top:-120px;border:1px solid #ffffff12}
+.hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;left:-200px;bottom:20px;border:1px solid #ffffff0b}
+.hero-content{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff1d;background:#ffffff0a;padding:8px 12px;border-radius:50px;color:#9be8f9;font-size:7px;font-weight:800;letter-spacing:1.3px}
+.hero h1{font:700 37px/1.08 "Playfair Display",Georgia,serif;margin-top:19px}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:9px;line-height:1.9;color:#b8cdd4;margin-top:14px}
+.hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:23px}
+.hero-buttons a{height:46px;border-radius:9px;display:flex;justify-content:center;align-items:center;gap:7px;font-size:8px;font-weight:800}
+.primary{background:#0888d0;color:#fff;box-shadow:0 12px 25px #0003}
+.secondary{background:#fff;color:#0879b9}
+.hero-visual{height:285px;margin-top:28px;border-radius:20px;overflow:hidden;position:relative;background:url("https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:0 25px 50px #0005}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#03131e08,#03131ebd)}
+.saving-card{position:absolute;z-index:2;left:14px;right:14px;bottom:14px;background:#ffffff18;border:1px solid #ffffff2b;border-radius:15px;padding:15px;backdrop-filter:blur(12px)}
+.saving-card small{font-size:6px;color:#c1d8df;letter-spacing:1px}
+.saving-card strong{display:block;font:700 23px Georgia;margin-top:5px}
+.saving-card span{font-size:6px;color:#b4c9d0}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}
+.trust{background:#ffffff0b;border:1px solid #ffffff12;border-radius:11px;padding:11px 5px;text-align:center}
+.trust i{color:#70dbf4;font-size:13px;margin-bottom:6px}
+.trust span{display:block;font-size:6px;color:#abc1c9}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-mark">S</div>
+<div class="logo-text">
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</a>
+<a href="index.html" class="header-link"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container hero-content">
+
+<div class="eyebrow"><i class="fa-solid fa-piggy-bank"></i> SOREVIA BANK • ÉPARGNE</div>
+
+<h1>Faites grandir vos projets, <span>pas à pas.</span></h1>
+
+<p>Des solutions d'épargne pensées pour vous aider à mettre de côté, préparer vos projets et construire votre avenir avec sérénité.</p>
+
+<div class="hero-buttons">
+<a href="#solutions" class="primary">Nos solutions <i class="fa-solid fa-arrow-down"></i></a>
+<a href="inscription.html" class="secondary">Commencer <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div class="hero-visual">
+<div class="saving-card">
+<small>ESPACE ÉPARGNE SOREVIA</small>
+<strong>Chaque objectif compte.</strong>
+<span>Épargnez à votre rythme et gardez le cap sur vos projets.</span>
+</div>
+</div>
+
+<div class="trust-row">
+<div class="trust"><i class="fa-solid fa-bullseye"></i><span>Objectifs</span></div>
+<div class="trust"><i class="fa-solid fa-chart-line"></i><span>Suivi</span></div>
+<div class="trust"><i class="fa-solid fa-shield-halved"></i><span>Sécurité</span></div>
+</div>
+
+</div>
+</section>
+
+<style>
+.solutions{background:#fff;padding:58px 0}
+.label{font-size:7px;font-weight:800;letter-spacing:1.7px;color:#087fc4}
+.title{font:700 30px/1.12 "Playfair Display",Georgia,serif;color:#092633;margin-top:7px}
+.title span{color:#087fc4}
+.desc{font-size:8px;line-height:1.9;color:#74878e;margin-top:10px}
+.solution-grid{display:grid;gap:12px;margin-top:25px}
+.solution{background:#fff;border:1px solid #e0e9ec;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px #0619250a}
+.solution-img{height:165px;background-size:cover;background-position:center;position:relative}
+.solution-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2800,#061b28ad)}
+.classic-img{background-image:url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1000&q=85")}
+.project-img{background-image:url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=85")}
+.reserve-img{background-image:url("https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1000&q=85")}
+.child-img{background-image:url("https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=1000&q=85")}
+.solution-tag{position:absolute;z-index:2;left:12px;top:12px;background:#ffffffdf;color:#0879b9;padding:7px 9px;border-radius:30px;font-size:6px;font-weight:800;letter-spacing:1px}
+.solution-body{padding:16px}
+.solution-icon{width:40px;height:40px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:14px;margin-bottom:12px}
+.solution h3{font:700 19px Georgia;color:#15333f}
+.solution p{font-size:7px;line-height:1.8;color:#74878f;margin-top:7px}
+.solution-link{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #edf1f2}
+.solution-link span{font-size:6px;color:#83969d}
+.solution-link a{font-size:7px;font-weight:800;color:#087fc4}
+.highlight{margin-top:25px;background:linear-gradient(145deg,#061b28,#075873);border-radius:19px;padding:20px;color:#fff;position:relative;overflow:hidden}
+.highlight:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-120px;top:-90px;border:1px solid #ffffff12}
+.highlight small{font-size:6px;color:#72ddf5;font-weight:800;letter-spacing:1.5px}
+.highlight h3{font:700 22px Georgia;margin-top:8px;position:relative;z-index:2}
+.highlight p{font-size:7px;line-height:1.8;color:#abc4cc;margin-top:7px;position:relative;z-index:2}
+</style>
+
+<section class="solutions" id="solutions">
+<div class="container">
+
+<div class="label">01 • NOS SOLUTIONS</div>
+<h2 class="title">Une épargne adaptée<br><span>à chaque ambition.</span></h2>
+<p class="desc">Choisissez une approche qui correspond à vos projets, votre rythme et vos objectifs.</p>
+
+<div class="solution-grid">
+
+<article class="solution reveal">
+<div class="solution-img classic-img"><span class="solution-tag">ESSENTIEL</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+<h3>Épargne classique</h3>
+<p>Une solution simple pour mettre progressivement de l'argent de côté et constituer une réserve.</p>
+<div class="solution-link"><span>Épargner régulièrement</span><a href="inscription.html">Commencer →</a></div>
+</div>
+</article>
+
+<article class="solution reveal">
+<div class="solution-img project-img"><span class="solution-tag">PROJETS</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-bullseye"></i></div>
+<h3>Épargne projet</h3>
+<p>Organisez votre épargne autour d'un objectif précis : voyage, logement, équipement ou autre projet.</p>
+<div class="solution-link"><span>Objectif personnalisé</span><a href="inscription.html">Découvrir →</a></div>
+</div>
+</article>
+
+<article class="solution reveal">
+<div class="solution-img reserve-img"><span class="solution-tag">PRÉVOYANCE</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-shield-heart"></i></div>
+<h3>Épargne de précaution</h3>
+<p>Constituez progressivement une réserve destinée à faire face aux dépenses imprévues.</p>
+<div class="solution-link"><span>Réserve personnelle</span><a href="inscription.html">Commencer →</a></div>
+</div>
+</article>
+
+<article class="solution reveal">
+<div class="solution-img child-img"><span class="solution-tag">AVENIR</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-child-reaching"></i></div>
+<h3>Épargne enfant</h3>
+<p>Préparez progressivement des projets futurs en mettant de côté une somme destinée à votre enfant.</p>
+<div class="solution-link"><span>Préparer demain</span><a href="inscription.html">Découvrir →</a></div>
+</div>
+</article>
+
+</div>
+
+<div class="highlight reveal">
+<small>SOREVIA SAVING EXPERIENCE</small>
+<h3>Un petit effort régulier peut devenir un grand projet.</h3>
+<p>Définissez votre objectif, choisissez votre rythme et suivez progressivement votre évolution.</p>
+</div>
+
+</div>
+</section>
+
+<style>
+.objectifs{background:#f2f7f9;padding:58px 0}
+.goal-box{background:#fff;border:1px solid #e0e9ec;border-radius:19px;padding:18px;margin-top:23px;box-shadow:0 15px 30px #0619250b}
+.goal-top{display:flex;justify-content:space-between;align-items:center}
+.goal-name{display:flex;align-items:center;gap:9px}
+.goal-name i{width:38px;height:38px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center}
+.goal-name strong{font-size:8px;color:#29444e}
+.goal-name small{display:block;font-size:6px;color:#84969c;margin-top:4px}
+.goal-percent{font-size:11px;font-weight:800;color:#087fc4}
+.goal-bar{height:9px;background:#e9eff1;border-radius:20px;margin-top:18px;overflow:hidden}
+.goal-bar i{display:block;height:100%;width:68%;background:linear-gradient(90deg,#087fc4,#72ddf5);border-radius:20px}
+.goal-values{display:flex;justify-content:space-between;margin-top:8px;font-size:6px;color:#83969d}
+.goal-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:17px}
+.goal-actions a{height:40px;border-radius:9px;display:flex;justify-content:center;align-items:center;gap:6px;font-size:7px;font-weight:800}
+.goal-main{background:#087fc4;color:#fff}
+.goal-alt{border:1px solid #dbe6e9;color:#0879b9}
+.steps{background:#fff;padding:58px 0}
+.step-list{display:grid;gap:10px;margin-top:24px}
+.step{display:flex;gap:12px;padding:14px;border:1px solid #e0e9ec;border-radius:14px;background:#fff}
+.step-number{width:38px;height:38px;border-radius:11px;background:#061b28;color:#72ddf5;display:grid;place-items:center;font-size:9px;font-weight:800;flex:none}
+.step strong{font-size:8px;color:#29444e;display:block}
+.step p{font-size:6px;line-height:1.7;color:#81939a;margin-top:4px}
+.stats{background:linear-gradient(145deg,#061b28,#075873);padding:58px 0;color:#fff}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:24px}
+.stat{background:#ffffff0b;border:1px solid #ffffff12;border-radius:14px;padding:16px;position:relative;overflow:hidden}
+.stat i{color:#72ddf5;font-size:14px}
+.stat strong{display:block;font:700 23px Georgia;margin-top:9px}
+.stat span{font-size:6px;color:#9fb8c0;line-height:1.6}
+</style>
+
+<section class="objectifs">
+<div class="container">
+
+<div class="label">02 • VOS OBJECTIFS</div>
+<h2 class="title">Donnez une direction<br><span>à votre épargne.</span></h2>
+<p class="desc">Visualisez votre progression et gardez votre motivation au fil du temps.</p>
+
+<div class="goal-box reveal">
+
+<div class="goal-top">
+<div class="goal-name">
+<i class="fa-solid fa-house"></i>
+<div><strong>Projet personnel</strong><small>Exemple d'objectif</small></div>
+</div>
+<div class="goal-percent">68%</div>
+</div>
+
+<div class="goal-bar"><i></i></div>
+
+<div class="goal-values">
+<span>6 800 € épargnés</span>
+<span>Objectif : 10 000 €</span>
+</div>
+
+<div class="goal-actions">
+<a href="inscription.html" class="goal-main">Créer mon objectif</a>
+<a href="inscription.html" class="goal-alt">En savoir plus</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="steps">
+<div class="container">
+
+<div class="label">03 • COMMENT ÇA MARCHE</div>
+<h2 class="title">Épargner devient<br><span>plus simple.</span></h2>
+<p class="desc">Une approche claire pour commencer à construire votre épargne.</p>
+
+<div class="step-list">
+
+<div class="step reveal">
+<div class="step-number">01</div>
+<div><strong>Définissez votre objectif</strong><p>Identifiez ce que vous souhaitez préparer et donnez-lui une direction claire.</p></div>
+</div>
+
+<div class="step reveal">
+<div class="step-number">02</div>
+<div><strong>Choisissez votre rythme</strong><p>Déterminez le montant et la fréquence adaptés à votre situation.</p></div>
+</div>
+
+<div class="step reveal">
+<div class="step-number">03</div>
+<div><strong>Suivez votre progression</strong><p>Observez l'évolution de votre épargne et ajustez votre stratégie si nécessaire.</p></div>
+</div>
+
+<div class="step reveal">
+<div class="step-number">04</div>
+<div><strong>Atteignez votre objectif</strong><p>Continuez progressivement jusqu'à atteindre la somme que vous vous êtes fixée.</p></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="stats">
+<div class="container">
+
+<div class="label" style="color:#72ddf5">04 • VOTRE PROGRESSION</div>
+<h2 class="title" style="color:#fff">Chaque étape compte.</h2>
+<p class="desc" style="color:#abc1c9">Gardez une vision simple de votre parcours d'épargne.</p>
+
+<div class="stats-grid">
+
+<div class="stat reveal">
+<i class="fa-solid fa-bullseye"></i>
+<strong>01</strong>
+<span>Objectif clairement défini</span>
+</div>
+
+<div class="stat reveal">
+<i class="fa-solid fa-calendar-check"></i>
+<strong>12</strong>
+<span>mois pour construire une habitude</span>
+</div>
+
+<div class="stat reveal">
+<i class="fa-solid fa-arrow-trend-up"></i>
+<strong>68%</strong>
+<span>de progression dans cet exemple</span>
+</div>
+
+<div class="stat reveal">
+<i class="fa-solid fa-star"></i>
+<strong>100%</strong>
+<span>de motivation pour avancer</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.digital{background:#fff;padding:58px 0}
+.digital-photo{height:250px;border-radius:19px;background:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85") center/cover;position:relative;overflow:hidden;margin-top:23px}
+.digital-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2805,#061b28b8)}
+.digital-card{position:absolute;z-index:2;left:13px;right:13px;bottom:13px;background:#ffffffed;border-radius:13px;padding:14px}
+.digital-card small{font-size:6px;color:#087fc4;font-weight:800;letter-spacing:1px}
+.digital-card strong{display:block;font:700 20px Georgia;color:#15333f;margin-top:5px}
+.digital-card span{display:block;font-size:6px;color:#71858c;margin-top:4px}
+.digital-features{display:grid;gap:9px;margin-top:18px}
+.digital-feature{display:flex;gap:10px;padding:13px;border:1px solid #e0e9ec;border-radius:12px}
+.digital-feature i{width:35px;height:35px;border-radius:10px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:11px;flex:none}
+.digital-feature strong{font-size:7px;display:block;color:#29444e}
+.digital-feature p{font-size:6px;color:#81939a;line-height:1.7;margin-top:4px}
+.security{background:#f2f7f9;padding:58px 0}
+.security-box{margin-top:23px;background:#fff;border:1px solid #e0e9ec;border-radius:19px;padding:18px}
+.security-head{display:flex;align-items:center;gap:11px}
+.security-head i{width:42px;height:42px;border-radius:12px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center}
+.security-head strong{font:700 18px Georgia;color:#17343f}
+.security-box>p{font-size:7px;line-height:1.8;color:#758990;margin-top:12px}
+.security-list{display:grid;gap:8px;margin-top:16px}
+.security-item{border:1px solid #e6edef;border-radius:10px;padding:11px;display:flex;gap:9px;align-items:center}
+.security-item i{color:#087fc4;font-size:10px;width:20px;text-align:center}
+.security-item span{font-size:7px;color:#526b74;font-weight:600}
+.experience{background:linear-gradient(145deg,#061b28,#075873);color:#fff;padding:58px 0;position:relative;overflow:hidden}
+.experience:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-230px;top:-130px;border:1px solid #ffffff0b}
+.experience .title{color:#fff}
+.experience .title span{color:#72ddf5}
+.experience .desc{color:#abc1c9}
+.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:22px}
+.experience-item{background:#ffffff0b;border:1px solid #ffffff12;border-radius:13px;padding:14px;position:relative;z-index:2}
+.experience-item i{color:#72ddf5;font-size:13px}
+.experience-item strong{display:block;font-size:7px;margin-top:7px}
+.experience-item p{font-size:6px;color:#9db6bf;line-height:1.6;margin-top:4px}
+</style>
+
+<section class="digital">
+<div class="container">
+
+<div class="label">05 • EXPÉRIENCE DIGITALE</div>
+<h2 class="title">Gardez le contrôle<br><span>de vos objectifs.</span></h2>
+<p class="desc">Une expérience pensée pour suivre votre épargne avec simplicité.</p>
+
+<div class="digital-photo reveal">
+<div class="digital-card">
+<small>SOREVIA DIGITAL SAVING</small>
+<strong>Votre progression en un coup d'œil.</strong>
+<span>Consultez votre épargne et gardez votre objectif en vue.</span>
+</div>
+</div>
+
+<div class="digital-features">
+
+<div class="digital-feature reveal">
+<i class="fa-solid fa-chart-pie"></i>
+<div><strong>Visualisez votre progression</strong><p>Gardez une représentation claire de votre évolution vers votre objectif.</p></div>
+</div>
+
+<div class="digital-feature reveal">
+<i class="fa-solid fa-bell"></i>
+<div><strong>Restez attentif</strong><p>Suivez vos mouvements et vos opérations d'épargne.</p></div>
+</div>
+
+<div class="digital-feature reveal">
+<i class="fa-solid fa-mobile-screen-button"></i>
+<div><strong>Une expérience mobile</strong><p>Retrouvez vos informations depuis votre smartphone.</p></div>
+</div>
+
+<div class="digital-feature reveal">
+<i class="fa-solid fa-sliders"></i>
+<div><strong>Adaptez votre stratégie</strong><p>Faites évoluer votre rythme selon vos projets et vos besoins.</p></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="security">
+<div class="container">
+
+<div class="label">06 • SÉCURITÉ</div>
+<h2 class="title">Votre épargne mérite<br><span>une protection sérieuse.</span></h2>
+<p class="desc">Adoptez les bons réflexes pour protéger votre environnement bancaire.</p>
+
+<div class="security-box reveal">
+
+<div class="security-head">
+<i class="fa-solid fa-shield-halved"></i>
+<strong>Les bons réflexes</strong>
+</div>
+
+<p>Ne communiquez jamais vos identifiants ou codes confidentiels et utilisez uniquement les canaux officiels de Sorevia Bank.</p>
+
+<div class="security-list">
+<div class="security-item"><i class="fa-solid fa-lock"></i><span>Protégez vos identifiants</span></div>
+<div class="security-item"><i class="fa-solid fa-mobile-screen"></i><span>Sécurisez votre appareil</span></div>
+<div class="security-item"><i class="fa-solid fa-eye"></i><span>Surveillez vos opérations</span></div>
+<div class="security-item"><i class="fa-solid fa-triangle-exclamation"></i><span>Signalez toute activité inhabituelle</span></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="experience">
+<div class="container">
+
+<div class="label" style="color:#72ddf5">07 • SOREVIA BANK</div>
+<h2 class="title">Construisez aujourd'hui<br><span>ce qui compte demain.</span></h2>
+<p class="desc">L'épargne peut vous accompagner dans différents moments de votre vie et vous aider à préparer vos projets.</p>
+
+<div class="experience-grid">
+
+<div class="experience-item reveal">
+<i class="fa-solid fa-house"></i>
+<strong>Logement</strong>
+<p>Préparez progressivement un projet immobilier.</p>
+</div>
+
+<div class="experience-item reveal">
+<i class="fa-solid fa-plane"></i>
+<strong>Voyage</strong>
+<p>Transformez une envie en objectif concret.</p>
+</div>
+
+<div class="experience-item reveal">
+<i class="fa-solid fa-graduation-cap"></i>
+<strong>Études</strong>
+<p>Anticipez les projets éducatifs futurs.</p>
+</div>
+
+<div class="experience-item reveal">
+<i class="fa-solid fa-seedling"></i>
+<strong>Avenir</strong>
+<p>Construisez progressivement votre réserve.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.final-cta{background:#fff;padding:60px 0;text-align:center}
+.final-icon{width:58px;height:58px;border-radius:16px;background:#e8f6fa;color:#087fc4;display:grid;place-items:center;margin:0 auto 15px;font-size:20px}
+.final-cta .title{font-size:30px}
+.final-cta p{font-size:8px;line-height:1.9;color:#758991;margin:11px auto 20px;max-width:500px}
+.final-cta a{display:flex;justify-content:center;align-items:center;gap:7px;background:#087fc4;color:#fff;border-radius:10px;padding:14px;font-size:8px;font-weight:800;max-width:500px;margin:auto;box-shadow:0 12px 25px #087fc42e}
+.footer{background:#03131e;color:#fff;padding:40px 0 18px}
+.footer-logo{display:flex;align-items:center;gap:9px}
+.footer-logo .logo-mark{box-shadow:none}
+.footer-logo strong{display:block;font:700 17px Georgia}
+.footer-logo small{display:block;font-size:6px;letter-spacing:2px;color:#6e8790;margin-top:5px}
+.footer-description{font-size:7px;line-height:1.8;color:#6e8790;margin:15px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;border-top:1px solid #ffffff0d;padding-top:20px}
+.footer-col h4{font:700 14px Georgia;margin-bottom:11px}
+.footer-col a{display:block;font-size:7px;color:#82989f;margin:8px 0}
+.footer-bottom{border-top:1px solid #ffffff0d;margin-top:22px;padding-top:14px;text-align:center;font-size:6px;color:#506972;line-height:1.8}
+.floating{position:fixed;bottom:17px;right:15px;width:45px;height:45px;border-radius:50%;background:#087fc4;color:#fff;display:grid;place-items:center;box-shadow:0 8px 25px #0004;z-index:500;font-size:13px;opacity:0;pointer-events:none;transition:.3s}
+.floating.visible{opacity:1;pointer-events:auto}
+@media(min-width:500px){
+.solution-grid{grid-template-columns:1fr 1fr}
+.solution:last-child{grid-column:1/-1}
+}
+</style>
+
+<section class="final-cta">
+<div class="container">
+
+<div class="final-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+
+<div class="label">08 • COMMENCER</div>
+
+<h2 class="title">Votre prochain objectif<br><span>commence aujourd'hui.</span></h2>
+
+<p>Découvrez l'univers Sorevia Bank et commencez à construire votre épargne à votre rythme.</p>
+
+<a href="inscription.html">Commencer mon parcours <i class="fa-solid fa-arrow-right"></i></a>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+
+<div class="footer-logo">
+<div class="logo-mark">S</div>
+<div>
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</div>
+
+<p class="footer-description">Des solutions bancaires digitales pensées pour accompagner votre quotidien, vos projets et vos ambitions.</p>
+
+<div class="footer-grid">
+
+<div class="footer-col">
+<h4>Épargne</h4>
+<a href="#solutions">Nos solutions</a>
+<a href="#solutions">Épargne classique</a>
+<a href="#solutions">Épargne projet</a>
+<a href="#solutions">Épargne enfant</a>
+<a href="inscription.html">Commencer</a>
+</div>
+
+<div class="footer-col">
+<h4>Sorevia</h4>
+<a href="index.html">Accueil</a>
+<a href="courant.html">Compte courant</a>
+<a href="bancaire.html">Cartes bancaires</a>
+<a href="paiement.html">Paiements</a>
+<a href="assurance.html">Assurances</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Sorevia Bank — Tous droits réservés.<br>
+Les informations et montants illustratifs présentés sur cette page sont des exemples de présentation et ne constituent pas une grille tarifaire ou un engagement contractuel.
+</div>
+
+</div>
+</footer>
+
+<a href="#" class="floating" id="topBtn">
+<i class="fa-solid fa-arrow-up"></i>
+</a>
+
+</main>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+}
+});
+},{threshold:.12});
+
+reveals.forEach(el=>observer.observe(el));
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+if(window.scrollY>450){
+topBtn.classList.add("visible");
+}else{
+topBtn.classList.remove("visible");
+}
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+link.addEventListener("click",function(e){
+const target=document.querySelector(this.getAttribute("href"));
+if(target){
+e.preventDefault();
+target.scrollIntoView({behavior:"smooth"});
+}
+});
+});
+</script>
+
+
+<script>
+/* ===== Sorevia Bank — traduction automatique selon la langue du navigateur =====
+   Langues : fr, en, es, it, de, pt, pl, ru, nl, tr
+   Le HTML reste en français (langue par défaut / source). Ordre des traductions : en,es,it,de,pt,pl,ru,nl,tr
+   Pour tester : ajoutez ?lang=de (ou es, it, pt, pl, ru, nl, tr, en, fr) à l'adresse de la page. */
+(function(){
+var LANGS=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var FALLBACK="en"; /* langue utilisée si celle du téléphone n'est pas dans la liste */
+var D={"Épargne projet":["Project savings","Ahorro para proyectos","Risparmio per progetti","Projektsparen","Poupança para projetos","Oszczędzanie na projekt","Сбережения на проект","Projectsparen","Proje tasarrufu"],"Une épargne adaptée":["Savings tailored","Un ahorro adaptado","Un risparmio adatto","Sparen, das","Uma poupança adaptada","Oszczędzanie dopasowane","Сбережения,","Sparen dat past","Her hedefe uygun"],"Continuez progressivement jusqu'à atteindre la somme que vous vous êtes fixée.":["Keep going step by step until you reach the amount you set for yourself.","Continúa poco a poco hasta alcanzar la suma que te has fijado.","Continua gradualmente fino a raggiungere la somma che ti sei prefissato.","Machen Sie Schritt für Schritt weiter, bis Sie den Betrag erreicht haben, den Sie sich vorgenommen haben.","Continue progressivamente até atingir a quantia que definiu.","Kontynuuj krok po kroku, aż osiągniesz wyznaczoną kwotę.","Продолжайте шаг за шагом, пока не накопите намеченную сумму.","Ga geleidelijk door tot u het bedrag hebt bereikt dat u zich had voorgenomen.","Belirlediğiniz tutara ulaşana kadar adım adım devam edin."],"Identifiez ce que vous souhaitez préparer et donnez-lui une direction claire.":["Identify what you want to prepare for and give it a clear direction.","Identifica lo que quieres preparar y dale una dirección clara.","Individua ciò che vuoi preparare e dagli una direzione chiara.","Überlegen Sie, was Sie vorbereiten möchten, und geben Sie dem Ganzen eine klare Richtung.","Identifique o que deseja preparar e dê-lhe uma direção clara.","Zastanów się, co chcesz przygotować, i nadaj temu wyraźny kierunek.","Определите, к чему вы хотите подготовиться, и задайте чёткое направление.","Bepaal waarvoor u wilt sparen en geef het een duidelijke richting.","Neye hazırlanmak istediğinizi belirleyin ve ona net bir yön verin."],"PROJETS":["PROJECTS","PROYECTOS","PROGETTI","PROJEKTE","PROJETOS","PROJEKTY","ПРОЕКТЫ","PROJECTEN","PROJELER"],"Une expérience pensée pour suivre votre épargne avec simplicité.":["An experience designed to follow your savings with ease.","Una experiencia pensada para seguir tu ahorro con sencillez.","Un'esperienza pensata per seguire il tuo risparmio con semplicità.","Ein Erlebnis, das Ihnen hilft, Ihre Ersparnisse einfach zu verfolgen.","Uma experiência pensada para acompanhar a sua poupança com simplicidade.","Rozwiązanie stworzone, by w prosty sposób śledzić swoje oszczędności.","Удобный способ просто следить за своими сбережениями.","Een ervaring waarmee u uw spaargeld eenvoudig volgt.","Tasarruflarınızı kolayca takip etmeniz için tasarlanmış bir deneyim."],"Épargne":["Savings","Ahorro","Risparmio","Sparen","Poupança","Oszczędności","Сбережения","Sparen","Tasarruf"],"Épargner devient":["Saving becomes","Ahorrar se vuelve","Risparmiare diventa","Sparen wird","Poupar torna-se","Oszczędzanie staje się","Копить становится","Sparen wordt","Tasarruf etmek"],"Assurances":["Insurance","Seguros","Assicurazioni","Versicherungen","Seguros","Ubezpieczenia","Страхование","Verzekeringen","Sigortalar"],"Construisez aujourd'hui":["Build today","Construye hoy","Costruisci oggi","Bauen Sie heute auf,","Construa hoje","Buduj dziś","Стройте сегодня","Bouw vandaag","Bugün"],"Des solutions bancaires digitales pensées pour accompagner votre quotidien, vos projets et vos ambitions.":["Digital banking solutions designed to support your daily life, your projects and your ambitions.","Soluciones bancarias digitales pensadas para acompañar tu día a día, tus proyectos y tus ambiciones.","Soluzioni bancarie digitali pensate per accompagnare la tua quotidianità, i tuoi progetti e le tue ambizioni.","Digitale Banklösungen, die Ihren Alltag, Ihre Projekte und Ihre Ziele begleiten.","Soluções bancárias digitais pensadas para acompanhar o seu dia a dia, os seus projetos e as suas ambições.","Cyfrowe rozwiązania bankowe, które wspierają Twoją codzienność, projekty i ambicje.","Цифровые банковские решения, которые сопровождают вашу повседневную жизнь, проекты и амбиции.","Digitale bankoplossingen die uw dagelijks leven, uw projecten en uw ambities begeleiden.","Günlük hayatınıza, projelerinize ve hedeflerinize eşlik eden dijital bankacılık çözümleri."],"AVENIR":["FUTURE","FUTURO","FUTURO","ZUKUNFT","FUTURO","PRZYSZŁOŚĆ","БУДУЩЕЕ","TOEKOMST","GELECEK"],"Définissez votre objectif":["Define your goal","Define tu objetivo","Definisci il tuo obiettivo","Legen Sie Ihr Ziel fest","Defina o seu objetivo","Określ swój cel","Определите свою цель","Bepaal uw doel","Hedefinizi belirleyin"],"Constituez progressivement une réserve destinée à faire face aux dépenses imprévues.":["Gradually build a reserve to cope with unexpected expenses.","Crea poco a poco una reserva para afrontar gastos imprevistos.","Costruisci gradualmente una riserva per far fronte alle spese impreviste.","Bauen Sie nach und nach eine Reserve für unvorhergesehene Ausgaben auf.","Constitua progressivamente uma reserva para fazer face a despesas imprevistas.","Stopniowo buduj rezerwę na nieprzewidziane wydatki.","Постепенно создавайте резерв на непредвиденные расходы.","Bouw geleidelijk een reserve op voor onverwachte uitgaven.","Beklenmedik giderlerle başa çıkmak için yavaş yavaş bir rezerv oluşturun."],"Atteignez votre objectif":["Reach your goal","Alcanza tu objetivo","Raggiungi il tuo obiettivo","Erreichen Sie Ihr Ziel","Alcance o seu objetivo","Osiągnij swój cel","Достигните цели","Bereik uw doel","Hedefinize ulaşın"],"Préparer demain":["Prepare for tomorrow","Preparar el mañana","Preparare il domani","Morgen vorbereiten","Preparar o amanhã","Przygotuj jutro","Готовиться к завтрашнему дню","Morgen voorbereiden","Yarına hazırlan"],"Épargnez à votre rythme et gardez le cap sur vos projets.":["Save at your own pace and stay on course with your projects.","Ahorra a tu ritmo y mantén el rumbo de tus proyectos.","Risparmia al tuo ritmo e mantieni la rotta verso i tuoi progetti.","Sparen Sie in Ihrem Tempo und behalten Sie Ihre Projekte im Blick.","Poupe ao seu ritmo e mantenha o rumo dos seus projetos.","Oszczędzaj we własnym tempie i trzymaj kurs na swoje projekty.","Копите в своем темпе и уверенно идите к своим проектам.","Spaar in uw eigen tempo en houd koers met uw projecten.","Kendi hızınızda tasarruf edin ve projelerinize odaklı kalın."],"SOREVIA SAVING EXPERIENCE":["SOREVIA SAVING EXPERIENCE","SOREVIA SAVING EXPERIENCE","SOREVIA SAVING EXPERIENCE","SOREVIA SAVING EXPERIENCE","SOREVIA SAVING EXPERIENCE","SOREVIA SAVING EXPERIENCE","SOREVIA SAVING EXPERIENCE","SOREVIA SAVING EXPERIENCE","SOREVIA SAVING EXPERIENCE"],"Chaque objectif compte.":["Every goal counts.","Cada objetivo cuenta.","Ogni obiettivo conta.","Jedes Ziel zählt.","Cada objetivo conta.","Każdy cel ma znaczenie.","Каждая цель важна.","Elk doel telt.","Her hedef önemlidir."],"PRÉVOYANCE":["PRECAUTION","PREVISIÓN","PREVIDENZA","VORSORGE","PREVIDÊNCIA","ZABEZPIECZENIE","ПРЕДОСТОРОЖНОСТЬ","VOORZORG","ÖNLEM"],"02 • VOS OBJECTIFS":["02 • YOUR GOALS","02 • TUS OBJETIVOS","02 • I TUOI OBIETTIVI","02 • IHRE ZIELE","02 • OS SEUS OBJETIVOS","02 • TWOJE CELE","02 • ВАШИ ЦЕЛИ","02 • UW DOELEN","02 • HEDEFLERİNİZ"],"SOREVIA DIGITAL SAVING":["SOREVIA DIGITAL SAVING","SOREVIA DIGITAL SAVING","SOREVIA DIGITAL SAVING","SOREVIA DIGITAL SAVING","SOREVIA DIGITAL SAVING","SOREVIA DIGITAL SAVING","SOREVIA DIGITAL SAVING","SOREVIA DIGITAL SAVING","SOREVIA DIGITAL SAVING"],"Accueil":["Home","Inicio","Home","Startseite","Início","Strona główna","Главная","Home","Ana sayfa"],"de vos objectifs.":["of your goals.","de tus objetivos.","dei tuoi obiettivi.","über Ihre Ziele.","dos seus objetivos.","nad swoimi celami.","свои цели.","over uw doelen.","kontrolü sizde kalsın."],"Sécurité":["Security","Seguridad","Sicurezza","Sicherheit","Segurança","Bezpieczeństwo","Безопасность","Beveiliging","Güvenlik"],"05 • EXPÉRIENCE DIGITALE":["05 • DIGITAL EXPERIENCE","05 • EXPERIENCIA DIGITAL","05 • ESPERIENZA DIGITALE","05 • DIGITALES ERLEBNIS","05 • EXPERIÊNCIA DIGITAL","05 • DOŚWIADCZENIE CYFROWE","05 • ЦИФРОВОЙ ОПЫТ","05 • DIGITALE ERVARING","05 • DİJİTAL DENEYİM"],"Protégez vos identifiants":["Protect your login details","Protege tus credenciales","Proteggi le tue credenziali","Schützen Sie Ihre Zugangsdaten","Proteja as suas credenciais","Chroń dane logowania","Защищайте свои учётные данные","Bescherm uw inloggegevens","Kimlik bilgilerinizi koruyun"],"Voyage":["Travel","Viaje","Viaggio","Reisen","Viagem","Podróże","Путешествия","Reizen","Seyahat"],"En savoir plus":["Learn more","Saber más","Scopri di più","Mehr erfahren","Saber mais","Dowiedz się więcej","Узнать больше","Meer informatie","Daha fazla bilgi"],"Sorevia Bank | Épargne":["Sorevia Bank | Savings","Sorevia Bank | Ahorro","Sorevia Bank | Risparmio","Sorevia Bank | Sparen","Sorevia Bank | Poupança","Sorevia Bank | Oszczędności","Sorevia Bank | Сбережения","Sorevia Bank | Sparen","Sorevia Bank | Tasarruf"],"ESPACE ÉPARGNE SOREVIA":["SOREVIA SAVINGS SPACE","ESPACIO DE AHORRO SOREVIA","SPAZIO RISPARMIO SOREVIA","SOREVIA SPARBEREICH","ESPAÇO POUPANÇA SOREVIA","STREFA OSZCZĘDNOŚCI SOREVIA","РАЗДЕЛ СБЕРЕЖЕНИЙ SOREVIA","SOREVIA SPAARRUIMTE","SOREVIA TASARRUF ALANI"],"Choisissez une approche qui correspond à vos projets, votre rythme et vos objectifs.":["Choose an approach that fits your projects, your pace and your goals.","Elige un enfoque que se adapte a tus proyectos, tu ritmo y tus objetivos.","Scegli un approccio in linea con i tuoi progetti, il tuo ritmo e i tuoi obiettivi.","Wählen Sie einen Ansatz, der zu Ihren Projekten, Ihrem Tempo und Ihren Zielen passt.","Escolha uma abordagem que corresponda aos seus projetos, ao seu ritmo e aos seus objetivos.","Wybierz podejście dopasowane do Twoich projektów, tempa i celów.","Выберите подход, который соответствует вашим проектам, темпу и целям.","Kies een aanpak die past bij uw projecten, uw tempo en uw doelen.","Projelerinize, hızınıza ve hedeflerinize uygun bir yaklaşım seçin."],"pas à pas.":["step by step.","paso a paso.","passo dopo passo.","Schritt für Schritt.","passo a passo.","krok po kroku.","шаг за шагом.","stap voor stap.","adım adım."],"Faites grandir vos projets,":["Make your projects grow,","Haz crecer tus proyectos,","Fai crescere i tuoi progetti,","Lassen Sie Ihre Projekte wachsen,","Faça os seus projetos crescer,","Rozwijaj swoje projekty,","Воплощайте свои проекты,","Laat uw projecten groeien,","Projelerinizi büyütün,"],"Épargne classique":["Classic savings","Ahorro clásico","Risparmio classico","Klassisches Sparen","Poupança clássica","Klasyczne oszczędzanie","Классические сбережения","Klassiek sparen","Klasik tasarruf"],"Cartes bancaires":["Bank cards","Tarjetas bancarias","Carte bancarie","Bankkarten","Cartões bancários","Karty bankowe","Банковские карты","Bankkaarten","Banka kartları"],"ESSENTIEL":["ESSENTIAL","ESENCIAL","ESSENZIALE","BASIS","ESSENCIAL","PODSTAWOWE","ОСНОВНОЙ","ESSENTIEEL","TEMEL"],"Exemple d'objectif":["Example goal","Ejemplo de objetivo","Esempio di obiettivo","Beispielziel","Exemplo de objetivo","Przykładowy cel","Пример цели","Voorbeelddoel","Örnek hedef"],"6 800 € épargnés":["6,800 € saved","6.800 € ahorrados","6.800 € risparmiati","6.800 € gespart","6.800 € poupados","Zaoszczędzono 6 800 €","Накоплено 6 800 €","6.800 € gespaard","6.800 € biriktirildi"],"Les bons réflexes":["Good habits","Los buenos reflejos","I giusti comportamenti","Die richtigen Verhaltensregeln","Os bons hábitos","Dobre nawyki","Правила безопасности","De juiste reflexen","Doğru alışkanlıklar"],"Études":["Studies","Estudios","Studi","Studium","Estudos","Nauka","Образование","Studie","Eğitim"],"Objectif clairement défini":["Clearly defined goal","Objetivo claramente definido","Obiettivo chiaramente definito","Klar definiertes Ziel","Objetivo claramente definido","Jasno określony cel","Чётко определённая цель","Duidelijk omschreven doel","Net olarak belirlenmiş hedef"],"Organisez votre épargne autour d'un objectif précis : voyage, logement, équipement ou autre projet.":["Organise your savings around a specific goal: travel, housing, equipment or any other project.","Organiza tu ahorro en torno a un objetivo concreto: viaje, vivienda, equipamiento u otro proyecto.","Organizza il tuo risparmio attorno a un obiettivo preciso: viaggio, casa, attrezzatura o altro progetto.","Richten Sie Ihre Ersparnisse auf ein klares Ziel aus: Reise, Wohnen, Ausstattung oder ein anderes Projekt.","Organize a sua poupança em torno de um objetivo preciso: viagem, habitação, equipamento ou outro projeto.","Zaplanuj oszczędności wokół konkretnego celu: podróży, mieszkania, wyposażenia lub innego projektu.","Организуйте сбережения вокруг конкретной цели: путешествие, жильё, техника или другой проект.","Organiseer uw spaargeld rond een concreet doel: reis, woning, uitrusting of een ander project.","Tasarrufunuzu belirli bir hedef etrafında düzenleyin: seyahat, konut, ekipman veya başka bir proje."],"07 • SOREVIA BANK":["07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK","07 • SOREVIA BANK"],"L'épargne peut vous accompagner dans différents moments de votre vie et vous aider à préparer vos projets.":["Savings can support you at different moments in your life and help you prepare your projects.","El ahorro puede acompañarte en distintos momentos de tu vida y ayudarte a preparar tus proyectos.","Il risparmio può accompagnarti in diversi momenti della tua vita e aiutarti a preparare i tuoi progetti.","Sparen kann Sie in verschiedenen Lebensphasen begleiten und Ihnen helfen, Ihre Projekte vorzubereiten.","A poupança pode acompanhá-lo em diferentes momentos da sua vida e ajudá-lo a preparar os seus projetos.","Oszczędzanie może towarzyszyć Ci w różnych momentach życia i pomagać w przygotowaniu projektów.","Сбережения могут сопровождать вас в разные периоды жизни и помогать готовить проекты.","Sparen kan u in verschillende fasen van uw leven begeleiden en helpen uw projecten voor te bereiden.","Tasarruf, hayatınızın farklı anlarında size eşlik edebilir ve projelerinizi hazırlamanıza yardımcı olabilir."],"Visualisez votre progression et gardez votre motivation au fil du temps.":["Visualise your progress and stay motivated over time.","Visualiza tu progreso y mantén la motivación con el tiempo.","Visualizza i tuoi progressi e mantieni la motivazione nel tempo.","Behalten Sie Ihren Fortschritt im Blick und bleiben Sie langfristig motiviert.","Visualize o seu progresso e mantenha a motivação ao longo do tempo.","Obserwuj swoje postępy i zachowaj motywację w czasie.","Следите за прогрессом и сохраняйте мотивацию с течением времени.","Visualiseer uw voortgang en blijf gemotiveerd.","İlerlemenizi görün ve zaman içinde motivasyonunuzu koruyun."],"Consultez votre épargne et gardez votre objectif en vue.":["Check your savings and keep your goal in sight.","Consulta tu ahorro y mantén tu objetivo a la vista.","Consulta il tuo risparmio e tieni il tuo obiettivo in vista.","Sehen Sie Ihre Ersparnisse ein und behalten Sie Ihr Ziel im Blick.","Consulte a sua poupança e mantenha o seu objetivo à vista.","Sprawdzaj swoje oszczędności i miej cel zawsze przed oczami.","Просматривайте сбережения и держите цель перед глазами.","Bekijk uw spaargeld en houd uw doel in zicht.","Tasarrufunuzu görüntüleyin ve hedefinizi gözden kaçırmayın."],"mois pour construire une habitude":["months to build a habit","meses para crear un hábito","mesi per costruire un'abitudine","Monate, um eine Gewohnheit aufzubauen","meses para criar um hábito","miesięcy na budowanie nawyku","месяцев для формирования привычки","maanden om een gewoonte op te bouwen","ayda bir alışkanlık kazanın"],"une protection sérieuse.":["serious protection.","una protección seria.","una protezione seria.","ernsthaften Schutz.","uma proteção séria.","na poważną ochronę.","серьёзной защиты.","serieuze bescherming.","ciddi bir korumayı hak ediyor."],"Une solution simple pour mettre progressivement de l'argent de côté et constituer une réserve.":["A simple solution to gradually set money aside and build a reserve.","Una solución sencilla para ir guardando dinero poco a poco y crear una reserva.","Una soluzione semplice per mettere da parte denaro gradualmente e costruire una riserva.","Eine einfache Lösung, um nach und nach Geld zurückzulegen und eine Reserve aufzubauen.","Uma solução simples para ir pondo dinheiro de lado e constituir uma reserva.","Proste rozwiązanie, by stopniowo odkładać pieniądze i budować rezerwę.","Простое решение, чтобы постепенно откладывать деньги и создавать резерв.","Een eenvoudige oplossing om geleidelijk geld opzij te zetten en een reserve op te bouwen.","Para biriktirip yavaş yavaş bir rezerv oluşturmanın basit bir yolu."],"Gardez une vision simple de votre parcours d'épargne.":["Keep a simple view of your savings journey.","Mantén una visión sencilla de tu trayectoria de ahorro.","Mantieni una visione semplice del tuo percorso di risparmio.","Behalten Sie Ihren Sparweg einfach im Blick.","Mantenha uma visão simples do seu percurso de poupança.","Miej prosty ogląd swojej drogi oszczędzania.","Сохраняйте простое представление о своём пути к сбережениям.","Houd uw spaartraject eenvoudig in beeld.","Tasarruf yolculuğunuzu basitçe takip edin."],"Projet personnel":["Personal project","Proyecto personal","Progetto personale","Persönliches Projekt","Projeto pessoal","Projekt osobisty","Личный проект","Persoonlijk project","Kişisel proje"],"Paiements":["Payments","Pagos","Pagamenti","Zahlungen","Pagamentos","Płatności","Платежи","Betalingen","Ödemeler"],"Sorevia Bank - Solutions d'épargne":["Sorevia Bank - Savings solutions","Sorevia Bank - Soluciones de ahorro","Sorevia Bank - Soluzioni di risparmio","Sorevia Bank - Sparlösungen","Sorevia Bank - Soluções de poupança","Sorevia Bank - Rozwiązania oszczędnościowe","Sorevia Bank - Решения для сбережений","Sorevia Bank - Spaaroplossingen","Sorevia Bank - Tasarruf çözümleri"],"Objectif : 10 000 €":["Goal: 10,000 €","Objetivo: 10.000 €","Obiettivo: 10.000 €","Ziel: 10.000 €","Objetivo: 10.000 €","Cel: 10 000 €","Цель: 10 000 €","Doel: 10.000 €","Hedef: 10.000 €"],"Sécurisez votre appareil":["Secure your device","Protege tu dispositivo","Metti in sicurezza il tuo dispositivo","Sichern Sie Ihr Gerät","Proteja o seu dispositivo","Zabezpiecz swoje urządzenie","Защитите своё устройство","Beveilig uw toestel","Cihazınızı güvenceye alın"],"Commencer mon parcours":["Start my journey","Empezar mi recorrido","Inizia il mio percorso","Meine Reise beginnen","Começar o meu percurso","Rozpocznij moją drogę","Начать мой путь","Mijn traject starten","Yolculuğuma başla"],"Observez l'évolution de votre épargne et ajustez votre stratégie si nécessaire.":["Watch how your savings evolve and adjust your strategy if needed.","Observa la evolución de tu ahorro y ajusta tu estrategia si es necesario.","Osserva l'evoluzione del tuo risparmio e adatta la tua strategia se necessario.","Beobachten Sie die Entwicklung Ihrer Ersparnisse und passen Sie Ihre Strategie bei Bedarf an.","Observe a evolução da sua poupança e ajuste a sua estratégia, se necessário.","Obserwuj rozwój swoich oszczędności i w razie potrzeby dostosuj strategię.","Наблюдайте за ростом сбережений и при необходимости корректируйте стратегию.","Zie hoe uw spaargeld groeit en pas uw strategie zo nodig aan.","Tasarrufunuzun gelişimini izleyin ve gerekirse stratejinizi ayarlayın."],"Épargne de précaution":["Precautionary savings","Ahorro de precaución","Risparmio di precauzione","Notfall-Rücklage","Poupança de precaução","Oszczędności na nieprzewidziane wydatki","Резервные сбережения","Spaarbuffer","Önlem tasarrufu"],"Une approche claire pour commencer à construire votre épargne.":["A clear approach to start building your savings.","Un enfoque claro para empezar a construir tu ahorro.","Un approccio chiaro per iniziare a costruire il tuo risparmio.","Ein klarer Ansatz, um Ihre Ersparnisse aufzubauen.","Uma abordagem clara para começar a construir a sua poupança.","Przejrzyste podejście do budowania oszczędności.","Понятный подход, чтобы начать формировать сбережения.","Een duidelijke aanpak om uw spaargeld op te bouwen.","Tasarruflarınızı oluşturmaya başlamak için net bir yaklaşım."],"© 2026 Sorevia Bank — Tous droits réservés.":["© 2026 Sorevia Bank — All rights reserved.","© 2026 Sorevia Bank — Todos los derechos reservados.","© 2026 Sorevia Bank — Tutti i diritti riservati.","© 2026 Sorevia Bank — Alle Rechte vorbehalten.","© 2026 Sorevia Bank — Todos os direitos reservados.","© 2026 Sorevia Bank — Wszelkie prawa zastrzeżone.","© 2026 Sorevia Bank — Все права защищены.","© 2026 Sorevia Bank — Alle rechten voorbehouden.","© 2026 Sorevia Bank — Tüm hakları saklıdır."],"de motivation pour avancer":["motivation to move forward","de motivación para avanzar","di motivazione per andare avanti","Motivation, um voranzukommen","de motivação para avançar","motywacji, by iść naprzód","мотивации двигаться вперёд","motivatie om vooruit te gaan","ilerlemek için motivasyon"],"Créer mon objectif":["Create my goal","Crear mi objetivo","Crea il mio obiettivo","Mein Ziel erstellen","Criar o meu objetivo","Utwórz mój cel","Создать цель","Mijn doel aanmaken","Hedefimi oluştur"],"Découvrez l'univers Sorevia Bank et commencez à construire votre épargne à votre rythme.":["Discover the Sorevia Bank universe and start building your savings at your own pace.","Descubre el universo Sorevia Bank y empieza a construir tu ahorro a tu ritmo.","Scopri l'universo Sorevia Bank e inizia a costruire il tuo risparmio con i tuoi tempi.","Entdecken Sie die Welt der Sorevia Bank und beginnen Sie, Ihre Ersparnisse in Ihrem Tempo aufzubauen.","Descubra o universo Sorevia Bank e comece a construir a sua poupança ao seu ritmo.","Odkryj świat Sorevia Bank i zacznij budować oszczędności we własnym tempie.","Откройте для себя мир Sorevia Bank и начните формировать сбережения в своём темпе.","Ontdek het universum van Sorevia Bank en begin in uw eigen tempo uw spaargeld op te bouwen.","Sorevia Bank dünyasını keşfedin ve tasarruflarınızı kendi hızınızda oluşturmaya başlayın."],"Des solutions d'épargne pensées pour vous aider à mettre de côté, préparer vos projets et construire votre avenir avec sérénité.":["Savings solutions designed to help you set money aside, prepare your projects and build your future with peace of mind.","Soluciones de ahorro pensadas para ayudarte a guardar dinero, preparar tus proyectos y construir tu futuro con serenidad.","Soluzioni di risparmio pensate per aiutarti a mettere da parte, preparare i tuoi progetti e costruire il tuo futuro con serenità.","Sparlösungen, die Ihnen helfen, Geld zurückzulegen, Ihre Projekte vorzubereiten und Ihre Zukunft gelassen aufzubauen.","Soluções de poupança pensadas para o ajudar a pôr dinheiro de lado, preparar os seus projetos e construir o seu futuro com serenidade.","Rozwiązania oszczędnościowe stworzone, aby pomóc Ci odkładać pieniądze, przygotowywać projekty i budować przyszłość ze spokojem.","Сберегательные решения, которые помогут вам откладывать средства, готовить проекты и спокойно строить будущее.","Spaaroplossingen die u helpen geld opzij te zetten, uw projecten voor te bereiden en met gemoedsrust uw toekomst op te bouwen.","Para biriktirmenize, projelerinizi hazırlamanıza ve geleceğinizi huzurla inşa etmenize yardımcı olacak tasarruf çözümleri."],"01 • NOS SOLUTIONS":["01 • OUR SOLUTIONS","01 • NUESTRAS SOLUCIONES","01 • LE NOSTRE SOLUZIONI","01 • UNSERE LÖSUNGEN","01 • AS NOSSAS SOLUÇÕES","01 • NASZE ROZWIĄZANIA","01 • НАШИ РЕШЕНИЯ","01 • ONZE OPLOSSINGEN","01 • ÇÖZÜMLERİMİZ"],"Objectifs":["Goals","Objetivos","Obiettivi","Ziele","Objetivos","Cele","Цели","Doelen","Hedefler"],"Transformez une envie en objectif concret.":["Turn a wish into a concrete goal.","Convierte un deseo en un objetivo concreto.","Trasforma un desiderio in un obiettivo concreto.","Machen Sie aus einem Wunsch ein konkretes Ziel.","Transforme um desejo num objetivo concreto.","Zamień pragnienie w konkretny cel.","Превратите желание в конкретную цель.","Maak van een wens een concreet doel.","Bir isteği somut bir hedefe dönüştürün."],"Les informations et montants illustratifs présentés sur cette page sont des exemples de présentation et ne constituent pas une grille tarifaire ou un engagement contractuel.":["The information and illustrative amounts shown on this page are presentation examples and do not constitute a price list or a contractual commitment.","La información y los importes ilustrativos que se muestran en esta página son ejemplos de presentación y no constituyen una tarifa ni un compromiso contractual.","Le informazioni e gli importi illustrativi presentati in questa pagina sono esempi di presentazione e non costituiscono un tariffario né un impegno contrattuale.","Die auf dieser Seite dargestellten Informationen und Beträge sind Beispiele zur Veranschaulichung und stellen weder eine Preisliste noch eine vertragliche Verpflichtung dar.","As informações e os montantes ilustrativos apresentados nesta página são exemplos de apresentação e não constituem uma tabela de preços nem um compromisso contratual.","Informacje i kwoty przedstawione na tej stronie mają charakter poglądowy i nie stanowią cennika ani zobowiązania umownego.","Информация и суммы на этой странице приведены в качестве примеров и не являются тарифной сеткой или договорным обязательством.","De informatie en bedragen op deze pagina zijn illustratieve voorbeelden en vormen geen tarievenlijst of contractuele verbintenis.","Bu sayfada sunulan bilgiler ve tutarlar yalnızca örnek niteliğindedir; fiyat tarifesi veya sözleşmesel bir taahhüt oluşturmaz."],"Découvrir →":["Discover →","Descubrir →","Scopri →","Entdecken →","Descobrir →","Odkryj →","Узнать →","Ontdekken →","Keşfet →"],"Commencer →":["Get started →","Empezar →","Inizia →","Loslegen →","Começar →","Zacznij →","Начать →","Beginnen →","Başla →"],"Construisez progressivement votre réserve.":["Gradually build your reserve.","Construye poco a poco tu reserva.","Costruisci gradualmente la tua riserva.","Bauen Sie Ihre Reserve nach und nach auf.","Construa progressivamente a sua reserva.","Stopniowo buduj swoją rezerwę.","Постепенно создавайте свой резерв.","Bouw geleidelijk uw reserve op.","Rezervinizi adım adım oluşturun."],"Votre prochain objectif":["Your next goal","Tu próximo objetivo","Il tuo prossimo obiettivo","Ihr nächstes Ziel","O seu próximo objetivo","Twój kolejny cel","Ваша следующая цель","Uw volgende doel","Bir sonraki hedefiniz"],"Retour":["Back","Volver","Indietro","Zurück","Voltar","Wstecz","Назад","Terug","Geri"],"Préparez progressivement un projet immobilier.":["Gradually prepare a property project.","Prepara poco a poco un proyecto inmobiliario.","Prepara gradualmente un progetto immobiliare.","Bereiten Sie ein Immobilienprojekt Schritt für Schritt vor.","Prepare progressivamente um projeto imobiliário.","Stopniowo przygotuj projekt nieruchomościowy.","Постепенно готовьтесь к покупке недвижимости.","Bereid geleidelijk een vastgoedproject voor.","Bir gayrimenkul projesini adım adım hazırlayın."],"Un petit effort régulier peut devenir un grand projet.":["A small, regular effort can become a big project.","Un pequeño esfuerzo regular puede convertirse en un gran proyecto.","Un piccolo sforzo regolare può diventare un grande progetto.","Ein kleiner, regelmäßiger Beitrag kann zu einem großen Projekt werden.","Um pequeno esforço regular pode tornar-se um grande projeto.","Mały, regularny wysiłek może stać się wielkim projektem.","Небольшие регулярные усилия могут превратиться в большой проект.","Een kleine, regelmatige inspanning kan uitgroeien tot een groot project.","Küçük ve düzenli bir çaba büyük bir projeye dönüşebilir."],"Anticipez les projets éducatifs futurs.":["Plan ahead for future education projects.","Anticipa los proyectos educativos futuros.","Anticipa i futuri progetti formativi.","Planen Sie künftige Bildungsprojekte voraus.","Antecipe os futuros projetos educativos.","Zaplanuj z wyprzedzeniem przyszłe projekty edukacyjne.","Заранее планируйте будущие образовательные проекты.","Anticipeer toekomstige onderwijsprojecten.","Gelecekteki eğitim projelerini önceden planlayın."],"04 • VOTRE PROGRESSION":["04 • YOUR PROGRESS","04 • TU PROGRESO","04 • I TUOI PROGRESSI","04 • IHR FORTSCHRITT","04 • O SEU PROGRESSO","04 • TWOJE POSTĘPY","04 • ВАШ ПРОГРЕСС","04 • UW VOORTGANG","04 • İLERLEMENİZ"],"Une expérience mobile":["A mobile experience","Una experiencia móvil","Un'esperienza mobile","Ein mobiles Erlebnis","Uma experiência móvel","Doświadczenie mobilne","Мобильный опыт","Een mobiele ervaring","Mobil bir deneyim"],"à votre épargne.":["to your savings.","a tu ahorro.","al tuo risparmio.","eine Richtung.","à sua poupança.","swoim oszczędnościom.","своим сбережениям.","aan uw spaargeld.","bir yön verin."],"ce qui compte demain.":["what matters tomorrow.","lo que importa mañana.","ciò che conta domani.","was morgen zählt.","o que conta amanhã.","to, co ważne jutro.","то, что важно завтра.","wat morgen telt.","yarın önemli olanı inşa edin."],"Choisissez votre rythme":["Choose your pace","Elige tu ritmo","Scegli il tuo ritmo","Wählen Sie Ihr Tempo","Escolha o seu ritmo","Wybierz swoje tempo","Выберите свой темп","Kies uw tempo","Hızınızı seçin"],"Gardez le contrôle":["Stay in control","Mantén el control","Mantieni il controllo","Behalten Sie die Kontrolle","Mantenha o controlo","Zachowaj kontrolę","Держите под контролем","Houd de controle","Hedeflerinizin"],"Adaptez votre stratégie":["Adapt your strategy","Adapta tu estrategia","Adatta la tua strategia","Passen Sie Ihre Strategie an","Adapte a sua estratégia","Dostosuj swoją strategię","Адаптируйте стратегию","Pas uw strategie aan","Stratejinizi uyarlayın"],"SOREVIA BANK • ÉPARGNE":["SOREVIA BANK • SAVINGS","SOREVIA BANK • AHORRO","SOREVIA BANK • RISPARMIO","SOREVIA BANK • SPAREN","SOREVIA BANK • POUPANÇA","SOREVIA BANK • OSZCZĘDNOŚCI","SOREVIA BANK • СБЕРЕЖЕНИЯ","SOREVIA BANK • SPAREN","SOREVIA BANK • TASARRUF"],"Visualisez votre progression":["Visualise your progress","Visualiza tu progreso","Visualizza i tuoi progressi","Visualisieren Sie Ihren Fortschritt","Visualize o seu progresso","Obserwuj swoje postępy","Наглядно следите за прогрессом","Visualiseer uw voortgang","İlerlemenizi görselleştirin"],"Votre progression en un coup d'œil.":["Your progress at a glance.","Tu progreso de un vistazo.","I tuoi progressi a colpo d'occhio.","Ihr Fortschritt auf einen Blick.","O seu progresso num relance.","Twoje postępy na pierwszy rzut oka.","Ваш прогресс с первого взгляда.","Uw voortgang in één oogopslag.","İlerlemeniz tek bakışta."],"08 • COMMENCER":["08 • GET STARTED","08 • EMPEZAR","08 • INIZIA","08 • LOSLEGEN","08 • COMEÇAR","08 • ZACZNIJ","08 • НАЧАТЬ","08 • BEGINNEN","08 • BAŞLA"],"plus simple.":["simpler.","más sencillo.","più semplice.","einfacher.","mais simples.","prostsze.","проще.","eenvoudiger.","daha kolay."],"Déterminez le montant et la fréquence adaptés à votre situation.":["Determine the amount and frequency that suit your situation.","Determina el importe y la frecuencia adecuados a tu situación.","Stabilisci l'importo e la frequenza adatti alla tua situazione.","Legen Sie Betrag und Häufigkeit fest, die zu Ihrer Situation passen.","Determine o montante e a frequência adequados à sua situação.","Ustal kwotę i częstotliwość odpowiednie do Twojej sytuacji.","Определите сумму и периодичность, подходящие вашей ситуации.","Bepaal het bedrag en de frequentie die bij uw situatie passen.","Durumunuza uygun tutarı ve sıklığı belirleyin."],"Commencer":["Get started","Empezar","Inizia","Loslegen","Começar","Zacznij","Начать","Beginnen","Başla"],"Suivi":["Tracking","Seguimiento","Monitoraggio","Überblick","Acompanhamento","Śledzenie","Контроль","Opvolging","Takip"],"Surveillez vos opérations":["Monitor your transactions","Vigila tus operaciones","Controlla le tue operazioni","Überwachen Sie Ihre Vorgänge","Vigie as suas operações","Kontroluj swoje operacje","Следите за своими операциями","Houd uw transacties in de gaten","İşlemlerinizi izleyin"],"Gardez une représentation claire de votre évolution vers votre objectif.":["Keep a clear picture of how you are moving towards your goal.","Mantén una imagen clara de tu avance hacia tu objetivo.","Mantieni un quadro chiaro della tua evoluzione verso l'obiettivo.","Behalten Sie klar im Blick, wie Sie Ihrem Ziel näherkommen.","Mantenha uma representação clara da sua evolução rumo ao objetivo.","Miej jasny obraz tego, jak zbliżasz się do swojego celu.","Сохраняйте чёткое представление о том, как вы приближаетесь к цели.","Houd een duidelijk beeld van uw voortgang richting uw doel.","Hedefinize doğru ilerleyişinizi net bir şekilde görün."],"commence aujourd'hui.":["starts today.","empieza hoy.","inizia oggi.","beginnt heute.","começa hoje.","zaczyna się dziś.","начинается сегодня.","begint vandaag.","bugün başlıyor."],"Nos solutions":["Our solutions","Nuestras soluciones","Le nostre soluzioni","Unsere Lösungen","As nossas soluções","Nasze rozwiązania","Наши решения","Onze oplossingen","Çözümlerimiz"],"Objectif personnalisé":["Personalised goal","Objetivo personalizado","Obiettivo personalizzato","Persönliches Ziel","Objetivo personalizado","Cel dopasowany do Ciebie","Персональная цель","Persoonlijk doel","Kişisel hedef"],"Suivez vos mouvements et vos opérations d'épargne.":["Follow your movements and savings transactions.","Sigue tus movimientos y operaciones de ahorro.","Segui i tuoi movimenti e le tue operazioni di risparmio.","Verfolgen Sie Ihre Bewegungen und Sparvorgänge.","Acompanhe os seus movimentos e operações de poupança.","Śledź swoje ruchy i operacje oszczędnościowe.","Следите за движением средств и операциями по сбережениям.","Volg uw bewegingen en spaartransacties.","Hareketlerinizi ve tasarruf işlemlerinizi takip edin."],"03 • COMMENT ÇA MARCHE":["03 • HOW IT WORKS","03 • CÓMO FUNCIONA","03 • COME FUNZIONA","03 • SO FUNKTIONIERT'S","03 • COMO FUNCIONA","03 • JAK TO DZIAŁA","03 • КАК ЭТО РАБОТАЕТ","03 • HOE HET WERKT","03 • NASIL ÇALIŞIR"],"Signalez toute activité inhabituelle":["Report any unusual activity","Informa de cualquier actividad inusual","Segnala qualsiasi attività insolita","Melden Sie ungewöhnliche Aktivitäten","Comunique qualquer atividade invulgar","Zgłaszaj każdą nietypową aktywność","Сообщайте о любой необычной активности","Meld elke ongebruikelijke activiteit","Olağandışı her etkinliği bildirin"],"Compte courant":["Current account","Cuenta corriente","Conto corrente","Girokonto","Conta corrente","Rachunek bieżący","Текущий счёт","Betaalrekening","Vadesiz hesap"],"Donnez une direction":["Give direction","Da una dirección","Dai una direzione","Geben Sie Ihren Ersparnissen","Dê uma direção","Nadaj kierunek","Задайте направление","Geef richting","Tasarrufunuza"],"Ne communiquez jamais vos identifiants ou codes confidentiels et utilisez uniquement les canaux officiels de Sorevia Bank.":["Never share your login details or confidential codes, and only use Sorevia Bank's official channels.","Nunca compartas tus credenciales ni tus códigos confidenciales y utiliza únicamente los canales oficiales de Sorevia Bank.","Non comunicare mai le tue credenziali o i tuoi codici riservati e utilizza solo i canali ufficiali di Sorevia Bank.","Geben Sie niemals Ihre Zugangsdaten oder vertraulichen Codes weiter und nutzen Sie ausschließlich die offiziellen Kanäle der Sorevia Bank.","Nunca partilhe as suas credenciais ou códigos confidenciais e utilize apenas os canais oficiais do Sorevia Bank.","Nigdy nie udostępniaj danych logowania ani poufnych kodów i korzystaj wyłącznie z oficjalnych kanałów Sorevia Bank.","Никогда не сообщайте свои учётные данные и конфиденциальные коды и пользуйтесь только официальными каналами Sorevia Bank.","Deel nooit uw inloggegevens of vertrouwelijke codes en gebruik uitsluitend de officiële kanalen van Sorevia Bank.","Kimlik bilgilerinizi veya gizli kodlarınızı asla paylaşmayın ve yalnızca Sorevia Bank'ın resmî kanallarını kullanın."],"Restez attentif":["Stay alert","Mantente atento","Resta attento","Bleiben Sie aufmerksam","Fique atento","Bądź czujny","Будьте внимательны","Blijf alert","Tetikte kalın"],"Votre épargne mérite":["Your savings deserve","Tu ahorro merece","Il tuo risparmio merita","Ihre Ersparnisse verdienen","A sua poupança merece","Twoje oszczędności zasługują","Ваши сбережения заслуживают","Uw spaargeld verdient","Tasarrufunuz"],"Définissez votre objectif, choisissez votre rythme et suivez progressivement votre évolution.":["Define your goal, choose your pace and follow your progress step by step.","Define tu objetivo, elige tu ritmo y sigue tu evolución poco a poco.","Definisci il tuo obiettivo, scegli il tuo ritmo e segui i tuoi progressi passo dopo passo.","Legen Sie Ihr Ziel fest, wählen Sie Ihr Tempo und verfolgen Sie Ihren Fortschritt Schritt für Schritt.","Defina o seu objetivo, escolha o seu ritmo e acompanhe a sua evolução passo a passo.","Określ cel, wybierz tempo i śledź swoje postępy krok po kroku.","Определите цель, выберите темп и шаг за шагом следите за прогрессом.","Bepaal uw doel, kies uw tempo en volg uw voortgang stap voor stap.","Hedefinizi belirleyin, hızınızı seçin ve ilerlemenizi adım adım takip edin."],"de progression dans cet exemple":["progress in this example","de progreso en este ejemplo","di progresso in questo esempio","Fortschritt in diesem Beispiel","de progresso neste exemplo","postępu w tym przykładzie","прогресса в этом примере","voortgang in dit voorbeeld","bu örnekte ilerleme"],"Logement":["Housing","Vivienda","Casa","Wohnen","Habitação","Mieszkanie","Жильё","Wonen","Konut"],"Épargner régulièrement":["Save regularly","Ahorrar con regularidad","Risparmiare con regolarità","Regelmäßig sparen","Poupar regularmente","Oszczędzaj regularnie","Копить регулярно","Regelmatig sparen","Düzenli tasarruf"],"06 • SÉCURITÉ":["06 • SECURITY","06 • SEGURIDAD","06 • SICUREZZA","06 • SICHERHEIT","06 • SEGURANÇA","06 • BEZPIECZEŃSTWO","06 • БЕЗОПАСНОСТЬ","06 • BEVEILIGING","06 • GÜVENLİK"],"Suivez votre progression":["Track your progress","Sigue tu progreso","Segui i tuoi progressi","Verfolgen Sie Ihren Fortschritt","Acompanhe o seu progresso","Śledź swoje postępy","Следите за прогрессом","Volg uw voortgang","İlerlemenizi takip edin"],"Avenir":["Future","Futuro","Futuro","Zukunft","Futuro","Przyszłość","Будущее","Toekomst","Gelecek"],"à chaque ambition.":["to every ambition.","a cada ambición.","a ogni ambizione.","zu jedem Ziel passt.","a cada ambição.","do każdej ambicji.","подходящие для любой амбиции.","bij elke ambitie.","bir tasarruf çözümü."],"Réserve personnelle":["Personal reserve","Reserva personal","Riserva personale","Persönliche Reserve","Reserva pessoal","Osobista rezerwa","Личный резерв","Persoonlijke reserve","Kişisel rezerv"],"Adoptez les bons réflexes pour protéger votre environnement bancaire.":["Adopt good habits to protect your banking environment.","Adopta los buenos reflejos para proteger tu entorno bancario.","Adotta i giusti comportamenti per proteggere il tuo ambiente bancario.","Beherzigen Sie die richtigen Verhaltensregeln, um Ihr Bankumfeld zu schützen.","Adote os bons hábitos para proteger o seu ambiente bancário.","Stosuj dobre nawyki, aby chronić swoje środowisko bankowe.","Соблюдайте правила безопасности, чтобы защитить свой банковский профиль.","Neem de juiste reflexen aan om uw bankomgeving te beschermen.","Bankacılık ortamınızı korumak için doğru alışkanlıkları edinin."],"Faites évoluer votre rythme selon vos projets et vos besoins.":["Adjust your pace according to your projects and needs.","Haz evolucionar tu ritmo según tus proyectos y necesidades.","Fai evolvere il tuo ritmo in base ai tuoi progetti e alle tue esigenze.","Passen Sie Ihr Tempo an Ihre Projekte und Bedürfnisse an.","Faça evoluir o seu ritmo de acordo com os seus projetos e necessidades.","Zmieniaj tempo w zależności od projektów i potrzeb.","Меняйте темп в зависимости от проектов и потребностей.","Pas uw tempo aan uw projecten en behoeften aan.","Hızınızı projelerinize ve ihtiyaçlarınıza göre değiştirin."],"Chaque étape compte.":["Every step counts.","Cada paso cuenta.","Ogni passo conta.","Jeder Schritt zählt.","Cada passo conta.","Każdy krok ma znaczenie.","Каждый шаг важен.","Elke stap telt.","Her adım önemlidir."],"Épargne enfant":["Child savings","Ahorro infantil","Risparmio per i bambini","Kindersparen","Poupança para crianças","Oszczędności dla dziecka","Сбережения для ребёнка","Kinderspaarrekening","Çocuk tasarrufu"],"Retrouvez vos informations depuis votre smartphone.":["Find your information from your smartphone.","Consulta tu información desde tu smartphone.","Ritrova le tue informazioni dal tuo smartphone.","Rufen Sie Ihre Informationen bequem auf Ihrem Smartphone ab.","Aceda às suas informações a partir do seu smartphone.","Miej swoje informacje pod ręką na smartfonie.","Все ваши данные доступны на смартфоне.","Vind uw gegevens terug op uw smartphone.","Bilgilerinize akıllı telefonunuzdan ulaşın."],"Préparez progressivement des projets futurs en mettant de côté une somme destinée à votre enfant.":["Gradually prepare future projects by setting aside a sum for your child.","Prepara poco a poco proyectos futuros reservando una suma para tu hijo.","Prepara gradualmente progetti futuri mettendo da parte una somma per tuo figlio.","Bereiten Sie nach und nach zukünftige Projekte vor, indem Sie einen Betrag für Ihr Kind zurücklegen.","Prepare progressivamente projetos futuros pondo de lado uma quantia para o seu filho.","Stopniowo przygotowuj przyszłe projekty, odkładając kwotę dla swojego dziecka.","Постепенно готовьте будущие проекты, откладывая средства для вашего ребёнка.","Bereid geleidelijk toekomstige projecten voor door een bedrag voor uw kind opzij te zetten.","Çocuğunuz için bir tutar ayırarak gelecekteki projeleri adım adım hazırlayın."]};
+
+function detect(){
+  var m=location.search.match(/[?&]lang=([a-zA-Z]{2})/);
+  if(m&&LANGS.indexOf(m[1].toLowerCase())>-1)return m[1].toLowerCase();
+  var list=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||FALLBACK];
+  for(var i=0;i<list.length;i++){
+    var c=String(list[i]).toLowerCase().slice(0,2);
+    if(LANGS.indexOf(c)>-1)return c;
+  }
+  return FALLBACK;
+}
+var lang=detect();
+var idx=LANGS.indexOf(lang)-1; /* -1 = français : rien à traduire */
+function norm(s){return String(s).replace(/\s+/g," ").trim();}
+function t(s){
+  if(idx<0)return s;
+  var v=D[norm(s)];
+  return(v&&v[idx])?v[idx]:s;
+}
+window.SOREVIA_LANG=lang;
+window.t=t;
+document.documentElement.setAttribute("lang",lang);
+if(idx<0)return;
+
+function run(){
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n,nodes=[];
+  while((n=w.nextNode())){
+    var p=n.parentNode&&n.parentNode.nodeName;
+    if(p==="SCRIPT"||p==="STYLE")continue;
+    nodes.push(n);
+  }
+  nodes.forEach(function(n){
+    var raw=n.nodeValue,k=norm(raw);
+    if(!k)return;
+    var v=D[k];
+    if(v&&v[idx]){
+      var lead=raw.match(/^\s*/)[0],trail=raw.match(/\s*$/)[0];
+      n.nodeValue=lead+v[idx]+trail;
+    }
+  });
+  var attrs=["placeholder","alt","aria-label","title"];
+  attrs.forEach(function(a){
+    document.querySelectorAll("["+a+"]").forEach(function(el){
+      el.setAttribute(a,t(el.getAttribute(a)));
+    });
+  });
+  var md=document.querySelector('meta[name="description"]');
+  if(md)md.setAttribute("content",t(md.getAttribute("content")));
+  document.title=t(document.title);
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();
+})();
+</script>
+</body>
+</html>

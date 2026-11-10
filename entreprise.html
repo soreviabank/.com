@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#061b28">
+<meta name="description" content="Sorevia Bank Entreprises - Des solutions bancaires conçues pour accompagner les entreprises et leurs projets.">
+<title>Sorevia Bank | Entreprises</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#f5f8fa;color:#102b38;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:root{--blue:#087fc4;--dark:#061b28;--deep:#03131e;--cyan:#72ddf5;--gold:#d5ad5c;--muted:#758990}
+.container{width:calc(100% - 30px);max-width:650px;margin:auto}
+.header{height:74px;background:#fff;border-bottom:1px solid #e4edef;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #0619250c}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:43px;height:43px;border-radius:12px;background:linear-gradient(145deg,#0ba5df,#07527a);color:#fff;display:grid;place-items:center;font:700 25px Georgia;box-shadow:0 8px 20px #087fc42c}
+.logo-text strong{display:block;font:700 18px Georgia;color:#0a2531;line-height:1}
+.logo-text small{display:block;font-size:6px;letter-spacing:3px;color:#8b9da3;margin-top:6px}
+.header-link{font-size:8px;font-weight:800;color:#0879b9;display:flex;align-items:center;gap:6px}
+.hero{min-height:700px;background:linear-gradient(145deg,#03131e,#06384d 55%,#08738d);color:#fff;position:relative;overflow:hidden;padding:45px 0 35px}
+.hero:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:-240px;top:-100px;border:1px solid #ffffff12}
+.hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;left:-190px;bottom:20px;border:1px solid #ffffff0b}
+.hero-content{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff1d;background:#ffffff0a;padding:8px 12px;border-radius:50px;color:#9be8f9;font-size:7px;font-weight:800;letter-spacing:1.3px}
+.hero h1{font:700 36px/1.08 "Playfair Display",Georgia,serif;margin-top:19px}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:9px;line-height:1.9;color:#b8cdd4;margin-top:14px}
+.hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:23px}
+.hero-buttons a{height:46px;border-radius:9px;display:flex;justify-content:center;align-items:center;gap:7px;font-size:8px;font-weight:800}
+.primary{background:#0888d0;color:#fff;box-shadow:0 12px 25px #0003}
+.secondary{background:#fff;color:#0879b9}
+.hero-visual{height:285px;margin-top:28px;border-radius:20px;overflow:hidden;position:relative;background:url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:0 25px 50px #0005}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#03131e05,#03131eb8)}
+.business-card{position:absolute;z-index:2;left:14px;right:14px;bottom:14px;background:#ffffff18;border:1px solid #ffffff2b;border-radius:15px;padding:14px;backdrop-filter:blur(12px)}
+.business-card small{font-size:6px;color:#c1d8df;letter-spacing:1px}
+.business-card strong{display:block;font:700 22px Georgia;margin-top:5px}
+.business-card span{font-size:6px;color:#b4c9d0}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}
+.trust{background:#ffffff0b;border:1px solid #ffffff12;border-radius:11px;padding:11px 5px;text-align:center}
+.trust i{color:#70dbf4;font-size:13px;margin-bottom:6px}
+.trust span{display:block;font-size:6px;color:#abc1c9}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-mark">S</div>
+<div class="logo-text">
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</a>
+<a href="index.html" class="header-link"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container hero-content">
+
+<div class="eyebrow"><i class="fa-solid fa-building"></i> SOREVIA BANK • ENTREPRISES</div>
+
+<h1>Votre entreprise mérite une banque qui <span>avance avec elle.</span></h1>
+
+<p>Des solutions bancaires pensées pour accompagner les entrepreneurs, les professionnels et les entreprises dans leur quotidien et leurs projets.</p>
+
+<div class="hero-buttons">
+<a href="#solutions" class="primary">Nos solutions <i class="fa-solid fa-arrow-down"></i></a>
+<a href="inscription.html" class="secondary">Ouvrir un compte <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div class="hero-visual">
+<div class="business-card">
+<small>SOREVIA BUSINESS</small>
+<strong>Construisez. Développez. Avancez.</strong>
+<span>Des outils bancaires adaptés à votre activité.</span>
+</div>
+</div>
+
+<div class="trust-row">
+<div class="trust"><i class="fa-solid fa-wallet"></i><span>Trésorerie</span></div>
+<div class="trust"><i class="fa-solid fa-arrow-right-arrow-left"></i><span>Paiements</span></div>
+<div class="trust"><i class="fa-solid fa-chart-line"></i><span>Croissance</span></div>
+</div>
+
+</div>
+</section>
+
+<style>
+.solutions{background:#fff;padding:58px 0}
+.label{font-size:7px;font-weight:800;letter-spacing:1.7px;color:#087fc4}
+.title{font:700 30px/1.12 "Playfair Display",Georgia,serif;color:#092633;margin-top:7px}
+.title span{color:#087fc4}
+.desc{font-size:8px;line-height:1.9;color:#74878e;margin-top:10px}
+.solution-grid{display:grid;gap:12px;margin-top:25px}
+.solution{background:#fff;border:1px solid #e0e9ec;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px #0619250a;transition:.3s}
+.solution:active{transform:scale(.985)}
+.solution-img{height:170px;background-size:cover;background-position:center;position:relative}
+.solution-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2800,#061b28b5)}
+.account-img{background-image:url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85")}
+.finance-img{background-image:url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=85")}
+.payment-img{background-image:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85")}
+.cash-img{background-image:url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85")}
+.solution-tag{position:absolute;z-index:2;left:12px;top:12px;background:#ffffffdf;color:#0879b9;padding:7px 9px;border-radius:30px;font-size:6px;font-weight:800;letter-spacing:1px}
+.solution-body{padding:16px}
+.solution-icon{width:40px;height:40px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:14px;margin-bottom:12px}
+.solution h3{font:700 19px Georgia;color:#15333f}
+.solution p{font-size:7px;line-height:1.8;color:#74878f;margin-top:7px}
+.solution-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #edf1f2}
+.solution-bottom span{font-size:6px;color:#83969d}
+.solution-bottom a{font-size:7px;font-weight:800;color:#087fc4}
+.highlight{margin-top:28px;background:linear-gradient(145deg,#061b28,#075b76);border-radius:19px;padding:19px;color:#fff;position:relative;overflow:hidden}
+.highlight:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-120px;top:-90px;border:1px solid #ffffff12}
+.highlight small{font-size:6px;color:#72ddf5;font-weight:800;letter-spacing:1.5px}
+.highlight h3{font:700 23px Georgia;margin-top:8px;position:relative;z-index:2}
+.highlight p{font-size:7px;line-height:1.8;color:#abc4cc;margin-top:7px;position:relative;z-index:2}
+.highlight a{display:inline-flex;margin-top:15px;padding:11px 14px;background:#fff;color:#0879b9;border-radius:9px;font-size:7px;font-weight:800;position:relative;z-index:2}
+</style>
+
+<section class="solutions" id="solutions">
+<div class="container">
+
+<div class="label">01 • SOLUTIONS ENTREPRISES</div>
+<h2 class="title">Tout ce qu'il faut pour <span>faire avancer votre activité.</span></h2>
+<p class="desc">Des services conçus pour simplifier votre gestion bancaire et vous permettre de vous concentrer sur votre activité.</p>
+
+<div class="solution-grid">
+
+<article class="solution reveal">
+<div class="solution-img account-img"><span class="solution-tag">COMPTE PROFESSIONNEL</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-building-columns"></i></div>
+<h3>Compte entreprise</h3>
+<p>Un compte pensé pour séparer vos opérations professionnelles et gérer votre activité avec plus de clarté.</p>
+<div class="solution-bottom"><span>Gestion quotidienne</span><a href="inscription.html">Découvrir →</a></div>
+</div>
+</article>
+
+<article class="solution reveal">
+<div class="solution-img finance-img"><span class="solution-tag">FINANCEMENT</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+<h3>Financement</h3>
+<p>Des solutions pour accompagner certains besoins de financement et soutenir vos projets de développement.</p>
+<div class="solution-bottom"><span>Projets & croissance</span><a href="inscription.html">Découvrir →</a></div>
+</div>
+</article>
+
+<article class="solution reveal">
+<div class="solution-img payment-img"><span class="solution-tag">PAIEMENTS</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-credit-card"></i></div>
+<h3>Paiements professionnels</h3>
+<p>Gérez vos paiements et vos encaissements avec des solutions adaptées aux besoins de votre entreprise.</p>
+<div class="solution-bottom"><span>Flux professionnels</span><a href="inscription.html">Découvrir →</a></div>
+</div>
+</article>
+
+<article class="solution reveal">
+<div class="solution-img cash-img"><span class="solution-tag">TRÉSORERIE</span></div>
+<div class="solution-body">
+<div class="solution-icon"><i class="fa-solid fa-chart-pie"></i></div>
+<h3>Gestion de trésorerie</h3>
+<p>Gardez une meilleure visibilité sur vos mouvements financiers et organisez votre trésorerie.</p>
+<div class="solution-bottom"><span>Pilotage financier</span><a href="inscription.html">Découvrir →</a></div>
+</div>
+</article>
+
+</div>
+
+<div class="highlight reveal">
+<small>SOREVIA BUSINESS</small>
+<h3>Une vision plus claire de votre activité.</h3>
+<p>Centralisez vos opérations et profitez d'une expérience bancaire pensée pour les professionnels.</p>
+<a href="inscription.html">Commencer maintenant <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</div>
+</section>
+
+<style>
+.business-services{background:#f2f7f9;padding:58px 0}
+.service-list{display:grid;gap:9px;margin-top:24px}
+.service{background:#fff;border:1px solid #e0e9ec;border-radius:14px;padding:14px;display:flex;gap:11px;align-items:center}
+.service-icon{width:39px;height:39px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:12px;flex:none}
+.service strong{display:block;font-size:8px;color:#29444e}
+.service p{font-size:6px;line-height:1.7;color:#81939a;margin-top:4px}
+.dashboard{background:#fff;padding:58px 0}
+.dashboard-card{margin-top:23px;background:linear-gradient(145deg,#061b28,#075773);border-radius:19px;color:#fff;padding:19px;position:relative;overflow:hidden;box-shadow:0 20px 40px #06192520}
+.dashboard-card:before{content:"";position:absolute;width:250px;height:250px;border-radius:50%;right:-170px;top:-120px;border:1px solid #ffffff0e}
+.dashboard-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+.dashboard-top small{font-size:6px;color:#72ddf5;letter-spacing:1.4px;font-weight:800}
+.status{font-size:6px;background:#ffffff0d;border:1px solid #ffffff12;padding:6px 8px;border-radius:30px;color:#b8d2da}
+.balance{margin-top:23px;position:relative;z-index:2}
+.balance small{font-size:6px;color:#9db7c0}
+.balance strong{display:block;font:700 31px Georgia;margin-top:5px}
+.balance span{font-size:6px;color:#9db7c0}
+.chart{height:100px;margin-top:20px;display:flex;align-items:flex-end;gap:7px;position:relative;z-index:2}
+.bar{flex:1;background:#72ddf5;border-radius:5px 5px 2px 2px;opacity:.8}
+.bar:nth-child(1){height:35%}.bar:nth-child(2){height:50%}.bar:nth-child(3){height:43%}.bar:nth-child(4){height:68%}.bar:nth-child(5){height:56%}.bar:nth-child(6){height:80%}.bar:nth-child(7){height:72%}.bar:nth-child(8){height:92%}
+.dashboard-bottom{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px;position:relative;z-index:2}
+.dashboard-stat{background:#ffffff0b;border:1px solid #ffffff10;border-radius:10px;padding:10px}
+.dashboard-stat i{color:#72ddf5;font-size:10px}
+.dashboard-stat strong{display:block;font-size:7px;margin-top:5px}
+.dashboard-stat span{font-size:6px;color:#9eb7c0}
+</style>
+
+<section class="business-services">
+<div class="container">
+
+<div class="label">02 • OUTILS PROFESSIONNELS</div>
+<h2 class="title">Des outils conçus pour<br><span>votre quotidien.</span></h2>
+<p class="desc">Simplifiez les opérations courantes de votre entreprise avec un environnement bancaire clair et moderne.</p>
+
+<div class="service-list">
+
+<div class="service reveal">
+<div class="service-icon"><i class="fa-solid fa-users"></i></div>
+<div><strong>Gestion des utilisateurs</strong><p>Organisez les accès aux services selon les besoins de votre entreprise.</p></div>
+</div>
+
+<div class="service reveal">
+<div class="service-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+<div><strong>Suivi des opérations</strong><p>Gardez une meilleure visibilité sur vos mouvements et transactions.</p></div>
+</div>
+
+<div class="service reveal">
+<div class="service-icon"><i class="fa-solid fa-repeat"></i></div>
+<div><strong>Virements professionnels</strong><p>Effectuez vos opérations courantes avec une expérience digitale simple.</p></div>
+</div>
+
+<div class="service reveal">
+<div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+<div><strong>Banque mobile</strong><p>Accédez à vos services bancaires depuis votre smartphone où que vous soyez.</p></div>
+</div>
+
+<div class="service reveal">
+<div class="service-icon"><i class="fa-solid fa-bell"></i></div>
+<div><strong>Notifications</strong><p>Restez informé de vos opérations importantes grâce aux alertes disponibles.</p></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="dashboard">
+<div class="container">
+
+<div class="label">03 • PILOTAGE</div>
+<h2 class="title">Gardez le contrôle de<br><span>vos flux financiers.</span></h2>
+<p class="desc">Une présentation claire pour vous aider à suivre l'activité de votre compte professionnel.</p>
+
+<div class="dashboard-card reveal">
+
+<div class="dashboard-top">
+<small>ESPACE ENTREPRISE</small>
+<span class="status"><i class="fa-solid fa-circle-check"></i> Actif</span>
+</div>
+
+<div class="balance">
+<small>SOLDE DISPONIBLE</small>
+<strong>48 750,00 €</strong>
+<span>Vue indicative de démonstration</span>
+</div>
+
+<div class="chart">
+<div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+<div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+</div>
+
+<div class="dashboard-bottom">
+<div class="dashboard-stat"><i class="fa-solid fa-arrow-down"></i><strong>Encaissements</strong><span>Suivi des entrées</span></div>
+<div class="dashboard-stat"><i class="fa-solid fa-arrow-up"></i><strong>Décaissements</strong><span>Suivi des sorties</span></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.growth{background:#fff;padding:58px 0}
+.growth-photo{height:245px;border-radius:19px;background:url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=85") center/cover;position:relative;overflow:hidden;margin-top:22px}
+.growth-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2805,#061b28b8)}
+.growth-card{position:absolute;left:13px;right:13px;bottom:13px;background:#ffffffed;border-radius:13px;padding:14px}
+.growth-card small{font-size:6px;color:#087fc4;font-weight:800;letter-spacing:1px}
+.growth-card strong{display:block;font:700 20px Georgia;color:#15333f;margin-top:5px}
+.growth-card span{display:block;font-size:6px;color:#71858c;margin-top:4px}
+.growth-list{display:grid;gap:9px;margin-top:18px}
+.growth-item{padding:13px;border:1px solid #e0e9ec;border-radius:12px;display:flex;gap:10px}
+.growth-item i{width:34px;height:34px;border-radius:10px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:11px;flex:none}
+.growth-item strong{font-size:7px;display:block;color:#29444e}
+.growth-item p{font-size:6px;color:#81939a;line-height:1.7;margin-top:4px}
+.support{background:#f3f7f9;padding:58px 0}
+.support-card{margin-top:23px;background:#fff;border:1px solid #e0e9ec;border-radius:19px;padding:18px;box-shadow:0 15px 30px #0619250b}
+.support-head{display:flex;align-items:center;gap:11px}
+.support-head i{width:42px;height:42px;border-radius:12px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center}
+.support-head strong{font:700 18px Georgia;color:#17343f}
+.support-card>p{font-size:7px;line-height:1.8;color:#758990;margin-top:12px}
+.support-options{display:grid;gap:8px;margin-top:16px}
+.support-option{border:1px solid #e6edef;border-radius:10px;padding:11px;display:flex;align-items:center;gap:9px}
+.support-option i{color:#087fc4;font-size:11px;width:20px;text-align:center}
+.support-option span{font-size:7px;color:#526b74;font-weight:600}
+.future{background:linear-gradient(145deg,#061b28,#075873);padding:58px 0;color:#fff;position:relative;overflow:hidden}
+.future:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-220px;top:-120px;border:1px solid #ffffff0b}
+.future .title{color:#fff}
+.future .title span{color:#72ddf5}
+.future .desc{color:#abc1c9}
+.future-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:22px}
+.future-item{background:#ffffff0b;border:1px solid #ffffff12;border-radius:12px;padding:13px;position:relative;z-index:2}
+.future-item i{color:#72ddf5;font-size:13px}
+.future-item strong{display:block;font-size:7px;margin-top:7px}
+.future-item p{font-size:6px;color:#9db6bf;line-height:1.6;margin-top:4px}
+</style>
+
+<section class="growth">
+<div class="container">
+
+<div class="label">04 • DÉVELOPPEMENT</div>
+<h2 class="title">Transformez vos projets<br><span>en nouvelles opportunités.</span></h2>
+<p class="desc">Sorevia Bank vous accompagne dans les différentes étapes de la vie de votre entreprise.</p>
+
+<div class="growth-photo reveal">
+<div class="growth-card">
+<small>VOTRE ENTREPRISE</small>
+<strong>Une ambition. Des projets. Un avenir.</strong>
+<span>Construisez votre activité avec les bons outils.</span>
+</div>
+</div>
+
+<div class="growth-list">
+
+<div class="growth-item reveal">
+<i class="fa-solid fa-rocket"></i>
+<div><strong>Lancement d'activité</strong><p>Organisez les premières opérations financières de votre nouvelle entreprise.</p></div>
+</div>
+
+<div class="growth-item reveal">
+<i class="fa-solid fa-chart-line"></i>
+<div><strong>Développement</strong><p>Accompagnez votre croissance avec des solutions bancaires adaptées à votre activité.</p></div>
+</div>
+
+<div class="growth-item reveal">
+<i class="fa-solid fa-globe"></i>
+<div><strong>Ouverture à l'international</strong><p>Préparez vos opérations avec des solutions adaptées à vos besoins internationaux.</p></div>
+</div>
+
+<div class="growth-item reveal">
+<i class="fa-solid fa-lightbulb"></i>
+<div><strong>Nouveaux projets</strong><p>Préparez vos besoins futurs et donnez une nouvelle dimension à vos ambitions.</p></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="support">
+<div class="container">
+
+<div class="label">05 • ACCOMPAGNEMENT</div>
+<h2 class="title">Une relation bancaire<br><span>pensée pour les professionnels.</span></h2>
+<p class="desc">Parce qu'une entreprise a besoin de solutions, mais aussi d'un accompagnement clair.</p>
+
+<div class="support-card reveal">
+<div class="support-head">
+<i class="fa-solid fa-handshake"></i>
+<strong>Un accompagnement à chaque étape</strong>
+</div>
+<p>Que vous soyez entrepreneur, indépendant, commerçant ou dirigeant d'entreprise, construisez votre expérience bancaire autour de vos besoins.</p>
+
+<div class="support-options">
+<div class="support-option"><i class="fa-solid fa-check"></i><span>Solutions adaptées à votre activité</span></div>
+<div class="support-option"><i class="fa-solid fa-check"></i><span>Services bancaires accessibles</span></div>
+<div class="support-option"><i class="fa-solid fa-check"></i><span>Expérience digitale moderne</span></div>
+<div class="support-option"><i class="fa-solid fa-check"></i><span>Suivi de vos opérations</span></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="future">
+<div class="container">
+
+<div class="label" style="color:#72ddf5">06 • BUSINESS DIGITAL</div>
+<h2 class="title">L'avenir de votre entreprise<br><span>commence maintenant.</span></h2>
+<p class="desc">Profitez d'un environnement conçu pour rendre vos opérations plus simples, plus claires et plus accessibles.</p>
+
+<div class="future-grid">
+
+<div class="future-item reveal">
+<i class="fa-solid fa-bolt"></i>
+<strong>Rapidité</strong>
+<p>Accédez rapidement à vos opérations courantes.</p>
+</div>
+
+<div class="future-item reveal">
+<i class="fa-solid fa-lock"></i>
+<strong>Sécurité</strong>
+<p>Adoptez les bonnes pratiques pour protéger vos accès.</p>
+</div>
+
+<div class="future-item reveal">
+<i class="fa-solid fa-mobile-screen"></i>
+<strong>Mobilité</strong>
+<p>Gérez votre activité depuis votre smartphone.</p>
+</div>
+
+<div class="future-item reveal">
+<i class="fa-solid fa-chart-simple"></i>
+<strong>Visibilité</strong>
+<p>Suivez vos flux avec une présentation claire.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.final-cta{background:#fff;padding:60px 0;text-align:center}
+.final-icon{width:58px;height:58px;border-radius:16px;background:#e8f6fa;color:#087fc4;display:grid;place-items:center;margin:0 auto 15px;font-size:20px}
+.final-cta .title{font-size:30px}
+.final-cta p{font-size:8px;line-height:1.9;color:#758991;margin:11px auto 20px;max-width:500px}
+.final-cta a{display:flex;justify-content:center;align-items:center;gap:7px;background:#087fc4;color:#fff;border-radius:10px;padding:14px;font-size:8px;font-weight:800;max-width:500px;margin:auto;box-shadow:0 12px 25px #087fc42e}
+.footer{background:#03131e;color:#fff;padding:40px 0 18px}
+.footer-logo{display:flex;align-items:center;gap:9px}
+.footer-logo .logo-mark{box-shadow:none}
+.footer-logo strong{display:block;font:700 17px Georgia}
+.footer-logo small{display:block;font-size:6px;letter-spacing:2px;color:#6e8790;margin-top:5px}
+.footer-description{font-size:7px;line-height:1.8;color:#6e8790;margin:15px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;border-top:1px solid #ffffff0d;padding-top:20px}
+.footer-col h4{font:700 14px Georgia;margin-bottom:11px}
+.footer-col a{display:block;font-size:7px;color:#82989f;margin:8px 0}
+.footer-bottom{border-top:1px solid #ffffff0d;margin-top:22px;padding-top:14px;text-align:center;font-size:6px;color:#506972;line-height:1.8}
+.floating{position:fixed;bottom:17px;right:15px;width:45px;height:45px;border-radius:50%;background:#087fc4;color:#fff;display:grid;place-items:center;box-shadow:0 8px 25px #0004;z-index:500;font-size:13px;opacity:0;pointer-events:none;transition:.3s}
+.floating.visible{opacity:1;pointer-events:auto}
+@media(min-width:500px){
+.solution-grid{grid-template-columns:1fr 1fr}
+.solution:last-child{grid-column:1/-1}
+}
+</style>
+
+<section class="final-cta">
+<div class="container">
+
+<div class="final-icon"><i class="fa-solid fa-building-circle-check"></i></div>
+
+<div class="label">07 • SOREVIA BUSINESS</div>
+
+<h2 class="title">Faites grandir votre entreprise<br><span>avec confiance.</span></h2>
+
+<p>Découvrez l'univers professionnel de Sorevia Bank et choisissez les solutions adaptées à votre activité et à vos ambitions.</p>
+
+<a href="inscription.html">Créer mon espace entreprise <i class="fa-solid fa-arrow-right"></i></a>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+
+<div class="footer-logo">
+<div class="logo-mark">S</div>
+<div>
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</div>
+
+<p class="footer-description">Des solutions bancaires digitales pensées pour accompagner les professionnels, les entrepreneurs et les entreprises dans leurs projets.</p>
+
+<div class="footer-grid">
+
+<div class="footer-col">
+<h4>Entreprises</h4>
+<a href="#solutions">Compte professionnel</a>
+<a href="#solutions">Financement</a>
+<a href="#solutions">Paiements</a>
+<a href="#solutions">Trésorerie</a>
+<a href="#solutions">Services professionnels</a>
+</div>
+
+<div class="footer-col">
+<h4>Sorevia</h4>
+<a href="index.html">Accueil</a>
+<a href="bancaire.html">Cartes bancaires</a>
+<a href="paiement.html">Paiements</a>
+<a href="assurance.html">Assurances</a>
+<a href="inscription.html">Inscription</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Sorevia Bank — Tous droits réservés.<br>
+Les informations présentées sont indicatives et les conditions peuvent dépendre du produit ou service choisi.
+</div>
+
+</div>
+</footer>
+
+<a href="#" class="floating" id="topBtn">
+<i class="fa-solid fa-arrow-up"></i>
+</a>
+
+</main>
+
+<script>
+(function(){
+var SUP=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var DEF={fr:"fr-FR",en:"en-US",es:"es-ES",it:"it-IT",de:"de-DE",pt:"pt-BR",pl:"pl-PL",ru:"ru-RU",nl:"nl-NL",tr:"tr-TR"};
+var D={"01 • SOLUTIONS ENTREPRISES":["01 • BUSINESS SOLUTIONS","01 • SOLUCIONES PARA EMPRESAS","01 • SOLUZIONI PER LE IMPRESE","01 • UNTERNEHMENSLÖSUNGEN","01 • SOLUÇÕES PARA EMPRESAS","01 • ROZWIĄZANIA DLA FIRM","01 • РЕШЕНИЯ ДЛЯ БИЗНЕСА","01 • ZAKELIJKE OPLOSSINGEN","01 • KURUMSAL ÇÖZÜMLER"],"02 • OUTILS PROFESSIONNELS":["02 • BUSINESS TOOLS","02 • HERRAMIENTAS PROFESIONALES","02 • STRUMENTI PROFESSIONALI","02 • PROFI-WERKZEUGE","02 • FERRAMENTAS PROFISSIONAIS","02 • NARZĘDZIA DLA FIRM","02 • ПРОФЕССИОНАЛЬНЫЕ ИНСТРУМЕНТЫ","02 • ZAKELIJKE TOOLS","02 • PROFESYONEL ARAÇLAR"],"03 • PILOTAGE":["03 • STEERING","03 • CONTROL","03 • CONTROLLO","03 • STEUERUNG","03 • CONTROLO","03 • KONTROLA","03 • УПРАВЛЕНИЕ","03 • STURING","03 • YÖNETİM"],"04 • DÉVELOPPEMENT":["04 • DEVELOPMENT","04 • DESARROLLO","04 • SVILUPPO","04 • ENTWICKLUNG","04 • DESENVOLVIMENTO","04 • ROZWÓJ","04 • РАЗВИТИЕ","04 • ONTWIKKELING","04 • GELİŞİM"],"05 • ACCOMPAGNEMENT":["05 • SUPPORT","05 • ACOMPAÑAMIENTO","05 • ASSISTENZA","05 • BEGLEITUNG","05 • ACOMPANHAMENTO","05 • WSPARCIE","05 • СОПРОВОЖДЕНИЕ","05 • BEGELEIDING","05 • DESTEK"],"06 • BUSINESS DIGITAL":["06 • DIGITAL BUSINESS","06 • NEGOCIO DIGITAL","06 • BUSINESS DIGITALE","06 • DIGITALES GESCHÄFT","06 • NEGÓCIO DIGITAL","06 • CYFROWY BIZNES","06 • ЦИФРОВОЙ БИЗНЕС","06 • DIGITAAL ZAKELIJK","06 • DİJİTAL İŞ"],"07 • SOREVIA BUSINESS":["07 • SOREVIA BUSINESS","07 • SOREVIA BUSINESS","07 • SOREVIA BUSINESS","07 • SOREVIA BUSINESS","07 • SOREVIA BUSINESS","07 • SOREVIA BUSINESS","07 • SOREVIA BUSINESS","07 • SOREVIA BUSINESS","07 • SOREVIA BUSINESS"],"Accompagnez votre croissance avec des solutions bancaires adaptées à votre activité.":["Support your growth with banking solutions suited to your business.","Acompañe su crecimiento con soluciones bancarias adaptadas a su actividad.","Accompagni la sua crescita con soluzioni bancarie adatte alla sua attività.","Begleiten Sie Ihr Wachstum mit Banklösungen, die zu Ihrer Tätigkeit passen.","Acompanhe o seu crescimento com soluções bancárias adaptadas à sua atividade.","Wspieraj swój rozwój rozwiązaniami bankowymi dopasowanymi do Twojej działalności.","Поддерживайте рост бизнеса банковскими решениями, подходящими вашей деятельности.","Ondersteun uw groei met bankoplossingen die bij uw activiteit passen.","Büyümenize, işinize uygun bankacılık çözümleriyle eşlik edin."],"Accueil":["Home","Inicio","Home","Startseite","Início","Strona główna","Главная","Home","Ana sayfa"],"Accédez rapidement à vos opérations courantes.":["Quickly access your everyday operations.","Acceda rápidamente a sus operaciones habituales.","Acceda rapidamente alle sue operazioni quotidiane.","Greifen Sie schnell auf Ihre laufenden Vorgänge zu.","Aceda rapidamente às suas operações correntes.","Szybko uzyskaj dostęp do bieżących operacji.","Быстрый доступ к повседневным операциям.","Krijg snel toegang tot uw dagelijkse transacties.","Günlük işlemlerinize hızlıca erişin."],"Accédez à vos services bancaires depuis votre smartphone où que vous soyez.":["Access your banking services from your smartphone wherever you are.","Acceda a sus servicios bancarios desde su smartphone esté donde esté.","Acceda ai suoi servizi bancari dallo smartphone ovunque si trovi.","Greifen Sie von überall auf Ihre Bankdienste per Smartphone zu.","Aceda aos seus serviços bancários a partir do smartphone, onde quer que esteja.","Korzystaj z usług bankowych na smartfonie, gdziekolwiek jesteś.","Пользуйтесь банковскими услугами со смартфона где бы вы ни находились.","Raadpleeg uw bankdiensten via uw smartphone, waar u ook bent.","Bankacılık hizmetlerinize nerede olursanız olun akıllı telefonunuzdan ulaşın."],"Actif":["Active","Activo","Attivo","Aktiv","Ativo","Aktywne","Активен","Actief","Aktif"],"Adoptez les bonnes pratiques pour protéger vos accès.":["Adopt good practices to protect your access.","Adopte buenas prácticas para proteger sus accesos.","Adotti le buone pratiche per proteggere i suoi accessi.","Beachten Sie bewährte Vorgehensweisen zum Schutz Ihrer Zugänge.","Adote boas práticas para proteger os seus acessos.","Stosuj dobre praktyki, aby chronić swoje dane dostępowe.","Следуйте рекомендациям по защите ваших учётных данных.","Hanteer goede gewoontes om uw toegang te beschermen.","Erişim bilgilerinizi korumak için iyi uygulamaları benimseyin."],"Assurances":["Insurance","Seguros","Assicurazioni","Versicherungen","Seguros","Ubezpieczenia","Страхование","Verzekeringen","Sigortalar"],"Banque mobile":["Mobile banking","Banca móvil","Mobile banking","Mobile Banking","Banca móvel","Bankowość mobilna","Мобильный банк","Mobiel bankieren","Mobil bankacılık"],"COMPTE PROFESSIONNEL":["BUSINESS ACCOUNT","CUENTA PROFESIONAL","CONTO PROFESSIONALE","GESCHÄFTSKONTO","CONTA PROFISSIONAL","KONTO FIRMOWE","БИЗНЕС-СЧЁТ","ZAKELIJKE REKENING","TİCARİ HESAP"],"Cartes bancaires":["Bank cards","Tarjetas bancarias","Carte bancarie","Bankkarten","Cartões bancários","Karty bankowe","Банковские карты","Bankkaarten","Banka kartları"],"Centralisez vos opérations et profitez d'une expérience bancaire pensée pour les professionnels.":["Centralize your operations and enjoy a banking experience designed for professionals.","Centralice sus operaciones y disfrute de una experiencia bancaria pensada para profesionales.","Centralizzi le sue operazioni e goda di un’esperienza bancaria pensata per i professionisti.","Bündeln Sie Ihre Vorgänge und profitieren Sie von einem Bankerlebnis für Profis.","Centralize as suas operações e desfrute de uma experiência bancária pensada para profissionais.","Scentralizuj swoje operacje i korzystaj z bankowości stworzonej dla profesjonalistów.","Объедините свои операции и пользуйтесь банковским сервисом, созданным для профессионалов.","Centraliseer uw transacties en geniet van een bankervaring voor professionals.","İşlemlerinizi tek yerde toplayın ve profesyoneller için tasarlanmış bir bankacılık deneyiminden yararlanın."],"Commencer maintenant":["Get started now","Empezar ahora","Inizia ora","Jetzt starten","Começar agora","Zacznij teraz","Начать сейчас","Nu beginnen","Şimdi başlayın"],"Compte entreprise":["Business account","Cuenta de empresa","Conto aziendale","Firmenkonto","Conta empresarial","Konto firmowe","Счёт для компании","Bedrijfsrekening","Şirket hesabı"],"Compte professionnel":["Business account","Cuenta profesional","Conto professionale","Geschäftskonto","Conta profissional","Konto firmowe","Бизнес-счёт","Zakelijke rekening","Ticari hesap"],"Construisez votre activité avec les bons outils.":["Build your business with the right tools.","Construya su actividad con las herramientas adecuadas.","Costruisca la sua attività con gli strumenti giusti.","Bauen Sie Ihr Geschäft mit den richtigen Werkzeugen auf.","Construa a sua atividade com as ferramentas certas.","Rozwijaj swoją działalność za pomocą odpowiednich narzędzi.","Развивайте свой бизнес с помощью правильных инструментов.","Bouw uw activiteit op met de juiste tools.","İşinizi doğru araçlarla inşa edin."],"Construisez. Développez. Avancez.":["Build. Grow. Move forward.","Construya. Desarrolle. Avance.","Costruisca. Sviluppi. Avanzi.","Aufbauen. Wachsen. Vorankommen.","Construa. Desenvolva. Avance.","Buduj. Rozwijaj. Idź naprzód.","Стройте. Развивайтесь. Двигайтесь вперёд.","Bouw. Groei. Ga vooruit.","İnşa edin. Büyütün. İlerleyin."],"Croissance":["Growth","Crecimiento","Crescita","Wachstum","Crescimento","Rozwój","Рост","Groei","Büyüme"],"Créer mon espace entreprise":["Create my business space","Crear mi espacio de empresa","Crea il mio spazio aziendale","Mein Unternehmensportal erstellen","Criar o meu espaço empresa","Utwórz moją strefę firmową","Создать кабинет компании","Mijn bedrijfsomgeving aanmaken","Kurumsal alanımı oluştur"],"Des outils bancaires adaptés à votre activité.":["Banking tools tailored to your business.","Herramientas bancarias adaptadas a su actividad.","Strumenti bancari adatti alla sua attività.","Bankwerkzeuge, die zu Ihrer Tätigkeit passen.","Ferramentas bancárias adaptadas à sua atividade.","Narzędzia bankowe dopasowane do Twojej działalności.","Банковские инструменты, адаптированные к вашей деятельности.","Bankinstrumenten afgestemd op uw activiteit.","İşinize uygun bankacılık araçları."],"Des outils conçus pour":["Tools designed for","Herramientas diseñadas para","Strumenti progettati per","Werkzeuge für","Ferramentas concebidas para","Narzędzia stworzone dla","Инструменты, созданные для","Tools ontworpen voor","Günlük işleriniz için"],"Des services conçus pour simplifier votre gestion bancaire et vous permettre de vous concentrer sur votre activité.":["Services designed to simplify your banking management and let you focus on your business.","Servicios diseñados para simplificar su gestión bancaria y permitirle concentrarse en su actividad.","Servizi progettati per semplificare la gestione bancaria e permetterle di concentrarsi sulla sua attività.","Services, die Ihre Bankverwaltung vereinfachen und Ihnen erlauben, sich auf Ihr Geschäft zu konzentrieren.","Serviços concebidos para simplificar a sua gestão bancária e permitir-lhe concentrar-se na sua atividade.","Usługi stworzone, by uprościć zarządzanie finansami i pozwolić Ci skupić się na działalności.","Услуги, которые упрощают управление банковскими операциями и позволяют сосредоточиться на бизнесе.","Diensten die uw bankzaken vereenvoudigen, zodat u zich op uw activiteit kunt richten.","Bankacılık yönetiminizi kolaylaştıran ve işinize odaklanmanızı sağlayan hizmetler."],"Des solutions bancaires digitales pensées pour accompagner les professionnels, les entrepreneurs et les entreprises dans leurs projets.":["Digital banking solutions designed to support professionals, entrepreneurs and companies in their projects.","Soluciones bancarias digitales pensadas para acompañar a profesionales, emprendedores y empresas en sus proyectos.","Soluzioni bancarie digitali pensate per accompagnare professionisti, imprenditori e aziende nei loro progetti.","Digitale Banklösungen, die Selbstständige, Unternehmer und Unternehmen bei ihren Projekten begleiten.","Soluções bancárias digitais pensadas para acompanhar profissionais, empreendedores e empresas nos seus projetos.","Cyfrowe rozwiązania bankowe stworzone, by wspierać profesjonalistów, przedsiębiorców i firmy w ich projektach.","Цифровые банковские решения для специалистов, предпринимателей и компаний в их проектах.","Digitale bankoplossingen ontworpen om professionals, ondernemers en bedrijven in hun projecten te ondersteunen.","Profesyonellere, girişimcilere ve şirketlere projelerinde eşlik etmek için tasarlanmış dijital bankacılık çözümleri."],"Des solutions bancaires pensées pour accompagner les entrepreneurs, les professionnels et les entreprises dans leur quotidien et leurs projets.":["Banking solutions designed to support entrepreneurs, professionals and companies in their daily operations and projects.","Soluciones bancarias pensadas para acompañar a emprendedores, profesionales y empresas en su día a día y en sus proyectos.","Soluzioni bancarie pensate per accompagnare imprenditori, professionisti e aziende nella quotidianità e nei loro progetti.","Banklösungen, die Unternehmer, Selbstständige und Unternehmen in ihrem Alltag und bei ihren Projekten begleiten.","Soluções bancárias pensadas para acompanhar empreendedores, profissionais e empresas no seu dia a dia e nos seus projetos.","Rozwiązania bankowe stworzone, by wspierać przedsiębiorców, profesjonalistów i firmy na co dzień i w ich projektach.","Банковские решения, созданные для предпринимателей, специалистов и компаний в их повседневной работе и проектах.","Bankoplossingen ontworpen om ondernemers, professionals en bedrijven te ondersteunen in hun dagelijks werk en hun projecten.","Girişimcilere, profesyonellere ve şirketlere günlük işlerinde ve projelerinde eşlik etmek için tasarlanmış bankacılık çözümleri."],"Des solutions pour accompagner certains besoins de financement et soutenir vos projets de développement.":["Solutions to support certain financing needs and back your development projects.","Soluciones para acompañar ciertas necesidades de financiación y apoyar sus proyectos de desarrollo.","Soluzioni per accompagnare alcune esigenze di finanziamento e sostenere i suoi progetti di sviluppo.","Lösungen für bestimmte Finanzierungsbedürfnisse und zur Unterstützung Ihrer Entwicklungsprojekte.","Soluções para acompanhar certas necessidades de financiamento e apoiar os seus projetos de desenvolvimento.","Rozwiązania odpowiadające na określone potrzeby finansowe i wspierające Twoje projekty rozwojowe.","Решения для определённых потребностей в финансировании и поддержки ваших проектов развития.","Oplossingen voor bepaalde financieringsbehoeften en ter ondersteuning van uw ontwikkelingsprojecten.","Belirli finansman ihtiyaçlarına eşlik eden ve gelişim projelerinizi destekleyen çözümler."],"Décaissements":["Outgoing payments","Pagos realizados","Pagamenti in uscita","Zahlungsausgänge","Pagamentos efetuados","Wydatki","Выплаты","Uitgaven","Ödemeler"],"Découvrez l'univers professionnel de Sorevia Bank et choisissez les solutions adaptées à votre activité et à vos ambitions.":["Discover the professional world of Sorevia Bank and choose the solutions suited to your business and your ambitions.","Descubra el universo profesional de Sorevia Bank y elija las soluciones adaptadas a su actividad y a sus ambiciones.","Scopra l’universo professionale di Sorevia Bank e scelga le soluzioni adatte alla sua attività e alle sue ambizioni.","Entdecken Sie die Geschäftswelt von Sorevia Bank und wählen Sie die Lösungen, die zu Ihrer Tätigkeit und Ihren Zielen passen.","Descubra o universo profissional do Sorevia Bank e escolha as soluções adaptadas à sua atividade e às suas ambições.","Poznaj świat biznesu Sorevia Bank i wybierz rozwiązania dopasowane do swojej działalności i ambicji.","Откройте для себя мир бизнес-услуг Sorevia Bank и выберите решения, подходящие вашей деятельности и амбициям.","Ontdek de zakelijke wereld van Sorevia Bank en kies de oplossingen die passen bij uw activiteit en ambities.","Sorevia Bank’ın kurumsal dünyasını keşfedin ve faaliyetinize ve hedeflerinize uygun çözümleri seçin."],"Découvrir →":["Discover →","Descubrir →","Scopri →","Entdecken →","Descobrir →","Odkryj →","Узнать больше →","Ontdekken →","Keşfet →"],"Développement":["Development","Desarrollo","Sviluppo","Entwicklung","Desenvolvimento","Rozwój","Развитие","Ontwikkeling","Gelişim"],"ESPACE ENTREPRISE":["BUSINESS AREA","ESPACIO EMPRESA","AREA AZIENDA","UNTERNEHMENSBEREICH","ESPAÇO EMPRESA","STREFA FIRMY","КАБИНЕТ КОМПАНИИ","BEDRIJFSOMGEVING","KURUMSAL ALAN"],"Effectuez vos opérations courantes avec une expérience digitale simple.":["Carry out your everyday operations with a simple digital experience.","Realice sus operaciones habituales con una experiencia digital sencilla.","Effettui le sue operazioni quotidiane con un’esperienza digitale semplice.","Erledigen Sie Ihre laufenden Vorgänge mit einem einfachen digitalen Erlebnis.","Realize as suas operações correntes com uma experiência digital simples.","Wykonuj bieżące operacje w prosty, cyfrowy sposób.","Выполняйте повседневные операции в простом цифровом формате.","Voer uw dagelijkse transacties uit met een eenvoudige digitale ervaring.","Günlük işlemlerinizi basit bir dijital deneyimle gerçekleştirin."],"Encaissements":["Incoming payments","Cobros","Incassi","Zahlungseingänge","Recebimentos","Wpływy","Поступления","Inkomsten","Tahsilatlar"],"Entreprises":["Business","Empresas","Imprese","Unternehmen","Empresas","Firmy","Для бизнеса","Zakelijk","Kurumsal"],"Expérience digitale moderne":["Modern digital experience","Experiencia digital moderna","Esperienza digitale moderna","Moderne digitale Erfahrung","Experiência digital moderna","Nowoczesne doświadczenie cyfrowe","Современный цифровой сервис","Moderne digitale ervaring","Modern dijital deneyim"],"FINANCEMENT":["FINANCING","FINANCIACIÓN","FINANZIAMENTO","FINANZIERUNG","FINANCIAMENTO","FINANSOWANIE","ФИНАНСИРОВАНИЕ","FINANCIERING","FİNANSMAN"],"Faites grandir votre entreprise":["Grow your business","Haga crecer su empresa","Faccia crescere la sua azienda","Lassen Sie Ihr Unternehmen wachsen","Faça crescer a sua empresa","Rozwijaj swoją firmę","Развивайте свой бизнес","Laat uw bedrijf groeien","Şirketinizi büyütün"],"Financement":["Financing","Financiación","Finanziamento","Finanzierung","Financiamento","Finansowanie","Финансирование","Financiering","Finansman"],"Flux professionnels":["Business flows","Flujos profesionales","Flussi professionali","Geschäftliche Zahlungsflüsse","Fluxos profissionais","Przepływy firmowe","Бизнес-потоки","Zakelijke geldstromen","Ticari akışlar"],"Gardez le contrôle de":["Stay in control of","Mantenga el control de","Mantenga il controllo dei","Behalten Sie die Kontrolle über","Mantenha o controlo dos","Zachowaj kontrolę nad","Держите под контролем","Houd controle over","Nakit akışlarınızın"],"Gardez une meilleure visibilité sur vos mouvements et transactions.":["Keep better visibility over your movements and transactions.","Mantenga mejor visibilidad de sus movimientos y transacciones.","Mantenga una migliore visibilità su movimenti e transazioni.","Behalten Sie Ihre Bewegungen und Transaktionen besser im Blick.","Mantenha melhor visibilidade dos seus movimentos e transações.","Miej lepszy wgląd w swoje ruchy na koncie i transakcje.","Получите лучший обзор движений по счёту и транзакций.","Houd beter overzicht over uw bewegingen en transacties.","Hareketleriniz ve işlemleriniz üzerinde daha iyi görünürlük sağlayın."],"Gardez une meilleure visibilité sur vos mouvements financiers et organisez votre trésorerie.":["Get better visibility over your financial movements and organize your cash flow.","Tenga mejor visibilidad de sus movimientos financieros y organice su tesorería.","Mantenga una migliore visibilità sui movimenti finanziari e organizzi la tesoreria.","Behalten Sie Ihre Finanzbewegungen besser im Blick und organisieren Sie Ihre Liquidität.","Tenha melhor visibilidade dos seus movimentos financeiros e organize a sua tesouraria.","Miej lepszy wgląd w przepływy finansowe i uporządkuj swoją płynność.","Получите лучший обзор финансовых движений и упорядочите денежные потоки.","Houd beter overzicht over uw geldstromen en organiseer uw liquiditeit.","Mali hareketlerinizi daha net görün ve nakit akışınızı düzenleyin."],"Gestion de trésorerie":["Cash flow management","Gestión de tesorería","Gestione della tesoreria","Liquiditätsmanagement","Gestão de tesouraria","Zarządzanie płynnością","Управление денежными средствами","Liquiditeitsbeheer","Nakit akışı yönetimi"],"Gestion des utilisateurs":["User management","Gestión de usuarios","Gestione degli utenti","Benutzerverwaltung","Gestão de utilizadores","Zarządzanie użytkownikami","Управление пользователями","Gebruikersbeheer","Kullanıcı yönetimi"],"Gestion quotidienne":["Daily management","Gestión diaria","Gestione quotidiana","Tägliche Verwaltung","Gestão diária","Codzienne zarządzanie","Ежедневное управление","Dagelijks beheer","Günlük yönetim"],"Gérez vos paiements et vos encaissements avec des solutions adaptées aux besoins de votre entreprise.":["Manage your payments and collections with solutions suited to your company’s needs.","Gestione sus pagos y cobros con soluciones adaptadas a las necesidades de su empresa.","Gestisca pagamenti e incassi con soluzioni adatte alle esigenze della sua azienda.","Verwalten Sie Zahlungen und Einnahmen mit Lösungen, die auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind.","Gira os seus pagamentos e recebimentos com soluções adaptadas às necessidades da sua empresa.","Zarządzaj płatnościami i wpływami dzięki rozwiązaniom dopasowanym do potrzeb Twojej firmy.","Управляйте платежами и поступлениями с помощью решений, подходящих вашей компании.","Beheer uw betalingen en inkomsten met oplossingen die passen bij de behoeften van uw bedrijf.","Ödemelerinizi ve tahsilatlarınızı şirketinizin ihtiyaçlarına uygun çözümlerle yönetin."],"Gérez votre activité depuis votre smartphone.":["Manage your business from your smartphone.","Gestione su actividad desde su smartphone.","Gestisca la sua attività dal suo smartphone.","Verwalten Sie Ihr Geschäft von Ihrem Smartphone aus.","Gira a sua atividade a partir do smartphone.","Zarządzaj działalnością ze smartfona.","Управляйте бизнесом со смартфона.","Beheer uw activiteit vanaf uw smartphone.","İşinizi akıllı telefonunuzdan yönetin."],"Inscription":["Sign up","Registro","Registrazione","Registrierung","Registo","Rejestracja","Регистрация","Registratie","Kayıt"],"L'avenir de votre entreprise":["The future of your business","El futuro de su empresa","Il futuro della sua azienda","Die Zukunft Ihres Unternehmens","O futuro da sua empresa","Przyszłość Twojej firmy","Будущее вашей компании","De toekomst van uw bedrijf","Şirketinizin geleceği"],"Lancement d'activité":["Business launch","Lanzamiento de actividad","Avvio dell’attività","Geschäftsstart","Lançamento de atividade","Rozpoczęcie działalności","Запуск бизнеса","Start van uw activiteit","İşin kuruluşu"],"Les informations présentées sont indicatives et les conditions peuvent dépendre du produit ou service choisi.":["The information presented is indicative and conditions may depend on the product or service chosen.","La información presentada es orientativa y las condiciones pueden depender del producto o servicio elegido.","Le informazioni presentate sono indicative e le condizioni possono dipendere dal prodotto o servizio scelto.","Die dargestellten Informationen sind unverbindlich; die Konditionen können vom gewählten Produkt oder Service abhängen.","As informações apresentadas são indicativas e as condições podem depender do produto ou serviço escolhido.","Przedstawione informacje mają charakter orientacyjny, a warunki mogą zależeć od wybranego produktu lub usługi.","Представленная информация носит ориентировочный характер, условия могут зависеть от выбранного продукта или услуги.","De gepresenteerde informatie is indicatief en de voorwaarden kunnen afhangen van het gekozen product of de gekozen dienst.","Sunulan bilgiler bilgilendirme amaçlıdır; koşullar seçilen ürün veya hizmete göre değişebilir."],"Mobilité":["Mobility","Movilidad","Mobilità","Mobilität","Mobilidade","Mobilność","Мобильность","Mobiliteit","Mobilite"],"Nos solutions":["Our solutions","Nuestras soluciones","Le nostre soluzioni","Unsere Lösungen","As nossas soluções","Nasze rozwiązania","Наши решения","Onze oplossingen","Çözümlerimiz"],"Notifications":["Notifications","Notificaciones","Notifiche","Benachrichtigungen","Notificações","Powiadomienia","Уведомления","Meldingen","Bildirimler"],"Nouveaux projets":["New projects","Nuevos proyectos","Nuovi progetti","Neue Projekte","Novos projetos","Nowe projekty","Новые проекты","Nieuwe projecten","Yeni projeler"],"Organisez les accès aux services selon les besoins de votre entreprise.":["Organize access to services according to your company’s needs.","Organice los accesos a los servicios según las necesidades de su empresa.","Organizzi gli accessi ai servizi in base alle esigenze della sua azienda.","Organisieren Sie den Zugriff auf Services nach den Bedürfnissen Ihres Unternehmens.","Organize os acessos aos serviços de acordo com as necessidades da sua empresa.","Zarządzaj dostępem do usług zgodnie z potrzebami swojej firmy.","Настройте доступ к сервисам в соответствии с потребностями вашей компании.","Organiseer de toegang tot diensten volgens de behoeften van uw bedrijf.","Hizmetlere erişimi şirketinizin ihtiyaçlarına göre düzenleyin."],"Organisez les premières opérations financières de votre nouvelle entreprise.":["Organize the first financial operations of your new business.","Organice las primeras operaciones financieras de su nueva empresa.","Organizzi le prime operazioni finanziarie della sua nuova azienda.","Organisieren Sie die ersten Finanzvorgänge Ihres neuen Unternehmens.","Organize as primeiras operações financeiras da sua nova empresa.","Uporządkuj pierwsze operacje finansowe swojej nowej firmy.","Организуйте первые финансовые операции вашей новой компании.","Organiseer de eerste financiële transacties van uw nieuwe bedrijf.","Yeni şirketinizin ilk mali işlemlerini düzenleyin."],"Ouverture à l'international":["Going international","Apertura al exterior","Apertura all’estero","Internationale Expansion","Abertura ao mercado internacional","Ekspansja międzynarodowa","Выход на международный рынок","Internationale uitbreiding","Uluslararası açılım"],"Ouvrir un compte":["Open an account","Abrir una cuenta","Apri un conto","Konto eröffnen","Abrir uma conta","Załóż konto","Открыть счёт","Rekening openen","Hesap aç"],"PAIEMENTS":["PAYMENTS","PAGOS","PAGAMENTI","ZAHLUNGEN","PAGAMENTOS","PŁATNOŚCI","ПЛАТЕЖИ","BETALINGEN","ÖDEMELER"],"Paiements":["Payments","Pagos","Pagamenti","Zahlungen","Pagamentos","Płatności","Платежи","Betalingen","Ödemeler"],"Paiements professionnels":["Business payments","Pagos profesionales","Pagamenti professionali","Geschäftliche Zahlungen","Pagamentos profissionais","Płatności firmowe","Бизнес-платежи","Zakelijke betalingen","Ticari ödemeler"],"Parce qu'une entreprise a besoin de solutions, mais aussi d'un accompagnement clair.":["Because a company needs solutions, but also clear guidance.","Porque una empresa necesita soluciones, pero también un acompañamiento claro.","Perché un’azienda ha bisogno di soluzioni, ma anche di un’assistenza chiara.","Denn ein Unternehmen braucht Lösungen, aber auch eine klare Begleitung.","Porque uma empresa precisa de soluções, mas também de um acompanhamento claro.","Bo firma potrzebuje rozwiązań, ale też jasnego wsparcia.","Ведь компании нужны не только решения, но и понятное сопровождение.","Omdat een bedrijf oplossingen nodig heeft, maar ook duidelijke begeleiding.","Çünkü bir şirketin çözümlere olduğu kadar net bir desteğe de ihtiyacı vardır."],"Pilotage financier":["Financial steering","Control financiero","Controllo finanziario","Finanzsteuerung","Controlo financeiro","Kontrola finansów","Финансовое управление","Financiële sturing","Finansal yönetim"],"Profitez d'un environnement conçu pour rendre vos opérations plus simples, plus claires et plus accessibles.":["Enjoy an environment designed to make your operations simpler, clearer and more accessible.","Disfrute de un entorno diseñado para hacer sus operaciones más simples, claras y accesibles.","Goda di un ambiente progettato per rendere le sue operazioni più semplici, chiare e accessibili.","Nutzen Sie eine Umgebung, die Ihre Vorgänge einfacher, klarer und zugänglicher macht.","Desfrute de um ambiente concebido para tornar as suas operações mais simples, claras e acessíveis.","Korzystaj ze środowiska, które sprawia, że Twoje operacje są prostsze, jaśniejsze i bardziej dostępne.","Пользуйтесь средой, которая делает ваши операции проще, понятнее и доступнее.","Geniet van een omgeving die uw transacties eenvoudiger, duidelijker en toegankelijker maakt.","İşlemlerinizi daha basit, daha net ve daha erişilebilir kılmak için tasarlanmış bir ortamdan yararlanın."],"Projets & croissance":["Projects & growth","Proyectos y crecimiento","Progetti e crescita","Projekte & Wachstum","Projetos e crescimento","Projekty i rozwój","Проекты и рост","Projecten & groei","Projeler ve büyüme"],"Préparez vos besoins futurs et donnez une nouvelle dimension à vos ambitions.":["Prepare for your future needs and give your ambitions a new dimension.","Prepare sus necesidades futuras y dé una nueva dimensión a sus ambiciones.","Prepari le sue esigenze future e dia una nuova dimensione alle sue ambizioni.","Bereiten Sie sich auf künftige Anforderungen vor und geben Sie Ihren Ambitionen eine neue Dimension.","Prepare as suas necessidades futuras e dê uma nova dimensão às suas ambições.","Przygotuj się na przyszłe potrzeby i nadaj swoim ambicjom nowy wymiar.","Подготовьтесь к будущим потребностям и придайте вашим амбициям новый масштаб.","Bereid u voor op uw toekomstige behoeften en geef uw ambities een nieuwe dimensie.","Gelecekteki ihtiyaçlarınıza hazırlanın ve hedeflerinize yeni bir boyut kazandırın."],"Préparez vos opérations avec des solutions adaptées à vos besoins internationaux.":["Prepare your operations with solutions suited to your international needs.","Prepare sus operaciones con soluciones adaptadas a sus necesidades internacionales.","Prepari le sue operazioni con soluzioni adatte alle sue esigenze internazionali.","Bereiten Sie Ihre Vorgänge mit Lösungen vor, die zu Ihren internationalen Anforderungen passen.","Prepare as suas operações com soluções adaptadas às suas necessidades internacionais.","Przygotuj swoje operacje dzięki rozwiązaniom dopasowanym do potrzeb międzynarodowych.","Подготовьте свои операции с помощью решений для международных задач.","Bereid uw transacties voor met oplossingen die passen bij uw internationale behoeften.","İşlemlerinizi uluslararası ihtiyaçlarınıza uygun çözümlerle hazırlayın."],"Que vous soyez entrepreneur, indépendant, commerçant ou dirigeant d'entreprise, construisez votre expérience bancaire autour de vos besoins.":["Whether you are an entrepreneur, freelancer, shopkeeper or company director, build your banking experience around your needs.","Ya sea emprendedor, autónomo, comerciante o directivo de empresa, construya su experiencia bancaria en torno a sus necesidades.","Che sia imprenditore, libero professionista, commerciante o dirigente d’azienda, costruisca la sua esperienza bancaria intorno alle sue esigenze.","Ob Unternehmer, Selbstständiger, Händler oder Geschäftsführer – gestalten Sie Ihr Bankerlebnis nach Ihren Bedürfnissen.","Seja empreendedor, trabalhador independente, comerciante ou gestor de empresa, construa a sua experiência bancária em torno das suas necessidades.","Niezależnie od tego, czy jesteś przedsiębiorcą, freelancerem, kupcem czy dyrektorem firmy, zbuduj swoje doświadczenie bankowe wokół swoich potrzeb.","Предприниматель, самозанятый, торговец или руководитель компании — стройте своё банковское обслуживание вокруг своих потребностей.","Of u nu ondernemer, zelfstandige, handelaar of bedrijfsleider bent, bouw uw bankervaring op rond uw behoeften.","Girişimci, serbest çalışan, esnaf ya da şirket yöneticisi olun, bankacılık deneyiminizi ihtiyaçlarınız etrafında şekillendirin."],"Rapidité":["Speed","Rapidez","Rapidità","Schnelligkeit","Rapidez","Szybkość","Скорость","Snelheid","Hız"],"Restez informé de vos opérations importantes grâce aux alertes disponibles.":["Stay informed about your important transactions with the available alerts.","Manténgase informado de sus operaciones importantes gracias a las alertas disponibles.","Resti informato sulle operazioni importanti grazie agli avvisi disponibili.","Bleiben Sie dank der verfügbaren Benachrichtigungen über wichtige Vorgänge informiert.","Fique informado sobre as suas operações importantes com os alertas disponíveis.","Bądź na bieżąco z ważnymi operacjami dzięki dostępnym powiadomieniom.","Будьте в курсе важных операций благодаря доступным уведомлениям.","Blijf op de hoogte van uw belangrijke transacties dankzij de beschikbare meldingen.","Mevcut uyarılar sayesinde önemli işlemlerinizden haberdar olun."],"Retour":["Back","Volver","Indietro","Zurück","Voltar","Wstecz","Назад","Terug","Geri"],"SOLDE DISPONIBLE":["AVAILABLE BALANCE","SALDO DISPONIBLE","SALDO DISPONIBILE","VERFÜGBARER SALDO","SALDO DISPONÍVEL","DOSTĘPNE ŚRODKI","ДОСТУПНЫЙ ОСТАТОК","BESCHIKBAAR SALDO","KULLANILABİLİR BAKİYE"],"SOREVIA BANK • ENTREPRISES":["SOREVIA BANK • BUSINESS","SOREVIA BANK • EMPRESAS","SOREVIA BANK • IMPRESE","SOREVIA BANK • UNTERNEHMEN","SOREVIA BANK • EMPRESAS","SOREVIA BANK • FIRMY","SOREVIA BANK • ДЛЯ БИЗНЕСА","SOREVIA BANK • ZAKELIJK","SOREVIA BANK • KURUMSAL"],"SOREVIA BUSINESS":["SOREVIA BUSINESS","SOREVIA BUSINESS","SOREVIA BUSINESS","SOREVIA BUSINESS","SOREVIA BUSINESS","SOREVIA BUSINESS","SOREVIA BUSINESS","SOREVIA BUSINESS","SOREVIA BUSINESS"],"Services bancaires accessibles":["Accessible banking services","Servicios bancarios accesibles","Servizi bancari accessibili","Zugängliche Bankdienstleistungen","Serviços bancários acessíveis","Dostępne usługi bankowe","Доступные банковские услуги","Toegankelijke bankdiensten","Erişilebilir bankacılık hizmetleri"],"Services professionnels":["Business services","Servicios profesionales","Servizi professionali","Geschäftliche Services","Serviços profissionais","Usługi dla firm","Бизнес-услуги","Zakelijke diensten","Ticari hizmetler"],"Simplifiez les opérations courantes de votre entreprise avec un environnement bancaire clair et moderne.":["Simplify your company’s everyday operations with a clear, modern banking environment.","Simplifique las operaciones habituales de su empresa con un entorno bancario claro y moderno.","Semplifichi le operazioni quotidiane della sua azienda con un ambiente bancario chiaro e moderno.","Vereinfachen Sie die laufenden Vorgänge Ihres Unternehmens mit einer klaren, modernen Bankumgebung.","Simplifique as operações correntes da sua empresa com um ambiente bancário claro e moderno.","Uprość bieżące operacje swojej firmy dzięki przejrzystemu i nowoczesnemu środowisku bankowemu.","Упростите повседневные операции компании с помощью понятной и современной банковской среды.","Vereenvoudig de dagelijkse transacties van uw bedrijf met een heldere, moderne bankomgeving.","Şirketinizin günlük işlemlerini net ve modern bir bankacılık ortamıyla kolaylaştırın."],"Solutions adaptées à votre activité":["Solutions suited to your business","Soluciones adaptadas a su actividad","Soluzioni adatte alla sua attività","Lösungen, die zu Ihrer Tätigkeit passen","Soluções adaptadas à sua atividade","Rozwiązania dopasowane do Twojej działalności","Решения, подходящие вашей деятельности","Oplossingen die bij uw activiteit passen","İşinize uygun çözümler"],"Sorevia Bank Entreprises - Des solutions bancaires conçues pour accompagner les entreprises et leurs projets.":["Sorevia Bank Business - Banking solutions designed to support companies and their projects.","Sorevia Bank Empresas - Soluciones bancarias diseñadas para acompañar a las empresas y sus proyectos.","Sorevia Bank Imprese - Soluzioni bancarie progettate per accompagnare le aziende e i loro progetti.","Sorevia Bank Unternehmen - Banklösungen, die Unternehmen und ihre Projekte begleiten.","Sorevia Bank Empresas - Soluções bancárias concebidas para acompanhar as empresas e os seus projetos.","Sorevia Bank Firmy - Rozwiązania bankowe stworzone, by wspierać firmy i ich projekty.","Sorevia Bank для бизнеса - банковские решения, созданные для поддержки компаний и их проектов.","Sorevia Bank Zakelijk - Bankoplossingen ontworpen om bedrijven en hun projecten te ondersteunen.","Sorevia Bank Kurumsal - Şirketlere ve projelerine eşlik etmek için tasarlanmış bankacılık çözümleri."],"Sorevia Bank vous accompagne dans les différentes étapes de la vie de votre entreprise.":["Sorevia Bank supports you through every stage of your company’s life.","Sorevia Bank le acompaña en las distintas etapas de la vida de su empresa.","Sorevia Bank la accompagna nelle diverse fasi della vita della sua azienda.","Sorevia Bank begleitet Sie durch alle Phasen im Leben Ihres Unternehmens.","O Sorevia Bank acompanha-o nas diferentes etapas da vida da sua empresa.","Sorevia Bank wspiera Cię na każdym etapie życia Twojej firmy.","Sorevia Bank сопровождает вас на всех этапах жизни вашей компании.","Sorevia Bank begeleidt u in alle fasen van het leven van uw bedrijf.","Sorevia Bank, şirketinizin hayatındaki her aşamada yanınızda."],"Sorevia Bank | Entreprises":["Sorevia Bank | Business","Sorevia Bank | Empresas","Sorevia Bank | Imprese","Sorevia Bank | Unternehmen","Sorevia Bank | Empresas","Sorevia Bank | Firmy","Sorevia Bank | Для бизнеса","Sorevia Bank | Zakelijk","Sorevia Bank | Kurumsal"],"Suivez vos flux avec une présentation claire.":["Follow your flows with a clear overview.","Siga sus flujos con una presentación clara.","Segua i suoi flussi con una presentazione chiara.","Verfolgen Sie Ihre Zahlungsflüsse in einer klaren Darstellung.","Acompanhe os seus fluxos com uma apresentação clara.","Śledź swoje przepływy w przejrzystej prezentacji.","Следите за потоками средств в наглядном виде.","Volg uw geldstromen in een duidelijk overzicht.","Akışlarınızı net bir sunumla takip edin."],"Suivi de vos opérations":["Tracking of your transactions","Seguimiento de sus operaciones","Monitoraggio delle sue operazioni","Nachverfolgung Ihrer Vorgänge","Acompanhamento das suas operações","Śledzenie Twoich operacji","Контроль ваших операций","Opvolging van uw transacties","İşlemlerinizin takibi"],"Suivi des entrées":["Tracking of inflows","Seguimiento de entradas","Monitoraggio delle entrate","Verfolgung der Eingänge","Acompanhamento das entradas","Śledzenie wpływów","Учёт поступлений","Opvolging van inkomsten","Girişlerin takibi"],"Suivi des opérations":["Transaction tracking","Seguimiento de operaciones","Monitoraggio delle operazioni","Nachverfolgung von Vorgängen","Acompanhamento das operações","Śledzenie operacji","Контроль операций","Transacties opvolgen","İşlem takibi"],"Suivi des sorties":["Tracking of outflows","Seguimiento de salidas","Monitoraggio delle uscite","Verfolgung der Ausgänge","Acompanhamento das saídas","Śledzenie wydatków","Учёт выплат","Opvolging van uitgaven","Çıkışların takibi"],"Sécurité":["Security","Seguridad","Sicurezza","Sicherheit","Segurança","Bezpieczeństwo","Безопасность","Veiligheid","Güvenlik"],"TRÉSORERIE":["CASH MANAGEMENT","TESORERÍA","TESORERIA","LIQUIDITÄT","TESOURARIA","PŁYNNOŚĆ","КАЗНАЧЕЙСТВО","LIQUIDITEIT","NAKİT YÖNETİMİ"],"Tout ce qu'il faut pour":["Everything you need to","Todo lo necesario para","Tutto ciò che serve per","Alles, was Sie brauchen, um","Tudo o que precisa para","Wszystko, czego potrzeba, aby","Всё необходимое, чтобы","Alles wat u nodig hebt om","İşinizi ilerletmek için"],"Transformez vos projets":["Turn your projects","Transforme sus proyectos","Trasformi i suoi progetti","Verwandeln Sie Ihre Projekte","Transforme os seus projetos","Zamień swoje projekty","Превращайте свои проекты","Maak van uw projecten","Projelerinizi"],"Trésorerie":["Cash management","Tesorería","Tesoreria","Liquidität","Tesouraria","Płynność","Казначейство","Liquiditeit","Nakit yönetimi"],"Un accompagnement à chaque étape":["Support at every step","Un acompañamiento en cada etapa","Assistenza a ogni passo","Begleitung bei jedem Schritt","Um acompanhamento em cada etapa","Wsparcie na każdym etapie","Сопровождение на каждом этапе","Begeleiding bij elke stap","Her adımda destek"],"Un compte pensé pour séparer vos opérations professionnelles et gérer votre activité avec plus de clarté.":["An account designed to separate your business transactions and manage your activity more clearly.","Una cuenta pensada para separar sus operaciones profesionales y gestionar su actividad con más claridad.","Un conto pensato per separare le operazioni professionali e gestire l’attività con maggiore chiarezza.","Ein Konto, das Ihre geschäftlichen Vorgänge trennt und Ihnen mehr Übersicht über Ihr Geschäft verschafft.","Uma conta pensada para separar as suas operações profissionais e gerir a sua atividade com mais clareza.","Konto stworzone, by oddzielić operacje firmowe i zarządzać działalnością z większą przejrzystością.","Счёт, который помогает разделять рабочие операции и вести дела яснее.","Een rekening om uw zakelijke transacties te scheiden en uw activiteit overzichtelijker te beheren.","İşlemlerinizi ayırmak ve faaliyetinizi daha net yönetmek için tasarlanmış bir hesap."],"Une ambition. Des projets. Un avenir.":["An ambition. Projects. A future.","Una ambición. Proyectos. Un futuro.","Un’ambizione. Dei progetti. Un futuro.","Ein Ziel. Projekte. Eine Zukunft.","Uma ambição. Projetos. Um futuro.","Ambicja. Projekty. Przyszłość.","Амбиции. Проекты. Будущее.","Een ambitie. Projecten. Een toekomst.","Bir hedef. Projeler. Bir gelecek."],"Une présentation claire pour vous aider à suivre l'activité de votre compte professionnel.":["A clear overview to help you follow the activity of your business account.","Una presentación clara para ayudarle a seguir la actividad de su cuenta profesional.","Una presentazione chiara per aiutarla a seguire l’attività del suo conto professionale.","Eine klare Darstellung, die Ihnen hilft, die Aktivität Ihres Geschäftskontos zu verfolgen.","Uma apresentação clara para o ajudar a acompanhar a atividade da sua conta profissional.","Przejrzysty widok, który pomaga śledzić aktywność Twojego konta firmowego.","Наглядное представление, которое поможет отслеживать операции по бизнес-счёту.","Een duidelijk overzicht om de activiteit van uw zakelijke rekening te volgen.","Ticari hesabınızın hareketlerini takip etmenize yardımcı olan net bir sunum."],"Une relation bancaire":["A banking relationship","Una relación bancaria","Una relazione bancaria","Eine Bankbeziehung","Uma relação bancária","Relacja z bankiem","Банковские отношения","Een bankrelatie","Profesyoneller için"],"Une vision plus claire de votre activité.":["A clearer view of your business.","Una visión más clara de su actividad.","Una visione più chiara della sua attività.","Ein klarerer Blick auf Ihr Geschäft.","Uma visão mais clara da sua atividade.","Jaśniejszy obraz Twojej działalności.","Более ясное представление о вашем бизнесе.","Een helderder beeld van uw activiteit.","İşinize dair daha net bir bakış."],"VOTRE ENTREPRISE":["YOUR BUSINESS","SU EMPRESA","LA SUA AZIENDA","IHR UNTERNEHMEN","A SUA EMPRESA","TWOJA FIRMA","ВАША КОМПАНИЯ","UW BEDRIJF","ŞİRKETİNİZ"],"Virements professionnels":["Business transfers","Transferencias profesionales","Bonifici professionali","Geschäftliche Überweisungen","Transferências profissionais","Przelewy firmowe","Бизнес-переводы","Zakelijke overschrijvingen","Ticari havaleler"],"Visibilité":["Visibility","Visibilidad","Visibilità","Übersicht","Visibilidade","Przejrzystość","Наглядность","Overzicht","Görünürlük"],"Votre entreprise mérite une banque qui":["Your business deserves a bank that","Su empresa merece un banco que","La sua azienda merita una banca che","Ihr Unternehmen verdient eine Bank, die","A sua empresa merece um banco que","Twoja firma zasługuje na bank, który","Ваш бизнес заслуживает банк, который","Uw bedrijf verdient een bank die","Şirketiniz, kendisiyle birlikte"],"Vue indicative de démonstration":["Indicative demo view","Vista orientativa de demostración","Vista dimostrativa indicativa","Unverbindliche Demo-Ansicht","Vista indicativa de demonstração","Orientacyjny widok demonstracyjny","Ориентировочный демонстрационный вид","Indicatieve demoweergave","Gösterim amaçlı örnek görünüm"],"avance avec elle.":["moves forward with it.","avance con ella.","vada avanti con lei.","mit ihm vorankommt.","avance com ela.","idzie razem z nią.","двигается вперёд вместе с ним.","samen met u vooruitgaat.","ilerleyen bir banka hak ediyor."],"avec confiance.":["with confidence.","con confianza.","con fiducia.","mit Zuversicht.","com confiança.","z pewnością.","с уверенностью.","met vertrouwen.","güvenle."],"commence maintenant.":["starts now.","comienza ahora.","inizia adesso.","beginnt jetzt.","começa agora.","zaczyna się teraz.","начинается сейчас.","begint nu.","şimdi başlıyor."],"en nouvelles opportunités.":["into new opportunities.","en nuevas oportunidades.","in nuove opportunità.","in neue Chancen.","em novas oportunidades.","w nowe możliwości.","в новые возможности.","nieuwe kansen.","yeni fırsatlara dönüştürün."],"faire avancer votre activité.":["move your business forward.","hacer avanzar su actividad.","far crescere la sua attività.","Ihr Geschäft voranzubringen.","fazer avançar a sua atividade.","rozwijać swoją działalność.","развивать ваш бизнес.","uw activiteit vooruit te helpen.","gereken her şey."],"pensée pour les professionnels.":["designed for professionals.","pensada para profesionales.","pensata per i professionisti.","für Profis gemacht.","pensada para profissionais.","stworzona dla profesjonalistów.","созданные для профессионалов.","ontworpen voor professionals.","tasarlanmış bir bankacılık ilişkisi."],"vos flux financiers.":["your financial flows.","sus flujos financieros.","suoi flussi finanziari.","Ihre Finanzflüsse.","seus fluxos financeiros.","swoimi przepływami finansowymi.","ваши финансовые потоки.","uw geldstromen.","kontrolü sizde olsun."],"votre quotidien.":["your day-to-day.","su día a día.","la sua quotidianità.","Ihren Alltag.","o seu dia a dia.","Twojej codzienności.","вашей повседневной работы.","uw dagelijkse werk.","tasarlanmış araçlar."],"© 2026 Sorevia Bank — Tous droits réservés.":["© 2026 Sorevia Bank — All rights reserved.","© 2026 Sorevia Bank — Todos los derechos reservados.","© 2026 Sorevia Bank — Tutti i diritti riservati.","© 2026 Sorevia Bank — Alle Rechte vorbehalten.","© 2026 Sorevia Bank — Todos os direitos reservados.","© 2026 Sorevia Bank — Wszelkie prawa zastrzeżone.","© 2026 Sorevia Bank — Все права защищены.","© 2026 Sorevia Bank — Alle rechten voorbehouden.","© 2026 Sorevia Bank — Tüm hakları saklıdır."]};
+function pick(){
+  var q=null;try{q=new URLSearchParams(location.search).get("lang");}catch(e){}
+  if(q){q=String(q).toLowerCase().slice(0,2);if(SUP.indexOf(q)>-1)return{l:q,tag:DEF[q]};}
+  var list=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||"en"];
+  for(var i=0;i<list.length;i++){var tag=String(list[i]||"");var p=tag.toLowerCase().slice(0,2);if(SUP.indexOf(p)>-1)return{l:p,tag:tag};}
+  return{l:"en",tag:"en-US"};
+}
+var P=pick(),L=P.l,idx=SUP.indexOf(L)-1,LOC=P.tag;
+try{new Intl.NumberFormat(LOC);}catch(e){LOC=DEF[L];}
+window.LANG=L;window.LOCALE=LOC;
+var AMT=/(\d{1,3}(?:[\s\u00a0\u202f]\d{3})*(?:,\d+)?)[\s\u00a0\u202f]*(€|\$)/g;
+function fmt(num,cur){
+  var v=parseFloat(num.replace(/[\s\u00a0\u202f]/g,"").replace(",","."));var dec=(num.split(",")[1]||"").length;
+  try{return new Intl.NumberFormat(LOC,{style:"currency",currency:cur==="€"?"EUR":"USD",minimumFractionDigits:dec,maximumFractionDigits:dec}).format(v);}
+  catch(e){return num+" "+cur;}
+}
+function tr(src){
+  var a=[];var key=src.replace(AMT,function(m,n,c){a.push([n,c]);return"§"+a.length;});
+  var m=/^(\d+) mois$/.exec(key);if(m&&D["mois"])return m[1]+" "+D["mois"][idx];
+  var t=D[key];
+  if(t===undefined){if(!a.length)return src;t=key;}else{t=t[idx];}
+  return t.replace(/§(\d)/g,function(x,i){var z=a[i-1];return z?fmt(z[0],z[1]):x;});
+}
+window.T=function(s){if(L==="fr")return s;return tr(String(s).replace(/\s+/g," ").trim());};
+if(L==="fr")return;
+document.documentElement.setAttribute("lang",L);
+try{
+  var w=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT,null),n,nodes=[];
+  while((n=w.nextNode()))nodes.push(n);
+  nodes.forEach(function(n){
+    var p=n.parentNode&&n.parentNode.nodeName;if(p==="SCRIPT"||p==="STYLE"||p==="NOSCRIPT")return;
+    var raw=n.nodeValue,src=raw.replace(/\s+/g," ").trim();if(!src)return;
+    var out=tr(src);if(out!==src)n.nodeValue=raw.match(/^\s*/)[0]+out+raw.match(/\s*$/)[0];
+  });
+  ["placeholder","aria-label","title","alt"].forEach(function(at){
+    document.querySelectorAll("["+at+"]").forEach(function(e){var v=e.getAttribute(at).replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)e.setAttribute(at,o);});
+  });
+  var md=document.querySelector('meta[name="description"]');
+  if(md){var v=md.getAttribute("content").replace(/\s+/g," ").trim();var o=tr(v);if(o!==v)md.setAttribute("content",o);}
+}catch(e){if(window.console)console.error("i18n",e);}
+})();
+
+</script>
+<script>
+const reveals=document.querySelectorAll(".reveal");
+
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+}
+});
+},{threshold:.12});
+
+reveals.forEach(el=>observer.observe(el));
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+if(window.scrollY>450){
+topBtn.classList.add("visible");
+}else{
+topBtn.classList.remove("visible");
+}
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+link.addEventListener("click",function(e){
+const target=document.querySelector(this.getAttribute("href"));
+if(target){
+e.preventDefault();
+target.scrollIntoView({behavior:"smooth"});
+}
+});
+});
+</script>
+
+</body>
+</html>

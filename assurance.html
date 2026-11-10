@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#061b28">
+<meta name="description" content="Sorevia Bank - Solutions d'assurance pour protéger votre vie, votre véhicule, votre habitation et vos voyages.">
+<title>Sorevia Bank | Assurances</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#f5f8fa;color:#102b38;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+:root{--blue:#087fc4;--dark:#061c29;--deep:#03131e;--cyan:#72ddf5;--gold:#d5ad5c;--white:#fff;--muted:#71868f}
+.container{width:calc(100% - 30px);max-width:650px;margin:auto}
+.header{height:74px;background:#fff;border-bottom:1px solid #e5edef;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #0619250d}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:43px;height:43px;border-radius:12px;background:linear-gradient(145deg,#0ba5df,#07527a);color:#fff;display:grid;place-items:center;font:700 25px Georgia;box-shadow:0 8px 20px #087fc42c}
+.logo-text strong{display:block;font:700 18px Georgia;color:#0a2531;line-height:1}
+.logo-text small{display:block;font-size:6px;letter-spacing:3px;color:#8b9da3;margin-top:6px}
+.header-link{font-size:8px;font-weight:800;color:#0879b9;display:flex;align-items:center;gap:6px}
+.hero{min-height:700px;background:linear-gradient(145deg,#03131e 0%,#06374b 55%,#08718e 100%);color:#fff;position:relative;overflow:hidden;padding:45px 0 35px}
+.hero:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-220px;top:-100px;border:1px solid #ffffff12}
+.hero:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;left:-180px;bottom:40px;border:1px solid #ffffff0d}
+.hero-content{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff1d;background:#ffffff0b;padding:8px 12px;border-radius:50px;color:#9be8f9;font-size:7px;font-weight:800;letter-spacing:1.3px}
+.hero h1{font:700 37px/1.08 "Playfair Display",Georgia,serif;margin-top:19px}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:9px;line-height:1.9;color:#b8cdd4;margin-top:14px}
+.hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:23px}
+.hero-buttons a{height:46px;border-radius:9px;display:flex;justify-content:center;align-items:center;gap:7px;font-size:8px;font-weight:800}
+.primary{background:#0888d0;color:#fff;box-shadow:0 12px 25px #0003}
+.secondary{background:#fff;color:#0879b9}
+.hero-visual{height:285px;margin-top:28px;border-radius:20px;overflow:hidden;position:relative;background:url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:0 25px 50px #0005}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#03131e12,#03131eb8)}
+.protection-card{position:absolute;z-index:2;left:14px;right:14px;bottom:14px;background:#ffffff18;border:1px solid #ffffff2b;border-radius:15px;padding:14px;backdrop-filter:blur(12px)}
+.protection-card small{font-size:6px;color:#c1d8df;letter-spacing:1px}
+.protection-card strong{display:block;font:700 23px Georgia;margin-top:5px}
+.protection-card span{font-size:6px;color:#b4c9d0}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}
+.trust{background:#ffffff0b;border:1px solid #ffffff12;border-radius:11px;padding:11px 5px;text-align:center}
+.trust i{color:#70dbf4;font-size:13px;margin-bottom:6px}
+.trust span{display:block;font-size:6px;color:#abc1c9}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-mark">S</div>
+<div class="logo-text">
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</a>
+<a href="index.html" class="header-link"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container hero-content">
+
+<div class="eyebrow"><i class="fa-solid fa-shield-halved"></i> SOREVIA BANK • ASSURANCES</div>
+
+<h1>Protégez ce qui compte <span>vraiment.</span></h1>
+
+<p>Des solutions d'assurance pensées pour vous accompagner dans les moments importants de votre vie, au quotidien comme lorsque l'imprévu survient.</p>
+
+<div class="hero-buttons">
+<a href="#assurances" class="primary">Découvrir nos offres <i class="fa-solid fa-arrow-down"></i></a>
+<a href="inscription.html" class="secondary">Commencer <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div class="hero-visual">
+<div class="protection-card">
+<small>PROTECTION SOREVIA</small>
+<strong>Votre sérénité, notre priorité.</strong>
+<span>Des solutions adaptées à vos besoins.</span>
+</div>
+</div>
+
+<div class="trust-row">
+<div class="trust"><i class="fa-solid fa-heart"></i><span>Vie</span></div>
+<div class="trust"><i class="fa-solid fa-car"></i><span>Mobilité</span></div>
+<div class="trust"><i class="fa-solid fa-house"></i><span>Habitation</span></div>
+</div>
+
+</div>
+</section>
+
+<style>
+.assurances{background:#fff;padding:56px 0}
+.label{font-size:7px;font-weight:800;letter-spacing:1.7px;color:#087fc4}
+.title{font:700 30px/1.12 "Playfair Display",Georgia,serif;color:#092633;margin-top:7px}
+.title span{color:#087fc4}
+.desc{font-size:8px;line-height:1.9;color:#74878e;margin-top:10px}
+.assurance-grid{display:grid;gap:12px;margin-top:25px}
+.assurance{background:#fff;border:1px solid #e0e9ec;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px #0619250a;transition:.3s}
+.assurance:active{transform:scale(.985)}
+.assurance-img{height:175px;background-size:cover;background-position:center;position:relative}
+.assurance-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2800,#061b28b0)}
+.life-img{background-image:url("https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1000&q=85")}
+.auto-img{background-image:url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85")}
+.home-img{background-image:url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85")}
+.death-img{background-image:url("https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1000&q=85")}
+.travel-img{background-image:url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=85")}
+.assurance-tag{position:absolute;z-index:2;left:12px;top:12px;background:#ffffffdf;color:#0879b9;padding:7px 9px;border-radius:30px;font-size:6px;font-weight:800;letter-spacing:1px}
+.assurance-body{padding:16px}
+.assurance-icon{width:40px;height:40px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:14px;margin-bottom:12px}
+.assurance h3{font:700 19px Georgia;color:#15333f}
+.assurance p{font-size:7px;line-height:1.8;color:#74878f;margin-top:7px}
+.assurance-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #edf1f2}
+.assurance-bottom span{font-size:6px;color:#83969d}
+.assurance-bottom a{font-size:7px;font-weight:800;color:#087fc4}
+</style>
+
+<section class="assurances" id="assurances">
+<div class="container">
+
+<div class="label">01 • NOS SOLUTIONS</div>
+<h2 class="title">Une protection pour <span>chaque étape.</span></h2>
+<p class="desc">Choisissez la couverture qui correspond à votre quotidien, à vos projets et à vos besoins.</p>
+
+<div class="assurance-grid">
+
+<article class="assurance reveal">
+<div class="assurance-img life-img">
+<span class="assurance-tag">ASSURANCE VIE</span>
+</div>
+<div class="assurance-body">
+<div class="assurance-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+<h3>Assurance vie</h3>
+<p>Une solution destinée à protéger vos proches et à accompagner vos projets à long terme selon les garanties choisies.</p>
+<div class="assurance-bottom">
+<span>Protection familiale</span>
+<a href="inscription.html">En savoir plus →</a>
+</div>
+</div>
+</article>
+
+<article class="assurance reveal">
+<div class="assurance-img auto-img">
+<span class="assurance-tag">AUTOMOBILE</span>
+</div>
+<div class="assurance-body">
+<div class="assurance-icon"><i class="fa-solid fa-car"></i></div>
+<h3>Assurance automobile</h3>
+<p>Protégez votre véhicule et bénéficiez d'une couverture adaptée à votre utilisation et aux garanties sélectionnées.</p>
+<div class="assurance-bottom">
+<span>Mobilité protégée</span>
+<a href="inscription.html">En savoir plus →</a>
+</div>
+</div>
+</article>
+
+<article class="assurance reveal">
+<div class="assurance-img home-img">
+<span class="assurance-tag">HABITATION</span>
+</div>
+<div class="assurance-body">
+<div class="assurance-icon"><i class="fa-solid fa-house-chimney"></i></div>
+<h3>Assurance habitation</h3>
+<p>Une protection pensée pour votre logement et vos biens face aux différents événements couverts par votre contrat.</p>
+<div class="assurance-bottom">
+<span>Maison & biens</span>
+<a href="inscription.html">En savoir plus →</a>
+</div>
+</div>
+</article>
+
+<article class="assurance reveal">
+<div class="assurance-img death-img">
+<span class="assurance-tag">DÉCÈS • INVALIDITÉ</span>
+</div>
+<div class="assurance-body">
+<div class="assurance-icon"><i class="fa-solid fa-user-shield"></i></div>
+<h3>Décès-invalidité</h3>
+<p>Une couverture destinée à vous accompagner face à certaines conséquences financières liées aux événements garantis.</p>
+<div class="assurance-bottom">
+<span>Protection personnelle</span>
+<a href="inscription.html">En savoir plus →</a>
+</div>
+</div>
+</article>
+
+<article class="assurance reveal">
+<div class="assurance-img travel-img">
+<span class="assurance-tag">ASSURANCE VOYAGE</span>
+</div>
+<div class="assurance-body">
+<div class="assurance-icon"><i class="fa-solid fa-plane"></i></div>
+<h3>Assurance voyage</h3>
+<p>Partez plus sereinement grâce à une protection pouvant couvrir certains imprévus pendant vos déplacements.</p>
+<div class="assurance-bottom">
+<span>Voyage & assistance</span>
+<a href="inscription.html">En savoir plus →</a>
+</div>
+</div>
+</article>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.protection{background:#f2f7f9;padding:58px 0}
+.protection-banner{margin-top:23px;height:250px;border-radius:19px;background:url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=85") center/cover;position:relative;overflow:hidden}
+.protection-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2818,#061b28bd)}
+.banner-card{position:absolute;z-index:2;bottom:14px;left:14px;right:14px;background:#ffffffec;border-radius:13px;padding:14px}
+.banner-card small{font-size:6px;color:#087fc4;font-weight:800;letter-spacing:1px}
+.banner-card strong{display:block;font:700 21px Georgia;color:#12303c;margin-top:5px}
+.banner-card span{font-size:6px;color:#71858c;display:block;margin-top:4px}
+.protection-list{display:grid;gap:9px;margin-top:20px}
+.protection-item{background:#fff;border:1px solid #e1e9ec;border-radius:13px;padding:13px;display:flex;gap:11px;align-items:center}
+.protection-item i{width:35px;height:35px;border-radius:10px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:11px;flex:none}
+.protection-item strong{display:block;font-size:8px;color:#29444e}
+.protection-item p{font-size:6px;line-height:1.7;color:#81939a;margin-top:4px}
+.coverage{background:#fff;padding:58px 0}
+.coverage-card{margin-top:23px;background:linear-gradient(145deg,#061b28,#075773);border-radius:19px;color:#fff;padding:20px;position:relative;overflow:hidden;box-shadow:0 20px 40px #0619251f}
+.coverage-card:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-120px;top:-80px;border:1px solid #ffffff12}
+.coverage-card small{font-size:6px;color:#76dff5;letter-spacing:1.4px;font-weight:800}
+.coverage-card h3{font:700 23px Georgia;margin-top:9px}
+.coverage-card p{font-size:7px;line-height:1.8;color:#abc3cb;margin-top:8px}
+.coverage-items{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px;position:relative;z-index:2}
+.coverage-item{background:#ffffff0b;border:1px solid #ffffff12;border-radius:11px;padding:11px}
+.coverage-item i{color:#70dcf4;font-size:11px}
+.coverage-item strong{display:block;font-size:7px;margin-top:6px}
+.coverage-item span{display:block;font-size:6px;color:#9eb7c0;line-height:1.5;margin-top:3px}
+</style>
+
+<section class="protection">
+<div class="container">
+
+<div class="label">02 • UNE PROTECTION GLOBALE</div>
+<h2 class="title">Parce que vos projets<br><span>méritent d'être protégés.</span></h2>
+<p class="desc">Une approche simple pour vous aider à identifier les protections qui correspondent à votre situation.</p>
+
+<div class="protection-banner reveal">
+<div class="banner-card">
+<small>VOTRE SÉRÉNITÉ</small>
+<strong>Anticiper aujourd'hui, c'est protéger demain.</strong>
+<span>Découvrez les solutions disponibles chez Sorevia Bank.</span>
+</div>
+</div>
+
+<div class="protection-list">
+
+<div class="protection-item reveal">
+<i class="fa-solid fa-people-roof"></i>
+<div><strong>Protéger vos proches</strong><p>Préservez vos projets familiaux grâce aux protections adaptées à vos besoins.</p></div>
+</div>
+
+<div class="protection-item reveal">
+<i class="fa-solid fa-car-side"></i>
+<div><strong>Protéger votre mobilité</strong><p>Choisissez une couverture adaptée à votre véhicule et à vos déplacements.</p></div>
+</div>
+
+<div class="protection-item reveal">
+<i class="fa-solid fa-house-circle-check"></i>
+<div><strong>Protéger votre logement</strong><p>Une solution pensée pour votre habitation et les biens qui comptent pour vous.</p></div>
+</div>
+
+<div class="protection-item reveal">
+<i class="fa-solid fa-suitcase-rolling"></i>
+<div><strong>Protéger vos voyages</strong><p>Partez avec une solution d'assistance adaptée à vos déplacements.</p></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="coverage">
+<div class="container">
+
+<div class="label">03 • DES GARANTIES À VOTRE IMAGE</div>
+<h2 class="title">Une protection qui<br><span>s'adapte à vous.</span></h2>
+<p class="desc">Les besoins ne sont pas les mêmes pour tout le monde. Prenez le temps de choisir les garanties adaptées à votre situation.</p>
+
+<div class="coverage-card reveal">
+<small>SOREVIA PROTECTION</small>
+<h3>Votre tranquillité commence par une bonne préparation.</h3>
+<p>Comparez vos besoins, choisissez les garanties pertinentes et construisez une protection cohérente avec votre quotidien.</p>
+
+<div class="coverage-items">
+<div class="coverage-item"><i class="fa-solid fa-check"></i><strong>Clarté</strong><span>Des informations présentées simplement.</span></div>
+<div class="coverage-item"><i class="fa-solid fa-sliders"></i><strong>Adaptation</strong><span>Des solutions selon vos besoins.</span></div>
+<div class="coverage-item"><i class="fa-solid fa-shield"></i><strong>Protection</strong><span>Une couverture selon les garanties.</span></div>
+<div class="coverage-item"><i class="fa-solid fa-headset"></i><strong>Accompagnement</strong><span>Un parcours pensé pour vous.</span></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<style>
+.steps{background:#f3f7f9;padding:58px 0}
+.step-list{display:grid;gap:10px;margin-top:24px}
+.step{background:#fff;border:1px solid #e0e9ec;border-radius:15px;padding:16px;display:flex;gap:13px;align-items:flex-start;box-shadow:0 8px 20px #06192508}
+.step-number{width:39px;height:39px;border-radius:12px;background:#087fc4;color:#fff;display:grid;place-items:center;font:700 14px Georgia;flex:none}
+.step h3{font:700 16px Georgia;color:#16333e;margin-bottom:5px}
+.step p{font-size:7px;line-height:1.8;color:#788c93}
+.advice{background:#fff;padding:58px 0}
+.advice-photo{height:235px;border-radius:19px;background:url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85") center/cover;position:relative;overflow:hidden;margin-top:22px}
+.advice-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2810,#061b28b0)}
+.advice-card{position:absolute;left:13px;right:13px;bottom:13px;background:#ffffffed;border-radius:13px;padding:13px}
+.advice-card strong{font:700 19px Georgia;color:#15333f}
+.advice-card span{display:block;font-size:6px;color:#71858c;margin-top:5px}
+.advice-list{display:grid;gap:9px;margin-top:18px}
+.advice-item{padding:13px;border:1px solid #e0e9ec;border-radius:11px;display:flex;gap:10px}
+.advice-item i{width:32px;height:32px;border-radius:9px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:10px;flex:none}
+.advice-item strong{font-size:7px;display:block;color:#29444e}
+.advice-item p{font-size:6px;color:#81939a;line-height:1.7;margin-top:4px}
+.security{background:linear-gradient(145deg,#061a27,#07435b);padding:58px 0;color:#fff;position:relative;overflow:hidden}
+.security:before{content:"";position:absolute;width:310px;height:310px;border-radius:50%;border:1px solid #ffffff0b;right:-190px;top:-80px}
+.security .title{color:#fff}
+.security .title span{color:#72ddf5}
+.security .desc{color:#abc1c9}
+.security-box{margin-top:23px;background:#ffffff0b;border:1px solid #ffffff14;border-radius:17px;padding:16px}
+.security-row{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid #ffffff10}
+.security-row:last-child{border-bottom:0}
+.security-row i{width:39px;height:39px;border-radius:11px;background:#ffffff0b;color:#72ddf5;display:grid;place-items:center;flex:none}
+.security-row strong{font-size:8px}
+.security-row p{font-size:6px;line-height:1.7;color:#9eb8c1;margin-top:4px}
+</style>
+
+<section class="steps">
+<div class="container">
+
+<div class="label">04 • COMMENT CHOISIR</div>
+<h2 class="title">Une démarche simple,<br><span>sans complication.</span></h2>
+<p class="desc">Prenez quelques instants pour identifier vos priorités et choisir la solution qui vous correspond.</p>
+
+<div class="step-list">
+
+<div class="step reveal">
+<div class="step-number">01</div>
+<div><h3>Identifiez vos besoins</h3><p>Vie familiale, véhicule, logement, voyage ou protection personnelle : commencez par ce qui compte le plus pour vous.</p></div>
+</div>
+
+<div class="step reveal">
+<div class="step-number">02</div>
+<div><h3>Découvrez les solutions</h3><p>Explorez les différentes familles d'assurance et les protections proposées.</p></div>
+</div>
+
+<div class="step reveal">
+<div class="step-number">03</div>
+<div><h3>Choisissez vos garanties</h3><p>Examinez attentivement les garanties, exclusions, conditions et limites applicables.</p></div>
+</div>
+
+<div class="step reveal">
+<div class="step-number">04</div>
+<div><h3>Finalisez votre demande</h3><p>Accédez à votre espace et poursuivez votre démarche auprès de Sorevia Bank.</p></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="advice">
+<div class="container">
+
+<div class="label">05 • CONSEILS & ACCOMPAGNEMENT</div>
+<h2 class="title">Bien assuré,<br><span>c'est mieux préparé.</span></h2>
+<p class="desc">Une bonne protection commence par une compréhension claire de vos besoins et des garanties choisies.</p>
+
+<div class="advice-photo reveal">
+<div class="advice-card">
+<strong>Prenez le temps de comparer.</strong>
+<span>Les garanties et conditions peuvent varier selon le produit choisi.</span>
+</div>
+</div>
+
+<div class="advice-list">
+
+<div class="advice-item reveal">
+<i class="fa-solid fa-file-circle-check"></i>
+<div><strong>Lisez les conditions</strong><p>Avant toute souscription, prenez connaissance des garanties, exclusions et conditions du contrat.</p></div>
+</div>
+
+<div class="advice-item reveal">
+<i class="fa-solid fa-scale-balanced"></i>
+<div><strong>Comparez vos besoins</strong><p>Une protection adaptée doit correspondre à votre situation réelle et à vos priorités.</p></div>
+</div>
+
+<div class="advice-item reveal">
+<i class="fa-solid fa-calendar-check"></i>
+<div><strong>Actualisez votre protection</strong><p>Vos besoins peuvent évoluer avec votre situation, vos projets et votre patrimoine.</p></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="security">
+<div class="container">
+
+<div class="label" style="color:#72ddf5">06 • CONFIANCE</div>
+<h2 class="title">Une expérience pensée<br><span>pour vous rassurer.</span></h2>
+<p class="desc">La simplicité, la transparence et la sécurité sont au cœur de votre parcours.</p>
+
+<div class="security-box reveal">
+
+<div class="security-row">
+<i class="fa-solid fa-lock"></i>
+<div><strong>Vos informations protégées</strong><p>Adoptez les bonnes pratiques et utilisez uniquement les canaux officiels de Sorevia Bank.</p></div>
+</div>
+
+<div class="security-row">
+<i class="fa-solid fa-magnifying-glass"></i>
+<div><strong>Une information claire</strong><p>Consultez les détails du produit avant toute décision et vérifiez les conditions applicables.</p></div>
+</div>
+
+<div class="security-row">
+<i class="fa-solid fa-comments"></i>
+<div><strong>Un accompagnement</strong><p>Lorsque vous avez un doute, demandez les informations nécessaires avant de souscrire.</p></div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.final-cta{background:#fff;padding:60px 0;text-align:center}
+.final-icon{width:58px;height:58px;border-radius:16px;background:#e8f6fa;color:#087fc4;display:grid;place-items:center;margin:0 auto 15px;font-size:20px}
+.final-cta .title{font-size:30px}
+.final-cta p{font-size:8px;line-height:1.9;color:#758991;margin:11px auto 20px;max-width:500px}
+.final-cta a{display:flex;justify-content:center;align-items:center;gap:7px;background:#087fc4;color:#fff;border-radius:10px;padding:14px;font-size:8px;font-weight:800;max-width:500px;margin:auto;box-shadow:0 12px 25px #087fc42e}
+.footer{background:#03131e;color:#fff;padding:40px 0 18px}
+.footer-logo{display:flex;align-items:center;gap:9px}
+.footer-logo .logo-mark{box-shadow:none}
+.footer-logo strong{display:block;font:700 17px Georgia}
+.footer-logo small{display:block;font-size:6px;letter-spacing:2px;color:#6e8790;margin-top:5px}
+.footer-description{font-size:7px;line-height:1.8;color:#6e8790;margin:15px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;border-top:1px solid #ffffff0d;padding-top:20px}
+.footer-col h4{font:700 14px Georgia;margin-bottom:11px}
+.footer-col a{display:block;font-size:7px;color:#82989f;margin:8px 0}
+.footer-bottom{border-top:1px solid #ffffff0d;margin-top:22px;padding-top:14px;text-align:center;font-size:6px;color:#506972;line-height:1.8}
+.floating{position:fixed;bottom:17px;right:15px;width:45px;height:45px;border-radius:50%;background:#087fc4;color:#fff;display:grid;place-items:center;box-shadow:0 8px 25px #0004;z-index:500;font-size:13px;opacity:0;pointer-events:none;transition:.3s}
+.floating.visible{opacity:1;pointer-events:auto}
+@media(min-width:500px){
+.assurance-grid{grid-template-columns:1fr 1fr}
+.assurance:last-child{grid-column:1/-1}
+}
+</style>
+
+<section class="final-cta">
+<div class="container">
+
+<div class="final-icon"><i class="fa-solid fa-shield-heart"></i></div>
+
+<div class="label">07 • SOREVIA BANK</div>
+
+<h2 class="title">Protégez aujourd'hui<br><span>ce qui compte demain.</span></h2>
+
+<p>Découvrez les solutions d'assurance Sorevia Bank et construisez une protection adaptée à vos besoins, à vos projets et à votre quotidien.</p>
+
+<a href="inscription.html">Commencer ma démarche <i class="fa-solid fa-arrow-right"></i></a>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+
+<div class="footer-logo">
+<div class="logo-mark">S</div>
+<div>
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</div>
+
+<p class="footer-description">Des solutions digitales et des services pensés pour accompagner votre quotidien, vos projets et votre avenir.</p>
+
+<div class="footer-grid">
+
+<div class="footer-col">
+<h4>Assurances</h4>
+<a href="#assurances">Assurance vie</a>
+<a href="#assurances">Automobile</a>
+<a href="#assurances">Habitation</a>
+<a href="#assurances">Décès-invalidité</a>
+<a href="#assurances">Voyage</a>
+</div>
+
+<div class="footer-col">
+<h4>Sorevia</h4>
+<a href="index.html">Accueil</a>
+<a href="bancaire.html">Cartes bancaires</a>
+<a href="paiement.html">Paiements</a>
+<a href="inscription.html">Inscription</a>
+<a href="connecter.html">Connexion</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Sorevia Bank — Tous droits réservés.<br>
+Les garanties, exclusions, tarifs et conditions dépendent du contrat souscrit.
+</div>
+
+</div>
+</footer>
+
+<a href="#" class="floating" id="topBtn">
+<i class="fa-solid fa-arrow-up"></i>
+</a>
+
+</main>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+}
+});
+},{threshold:.12});
+
+reveals.forEach(el=>observer.observe(el));
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+if(window.scrollY>450){
+topBtn.classList.add("visible");
+}else{
+topBtn.classList.remove("visible");
+}
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+link.addEventListener("click",function(e){
+const target=document.querySelector(this.getAttribute("href"));
+if(target){
+e.preventDefault();
+target.scrollIntoView({behavior:"smooth"});
+}
+});
+});
+</script>
+
+
+<script>
+/* Traduction automatique : FR, EN, ES, IT, DE, PT, PL, RU, NL, TR — langue du navigateur */
+(function(){
+var D={"Sorevia Bank - Solutions d'assurance pour protéger votre vie, votre véhicule, votre habitation et vos voyages.":{"en":"Sorevia Bank - Insurance solutions to protect your life, your vehicle, your home and your travels.","es":"Sorevia Bank - Soluciones de seguros para proteger tu vida, tu vehículo, tu hogar y tus viajes.","it":"Sorevia Bank - Soluzioni assicurative per proteggere la tua vita, il tuo veicolo, la tua casa e i tuoi viaggi.","de":"Sorevia Bank - Versicherungslösungen zum Schutz Ihres Lebens, Ihres Fahrzeugs, Ihres Zuhauses und Ihrer Reisen.","pt":"Sorevia Bank - Soluções de seguros para proteger a sua vida, o seu veículo, a sua habitação e as suas viagens.","pl":"Sorevia Bank - Rozwiązania ubezpieczeniowe, które chronią Twoje życie, pojazd, dom i podróże.","ru":"Sorevia Bank - страховые решения для защиты вашей жизни, автомобиля, жилья и путешествий.","nl":"Sorevia Bank - Verzekeringsoplossingen om uw leven, uw voertuig, uw woning en uw reizen te beschermen.","tr":"Sorevia Bank - Hayatınızı, aracınızı, evinizi ve seyahatlerinizi korumak için sigorta çözümleri."},"Sorevia Bank | Assurances":{"en":"Sorevia Bank | Insurance","es":"Sorevia Bank | Seguros","it":"Sorevia Bank | Assicurazioni","de":"Sorevia Bank | Versicherungen","pt":"Sorevia Bank | Seguros","pl":"Sorevia Bank | Ubezpieczenia","ru":"Sorevia Bank | Страхование","nl":"Sorevia Bank | Verzekeringen","tr":"Sorevia Bank | Sigorta"},"S":{"en":"S","es":"S","it":"S","de":"S","pt":"S","pl":"S","ru":"S","nl":"S","tr":"S"},"Sorevia Bank":{"en":"Sorevia Bank","es":"Sorevia Bank","it":"Sorevia Bank","de":"Sorevia Bank","pt":"Sorevia Bank","pl":"Sorevia Bank","ru":"Sorevia Bank","nl":"Sorevia Bank","tr":"Sorevia Bank"},"DIGITAL BANKING":{"en":"DIGITAL BANKING","es":"DIGITAL BANKING","it":"DIGITAL BANKING","de":"DIGITAL BANKING","pt":"DIGITAL BANKING","pl":"DIGITAL BANKING","ru":"DIGITAL BANKING","nl":"DIGITAL BANKING","tr":"DIGITAL BANKING"},"Retour":{"en":"Back","es":"Volver","it":"Indietro","de":"Zurück","pt":"Voltar","pl":"Wróć","ru":"Назад","nl":"Terug","tr":"Geri"},"SOREVIA BANK • ASSURANCES":{"en":"SOREVIA BANK • INSURANCE","es":"SOREVIA BANK • SEGUROS","it":"SOREVIA BANK • ASSICURAZIONI","de":"SOREVIA BANK • VERSICHERUNGEN","pt":"SOREVIA BANK • SEGUROS","pl":"SOREVIA BANK • UBEZPIECZENIA","ru":"SOREVIA BANK • СТРАХОВАНИЕ","nl":"SOREVIA BANK • VERZEKERINGEN","tr":"SOREVIA BANK • SİGORTA"},"Protégez ce qui compte":{"en":"Protect what truly","es":"Protege lo que importa","it":"Proteggi ciò che conta","de":"Schützen Sie, was wirklich","pt":"Proteja o que realmente","pl":"Chroń to, co naprawdę","ru":"Защитите то, что по-настоящему","nl":"Bescherm wat er echt","tr":"Gerçekten önemli olanı"},"vraiment.":{"en":"matters.","es":"de verdad.","it":"davvero.","de":"zählt.","pt":"importa.","pl":"się liczy.","ru":"важно.","nl":"toe doet.","tr":"koruyun."},"Des solutions d'assurance pensées pour vous accompagner dans les moments importants de votre vie, au quotidien comme lorsque l'imprévu survient.":{"en":"Insurance solutions designed to support you through life's important moments, every day and when the unexpected happens.","es":"Soluciones de seguros pensadas para acompañarte en los momentos importantes de tu vida, día a día y cuando surge un imprevisto.","it":"Soluzioni assicurative pensate per accompagnarti nei momenti importanti della tua vita, ogni giorno e quando capita l'imprevisto.","de":"Versicherungslösungen, die Sie in den wichtigen Momenten Ihres Lebens begleiten, im Alltag ebenso wie bei Unvorhergesehenem.","pt":"Soluções de seguros pensadas para o acompanhar nos momentos importantes da sua vida, no dia a dia e quando surge um imprevisto.","pl":"Rozwiązania ubezpieczeniowe stworzone, by towarzyszyć Ci w ważnych chwilach życia, na co dzień i gdy zdarzy się coś nieprzewidzianego.","ru":"Страховые решения, созданные, чтобы сопровождать вас в важные моменты жизни — в повседневности и когда случается непредвиденное.","nl":"Verzekeringsoplossingen die u begeleiden bij de belangrijke momenten in uw leven, dagelijks en wanneer het onverwachte gebeurt.","tr":"Hayatınızın önemli anlarında, günlük yaşamda ve beklenmedik bir durum yaşandığında size eşlik etmek için tasarlanmış sigorta çözümleri."},"Découvrir nos offres":{"en":"Discover our offers","es":"Descubrir nuestras ofertas","it":"Scopri le nostre offerte","de":"Unsere Angebote entdecken","pt":"Descobrir as nossas ofertas","pl":"Poznaj nasze oferty","ru":"Узнать о наших предложениях","nl":"Ontdek onze aanbiedingen","tr":"Tekliflerimizi keşfedin"},"Commencer":{"en":"Get started","es":"Empezar","it":"Inizia","de":"Loslegen","pt":"Começar","pl":"Zacznij","ru":"Начать","nl":"Beginnen","tr":"Başlayın"},"PROTECTION SOREVIA":{"en":"SOREVIA PROTECTION","es":"PROTECCIÓN SOREVIA","it":"PROTEZIONE SOREVIA","de":"SOREVIA SCHUTZ","pt":"PROTEÇÃO SOREVIA","pl":"OCHRONA SOREVIA","ru":"ЗАЩИТА SOREVIA","nl":"SOREVIA BESCHERMING","tr":"SOREVIA KORUMASI"},"Votre sérénité, notre priorité.":{"en":"Your peace of mind, our priority.","es":"Tu tranquilidad, nuestra prioridad.","it":"La tua serenità, la nostra priorità.","de":"Ihre Sorgenfreiheit, unsere Priorität.","pt":"A sua tranquilidade, a nossa prioridade.","pl":"Twój spokój, nasz priorytet.","ru":"Ваше спокойствие — наш приоритет.","nl":"Uw gemoedsrust, onze prioriteit.","tr":"Huzurunuz, önceliğimiz."},"Des solutions adaptées à vos besoins.":{"en":"Solutions tailored to your needs.","es":"Soluciones adaptadas a tus necesidades.","it":"Soluzioni adatte alle tue esigenze.","de":"Lösungen, die zu Ihren Bedürfnissen passen.","pt":"Soluções adaptadas às suas necessidades.","pl":"Rozwiązania dopasowane do Twoich potrzeb.","ru":"Решения, адаптированные к вашим потребностям.","nl":"Oplossingen afgestemd op uw behoeften.","tr":"İhtiyaçlarınıza uygun çözümler."},"Vie":{"en":"Life","es":"Vida","it":"Vita","de":"Leben","pt":"Vida","pl":"Życie","ru":"Жизнь","nl":"Leven","tr":"Hayat"},"Mobilité":{"en":"Mobility","es":"Movilidad","it":"Mobilità","de":"Mobilität","pt":"Mobilidade","pl":"Mobilność","ru":"Мобильность","nl":"Mobiliteit","tr":"Mobilite"},"Habitation":{"en":"Home","es":"Hogar","it":"Casa","de":"Wohnen","pt":"Habitação","pl":"Dom","ru":"Жильё","nl":"Woning","tr":"Konut"},"01 • NOS SOLUTIONS":{"en":"01 • OUR SOLUTIONS","es":"01 • NUESTRAS SOLUCIONES","it":"01 • LE NOSTRE SOLUZIONI","de":"01 • UNSERE LÖSUNGEN","pt":"01 • AS NOSSAS SOLUÇÕES","pl":"01 • NASZE ROZWIĄZANIA","ru":"01 • НАШИ РЕШЕНИЯ","nl":"01 • ONZE OPLOSSINGEN","tr":"01 • ÇÖZÜMLERİMİZ"},"Une protection pour":{"en":"Protection for","es":"Una protección para","it":"Una protezione per","de":"Ein Schutz für","pt":"Uma proteção para","pl":"Ochrona na","ru":"Защита для","nl":"Bescherming voor","tr":"Her aşama için"},"chaque étape.":{"en":"every stage.","es":"cada etapa.","it":"ogni tappa.","de":"jede Lebensphase.","pt":"cada etapa.","pl":"każdym etapie.","ru":"каждого этапа.","nl":"elke fase.","tr":"bir koruma."},"Choisissez la couverture qui correspond à votre quotidien, à vos projets et à vos besoins.":{"en":"Choose the coverage that fits your daily life, your projects and your needs.","es":"Elige la cobertura que se adapta a tu día a día, a tus proyectos y a tus necesidades.","it":"Scegli la copertura più adatta alla tua quotidianità, ai tuoi progetti e alle tue esigenze.","de":"Wählen Sie den Versicherungsschutz, der zu Ihrem Alltag, Ihren Projekten und Ihren Bedürfnissen passt.","pt":"Escolha a cobertura que corresponde ao seu quotidiano, aos seus projetos e às suas necessidades.","pl":"Wybierz ochronę, która odpowiada Twojej codzienności, Twoim planom i potrzebom.","ru":"Выберите покрытие, которое соответствует вашей повседневной жизни, вашим планам и потребностям.","nl":"Kies de dekking die past bij uw dagelijks leven, uw plannen en uw behoeften.","tr":"Günlük yaşamınıza, projelerinize ve ihtiyaçlarınıza uygun teminatı seçin."},"ASSURANCE VIE":{"en":"LIFE INSURANCE","es":"SEGURO DE VIDA","it":"ASSICURAZIONE VITA","de":"LEBENSVERSICHERUNG","pt":"SEGURO DE VIDA","pl":"UBEZPIECZENIE NA ŻYCIE","ru":"СТРАХОВАНИЕ ЖИЗНИ","nl":"LEVENSVERZEKERING","tr":"HAYAT SİGORTASI"},"Assurance vie":{"en":"Life insurance","es":"Seguro de vida","it":"Assicurazione vita","de":"Lebensversicherung","pt":"Seguro de vida","pl":"Ubezpieczenie na życie","ru":"Страхование жизни","nl":"Levensverzekering","tr":"Hayat sigortası"},"Une solution destinée à protéger vos proches et à accompagner vos projets à long terme selon les garanties choisies.":{"en":"A solution designed to protect your loved ones and support your long-term projects, depending on the chosen coverage.","es":"Una solución destinada a proteger a tus seres queridos y a acompañar tus proyectos a largo plazo según las garantías elegidas.","it":"Una soluzione pensata per proteggere i tuoi cari e accompagnare i tuoi progetti a lungo termine in base alle garanzie scelte.","de":"Eine Lösung zum Schutz Ihrer Angehörigen und zur Begleitung Ihrer langfristigen Projekte, entsprechend den gewählten Leistungen.","pt":"Uma solução destinada a proteger os seus familiares e a acompanhar os seus projetos a longo prazo, de acordo com as garantias escolhidas.","pl":"Rozwiązanie mające chronić Twoich bliskich i wspierać Twoje długoterminowe plany, zgodnie z wybranymi gwarancjami.","ru":"Решение, призванное защитить ваших близких и поддержать ваши долгосрочные планы в рамках выбранных гарантий.","nl":"Een oplossing om uw dierbaren te beschermen en uw langetermijnplannen te ondersteunen, volgens de gekozen waarborgen.","tr":"Sevdiklerinizi korumak ve seçilen teminatlara göre uzun vadeli projelerinize eşlik etmek için tasarlanmış bir çözüm."},"Protection familiale":{"en":"Family protection","es":"Protección familiar","it":"Protezione familiare","de":"Familienschutz","pt":"Proteção familiar","pl":"Ochrona rodziny","ru":"Защита семьи","nl":"Gezinsbescherming","tr":"Aile koruması"},"En savoir plus →":{"en":"Learn more →","es":"Saber más →","it":"Scopri di più →","de":"Mehr erfahren →","pt":"Saber mais →","pl":"Dowiedz się więcej →","ru":"Подробнее →","nl":"Meer informatie →","tr":"Daha fazla bilgi →"},"AUTOMOBILE":{"en":"CAR","es":"AUTOMÓVIL","it":"AUTO","de":"AUTO","pt":"AUTOMÓVEL","pl":"SAMOCHÓD","ru":"АВТО","nl":"AUTO","tr":"OTOMOBİL"},"Assurance automobile":{"en":"Car insurance","es":"Seguro de automóvil","it":"Assicurazione auto","de":"Kfz-Versicherung","pt":"Seguro automóvel","pl":"Ubezpieczenie samochodu","ru":"Автострахование","nl":"Autoverzekering","tr":"Araç sigortası"},"Protégez votre véhicule et bénéficiez d'une couverture adaptée à votre utilisation et aux garanties sélectionnées.":{"en":"Protect your vehicle and benefit from coverage suited to your use and the selected guarantees.","es":"Protege tu vehículo y benefíciate de una cobertura adaptada a tu uso y a las garantías seleccionadas.","it":"Proteggi il tuo veicolo e usufruisci di una copertura adatta al tuo utilizzo e alle garanzie selezionate.","de":"Schützen Sie Ihr Fahrzeug und profitieren Sie von einem Versicherungsschutz, der zu Ihrer Nutzung und den gewählten Leistungen passt.","pt":"Proteja o seu veículo e beneficie de uma cobertura adaptada à sua utilização e às garantias selecionadas.","pl":"Chroń swój pojazd i korzystaj z ochrony dopasowanej do sposobu użytkowania i wybranych gwarancji.","ru":"Защитите свой автомобиль и получите покрытие, соответствующее вашему использованию и выбранным гарантиям.","nl":"Bescherm uw voertuig en profiteer van een dekking die past bij uw gebruik en de gekozen waarborgen.","tr":"Aracınızı koruyun ve kullanımınıza ve seçilen teminatlara uygun bir güvenceden yararlanın."},"Mobilité protégée":{"en":"Protected mobility","es":"Movilidad protegida","it":"Mobilità protetta","de":"Geschützte Mobilität","pt":"Mobilidade protegida","pl":"Chroniona mobilność","ru":"Защищённая мобильность","nl":"Beschermde mobiliteit","tr":"Korunan mobilite"},"HABITATION":{"en":"HOME","es":"HOGAR","it":"CASA","de":"WOHNEN","pt":"HABITAÇÃO","pl":"DOM","ru":"ЖИЛЬЁ","nl":"WONING","tr":"KONUT"},"Assurance habitation":{"en":"Home insurance","es":"Seguro de hogar","it":"Assicurazione casa","de":"Hausratversicherung","pt":"Seguro de habitação","pl":"Ubezpieczenie domu","ru":"Страхование жилья","nl":"Woningverzekering","tr":"Konut sigortası"},"Une protection pensée pour votre logement et vos biens face aux différents événements couverts par votre contrat.":{"en":"Protection designed for your home and belongings against the various events covered by your contract.","es":"Una protección pensada para tu vivienda y tus bienes frente a los distintos eventos cubiertos por tu contrato.","it":"Una protezione pensata per la tua abitazione e i tuoi beni di fronte ai vari eventi coperti dal tuo contratto.","de":"Ein Schutz für Ihre Wohnung und Ihr Eigentum bei den verschiedenen, durch Ihren Vertrag abgedeckten Ereignissen.","pt":"Uma proteção pensada para a sua casa e os seus bens face aos diferentes eventos cobertos pelo seu contrato.","pl":"Ochrona stworzona dla Twojego mieszkania i mienia na wypadek różnych zdarzeń objętych umową.","ru":"Защита вашего дома и имущества от различных событий, предусмотренных вашим договором.","nl":"Een bescherming voor uw woning en uw bezittingen bij de verschillende gebeurtenissen die door uw contract gedekt zijn.","tr":"Sözleşmenizin kapsadığı çeşitli olaylara karşı evinize ve eşyalarınıza yönelik bir koruma."},"Maison & biens":{"en":"Home & belongings","es":"Casa y bienes","it":"Casa e beni","de":"Haus & Eigentum","pt":"Casa e bens","pl":"Dom i mienie","ru":"Дом и имущество","nl":"Huis en bezittingen","tr":"Ev ve eşyalar"},"DÉCÈS • INVALIDITÉ":{"en":"DEATH • DISABILITY","es":"FALLECIMIENTO • INVALIDEZ","it":"DECESSO • INVALIDITÀ","de":"TODESFALL • INVALIDITÄT","pt":"MORTE • INVALIDEZ","pl":"ZGON • NIEZDOLNOŚĆ","ru":"СМЕРТЬ • ИНВАЛИДНОСТЬ","nl":"OVERLIJDEN • INVALIDITEIT","tr":"VEFAT • MALULİYET"},"Décès-invalidité":{"en":"Death & disability","es":"Fallecimiento-invalidez","it":"Decesso-invalidità","de":"Todesfall und Invalidität","pt":"Morte e invalidez","pl":"Zgon i niezdolność","ru":"Смерть и инвалидность","nl":"Overlijden en invaliditeit","tr":"Vefat ve maluliyet"},"Une couverture destinée à vous accompagner face à certaines conséquences financières liées aux événements garantis.":{"en":"Coverage designed to support you in the face of certain financial consequences linked to insured events.","es":"Una cobertura destinada a acompañarte ante ciertas consecuencias financieras derivadas de los eventos garantizados.","it":"Una copertura pensata per accompagnarti di fronte ad alcune conseguenze finanziarie legate agli eventi garantiti.","de":"Ein Versicherungsschutz, der Sie bei bestimmten finanziellen Folgen versicherter Ereignisse unterstützt.","pt":"Uma cobertura destinada a acompanhá-lo perante certas consequências financeiras ligadas aos eventos garantidos.","pl":"Ochrona mająca Cię wspierać w obliczu niektórych skutków finansowych związanych z objętymi zdarzeniami.","ru":"Покрытие, призванное поддержать вас в случае некоторых финансовых последствий застрахованных событий.","nl":"Een dekking om u bij te staan bij bepaalde financiële gevolgen van de verzekerde gebeurtenissen.","tr":"Teminat altındaki olaylara bağlı bazı finansal sonuçlar karşısında size eşlik etmek için tasarlanmış bir güvence."},"Protection personnelle":{"en":"Personal protection","es":"Protección personal","it":"Protezione personale","de":"Persönlicher Schutz","pt":"Proteção pessoal","pl":"Ochrona osobista","ru":"Личная защита","nl":"Persoonlijke bescherming","tr":"Kişisel koruma"},"ASSURANCE VOYAGE":{"en":"TRAVEL INSURANCE","es":"SEGURO DE VIAJE","it":"ASSICURAZIONE VIAGGIO","de":"REISEVERSICHERUNG","pt":"SEGURO DE VIAGEM","pl":"UBEZPIECZENIE PODRÓŻNE","ru":"СТРАХОВАНИЕ ПУТЕШЕСТВИЙ","nl":"REISVERZEKERING","tr":"SEYAHAT SİGORTASI"},"Assurance voyage":{"en":"Travel insurance","es":"Seguro de viaje","it":"Assicurazione viaggio","de":"Reiseversicherung","pt":"Seguro de viagem","pl":"Ubezpieczenie podróżne","ru":"Страхование путешествий","nl":"Reisverzekering","tr":"Seyahat sigortası"},"Partez plus sereinement grâce à une protection pouvant couvrir certains imprévus pendant vos déplacements.":{"en":"Travel with greater peace of mind thanks to protection that can cover certain unforeseen events during your trips.","es":"Viaja con más tranquilidad gracias a una protección que puede cubrir ciertos imprevistos durante tus desplazamientos.","it":"Parti più sereno grazie a una protezione che può coprire alcuni imprevisti durante i tuoi spostamenti.","de":"Reisen Sie entspannter dank eines Schutzes, der bestimmte Unvorhergesehenheiten auf Ihren Reisen abdecken kann.","pt":"Viaje com mais tranquilidade graças a uma proteção que pode cobrir certos imprevistos durante as suas deslocações.","pl":"Podróżuj spokojniej dzięki ochronie, która może obejmować niektóre nieprzewidziane zdarzenia podczas wyjazdów.","ru":"Путешествуйте спокойнее благодаря защите, которая может покрывать некоторые непредвиденные ситуации во время поездок.","nl":"Reis met meer gemoedsrust dankzij een bescherming die bepaalde onvoorziene gebeurtenissen tijdens uw verplaatsingen kan dekken.","tr":"Yolculuklarınız sırasında bazı beklenmedik durumları kapsayabilen bir koruma sayesinde daha rahat seyahat edin."},"Voyage & assistance":{"en":"Travel & assistance","es":"Viaje y asistencia","it":"Viaggio e assistenza","de":"Reise & Assistance","pt":"Viagem e assistência","pl":"Podróże i assistance","ru":"Путешествия и помощь","nl":"Reizen en assistance","tr":"Seyahat ve yardım"},"02 • UNE PROTECTION GLOBALE":{"en":"02 • COMPLETE PROTECTION","es":"02 • UNA PROTECCIÓN GLOBAL","it":"02 • UNA PROTEZIONE GLOBALE","de":"02 • UMFASSENDER SCHUTZ","pt":"02 • UMA PROTEÇÃO GLOBAL","pl":"02 • KOMPLEKSOWA OCHRONA","ru":"02 • КОМПЛЕКСНАЯ ЗАЩИТА","nl":"02 • EEN VOLLEDIGE BESCHERMING","tr":"02 • KAPSAMLI KORUMA"},"Parce que vos projets":{"en":"Because your projects","es":"Porque tus proyectos","it":"Perché i tuoi progetti","de":"Weil Ihre Projekte","pt":"Porque os seus projetos","pl":"Ponieważ Twoje plany","ru":"Потому что ваши планы","nl":"Omdat uw plannen","tr":"Çünkü projeleriniz"},"méritent d'être protégés.":{"en":"deserve to be protected.","es":"merecen estar protegidos.","it":"meritano di essere protetti.","de":"es verdienen, geschützt zu werden.","pt":"merecem ser protegidos.","pl":"zasługują na ochronę.","ru":"заслуживают защиты.","nl":"het verdienen beschermd te worden.","tr":"korunmayı hak ediyor."},"Une approche simple pour vous aider à identifier les protections qui correspondent à votre situation.":{"en":"A simple approach to help you identify the protections that match your situation.","es":"Un enfoque sencillo para ayudarte a identificar las protecciones que se adaptan a tu situación.","it":"Un approccio semplice per aiutarti a individuare le protezioni adatte alla tua situazione.","de":"Ein einfacher Ansatz, der Ihnen hilft, den Schutz zu finden, der zu Ihrer Situation passt.","pt":"Uma abordagem simples para ajudá-lo a identificar as proteções que correspondem à sua situação.","pl":"Prosty sposób, który pomoże Ci wybrać ochronę odpowiadającą Twojej sytuacji.","ru":"Простой подход, который поможет определить защиту, соответствующую вашей ситуации.","nl":"Een eenvoudige aanpak om u te helpen de bescherming te vinden die bij uw situatie past.","tr":"Durumunuza uygun korumaları belirlemenize yardımcı olacak basit bir yaklaşım."},"VOTRE SÉRÉNITÉ":{"en":"YOUR PEACE OF MIND","es":"TU TRANQUILIDAD","it":"LA TUA SERENITÀ","de":"IHRE SORGENFREIHEIT","pt":"A SUA TRANQUILIDADE","pl":"TWÓJ SPOKÓJ","ru":"ВАШЕ СПОКОЙСТВИЕ","nl":"UW GEMOEDSRUST","tr":"HUZURUNUZ"},"Anticiper aujourd'hui, c'est protéger demain.":{"en":"Planning ahead today means protecting tomorrow.","es":"Anticiparse hoy es proteger el mañana.","it":"Prevenire oggi significa proteggere il domani.","de":"Heute vorsorgen heißt, morgen schützen.","pt":"Antecipar hoje é proteger o amanhã.","pl":"Zadbać dziś, to chronić jutro.","ru":"Позаботиться сегодня — значит защитить завтра.","nl":"Vandaag vooruitkijken is morgen beschermen.","tr":"Bugünden önlem almak, yarını korumaktır."},"Découvrez les solutions disponibles chez Sorevia Bank.":{"en":"Discover the solutions available at Sorevia Bank.","es":"Descubre las soluciones disponibles en Sorevia Bank.","it":"Scopri le soluzioni disponibili presso Sorevia Bank.","de":"Entdecken Sie die Lösungen, die bei Sorevia Bank verfügbar sind.","pt":"Descubra as soluções disponíveis no Sorevia Bank.","pl":"Poznaj rozwiązania dostępne w Sorevia Bank.","ru":"Узнайте о решениях, доступных в Sorevia Bank.","nl":"Ontdek de oplossingen die beschikbaar zijn bij Sorevia Bank.","tr":"Sorevia Bank'ta sunulan çözümleri keşfedin."},"Protéger vos proches":{"en":"Protect your loved ones","es":"Proteger a tus seres queridos","it":"Proteggi i tuoi cari","de":"Ihre Angehörigen schützen","pt":"Proteger os seus familiares","pl":"Chroń swoich bliskich","ru":"Защитите своих близких","nl":"Bescherm uw dierbaren","tr":"Sevdiklerinizi koruyun"},"Préservez vos projets familiaux grâce aux protections adaptées à vos besoins.":{"en":"Safeguard your family projects with protections suited to your needs.","es":"Preserva tus proyectos familiares con protecciones adaptadas a tus necesidades.","it":"Tutela i tuoi progetti familiari con protezioni adatte alle tue esigenze.","de":"Bewahren Sie Ihre Familienprojekte mit Schutzleistungen, die zu Ihren Bedürfnissen passen.","pt":"Preserve os seus projetos familiares com proteções adaptadas às suas necessidades.","pl":"Zabezpiecz swoje rodzinne plany ochroną dopasowaną do Twoich potrzeb.","ru":"Сохраните свои семейные планы с помощью защиты, адаптированной к вашим потребностям.","nl":"Behoud uw gezinsplannen met een bescherming die past bij uw behoeften.","tr":"Aile projelerinizi ihtiyaçlarınıza uygun korumalarla güvence altına alın."},"Protéger votre mobilité":{"en":"Protect your mobility","es":"Proteger tu movilidad","it":"Proteggi la tua mobilità","de":"Ihre Mobilität schützen","pt":"Proteger a sua mobilidade","pl":"Chroń swoją mobilność","ru":"Защитите свою мобильность","nl":"Bescherm uw mobiliteit","tr":"Mobilitenizi koruyun"},"Choisissez une couverture adaptée à votre véhicule et à vos déplacements.":{"en":"Choose coverage suited to your vehicle and your travels.","es":"Elige una cobertura adaptada a tu vehículo y a tus desplazamientos.","it":"Scegli una copertura adatta al tuo veicolo e ai tuoi spostamenti.","de":"Wählen Sie einen Versicherungsschutz, der zu Ihrem Fahrzeug und Ihren Fahrten passt.","pt":"Escolha uma cobertura adaptada ao seu veículo e às suas deslocações.","pl":"Wybierz ochronę dopasowaną do Twojego pojazdu i podróży.","ru":"Выберите покрытие, подходящее для вашего автомобиля и ваших поездок.","nl":"Kies een dekking die past bij uw voertuig en uw verplaatsingen.","tr":"Aracınıza ve yolculuklarınıza uygun bir teminat seçin."},"Protéger votre logement":{"en":"Protect your home","es":"Proteger tu vivienda","it":"Proteggi la tua casa","de":"Ihr Zuhause schützen","pt":"Proteger a sua habitação","pl":"Chroń swój dom","ru":"Защитите своё жильё","nl":"Bescherm uw woning","tr":"Konutunuzu koruyun"},"Une solution pensée pour votre habitation et les biens qui comptent pour vous.":{"en":"A solution designed for your home and the belongings that matter to you.","es":"Una solución pensada para tu hogar y los bienes que más te importan.","it":"Una soluzione pensata per la tua abitazione e i beni che contano per te.","de":"Eine Lösung für Ihre Wohnung und die Dinge, die Ihnen wichtig sind.","pt":"Uma solução pensada para a sua casa e para os bens que contam para si.","pl":"Rozwiązanie stworzone dla Twojego mieszkania i rzeczy, które się dla Ciebie liczą.","ru":"Решение для вашего дома и вещей, которые для вас важны.","nl":"Een oplossing voor uw woning en de bezittingen die voor u belangrijk zijn.","tr":"Eviniz ve sizin için önemli olan eşyalar için tasarlanmış bir çözüm."},"Protéger vos voyages":{"en":"Protect your trips","es":"Proteger tus viajes","it":"Proteggi i tuoi viaggi","de":"Ihre Reisen schützen","pt":"Proteger as suas viagens","pl":"Chroń swoje podróże","ru":"Защитите свои путешествия","nl":"Bescherm uw reizen","tr":"Seyahatlerinizi koruyun"},"Partez avec une solution d'assistance adaptée à vos déplacements.":{"en":"Travel with an assistance solution suited to your journeys.","es":"Viaja con una solución de asistencia adaptada a tus desplazamientos.","it":"Parti con una soluzione di assistenza adatta ai tuoi spostamenti.","de":"Reisen Sie mit einer Assistance-Lösung, die zu Ihren Reisen passt.","pt":"Viaje com uma solução de assistência adaptada às suas deslocações.","pl":"Podróżuj z rozwiązaniem assistance dopasowanym do Twoich wyjazdów.","ru":"Путешествуйте с решением помощи, адаптированным к вашим поездкам.","nl":"Reis met een assistance-oplossing die past bij uw verplaatsingen.","tr":"Yolculuklarınıza uygun bir yardım çözümüyle yola çıkın."},"03 • DES GARANTIES À VOTRE IMAGE":{"en":"03 • COVERAGE TO FIT YOU","es":"03 • GARANTÍAS A TU MEDIDA","it":"03 • GARANZIE SU MISURA","de":"03 • LEISTUNGEN NACH IHREM BEDARF","pt":"03 • GARANTIAS À SUA MEDIDA","pl":"03 • GWARANCJE NA MIARĘ","ru":"03 • ГАРАНТИИ ПО ВАШЕЙ МЕРКЕ","nl":"03 • WAARBORGEN OP UW MAAT","tr":"03 • SİZE ÖZEL TEMİNATLAR"},"Une protection qui":{"en":"Protection that","es":"Una protección que","it":"Una protezione che","de":"Ein Schutz, der","pt":"Uma proteção que","pl":"Ochrona, która","ru":"Защита, которая","nl":"Een bescherming die","tr":"Size uyum sağlayan"},"s'adapte à vous.":{"en":"adapts to you.","es":"se adapta a ti.","it":"si adatta a te.","de":"sich Ihnen anpasst.","pt":"se adapta a si.","pl":"dopasowuje się do Ciebie.","ru":"подстраивается под вас.","nl":"zich aan u aanpast.","tr":"bir koruma."},"Les besoins ne sont pas les mêmes pour tout le monde. Prenez le temps de choisir les garanties adaptées à votre situation.":{"en":"Needs are not the same for everyone. Take the time to choose the coverage suited to your situation.","es":"Las necesidades no son las mismas para todos. Tómate el tiempo de elegir las garantías adecuadas a tu situación.","it":"Le esigenze non sono uguali per tutti. Prenditi il tempo di scegliere le garanzie adatte alla tua situazione.","de":"Die Bedürfnisse sind nicht für alle gleich. Nehmen Sie sich Zeit, die zu Ihrer Situation passenden Leistungen zu wählen.","pt":"As necessidades não são as mesmas para todos. Dedique tempo a escolher as garantias adequadas à sua situação.","pl":"Potrzeby nie są takie same dla wszystkich. Poświęć czas na wybór gwarancji odpowiednich do Twojej sytuacji.","ru":"Потребности у всех разные. Найдите время, чтобы выбрать гарантии, подходящие вашей ситуации.","nl":"Behoeften zijn niet voor iedereen hetzelfde. Neem de tijd om de waarborgen te kiezen die bij uw situatie passen.","tr":"İhtiyaçlar herkes için aynı değildir. Durumunuza uygun teminatları seçmek için zaman ayırın."},"SOREVIA PROTECTION":{"en":"SOREVIA PROTECTION","es":"PROTECCIÓN SOREVIA","it":"PROTEZIONE SOREVIA","de":"SOREVIA SCHUTZ","pt":"PROTEÇÃO SOREVIA","pl":"OCHRONA SOREVIA","ru":"ЗАЩИТА SOREVIA","nl":"SOREVIA BESCHERMING","tr":"SOREVIA KORUMASI"},"Votre tranquillité commence par une bonne préparation.":{"en":"Your peace of mind starts with good preparation.","es":"Tu tranquilidad empieza con una buena preparación.","it":"La tua tranquillità inizia con una buona preparazione.","de":"Ihre Ruhe beginnt mit guter Vorbereitung.","pt":"A sua tranquilidade começa com uma boa preparação.","pl":"Twój spokój zaczyna się od dobrego przygotowania.","ru":"Ваше спокойствие начинается с хорошей подготовки.","nl":"Uw rust begint met een goede voorbereiding.","tr":"Huzurunuz iyi bir hazırlıkla başlar."},"Comparez vos besoins, choisissez les garanties pertinentes et construisez une protection cohérente avec votre quotidien.":{"en":"Compare your needs, choose the relevant coverage and build protection consistent with your daily life.","es":"Compara tus necesidades, elige las garantías pertinentes y construye una protección coherente con tu día a día.","it":"Confronta le tue esigenze, scegli le garanzie pertinenti e costruisci una protezione coerente con la tua quotidianità.","de":"Vergleichen Sie Ihre Bedürfnisse, wählen Sie die passenden Leistungen und bauen Sie einen Schutz auf, der zu Ihrem Alltag passt.","pt":"Compare as suas necessidades, escolha as garantias pertinentes e construa uma proteção coerente com o seu quotidiano.","pl":"Porównaj swoje potrzeby, wybierz odpowiednie gwarancje i zbuduj ochronę spójną z Twoją codziennością.","ru":"Сравните свои потребности, выберите подходящие гарантии и создайте защиту, соответствующую вашей повседневной жизни.","nl":"Vergelijk uw behoeften, kies de relevante waarborgen en bouw een bescherming die past bij uw dagelijks leven.","tr":"İhtiyaçlarınızı karşılaştırın, uygun teminatları seçin ve günlük yaşamınızla tutarlı bir koruma oluşturun."},"Clarté":{"en":"Clarity","es":"Claridad","it":"Chiarezza","de":"Klarheit","pt":"Clareza","pl":"Przejrzystość","ru":"Ясность","nl":"Duidelijkheid","tr":"Netlik"},"Des informations présentées simplement.":{"en":"Information presented simply.","es":"Información presentada de forma sencilla.","it":"Informazioni presentate in modo semplice.","de":"Informationen einfach dargestellt.","pt":"Informações apresentadas de forma simples.","pl":"Informacje przedstawione w prosty sposób.","ru":"Информация, изложенная просто.","nl":"Informatie eenvoudig gepresenteerd.","tr":"Basit şekilde sunulan bilgiler."},"Adaptation":{"en":"Adaptation","es":"Adaptación","it":"Adattamento","de":"Anpassung","pt":"Adaptação","pl":"Dopasowanie","ru":"Адаптация","nl":"Aanpassing","tr":"Uyum"},"Des solutions selon vos besoins.":{"en":"Solutions based on your needs.","es":"Soluciones según tus necesidades.","it":"Soluzioni in base alle tue esigenze.","de":"Lösungen nach Ihren Bedürfnissen.","pt":"Soluções de acordo com as suas necessidades.","pl":"Rozwiązania według Twoich potrzeb.","ru":"Решения под ваши потребности.","nl":"Oplossingen volgens uw behoeften.","tr":"İhtiyaçlarınıza göre çözümler."},"Protection":{"en":"Protection","es":"Protección","it":"Protezione","de":"Schutz","pt":"Proteção","pl":"Ochrona","ru":"Защита","nl":"Bescherming","tr":"Koruma"},"Une couverture selon les garanties.":{"en":"Coverage based on guarantees.","es":"Una cobertura según las garantías.","it":"Una copertura in base alle garanzie.","de":"Ein Versicherungsschutz je nach Leistungen.","pt":"Uma cobertura de acordo com as garantias.","pl":"Ochrona zależna od gwarancji.","ru":"Покрытие в соответствии с гарантиями.","nl":"Een dekking volgens de waarborgen.","tr":"Teminatlara göre bir güvence."},"Accompagnement":{"en":"Support","es":"Acompañamiento","it":"Accompagnamento","de":"Begleitung","pt":"Acompanhamento","pl":"Wsparcie","ru":"Сопровождение","nl":"Begeleiding","tr":"Destek"},"Un parcours pensé pour vous.":{"en":"A journey designed for you.","es":"Un recorrido pensado para ti.","it":"Un percorso pensato per te.","de":"Ein Weg, der für Sie gedacht ist.","pt":"Um percurso pensado para si.","pl":"Ścieżka stworzona dla Ciebie.","ru":"Путь, созданный для вас.","nl":"Een traject voor u uitgedacht.","tr":"Sizin için düşünülmüş bir süreç."},"04 • COMMENT CHOISIR":{"en":"04 • HOW TO CHOOSE","es":"04 • CÓMO ELEGIR","it":"04 • COME SCEGLIERE","de":"04 • SO WÄHLEN SIE","pt":"04 • COMO ESCOLHER","pl":"04 • JAK WYBRAĆ","ru":"04 • КАК ВЫБРАТЬ","nl":"04 • HOE KIEST U","tr":"04 • NASIL SEÇİLİR"},"Une démarche simple,":{"en":"A simple process,","es":"Un proceso sencillo,","it":"Un percorso semplice,","de":"Ein einfacher Ablauf,","pt":"Um processo simples,","pl":"Prosty proces,","ru":"Простой процесс,","nl":"Een eenvoudige aanpak,","tr":"Basit bir süreç,"},"sans complication.":{"en":"without complications.","es":"sin complicaciones.","it":"senza complicazioni.","de":"ohne Komplikationen.","pt":"sem complicações.","pl":"bez komplikacji.","ru":"без сложностей.","nl":"zonder complicaties.","tr":"karmaşa yok."},"Prenez quelques instants pour identifier vos priorités et choisir la solution qui vous correspond.":{"en":"Take a few moments to identify your priorities and choose the solution that suits you.","es":"Dedica unos instantes a identificar tus prioridades y elegir la solución que más te conviene.","it":"Dedica qualche istante a individuare le tue priorità e a scegliere la soluzione più adatta a te.","de":"Nehmen Sie sich einen Moment, um Ihre Prioritäten zu erkennen und die passende Lösung zu wählen.","pt":"Dedique alguns instantes a identificar as suas prioridades e a escolher a solução que lhe corresponde.","pl":"Poświęć chwilę, aby określić swoje priorytety i wybrać rozwiązanie, które Ci odpowiada.","ru":"Уделите несколько минут, чтобы определить свои приоритеты и выбрать подходящее решение.","nl":"Neem even de tijd om uw prioriteiten te bepalen en de oplossing te kiezen die bij u past.","tr":"Önceliklerinizi belirlemek ve size uygun çözümü seçmek için birkaç dakika ayırın."},"Identifiez vos besoins":{"en":"Identify your needs","es":"Identifica tus necesidades","it":"Individua le tue esigenze","de":"Bedürfnisse ermitteln","pt":"Identifique as suas necessidades","pl":"Określ swoje potrzeby","ru":"Определите свои потребности","nl":"Bepaal uw behoeften","tr":"İhtiyaçlarınızı belirleyin"},"Vie familiale, véhicule, logement, voyage ou protection personnelle : commencez par ce qui compte le plus pour vous.":{"en":"Family life, vehicle, home, travel or personal protection: start with what matters most to you.","es":"Vida familiar, vehículo, vivienda, viaje o protección personal: empieza por lo que más te importa.","it":"Vita familiare, veicolo, abitazione, viaggio o protezione personale: parti da ciò che conta di più per te.","de":"Familienleben, Fahrzeug, Wohnung, Reise oder persönlicher Schutz: Beginnen Sie mit dem, was Ihnen am wichtigsten ist.","pt":"Vida familiar, veículo, habitação, viagem ou proteção pessoal: comece pelo que mais importa para si.","pl":"Życie rodzinne, pojazd, mieszkanie, podróż lub ochrona osobista: zacznij od tego, co jest dla Ciebie najważniejsze.","ru":"Семья, автомобиль, жильё, путешествие или личная защита: начните с того, что для вас важнее всего.","nl":"Gezinsleven, voertuig, woning, reis of persoonlijke bescherming: begin met wat voor u het belangrijkst is.","tr":"Aile hayatı, araç, konut, seyahat veya kişisel koruma: sizin için en önemli olandan başlayın."},"Découvrez les solutions":{"en":"Discover the solutions","es":"Descubre las soluciones","it":"Scopri le soluzioni","de":"Lösungen entdecken","pt":"Descubra as soluções","pl":"Poznaj rozwiązania","ru":"Изучите решения","nl":"Ontdek de oplossingen","tr":"Çözümleri keşfedin"},"Explorez les différentes familles d'assurance et les protections proposées.":{"en":"Explore the different insurance families and the protections offered.","es":"Explora las distintas familias de seguros y las protecciones propuestas.","it":"Esplora le diverse famiglie di assicurazione e le protezioni proposte.","de":"Entdecken Sie die verschiedenen Versicherungsarten und die angebotenen Schutzleistungen.","pt":"Explore as diferentes famílias de seguros e as proteções propostas.","pl":"Przejrzyj różne rodzaje ubezpieczeń i proponowaną ochronę.","ru":"Познакомьтесь с разными видами страхования и предлагаемой защитой.","nl":"Verken de verschillende verzekeringsfamilies en de aangeboden beschermingen.","tr":"Farklı sigorta türlerini ve sunulan korumaları inceleyin."},"Choisissez vos garanties":{"en":"Choose your coverage","es":"Elige tus garantías","it":"Scegli le tue garanzie","de":"Leistungen wählen","pt":"Escolha as suas garantias","pl":"Wybierz swoje gwarancje","ru":"Выберите свои гарантии","nl":"Kies uw waarborgen","tr":"Teminatlarınızı seçin"},"Examinez attentivement les garanties, exclusions, conditions et limites applicables.":{"en":"Carefully review the guarantees, exclusions, conditions and applicable limits.","es":"Examina atentamente las garantías, exclusiones, condiciones y límites aplicables.","it":"Esamina con attenzione le garanzie, le esclusioni, le condizioni e i limiti applicabili.","de":"Prüfen Sie sorgfältig die Leistungen, Ausschlüsse, Bedingungen und geltenden Grenzen.","pt":"Examine atentamente as garantias, exclusões, condições e limites aplicáveis.","pl":"Uważnie sprawdź gwarancje, wyłączenia, warunki i obowiązujące limity.","ru":"Внимательно изучите гарантии, исключения, условия и применимые ограничения.","nl":"Bekijk aandachtig de waarborgen, uitsluitingen, voorwaarden en toepasselijke beperkingen.","tr":"Teminatları, istisnaları, koşulları ve geçerli sınırları dikkatle inceleyin."},"Finalisez votre demande":{"en":"Complete your request","es":"Finaliza tu solicitud","it":"Finalizza la tua richiesta","de":"Antrag abschließen","pt":"Finalize o seu pedido","pl":"Dokończ swój wniosek","ru":"Завершите заявку","nl":"Rond uw aanvraag af","tr":"Talebinizi tamamlayın"},"Accédez à votre espace et poursuivez votre démarche auprès de Sorevia Bank.":{"en":"Access your account and continue your process with Sorevia Bank.","es":"Accede a tu espacio y continúa tu trámite con Sorevia Bank.","it":"Accedi alla tua area e prosegui la tua pratica con Sorevia Bank.","de":"Rufen Sie Ihren Bereich auf und setzen Sie Ihren Vorgang bei Sorevia Bank fort.","pt":"Aceda ao seu espaço e prossiga o seu processo junto do Sorevia Bank.","pl":"Wejdź do swojej strefy i kontynuuj proces w Sorevia Bank.","ru":"Войдите в свой личный кабинет и продолжите оформление в Sorevia Bank.","nl":"Ga naar uw omgeving en zet uw traject bij Sorevia Bank voort.","tr":"Alanınıza erişin ve Sorevia Bank ile sürecinize devam edin."},"05 • CONSEILS & ACCOMPAGNEMENT":{"en":"05 • ADVICE & SUPPORT","es":"05 • CONSEJOS Y ACOMPAÑAMIENTO","it":"05 • CONSIGLI E ACCOMPAGNAMENTO","de":"05 • TIPPS & BEGLEITUNG","pt":"05 • CONSELHOS E ACOMPANHAMENTO","pl":"05 • PORADY I WSPARCIE","ru":"05 • СОВЕТЫ И СОПРОВОЖДЕНИЕ","nl":"05 • ADVIES EN BEGELEIDING","tr":"05 • TAVSİYELER VE DESTEK"},"Bien assuré,":{"en":"Well insured,","es":"Bien asegurado,","it":"Ben assicurato,","de":"Gut versichert,","pt":"Bem segurado,","pl":"Dobrze ubezpieczony,","ru":"Хорошо застрахован —","nl":"Goed verzekerd,","tr":"İyi sigortalanmış,"},"c'est mieux préparé.":{"en":"better prepared.","es":"mejor preparado.","it":"meglio preparato.","de":"besser vorbereitet.","pt":"melhor preparado.","pl":"lepiej przygotowany.","ru":"лучше подготовлен.","nl":"beter voorbereid.","tr":"daha hazırlıklı."},"Une bonne protection commence par une compréhension claire de vos besoins et des garanties choisies.":{"en":"Good protection starts with a clear understanding of your needs and the chosen coverage.","es":"Una buena protección empieza con una comprensión clara de tus necesidades y de las garantías elegidas.","it":"Una buona protezione inizia da una comprensione chiara delle tue esigenze e delle garanzie scelte.","de":"Guter Schutz beginnt mit einem klaren Verständnis Ihrer Bedürfnisse und der gewählten Leistungen.","pt":"Uma boa proteção começa por uma compreensão clara das suas necessidades e das garantias escolhidas.","pl":"Dobra ochrona zaczyna się od jasnego zrozumienia Twoich potrzeb i wybranych gwarancji.","ru":"Хорошая защита начинается с ясного понимания ваших потребностей и выбранных гарантий.","nl":"Een goede bescherming begint met een duidelijk begrip van uw behoeften en de gekozen waarborgen.","tr":"İyi bir koruma, ihtiyaçlarınızın ve seçilen teminatların net bir şekilde anlaşılmasıyla başlar."},"Prenez le temps de comparer.":{"en":"Take the time to compare.","es":"Tómate el tiempo de comparar.","it":"Prenditi il tempo di confrontare.","de":"Nehmen Sie sich Zeit zum Vergleichen.","pt":"Dedique tempo a comparar.","pl":"Poświęć czas na porównanie.","ru":"Найдите время сравнить.","nl":"Neem de tijd om te vergelijken.","tr":"Karşılaştırmak için zaman ayırın."},"Les garanties et conditions peuvent varier selon le produit choisi.":{"en":"Guarantees and conditions may vary depending on the chosen product.","es":"Las garantías y condiciones pueden variar según el producto elegido.","it":"Le garanzie e le condizioni possono variare in base al prodotto scelto.","de":"Leistungen und Bedingungen können je nach gewähltem Produkt variieren.","pt":"As garantias e condições podem variar consoante o produto escolhido.","pl":"Gwarancje i warunki mogą się różnić w zależności od wybranego produktu.","ru":"Гарантии и условия могут отличаться в зависимости от выбранного продукта.","nl":"De waarborgen en voorwaarden kunnen variëren naargelang het gekozen product.","tr":"Teminatlar ve koşullar seçilen ürüne göre değişebilir."},"Lisez les conditions":{"en":"Read the terms","es":"Lee las condiciones","it":"Leggi le condizioni","de":"Bedingungen lesen","pt":"Leia as condições","pl":"Przeczytaj warunki","ru":"Прочтите условия","nl":"Lees de voorwaarden","tr":"Koşulları okuyun"},"Avant toute souscription, prenez connaissance des garanties, exclusions et conditions du contrat.":{"en":"Before subscribing, review the guarantees, exclusions and terms of the contract.","es":"Antes de contratar, consulta las garantías, exclusiones y condiciones del contrato.","it":"Prima di qualsiasi sottoscrizione, prendi visione delle garanzie, delle esclusioni e delle condizioni del contratto.","de":"Machen Sie sich vor jedem Abschluss mit den Leistungen, Ausschlüssen und Vertragsbedingungen vertraut.","pt":"Antes de qualquer subscrição, tome conhecimento das garantias, exclusões e condições do contrato.","pl":"Przed zawarciem umowy zapoznaj się z gwarancjami, wyłączeniami i warunkami umowy.","ru":"Перед оформлением ознакомьтесь с гарантиями, исключениями и условиями договора.","nl":"Neem vóór elke afsluiting kennis van de waarborgen, uitsluitingen en voorwaarden van het contract.","tr":"Herhangi bir sözleşme yapmadan önce teminatları, istisnaları ve sözleşme koşullarını inceleyin."},"Comparez vos besoins":{"en":"Compare your needs","es":"Compara tus necesidades","it":"Confronta le tue esigenze","de":"Bedürfnisse vergleichen","pt":"Compare as suas necessidades","pl":"Porównaj swoje potrzeby","ru":"Сравните свои потребности","nl":"Vergelijk uw behoeften","tr":"İhtiyaçlarınızı karşılaştırın"},"Une protection adaptée doit correspondre à votre situation réelle et à vos priorités.":{"en":"Suitable protection must match your real situation and your priorities.","es":"Una protección adecuada debe corresponder a tu situación real y a tus prioridades.","it":"Una protezione adeguata deve corrispondere alla tua situazione reale e alle tue priorità.","de":"Ein passender Schutz muss Ihrer tatsächlichen Situation und Ihren Prioritäten entsprechen.","pt":"Uma proteção adequada deve corresponder à sua situação real e às suas prioridades.","pl":"Odpowiednia ochrona powinna odpowiadać Twojej rzeczywistej sytuacji i priorytetom.","ru":"Подходящая защита должна соответствовать вашей реальной ситуации и приоритетам.","nl":"Een passende bescherming moet aansluiten bij uw werkelijke situatie en uw prioriteiten.","tr":"Uygun bir koruma gerçek durumunuza ve önceliklerinize karşılık gelmelidir."},"Actualisez votre protection":{"en":"Update your protection","es":"Actualiza tu protección","it":"Aggiorna la tua protezione","de":"Schutz aktualisieren","pt":"Atualize a sua proteção","pl":"Aktualizuj swoją ochronę","ru":"Обновляйте свою защиту","nl":"Actualiseer uw bescherming","tr":"Korumanızı güncelleyin"},"Vos besoins peuvent évoluer avec votre situation, vos projets et votre patrimoine.":{"en":"Your needs may change with your situation, your projects and your assets.","es":"Tus necesidades pueden cambiar con tu situación, tus proyectos y tu patrimonio.","it":"Le tue esigenze possono evolvere con la tua situazione, i tuoi progetti e il tuo patrimonio.","de":"Ihre Bedürfnisse können sich mit Ihrer Situation, Ihren Projekten und Ihrem Vermögen ändern.","pt":"As suas necessidades podem evoluir com a sua situação, os seus projetos e o seu património.","pl":"Twoje potrzeby mogą się zmieniać wraz z sytuacją, planami i majątkiem.","ru":"Ваши потребности могут меняться вместе с вашей ситуацией, планами и имуществом.","nl":"Uw behoeften kunnen veranderen met uw situatie, uw plannen en uw vermogen.","tr":"İhtiyaçlarınız durumunuzla, projelerinizle ve varlığınızla birlikte değişebilir."},"06 • CONFIANCE":{"en":"06 • TRUST","es":"06 • CONFIANZA","it":"06 • FIDUCIA","de":"06 • VERTRAUEN","pt":"06 • CONFIANÇA","pl":"06 • ZAUFANIE","ru":"06 • ДОВЕРИЕ","nl":"06 • VERTROUWEN","tr":"06 • GÜVEN"},"Une expérience pensée":{"en":"An experience designed","es":"Una experiencia pensada","it":"Un'esperienza pensata","de":"Ein Erlebnis, das","pt":"Uma experiência pensada","pl":"Doświadczenie stworzone,","ru":"Опыт, созданный,","nl":"Een ervaring ontworpen","tr":"Sizi rahatlatmak için"},"pour vous rassurer.":{"en":"to reassure you.","es":"para tranquilizarte.","it":"per rassicurarti.","de":"Sie beruhigen soll.","pt":"para o tranquilizar.","pl":"by Cię uspokoić.","ru":"чтобы вас успокоить.","nl":"om u gerust te stellen.","tr":"tasarlanmış bir deneyim."},"La simplicité, la transparence et la sécurité sont au cœur de votre parcours.":{"en":"Simplicity, transparency and security are at the heart of your journey.","es":"La sencillez, la transparencia y la seguridad están en el centro de tu recorrido.","it":"Semplicità, trasparenza e sicurezza sono al centro del tuo percorso.","de":"Einfachheit, Transparenz und Sicherheit stehen im Mittelpunkt Ihres Weges.","pt":"A simplicidade, a transparência e a segurança estão no centro do seu percurso.","pl":"Prostota, przejrzystość i bezpieczeństwo są sercem Twojej ścieżki.","ru":"Простота, прозрачность и безопасность — в основе вашего пути.","nl":"Eenvoud, transparantie en veiligheid staan centraal in uw traject.","tr":"Sadelik, şeffaflık ve güvenlik sürecinizin merkezindedir."},"Vos informations protégées":{"en":"Your information protected","es":"Tu información protegida","it":"Le tue informazioni protette","de":"Ihre Informationen geschützt","pt":"As suas informações protegidas","pl":"Twoje dane chronione","ru":"Ваша информация защищена","nl":"Uw gegevens beschermd","tr":"Bilgileriniz korunuyor"},"Adoptez les bonnes pratiques et utilisez uniquement les canaux officiels de Sorevia Bank.":{"en":"Adopt good practices and use only Sorevia Bank's official channels.","es":"Adopta buenas prácticas y utiliza únicamente los canales oficiales de Sorevia Bank.","it":"Adotta le buone pratiche e utilizza solo i canali ufficiali di Sorevia Bank.","de":"Befolgen Sie bewährte Verfahren und nutzen Sie ausschließlich die offiziellen Kanäle von Sorevia Bank.","pt":"Adote boas práticas e utilize apenas os canais oficiais do Sorevia Bank.","pl":"Stosuj dobre praktyki i korzystaj wyłącznie z oficjalnych kanałów Sorevia Bank.","ru":"Соблюдайте правила безопасности и пользуйтесь только официальными каналами Sorevia Bank.","nl":"Pas goede gewoonten toe en gebruik uitsluitend de officiële kanalen van Sorevia Bank.","tr":"İyi uygulamaları benimseyin ve yalnızca Sorevia Bank'ın resmi kanallarını kullanın."},"Une information claire":{"en":"Clear information","es":"Información clara","it":"Un'informazione chiara","de":"Klare Informationen","pt":"Uma informação clara","pl":"Jasna informacja","ru":"Понятная информация","nl":"Duidelijke informatie","tr":"Net bilgi"},"Consultez les détails du produit avant toute décision et vérifiez les conditions applicables.":{"en":"Review the product details before any decision and check the applicable conditions.","es":"Consulta los detalles del producto antes de cualquier decisión y verifica las condiciones aplicables.","it":"Consulta i dettagli del prodotto prima di qualsiasi decisione e verifica le condizioni applicabili.","de":"Sehen Sie sich vor jeder Entscheidung die Produktdetails an und prüfen Sie die geltenden Bedingungen.","pt":"Consulte os detalhes do produto antes de qualquer decisão e verifique as condições aplicáveis.","pl":"Zapoznaj się ze szczegółami produktu przed podjęciem decyzji i sprawdź obowiązujące warunki.","ru":"Изучите детали продукта до принятия решения и проверьте применимые условия.","nl":"Raadpleeg de details van het product vóór elke beslissing en controleer de toepasselijke voorwaarden.","tr":"Herhangi bir karar vermeden önce ürün ayrıntılarına göz atın ve geçerli koşulları kontrol edin."},"Un accompagnement":{"en":"Support","es":"Acompañamiento","it":"Un accompagnamento","de":"Begleitung","pt":"Um acompanhamento","pl":"Wsparcie","ru":"Сопровождение","nl":"Begeleiding","tr":"Destek"},"Lorsque vous avez un doute, demandez les informations nécessaires avant de souscrire.":{"en":"If you have any doubt, ask for the necessary information before subscribing.","es":"Si tienes alguna duda, solicita la información necesaria antes de contratar.","it":"Quando hai un dubbio, chiedi le informazioni necessarie prima di sottoscrivere.","de":"Wenn Sie Zweifel haben, fragen Sie vor dem Abschluss nach den nötigen Informationen.","pt":"Quando tiver uma dúvida, peça as informações necessárias antes de subscrever.","pl":"Gdy masz wątpliwości, poproś o niezbędne informacje przed zawarciem umowy.","ru":"Если у вас есть сомнения, запросите необходимую информацию перед оформлением.","nl":"Bij twijfel kunt u de nodige informatie opvragen voordat u afsluit.","tr":"Şüpheniz olduğunda, sözleşme yapmadan önce gerekli bilgileri isteyin."},"07 • SOREVIA BANK":{"en":"07 • SOREVIA BANK","es":"07 • SOREVIA BANK","it":"07 • SOREVIA BANK","de":"07 • SOREVIA BANK","pt":"07 • SOREVIA BANK","pl":"07 • SOREVIA BANK","ru":"07 • SOREVIA BANK","nl":"07 • SOREVIA BANK","tr":"07 • SOREVIA BANK"},"Protégez aujourd'hui":{"en":"Protect today","es":"Protege hoy","it":"Proteggi oggi","de":"Schützen Sie heute,","pt":"Proteja hoje","pl":"Chroń dziś","ru":"Защитите сегодня то,","nl":"Bescherm vandaag","tr":"Bugün yarın önemli olanı"},"ce qui compte demain.":{"en":"what matters tomorrow.","es":"lo que importa mañana.","it":"ciò che conta domani.","de":"was morgen zählt.","pt":"o que importa amanhã.","pl":"to, co ważne jutro.","ru":"что важно завтра.","nl":"wat morgen telt.","tr":"koruyun."},"Découvrez les solutions d'assurance Sorevia Bank et construisez une protection adaptée à vos besoins, à vos projets et à votre quotidien.":{"en":"Discover Sorevia Bank's insurance solutions and build protection suited to your needs, your projects and your daily life.","es":"Descubre las soluciones de seguros de Sorevia Bank y construye una protección adaptada a tus necesidades, a tus proyectos y a tu día a día.","it":"Scopri le soluzioni assicurative di Sorevia Bank e costruisci una protezione adatta alle tue esigenze, ai tuoi progetti e alla tua quotidianità.","de":"Entdecken Sie die Versicherungslösungen von Sorevia Bank und bauen Sie einen Schutz auf, der zu Ihren Bedürfnissen, Projekten und Ihrem Alltag passt.","pt":"Descubra as soluções de seguros do Sorevia Bank e construa uma proteção adaptada às suas necessidades, aos seus projetos e ao seu quotidiano.","pl":"Poznaj rozwiązania ubezpieczeniowe Sorevia Bank i zbuduj ochronę dopasowaną do swoich potrzeb, planów i codzienności.","ru":"Узнайте о страховых решениях Sorevia Bank и создайте защиту, соответствующую вашим потребностям, планам и повседневной жизни.","nl":"Ontdek de verzekeringsoplossingen van Sorevia Bank en bouw een bescherming die past bij uw behoeften, uw plannen en uw dagelijks leven.","tr":"Sorevia Bank sigorta çözümlerini keşfedin ve ihtiyaçlarınıza, projelerinize ve günlük yaşamınıza uygun bir koruma oluşturun."},"Commencer ma démarche":{"en":"Start my application","es":"Iniciar mi trámite","it":"Inizia la mia pratica","de":"Meinen Antrag starten","pt":"Iniciar o meu processo","pl":"Rozpocznij mój wniosek","ru":"Начать оформление","nl":"Mijn aanvraag starten","tr":"Başvurumu başlat"},"Des solutions digitales et des services pensés pour accompagner votre quotidien, vos projets et votre avenir.":{"en":"Digital solutions and services designed to support your daily life, your projects and your future.","es":"Soluciones digitales y servicios pensados para acompañar tu día a día, tus proyectos y tu futuro.","it":"Soluzioni digitali e servizi pensati per accompagnare la tua quotidianità, i tuoi progetti e il tuo futuro.","de":"Digitale Lösungen und Services, die Ihren Alltag, Ihre Projekte und Ihre Zukunft begleiten.","pt":"Soluções digitais e serviços pensados para acompanhar o seu quotidiano, os seus projetos e o seu futuro.","pl":"Cyfrowe rozwiązania i usługi stworzone, by towarzyszyć Twojej codzienności, planom i przyszłości.","ru":"Цифровые решения и услуги, созданные, чтобы сопровождать вашу повседневную жизнь, ваши планы и ваше будущее.","nl":"Digitale oplossingen en diensten die uw dagelijks leven, uw plannen en uw toekomst begeleiden.","tr":"Günlük yaşamınıza, projelerinize ve geleceğinize eşlik etmek için tasarlanmış dijital çözümler ve hizmetler."},"Assurances":{"en":"Insurance","es":"Seguros","it":"Assicurazioni","de":"Versicherungen","pt":"Seguros","pl":"Ubezpieczenia","ru":"Страхование","nl":"Verzekeringen","tr":"Sigorta"},"Automobile":{"en":"Car","es":"Automóvil","it":"Auto","de":"Auto","pt":"Automóvel","pl":"Samochód","ru":"Авто","nl":"Auto","tr":"Otomobil"},"Voyage":{"en":"Travel","es":"Viaje","it":"Viaggio","de":"Reise","pt":"Viagem","pl":"Podróże","ru":"Путешествия","nl":"Reis","tr":"Seyahat"},"Sorevia":{"en":"Sorevia","es":"Sorevia","it":"Sorevia","de":"Sorevia","pt":"Sorevia","pl":"Sorevia","ru":"Sorevia","nl":"Sorevia","tr":"Sorevia"},"Accueil":{"en":"Home","es":"Inicio","it":"Home","de":"Startseite","pt":"Início","pl":"Strona główna","ru":"Главная","nl":"Home","tr":"Ana sayfa"},"Cartes bancaires":{"en":"Bank cards","es":"Tarjetas bancarias","it":"Carte bancarie","de":"Bankkarten","pt":"Cartões bancários","pl":"Karty bankowe","ru":"Банковские карты","nl":"Bankkaarten","tr":"Banka kartları"},"Paiements":{"en":"Payments","es":"Pagos","it":"Pagamenti","de":"Zahlungen","pt":"Pagamentos","pl":"Płatności","ru":"Платежи","nl":"Betalingen","tr":"Ödemeler"},"Inscription":{"en":"Sign up","es":"Registro","it":"Registrazione","de":"Registrierung","pt":"Registo","pl":"Rejestracja","ru":"Регистрация","nl":"Registratie","tr":"Kayıt"},"Connexion":{"en":"Log in","es":"Iniciar sesión","it":"Accedi","de":"Anmelden","pt":"Iniciar sessão","pl":"Logowanie","ru":"Вход","nl":"Inloggen","tr":"Giriş"},"© 2026 Sorevia Bank — Tous droits réservés.":{"en":"© 2026 Sorevia Bank — All rights reserved.","es":"© 2026 Sorevia Bank — Todos los derechos reservados.","it":"© 2026 Sorevia Bank — Tutti i diritti riservati.","de":"© 2026 Sorevia Bank — Alle Rechte vorbehalten.","pt":"© 2026 Sorevia Bank — Todos os direitos reservados.","pl":"© 2026 Sorevia Bank — Wszelkie prawa zastrzeżone.","ru":"© 2026 Sorevia Bank — Все права защищены.","nl":"© 2026 Sorevia Bank — Alle rechten voorbehouden.","tr":"© 2026 Sorevia Bank — Tüm hakları saklıdır."},"Les garanties, exclusions, tarifs et conditions dépendent du contrat souscrit.":{"en":"Guarantees, exclusions, prices and conditions depend on the subscribed contract.","es":"Las garantías, exclusiones, tarifas y condiciones dependen del contrato suscrito.","it":"Le garanzie, le esclusioni, le tariffe e le condizioni dipendono dal contratto sottoscritto.","de":"Leistungen, Ausschlüsse, Tarife und Bedingungen hängen vom abgeschlossenen Vertrag ab.","pt":"As garantias, exclusões, preços e condições dependem do contrato subscrito.","pl":"Gwarancje, wyłączenia, taryfy i warunki zależą od zawartej umowy.","ru":"Гарантии, исключения, тарифы и условия зависят от заключённого договора.","nl":"De waarborgen, uitsluitingen, tarieven en voorwaarden hangen af van het afgesloten contract.","tr":"Teminatlar, istisnalar, tarifeler ve koşullar yapılan sözleşmeye bağlıdır."}};
+var L=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var LOC={fr:"fr-FR",en:"en-GB",es:"es-ES",it:"it-IT",de:"de-DE",pt:"pt-PT",pl:"pl-PL",ru:"ru-RU",nl:"nl-NL",tr:"tr-TR"};
+var MONTHS={fr:"mois",en:"months",es:"meses",it:"mesi",de:"Monate",pt:"meses",pl:"miesięcy",ru:"мес.",nl:"maanden",tr:"ay"};
+function pick(){
+  var m=location.search.match(/[?&]lang=([a-z]{2})/i);
+  if(m&&L.indexOf(m[1].toLowerCase())>-1)return m[1].toLowerCase();
+  var c=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||"fr"];
+  for(var i=0;i<c.length;i++){var b=String(c[i]).toLowerCase().split("-")[0];if(L.indexOf(b)>-1)return b;}
+  return "en";
+}
+var lang=pick();
+window.__lang=lang;window.__locale=LOC[lang];window.__monthsWord=MONTHS[lang];
+var N=function(s){return s.replace(/\s+/g," ").trim();};
+function tr(s){var e=D[N(s)];return e&&e[lang]?e[lang]:null;}
+function run(){
+  document.documentElement.setAttribute("lang",lang);
+  if(lang!=="fr"){
+    var w=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT,null,false),n,list=[];
+    while((n=w.nextNode())){
+      var p=n.parentNode&&n.parentNode.nodeName;
+      if(p==="SCRIPT"||p==="STYLE"||!/\S/.test(n.nodeValue))continue;
+      list.push(n);
+    }
+    list.forEach(function(n){
+      var t=tr(n.nodeValue);
+      if(t){var v=n.nodeValue,a=v.match(/^\s*/)[0],b=v.match(/\s*$/)[0];n.nodeValue=a+t+b;}
+    });
+    document.querySelectorAll("[alt],[title],[placeholder],[aria-label]").forEach(function(el){
+      ["alt","title","placeholder","aria-label"].forEach(function(k){
+        var v=el.getAttribute(k);if(v){var t=tr(v);if(t)el.setAttribute(k,t);}
+      });
+    });
+    var md=document.querySelector('meta[name="description"]');
+    if(md){var t=tr(md.getAttribute("content")||"");if(t)md.setAttribute("content",t);}
+  }
+  if(typeof updateSimulator==="function"){try{updateSimulator();}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();
+})();
+</script>
+
+</body>
+</html>

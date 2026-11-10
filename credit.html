@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#061b28">
+<meta name="description" content="Sorevia Bank - Solutions de crédit et de financement">
+<title>Sorevia Bank | Crédit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#f5f8fa;color:#102b38;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:root{--blue:#087fc4;--dark:#061b28;--cyan:#72ddf5;--gold:#d5ad5c;--muted:#758990}
+.container{width:calc(100% - 30px);max-width:650px;margin:auto}
+.header{height:74px;background:#fff;border-bottom:1px solid #e4edef;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px #0619250c}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:43px;height:43px;border-radius:12px;background:linear-gradient(145deg,#0ba5df,#07527a);color:#fff;display:grid;place-items:center;font:700 25px Georgia;box-shadow:0 8px 20px #087fc42c}
+.logo-text strong{display:block;font:700 18px Georgia;color:#0a2531;line-height:1}
+.logo-text small{display:block;font-size:6px;letter-spacing:3px;color:#8b9da3;margin-top:6px}
+.header-link{font-size:8px;font-weight:800;color:#0879b9;display:flex;align-items:center;gap:6px}
+.hero{min-height:700px;background:linear-gradient(145deg,#03131e,#06384d 58%,#08738d);color:#fff;position:relative;overflow:hidden;padding:45px 0 35px}
+.hero:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;right:-280px;top:-130px;border:1px solid #ffffff12}
+.hero:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;left:-170px;bottom:-100px;border:1px solid #72ddf514}
+.hero-content{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid #ffffff1d;background:#ffffff0a;padding:8px 12px;border-radius:50px;color:#9be8f9;font-size:7px;font-weight:800;letter-spacing:1.3px}
+.hero h1{font:700 37px/1.08 "Playfair Display",Georgia,serif;margin-top:19px}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:9px;line-height:1.9;color:#b8cdd4;margin-top:14px}
+.hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:23px}
+.hero-buttons a{height:46px;border-radius:9px;display:flex;justify-content:center;align-items:center;gap:7px;font-size:8px;font-weight:800}
+.primary{background:#0888d0;color:#fff;box-shadow:0 12px 25px #0003}
+.secondary{background:#fff;color:#0879b9}
+.hero-visual{height:270px;margin-top:28px;border-radius:20px;overflow:hidden;position:relative;background:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:0 25px 50px #0005}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#03131e08,#03131ebd)}
+.credit-card{position:absolute;z-index:2;left:14px;right:14px;bottom:14px;background:#ffffff18;border:1px solid #ffffff2b;border-radius:15px;padding:15px;backdrop-filter:blur(12px)}
+.credit-card small{font-size:6px;color:#c1d8df;letter-spacing:1px}
+.credit-card strong{display:block;font:700 22px Georgia;margin-top:5px}
+.credit-card span{font-size:6px;color:#b4c9d0}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}
+.trust{background:#ffffff0b;border:1px solid #ffffff12;border-radius:11px;padding:11px 5px;text-align:center}
+.trust i{color:#70dbf4;font-size:13px;margin-bottom:6px}
+.trust span{display:block;font-size:6px;color:#abc1c9}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-mark">S</div>
+<div class="logo-text"><strong>Sorevia Bank</strong><small>DIGITAL BANKING</small></div>
+</a>
+<a href="index.html" class="header-link"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container hero-content">
+
+<div class="eyebrow"><i class="fa-solid fa-building-columns"></i> SOREVIA BANK • CRÉDIT</div>
+
+<h1>Donnez vie à vos projets avec un <span>financement adapté.</span></h1>
+
+<p>Que ce soit pour un projet personnel, une voiture, un logement, des études ou votre activité professionnelle, découvrez nos solutions de financement.</p>
+
+<div class="hero-buttons">
+<a href="#credits" class="primary">Nos crédits <i class="fa-solid fa-arrow-down"></i></a>
+<a href="demandepret.html" class="secondary">Prêtez maintenant <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div class="hero-visual">
+<a href="demandepret.html" style="display:block;width:100%;height:100%">
+<div class="credit-card">
+<small>SOREVIA FINANCEMENT</small>
+<strong>Votre projet mérite d'avancer.</strong>
+<span>Découvrez une solution de crédit adaptée à vos besoins.</span>
+</div>
+</a>
+</div>
+
+<div class="trust-row">
+<div class="trust"><i class="fa-solid fa-hand-holding-dollar"></i><span>Financement</span></div>
+<div class="trust"><i class="fa-solid fa-sliders"></i><span>Solutions</span></div>
+<div class="trust"><i class="fa-solid fa-shield-halved"></i><span>Sécurité</span></div>
+</div>
+
+</div>
+</section>
+
+<style>
+.credits{background:#fff;padding:58px 0}
+.label{font-size:7px;font-weight:800;letter-spacing:1.7px;color:#087fc4}
+.title{font:700 30px/1.12 "Playfair Display",Georgia,serif;color:#092633;margin-top:7px}
+.title span{color:#087fc4}
+.desc{font-size:8px;line-height:1.9;color:#74878e;margin-top:10px}
+.credit-grid{display:grid;gap:14px;margin-top:25px}
+.credit-item{background:#fff;border:1px solid #e0e9ec;border-radius:19px;overflow:hidden;box-shadow:0 13px 35px #0619250b;transition:transform .35s,box-shadow .35s}
+.credit-item:hover{transform:translateY(-5px);box-shadow:0 20px 40px #06192514}
+.credit-image{height:185px;background-size:cover;background-position:center;position:relative;display:block}
+.credit-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061b2800 35%,#061b28c9)}
+.personal{background-image:url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=85")}
+.business{background-image:url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85")}
+.auto{background-image:url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85")}
+.mortgage{background-image:url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=85")}
+.student{background-image:url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85")}
+.consumer{background-image:url("https://images.unsplash.com/photo-1556742111-a301076d9d18?auto=format&fit=crop&w=1000&q=85")}
+.credit-number{position:absolute;z-index:2;top:13px;left:13px;width:34px;height:34px;border-radius:10px;background:#ffffffdf;color:#087fc4;display:grid;place-items:center;font-size:8px;font-weight:800}
+.credit-body{padding:17px}
+.credit-icon{width:42px;height:42px;border-radius:12px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:14px;margin-bottom:12px}
+.credit-body h3{font:700 20px Georgia;color:#15333f}
+.credit-body p{font-size:7px;line-height:1.85;color:#74878f;margin-top:8px}
+.credit-details{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:14px}
+.detail{background:#f4f8f9;border-radius:9px;padding:9px}
+.detail small{display:block;font-size:5px;color:#87999f}
+.detail strong{display:block;font-size:7px;color:#28444f;margin-top:3px}
+.credit-button{display:flex;align-items:center;justify-content:center;gap:7px;height:43px;border-radius:9px;background:#087fc4;color:#fff;margin-top:14px;font-size:7px;font-weight:800;box-shadow:0 9px 20px #087fc426}
+.credit-note{text-align:center;font-size:6px;color:#84969d;margin-top:20px;line-height:1.8}
+</style>
+
+<section class="credits" id="credits">
+<div class="container">
+
+<div class="label">01 • NOS SOLUTIONS</div>
+<h2 class="title">Un crédit pour chaque<br><span>projet important.</span></h2>
+<p class="desc">Découvrez nos principales catégories de financement et choisissez celle qui correspond le mieux à votre besoin.</p>
+
+<div class="credit-grid">
+
+<article class="credit-item reveal">
+<a href="demandepret.html" class="credit-image personal">
+<span class="credit-number">01</span>
+</a>
+<div class="credit-body">
+<div class="credit-icon"><i class="fa-solid fa-user"></i></div>
+<h3>Prêt personnel</h3>
+<p>Financez vos projets personnels : équipement, événement, travaux, voyage ou dépenses importantes, selon les conditions applicables.</p>
+<div class="credit-details">
+<div class="detail"><small>USAGE</small><strong>Personnel</strong></div>
+<div class="detail"><small>FLEXIBILITÉ</small><strong>Adaptable</strong></div>
+</div>
+<a href="demandepret.html" class="credit-button">Prêtez maintenant <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="credit-item reveal">
+<a href="demandepret.html" class="credit-image business">
+<span class="credit-number">02</span>
+</a>
+<div class="credit-body">
+<div class="credit-icon"><i class="fa-solid fa-briefcase"></i></div>
+<h3>Prêt aux entreprises</h3>
+<p>Accompagnez le développement de votre entreprise avec une solution de financement destinée aux besoins professionnels.</p>
+<div class="credit-details">
+<div class="detail"><small>PUBLIC</small><strong>Entreprises</strong></div>
+<div class="detail"><small>OBJECTIF</small><strong>Développement</strong></div>
+</div>
+<a href="demandepret.html" class="credit-button">Prêtez maintenant <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="credit-item reveal">
+<a href="demandepret.html" class="credit-image auto">
+<span class="credit-number">03</span>
+</a>
+<div class="credit-body">
+<div class="credit-icon"><i class="fa-solid fa-car"></i></div>
+<h3>Prêt automobile</h3>
+<p>Préparez le financement de votre véhicule et avancez vers votre prochain déplacement avec une solution dédiée.</p>
+<div class="credit-details">
+<div class="detail"><small>PROJET</small><strong>Automobile</strong></div>
+<div class="detail"><small>USAGE</small><strong>Véhicule</strong></div>
+</div>
+<a href="demandepret.html" class="credit-button">Prêtez maintenant <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="credit-item reveal">
+<a href="demandepret.html" class="credit-image mortgage">
+<span class="credit-number">04</span>
+</a>
+<div class="credit-body">
+<div class="credit-icon"><i class="fa-solid fa-house"></i></div>
+<h3>Prêt hypothécaire</h3>
+<p>Un financement destiné aux projets immobiliers, avec un accompagnement adapté à la nature de votre projet.</p>
+<div class="credit-details">
+<div class="detail"><small>PROJET</small><strong>Immobilier</strong></div>
+<div class="detail"><small>GARANTIE</small><strong>Selon conditions</strong></div>
+</div>
+<a href="demandepret.html" class="credit-button">Prêtez maintenant <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="credit-item reveal">
+<a href="demandepret.html" class="credit-image student">
+<span class="credit-number">05</span>
+</a>
+<div class="credit-body">
+<div class="credit-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+<h3>Prêt étudiant</h3>
+<p>Financez vos études, votre formation et les dépenses liées à votre parcours académique avec une solution adaptée.</p>
+<div class="credit-details">
+<div class="detail"><small>PUBLIC</small><strong>Étudiants</strong></div>
+<div class="detail"><small>OBJECTIF</small><strong>Études</strong></div>
+</div>
+<a href="demandepret.html" class="credit-button">Prêtez maintenant <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="credit-item reveal">
+<a href="demandepret.html" class="credit-image consumer">
+<span class="credit-number">06</span>
+</a>
+<div class="credit-body">
+<div class="credit-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+<h3>Prêt à la consommation</h3>
+<p>Financez vos achats et dépenses importantes avec une solution pensée pour accompagner vos besoins du quotidien.</p>
+<div class="credit-details">
+<div class="detail"><small>USAGE</small><strong>Consommation</strong></div>
+<div class="detail"><small>PROJET</small><strong>Quotidien</strong></div>
+</div>
+<a href="demandepret.html" class="credit-button">Prêtez maintenant <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</article>
+
+</div>
+
+<p class="credit-note"><i class="fa-solid fa-circle-info"></i> Les conditions, montants, durées et taux éventuels sont déterminés selon le produit et l'étude de votre demande.</p>
+
+</div>
+</section>
+
+<style>
+.process{background:#f2f7f9;padding:58px 0}
+.process-list{display:grid;gap:10px;margin-top:24px}
+.process-step{background:#fff;border:1px solid #e0e9ec;border-radius:15px;padding:15px;display:flex;gap:12px;align-items:flex-start}
+.step-number{width:39px;height:39px;border-radius:11px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:9px;font-weight:800;flex:none}
+.process-step strong{font-size:8px;color:#29444e;display:block}
+.process-step p{font-size:6px;line-height:1.8;color:#81939a;margin-top:4px}
+.process-line{height:20px;width:1px;background:#d7e6e9;margin-left:19px}
+.benefits{background:#fff;padding:58px 0}
+.benefit-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:24px}
+.benefit{border:1px solid #e0e9ec;border-radius:15px;padding:15px;background:#fff;box-shadow:0 8px 22px #06192508}
+.benefit i{width:36px;height:36px;border-radius:10px;background:#eaf6fa;color:#087fc4;display:grid;place-items:center;font-size:11px}
+.benefit strong{display:block;font-size:7px;color:#29444e;margin-top:9px}
+.benefit p{font-size:6px;line-height:1.7;color:#81939a;margin-top:4px}
+</style>
+
+<section class="process">
+<div class="container">
+
+<div class="label">02 • COMMENT ÇA MARCHE</div>
+<h2 class="title">Un parcours<br><span>simple et clair.</span></h2>
+<p class="desc">Votre demande peut être préparée étape par étape depuis votre smartphone.</p>
+
+<div class="process-list">
+
+<div class="process-step reveal">
+<div class="step-number">01</div>
+<div><strong>Choisissez votre prêt</strong><p>Sélectionnez la solution qui correspond à votre projet.</p></div>
+</div>
+
+<div class="process-line"></div>
+
+<div class="process-step reveal">
+<div class="step-number">02</div>
+<div><strong>Préparez votre demande</strong><p>Renseignez les informations nécessaires à l'étude de votre projet.</p></div>
+</div>
+
+<div class="process-line"></div>
+
+<div class="process-step reveal">
+<div class="step-number">03</div>
+<div><strong>Étude du dossier</strong><p>Votre demande est examinée selon les critères et conditions applicables.</p></div>
+</div>
+
+<div class="process-line"></div>
+
+<div class="process-step reveal">
+<div class="step-number">04</div>
+<div><strong>Réponse et suite du parcours</strong><p>Vous êtes informé de la suite donnée à votre demande selon le processus prévu.</p></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="benefits">
+<div class="container">
+
+<div class="label">03 • L'EXPÉRIENCE SOREVIA</div>
+<h2 class="title">Pensé pour vos<br><span>projets.</span></h2>
+<p class="desc">Une expérience digitale conçue pour rendre votre parcours de financement plus lisible.</p>
+
+<div class="benefit-grid">
+
+<div class="benefit reveal">
+<i class="fa-solid fa-mobile-screen-button"></i>
+<strong>100 % mobile</strong>
+<p>Consultez et préparez votre demande depuis votre smartphone.</p>
+</div>
+
+<div class="benefit reveal">
+<i class="fa-solid fa-list-check"></i>
+<strong>Parcours structuré</strong>
+<p>Chaque étape est présentée de manière claire et progressive.</p>
+</div>
+
+<div class="benefit reveal">
+<i class="fa-solid fa-shield-halved"></i>
+<strong>Confidentialité</strong>
+<p>Adoptez les bonnes pratiques pour protéger vos informations.</p>
+</div>
+
+<div class="benefit reveal">
+<i class="fa-solid fa-comments"></i>
+<strong>Accompagnement</strong>
+<p>Retrouvez les informations utiles tout au long de votre parcours.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+.simulator{background:linear-gradient(145deg,#061b28,#075873);padding:58px 0;color:#fff}
+.simulator-box{margin-top:24px;background:#ffffff0b;border:1px solid #ffffff14;border-radius:19px;padding:18px}
+.simulator-box h3{font:700 21px Georgia}
+.simulator-box>p{font-size:7px;line-height:1.8;color:#a9c2ca;margin-top:7px}
+.range-group{margin-top:19px}
+.range-top{display:flex;justify-content:space-between;font-size:7px;color:#c3d8de}
+.range-top strong{color:#72ddf5}
+input[type=range]{width:100%;margin-top:12px;accent-color:#72ddf5}
+.simulator-result{margin-top:18px;background:#ffffff0b;border:1px solid #ffffff12;border-radius:13px;padding:14px}
+.simulator-result small{font-size:6px;color:#9db8c0}
+.simulator-result strong{display:block;font:700 25px Georgia;margin-top:5px}
+.simulator-result span{font-size:6px;color:#8faab2}
+.simulator-button{display:flex;justify-content:center;align-items:center;gap:7px;height:43px;border-radius:9px;background:#fff;color:#0879b9;font-size:7px;font-weight:800;margin-top:15px}
+.questions{background:#fff;padding:58px 0}
+.faq{margin-top:23px;display:grid;gap:8px}
+.faq-item{border:1px solid #e0e9ec;border-radius:12px;overflow:hidden}
+.faq-question{padding:14px;display:flex;justify-content:space-between;align-items:center;font-size:7px;font-weight:800;color:#29444e}
+.faq-question i{color:#087fc4}
+.faq-answer{padding:0 14px 14px;font-size:6px;line-height:1.8;color:#81939a}
+.final-cta{background:#f2f7f9;padding:60px 0;text-align:center}
+.final-icon{width:58px;height:58px;border-radius:16px;background:#e8f6fa;color:#087fc4;display:grid;place-items:center;margin:0 auto 15px;font-size:20px}
+.final-cta .title{font-size:30px}
+.final-cta p{font-size:8px;line-height:1.9;color:#758991;margin:11px auto 20px;max-width:500px}
+.final-cta a{display:flex;justify-content:center;align-items:center;gap:7px;background:#087fc4;color:#fff;border-radius:10px;padding:14px;font-size:8px;font-weight:800;max-width:500px;margin:auto;box-shadow:0 12px 25px #087fc42e}
+</style>
+
+<section class="simulator">
+<div class="container">
+
+<div class="label" style="color:#72ddf5">04 • PROJECTION</div>
+<h2 class="title" style="color:#fff">Imaginez votre<br><span>prochain projet.</span></h2>
+<p class="desc" style="color:#abc1c9">Utilisez cette présentation indicative pour visualiser l'idée d'un financement.</p>
+
+<div class="simulator-box reveal">
+<h3>Votre projet</h3>
+<p>Les valeurs ci-dessous sont uniquement illustratives et ne constituent pas une simulation bancaire contractuelle.</p>
+
+<div class="range-group">
+<div class="range-top"><span>Montant souhaité</span><strong id="amountValue">10 000 €</strong></div>
+<input id="amountRange" type="range" min="1000" max="50000" step="500" value="10000">
+</div>
+
+<div class="range-group">
+<div class="range-top"><span>Durée indicative</span><strong id="durationValue">36 mois</strong></div>
+<input id="durationRange" type="range" min="12" max="84" step="12" value="36">
+</div>
+
+<div class="simulator-result">
+<small>PROJET INDICATIF</small>
+<strong id="projectValue">10 000 €</strong>
+<span>Montant sélectionné</span>
+</div>
+
+<a href="demandepret.html" class="simulator-button">Prêtez maintenant <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+</div>
+</section>
+
+<section class="questions">
+<div class="container">
+
+<div class="label">05 • QUESTIONS</div>
+<h2 class="title">Avant de faire<br><span>votre demande.</span></h2>
+<p class="desc">Quelques informations utiles avant de commencer votre parcours.</p>
+
+<div class="faq">
+
+<div class="faq-item reveal">
+<div class="faq-question">Quel prêt choisir ? <i class="fa-solid fa-plus"></i></div>
+<div class="faq-answer">Le choix dépend de la nature de votre projet : personnel, professionnel, automobile, immobilier, étudiant ou consommation.</div>
+</div>
+
+<div class="faq-item reveal">
+<div class="faq-question">Comment commencer ? <i class="fa-solid fa-plus"></i></div>
+<div class="faq-answer">Sélectionnez le prêt qui correspond à votre besoin puis utilisez le bouton « Prêtez maintenant » pour accéder à la page de demande.</div>
+</div>
+
+<div class="faq-item reveal">
+<div class="faq-question">Les conditions sont-elles identiques pour tous ? <i class="fa-solid fa-plus"></i></div>
+<div class="faq-answer">Non. Les conditions dépendent notamment du type de financement, du projet et de l'étude du dossier.</div>
+</div>
+
+<div class="faq-item reveal">
+<div class="faq-question">Les montants affichés sont-ils contractuels ? <i class="fa-solid fa-plus"></i></div>
+<div class="faq-answer">Non. Les montants présentés sur cette page sont des exemples visuels. Les conditions réelles sont déterminées lors de l'étude de la demande.</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<style>
+.footer{background:#03131e;color:#fff;padding:40px 0 18px}
+.footer-logo{display:flex;align-items:center;gap:9px}
+.footer-logo .logo-mark{box-shadow:none}
+.footer-logo strong{display:block;font:700 17px Georgia}
+.footer-logo small{display:block;font-size:6px;letter-spacing:2px;color:#6e8790;margin-top:5px}
+.footer-description{font-size:7px;line-height:1.8;color:#6e8790;margin:15px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;border-top:1px solid #ffffff0d;padding-top:20px}
+.footer-col h4{font:700 14px Georgia;margin-bottom:11px}
+.footer-col a{display:block;font-size:7px;color:#82989f;margin:8px 0}
+.footer-bottom{border-top:1px solid #ffffff0d;margin-top:22px;padding-top:14px;text-align:center;font-size:6px;color:#506972;line-height:1.8}
+.floating{position:fixed;bottom:17px;right:15px;width:45px;height:45px;border-radius:50%;background:#087fc4;color:#fff;display:grid;place-items:center;box-shadow:0 8px 25px #0004;z-index:500;font-size:13px;opacity:0;pointer-events:none;transition:.3s}
+.floating.visible{opacity:1;pointer-events:auto}
+@media(min-width:500px){.credit-grid{grid-template-columns:1fr 1fr}.credit-item:last-child{grid-column:1/-1}}
+</style>
+
+<section class="final-cta">
+<div class="container">
+
+<div class="final-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+
+<div class="label">06 • VOTRE PROJET</div>
+
+<h2 class="title">Prêt à faire avancer<br><span>votre projet ?</span></h2>
+
+<p>Choisissez votre solution de financement et commencez votre demande depuis votre smartphone.</p>
+
+<a href="demandepret.html">Prêtez maintenant <i class="fa-solid fa-arrow-right"></i></a>
+
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+
+<div class="footer-logo">
+<div class="logo-mark">S</div>
+<div>
+<strong>Sorevia Bank</strong>
+<small>DIGITAL BANKING</small>
+</div>
+</div>
+
+<p class="footer-description">Des solutions bancaires digitales pensées pour accompagner votre quotidien, vos projets et vos ambitions.</p>
+
+<div class="footer-grid">
+
+<div class="footer-col">
+<h4>Services</h4>
+<a href="courant.html">Compte courant</a>
+<a href="epargne.html">Épargne</a>
+<a href="bancaire.html">Cartes bancaires</a>
+<a href="paiement.html">Paiements</a>
+<a href="assurance.html">Assurances</a>
+<a href="credit.html">Crédits</a>
+</div>
+
+<div class="footer-col">
+<h4>Sorevia</h4>
+<a href="index.html">Accueil</a>
+<a href="entreprise.html">Entreprise</a>
+<a href="remboursement.html">Remboursement</a>
+<a href="inscription.html">Inscription</a>
+<a href="demandepret.html">Demande de prêt</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Sorevia Bank — Tous droits réservés.<br>
+Les informations et montants présentés sont illustratifs et ne constituent pas une offre de crédit.
+</div>
+
+</div>
+</footer>
+
+<a href="#" class="floating" id="topBtn"><i class="fa-solid fa-arrow-up"></i></a>
+
+</main>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+}
+});
+},{threshold:.12});
+reveals.forEach(el=>observer.observe(el));
+
+const topBtn=document.getElementById("topBtn");
+window.addEventListener("scroll",()=>{
+if(window.scrollY>450){topBtn.classList.add("visible")}
+else{topBtn.classList.remove("visible")}
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+link.addEventListener("click",function(e){
+const target=document.querySelector(this.getAttribute("href"));
+if(target){
+e.preventDefault();
+target.scrollIntoView({behavior:"smooth"});
+}
+});
+});
+
+const amountRange=document.getElementById("amountRange");
+const durationRange=document.getElementById("durationRange");
+const amountValue=document.getElementById("amountValue");
+const durationValue=document.getElementById("durationValue");
+const projectValue=document.getElementById("projectValue");
+
+function updateSimulator(){
+const amount=Number(amountRange.value);
+const duration=Number(durationRange.value);
+const formatted=amount.toLocaleString(window.__locale||"fr-FR")+" €";
+amountValue.textContent=formatted;
+durationValue.textContent=duration+" "+(window.__monthsWord||"mois");
+projectValue.textContent=formatted;
+}
+
+amountRange.addEventListener("input",updateSimulator);
+durationRange.addEventListener("input",updateSimulator);
+updateSimulator();
+
+document.querySelectorAll(".faq-question").forEach(question=>{
+question.addEventListener("click",()=>{
+const answer=question.nextElementSibling;
+const icon=question.querySelector("i");
+const opened=answer.style.display==="block";
+document.querySelectorAll(".faq-answer").forEach(a=>a.style.display="none");
+document.querySelectorAll(".faq-question i").forEach(i=>i.className="fa-solid fa-plus");
+if(!opened){
+answer.style.display="block";
+icon.className="fa-solid fa-minus";
+}
+});
+});
+</script>
+
+
+<script>
+/* Traduction automatique : FR, EN, ES, IT, DE, PT, PL, RU, NL, TR — langue du navigateur */
+(function(){
+var D={"Sorevia Bank - Solutions de crédit et de financement":{"en":"Sorevia Bank - Credit and financing solutions","es":"Sorevia Bank - Soluciones de crédito y financiación","it":"Sorevia Bank - Soluzioni di credito e finanziamento","de":"Sorevia Bank - Kredit- und Finanzierungslösungen","pt":"Sorevia Bank - Soluções de crédito e financiamento","pl":"Sorevia Bank - Rozwiązania kredytowe i finansowe","ru":"Sorevia Bank - Кредитные и финансовые решения","nl":"Sorevia Bank - Krediet- en financieringsoplossingen","tr":"Sorevia Bank - Kredi ve finansman çözümleri"},"Sorevia Bank | Crédit":{"en":"Sorevia Bank | Credit","es":"Sorevia Bank | Crédito","it":"Sorevia Bank | Credito","de":"Sorevia Bank | Kredit","pt":"Sorevia Bank | Crédito","pl":"Sorevia Bank | Kredyt","ru":"Sorevia Bank | Кредит","nl":"Sorevia Bank | Krediet","tr":"Sorevia Bank | Kredi"},"S":{"en":"S","es":"S","it":"S","de":"S","pt":"S","pl":"S","ru":"S","nl":"S","tr":"S"},"Sorevia Bank":{"en":"Sorevia Bank","es":"Sorevia Bank","it":"Sorevia Bank","de":"Sorevia Bank","pt":"Sorevia Bank","pl":"Sorevia Bank","ru":"Sorevia Bank","nl":"Sorevia Bank","tr":"Sorevia Bank"},"DIGITAL BANKING":{"en":"DIGITAL BANKING","es":"DIGITAL BANKING","it":"DIGITAL BANKING","de":"DIGITAL BANKING","pt":"DIGITAL BANKING","pl":"DIGITAL BANKING","ru":"DIGITAL BANKING","nl":"DIGITAL BANKING","tr":"DIGITAL BANKING"},"Retour":{"en":"Back","es":"Volver","it":"Indietro","de":"Zurück","pt":"Voltar","pl":"Wróć","ru":"Назад","nl":"Terug","tr":"Geri"},"SOREVIA BANK • CRÉDIT":{"en":"SOREVIA BANK • CREDIT","es":"SOREVIA BANK • CRÉDITO","it":"SOREVIA BANK • CREDITO","de":"SOREVIA BANK • KREDIT","pt":"SOREVIA BANK • CRÉDITO","pl":"SOREVIA BANK • KREDYT","ru":"SOREVIA BANK • КРЕДИТ","nl":"SOREVIA BANK • KREDIET","tr":"SOREVIA BANK • KREDİ"},"Donnez vie à vos projets avec un":{"en":"Bring your projects to life with","es":"Da vida a tus proyectos con una","it":"Dai vita ai tuoi progetti con un","de":"Verwirklichen Sie Ihre Projekte mit einer","pt":"Dê vida aos seus projetos com um","pl":"Spełniaj swoje plany dzięki","ru":"Воплощайте свои планы с","nl":"Breng uw plannen tot leven met een","tr":"Projelerinizi uygun bir"},"financement adapté.":{"en":"suitable financing.","es":"financiación adaptada.","it":"finanziamento adatto.","de":"passenden Finanzierung.","pt":"financiamento adequado.","pl":"odpowiedniemu finansowaniu.","ru":"подходящим финансированием.","nl":"passende financiering.","tr":"finansmanla hayata geçirin."},"Que ce soit pour un projet personnel, une voiture, un logement, des études ou votre activité professionnelle, découvrez nos solutions de financement.":{"en":"Whether for a personal project, a car, a home, studies or your business, discover our financing solutions.","es":"Ya sea para un proyecto personal, un coche, una vivienda, estudios o tu actividad profesional, descubre nuestras soluciones de financiación.","it":"Che si tratti di un progetto personale, un'auto, una casa, gli studi o la tua attività professionale, scopri le nostre soluzioni di finanziamento.","de":"Ob für ein privates Projekt, ein Auto, eine Immobilie, das Studium oder Ihre berufliche Tätigkeit: Entdecken Sie unsere Finanzierungslösungen.","pt":"Seja para um projeto pessoal, um carro, uma habitação, estudos ou a sua atividade profissional, descubra as nossas soluções de financiamento.","pl":"Czy to projekt osobisty, samochód, mieszkanie, studia czy działalność zawodowa — poznaj nasze rozwiązania finansowe.","ru":"Будь то личный проект, автомобиль, жильё, учёба или ваша профессиональная деятельность — узнайте о наших решениях по финансированию.","nl":"Of het nu gaat om een persoonlijk project, een auto, een woning, studies of uw professionele activiteit: ontdek onze financieringsoplossingen.","tr":"İster kişisel bir proje, ister bir araba, konut, eğitim ya da mesleki faaliyetiniz için olsun, finansman çözümlerimizi keşfedin."},"Nos crédits":{"en":"Our loans","es":"Nuestros créditos","it":"I nostri crediti","de":"Unsere Kredite","pt":"Os nossos créditos","pl":"Nasze kredyty","ru":"Наши кредиты","nl":"Onze kredieten","tr":"Kredilerimiz"},"Prêtez maintenant":{"en":"Borrow now","es":"Solicita ahora","it":"Richiedi ora","de":"Jetzt beantragen","pt":"Peça já","pl":"Złóż wniosek teraz","ru":"Оформить сейчас","nl":"Nu lenen","tr":"Şimdi başvurun"},"SOREVIA FINANCEMENT":{"en":"SOREVIA FINANCING","es":"SOREVIA FINANCIACIÓN","it":"SOREVIA FINANZIAMENTO","de":"SOREVIA FINANZIERUNG","pt":"SOREVIA FINANCIAMENTO","pl":"SOREVIA FINANSOWANIE","ru":"ФИНАНСИРОВАНИЕ SOREVIA","nl":"SOREVIA FINANCIERING","tr":"SOREVIA FİNANSMAN"},"Votre projet mérite d'avancer.":{"en":"Your project deserves to move forward.","es":"Tu proyecto merece avanzar.","it":"Il tuo progetto merita di andare avanti.","de":"Ihr Projekt verdient es, voranzukommen.","pt":"O seu projeto merece avançar.","pl":"Twój projekt zasługuje na rozwój.","ru":"Ваш проект заслуживает развития.","nl":"Uw project verdient vooruitgang.","tr":"Projeniz ilerlemeyi hak ediyor."},"Découvrez une solution de crédit adaptée à vos besoins.":{"en":"Discover a credit solution suited to your needs.","es":"Descubre una solución de crédito adaptada a tus necesidades.","it":"Scopri una soluzione di credito adatta alle tue esigenze.","de":"Entdecken Sie eine Kreditlösung, die zu Ihren Bedürfnissen passt.","pt":"Descubra uma solução de crédito adaptada às suas necessidades.","pl":"Poznaj rozwiązanie kredytowe dopasowane do Twoich potrzeb.","ru":"Узнайте о кредитном решении, адаптированном к вашим потребностям.","nl":"Ontdek een kredietoplossing die bij uw behoeften past.","tr":"İhtiyaçlarınıza uygun bir kredi çözümünü keşfedin."},"Financement":{"en":"Financing","es":"Financiación","it":"Finanziamento","de":"Finanzierung","pt":"Financiamento","pl":"Finansowanie","ru":"Финансирование","nl":"Financiering","tr":"Finansman"},"Solutions":{"en":"Solutions","es":"Soluciones","it":"Soluzioni","de":"Lösungen","pt":"Soluções","pl":"Rozwiązania","ru":"Решения","nl":"Oplossingen","tr":"Çözümler"},"Sécurité":{"en":"Security","es":"Seguridad","it":"Sicurezza","de":"Sicherheit","pt":"Segurança","pl":"Bezpieczeństwo","ru":"Безопасность","nl":"Veiligheid","tr":"Güvenlik"},"01 • NOS SOLUTIONS":{"en":"01 • OUR SOLUTIONS","es":"01 • NUESTRAS SOLUCIONES","it":"01 • LE NOSTRE SOLUZIONI","de":"01 • UNSERE LÖSUNGEN","pt":"01 • AS NOSSAS SOLUÇÕES","pl":"01 • NASZE ROZWIĄZANIA","ru":"01 • НАШИ РЕШЕНИЯ","nl":"01 • ONZE OPLOSSINGEN","tr":"01 • ÇÖZÜMLERİMİZ"},"Un crédit pour chaque":{"en":"A loan for every","es":"Un crédito para cada","it":"Un credito per ogni","de":"Ein Kredit für jedes","pt":"Um crédito para cada","pl":"Kredyt na każdy","ru":"Кредит для каждого","nl":"Een krediet voor elk","tr":"Her önemli proje için"},"projet important.":{"en":"important project.","es":"proyecto importante.","it":"progetto importante.","de":"wichtige Projekt.","pt":"projeto importante.","pl":"ważny projekt.","ru":"важного проекта.","nl":"belangrijk project.","tr":"bir kredi."},"Découvrez nos principales catégories de financement et choisissez celle qui correspond le mieux à votre besoin.":{"en":"Discover our main financing categories and choose the one that best fits your need.","es":"Descubre nuestras principales categorías de financiación y elige la que mejor responda a tu necesidad.","it":"Scopri le nostre principali categorie di finanziamento e scegli quella che risponde meglio alla tua esigenza.","de":"Entdecken Sie unsere wichtigsten Finanzierungskategorien und wählen Sie die, die am besten zu Ihrem Bedarf passt.","pt":"Descubra as nossas principais categorias de financiamento e escolha a que melhor corresponde à sua necessidade.","pl":"Poznaj nasze główne kategorie finansowania i wybierz tę, która najlepiej odpowiada Twojej potrzebie.","ru":"Узнайте о наших основных категориях финансирования и выберите ту, которая лучше всего отвечает вашей потребности.","nl":"Ontdek onze belangrijkste financieringscategorieën en kies degene die het best bij uw behoefte past.","tr":"Başlıca finansman kategorilerimizi keşfedin ve ihtiyacınıza en uygun olanı seçin."},"Prêt personnel":{"en":"Personal loan","es":"Préstamo personal","it":"Prestito personale","de":"Privatkredit","pt":"Crédito pessoal","pl":"Pożyczka osobista","ru":"Персональный кредит","nl":"Persoonlijke lening","tr":"İhtiyaç kredisi"},"Financez vos projets personnels : équipement, événement, travaux, voyage ou dépenses importantes, selon les conditions applicables.":{"en":"Finance your personal projects: equipment, event, renovations, travel or major expenses, subject to applicable conditions.","es":"Financia tus proyectos personales: equipamiento, evento, obras, viaje o gastos importantes, según las condiciones aplicables.","it":"Finanzia i tuoi progetti personali: attrezzatura, evento, lavori, viaggio o spese importanti, secondo le condizioni applicabili.","de":"Finanzieren Sie Ihre persönlichen Projekte: Ausstattung, Veranstaltung, Renovierung, Reise oder größere Ausgaben, je nach geltenden Bedingungen.","pt":"Financie os seus projetos pessoais: equipamento, evento, obras, viagem ou despesas importantes, de acordo com as condições aplicáveis.","pl":"Sfinansuj swoje osobiste projekty: sprzęt, wydarzenie, remont, podróż lub większe wydatki, zgodnie z obowiązującymi warunkami.","ru":"Финансируйте личные проекты: оборудование, мероприятие, ремонт, поездку или крупные расходы — при соблюдении применимых условий.","nl":"Financier uw persoonlijke projecten: uitrusting, evenement, werken, reis of grote uitgaven, volgens de toepasselijke voorwaarden.","tr":"Kişisel projelerinizi finanse edin: ekipman, etkinlik, tadilat, seyahat veya büyük harcamalar, geçerli koşullara bağlı olarak."},"USAGE":{"en":"USE","es":"USO","it":"USO","de":"NUTZUNG","pt":"UTILIZAÇÃO","pl":"ZASTOSOWANIE","ru":"ЦЕЛЬ","nl":"GEBRUIK","tr":"KULLANIM"},"Personnel":{"en":"Personal","es":"Personal","it":"Personale","de":"Persönlich","pt":"Pessoal","pl":"Osobiste","ru":"Личное","nl":"Persoonlijk","tr":"Kişisel"},"FLEXIBILITÉ":{"en":"FLEXIBILITY","es":"FLEXIBILIDAD","it":"FLESSIBILITÀ","de":"FLEXIBILITÄT","pt":"FLEXIBILIDADE","pl":"ELASTYCZNOŚĆ","ru":"ГИБКОСТЬ","nl":"FLEXIBILITEIT","tr":"ESNEKLİK"},"Adaptable":{"en":"Adaptable","es":"Adaptable","it":"Adattabile","de":"Anpassbar","pt":"Adaptável","pl":"Dopasowywalne","ru":"Адаптируемый","nl":"Aanpasbaar","tr":"Uyarlanabilir"},"Prêt aux entreprises":{"en":"Business loan","es":"Préstamo para empresas","it":"Prestito alle imprese","de":"Unternehmenskredit","pt":"Crédito a empresas","pl":"Kredyt dla firm","ru":"Кредит для бизнеса","nl":"Lening voor bedrijven","tr":"Ticari kredi"},"Accompagnez le développement de votre entreprise avec une solution de financement destinée aux besoins professionnels.":{"en":"Support the growth of your business with a financing solution designed for professional needs.","es":"Acompaña el desarrollo de tu empresa con una solución de financiación destinada a las necesidades profesionales.","it":"Accompagna lo sviluppo della tua impresa con una soluzione di finanziamento destinata alle esigenze professionali.","de":"Begleiten Sie das Wachstum Ihres Unternehmens mit einer Finanzierungslösung für berufliche Bedürfnisse.","pt":"Acompanhe o desenvolvimento da sua empresa com uma solução de financiamento destinada às necessidades profissionais.","pl":"Wspieraj rozwój swojej firmy rozwiązaniem finansowym przeznaczonym na potrzeby zawodowe.","ru":"Поддержите развитие вашей компании с помощью решения по финансированию, предназначенного для профессиональных потребностей.","nl":"Ondersteun de groei van uw bedrijf met een financieringsoplossing voor professionele behoeften.","tr":"Mesleki ihtiyaçlar için tasarlanmış bir finansman çözümüyle şirketinizin gelişimine destek olun."},"PUBLIC":{"en":"AUDIENCE","es":"PÚBLICO","it":"PUBBLICO","de":"ZIELGRUPPE","pt":"PÚBLICO","pl":"ODBIORCY","ru":"КЛИЕНТЫ","nl":"DOELGROEP","tr":"HEDEF KİTLE"},"Entreprises":{"en":"Business","es":"Empresas","it":"Imprese","de":"Unternehmen","pt":"Empresas","pl":"Firmy","ru":"Для бизнеса","nl":"Bedrijven","tr":"Şirketler"},"OBJECTIF":{"en":"GOAL","es":"OBJETIVO","it":"OBIETTIVO","de":"ZIEL","pt":"OBJETIVO","pl":"CEL","ru":"ЦЕЛЬ","nl":"DOEL","tr":"AMAÇ"},"Développement":{"en":"Growth","es":"Desarrollo","it":"Sviluppo","de":"Entwicklung","pt":"Desenvolvimento","pl":"Rozwój","ru":"Развитие","nl":"Ontwikkeling","tr":"Gelişim"},"Prêt automobile":{"en":"Car loan","es":"Préstamo de automóvil","it":"Prestito auto","de":"Autokredit","pt":"Crédito automóvel","pl":"Kredyt samochodowy","ru":"Автокредит","nl":"Autolening","tr":"Taşıt kredisi"},"Préparez le financement de votre véhicule et avancez vers votre prochain déplacement avec une solution dédiée.":{"en":"Prepare the financing of your vehicle and move toward your next journey with a dedicated solution.","es":"Prepara la financiación de tu vehículo y avanza hacia tu próximo desplazamiento con una solución específica.","it":"Prepara il finanziamento del tuo veicolo e vai verso il tuo prossimo spostamento con una soluzione dedicata.","de":"Bereiten Sie die Finanzierung Ihres Fahrzeugs vor und fahren Sie mit einer speziellen Lösung Ihrer nächsten Fahrt entgegen.","pt":"Prepare o financiamento do seu veículo e avance para a sua próxima viagem com uma solução dedicada.","pl":"Przygotuj finansowanie swojego pojazdu i ruszaj w kolejną podróż z dedykowanym rozwiązaniem.","ru":"Подготовьте финансирование своего автомобиля и двигайтесь к следующей поездке с помощью специального решения.","nl":"Bereid de financiering van uw voertuig voor en ga met een specifieke oplossing uw volgende verplaatsing tegemoet.","tr":"Aracınızın finansmanını hazırlayın ve özel bir çözümle bir sonraki yolculuğunuza doğru ilerleyin."},"PROJET":{"en":"PROJECT","es":"PROYECTO","it":"PROGETTO","de":"PROJEKT","pt":"PROJETO","pl":"PROJEKT","ru":"ПРОЕКТ","nl":"PROJECT","tr":"PROJE"},"Automobile":{"en":"Car","es":"Automóvil","it":"Auto","de":"Auto","pt":"Automóvel","pl":"Samochód","ru":"Авто","nl":"Auto","tr":"Otomobil"},"Véhicule":{"en":"Vehicle","es":"Vehículo","it":"Veicolo","de":"Fahrzeug","pt":"Veículo","pl":"Pojazd","ru":"Автомобиль","nl":"Voertuig","tr":"Araç"},"Prêt hypothécaire":{"en":"Mortgage loan","es":"Préstamo hipotecario","it":"Mutuo ipotecario","de":"Hypothekendarlehen","pt":"Crédito hipotecário","pl":"Kredyt hipoteczny","ru":"Ипотечный кредит","nl":"Hypothecaire lening","tr":"İpotekli kredi"},"Un financement destiné aux projets immobiliers, avec un accompagnement adapté à la nature de votre projet.":{"en":"Financing designed for real estate projects, with support suited to the nature of your project.","es":"Una financiación destinada a proyectos inmobiliarios, con un acompañamiento adaptado a la naturaleza de tu proyecto.","it":"Un finanziamento destinato ai progetti immobiliari, con un accompagnamento adatto alla natura del tuo progetto.","de":"Eine Finanzierung für Immobilienprojekte, mit einer Begleitung, die zur Art Ihres Projekts passt.","pt":"Um financiamento destinado a projetos imobiliários, com um acompanhamento adaptado à natureza do seu projeto.","pl":"Finansowanie przeznaczone na projekty nieruchomości, z obsługą dostosowaną do charakteru Twojego projektu.","ru":"Финансирование для проектов в сфере недвижимости с сопровождением, соответствующим характеру вашего проекта.","nl":"Een financiering voor vastgoedprojecten, met begeleiding die past bij de aard van uw project.","tr":"Projenizin niteliğine uygun bir destekle gayrimenkul projeleri için tasarlanmış bir finansman."},"Immobilier":{"en":"Real estate","es":"Inmobiliario","it":"Immobiliare","de":"Immobilien","pt":"Imobiliário","pl":"Nieruchomości","ru":"Недвижимость","nl":"Vastgoed","tr":"Gayrimenkul"},"GARANTIE":{"en":"GUARANTEE","es":"GARANTÍA","it":"GARANZIA","de":"SICHERHEIT","pt":"GARANTIA","pl":"ZABEZPIECZENIE","ru":"ОБЕСПЕЧЕНИЕ","nl":"WAARBORG","tr":"TEMİNAT"},"Selon conditions":{"en":"Subject to conditions","es":"Según condiciones","it":"Secondo condizioni","de":"Nach Bedingungen","pt":"Consoante condições","pl":"Zgodnie z warunkami","ru":"По условиям","nl":"Volgens voorwaarden","tr":"Koşullara göre"},"Prêt étudiant":{"en":"Student loan","es":"Préstamo para estudiantes","it":"Prestito studenti","de":"Studienkredit","pt":"Crédito a estudantes","pl":"Pożyczka studencka","ru":"Студенческий кредит","nl":"Studielening","tr":"Öğrenci kredisi"},"Financez vos études, votre formation et les dépenses liées à votre parcours académique avec une solution adaptée.":{"en":"Finance your studies, your training and the expenses linked to your academic path with a suitable solution.","es":"Financia tus estudios, tu formación y los gastos vinculados a tu trayectoria académica con una solución adaptada.","it":"Finanzia i tuoi studi, la tua formazione e le spese legate al tuo percorso accademico con una soluzione adatta.","de":"Finanzieren Sie Ihr Studium, Ihre Ausbildung und die Ausgaben Ihres akademischen Werdegangs mit einer passenden Lösung.","pt":"Financie os seus estudos, a sua formação e as despesas ligadas ao seu percurso académico com uma solução adequada.","pl":"Sfinansuj studia, naukę i wydatki związane z Twoją ścieżką edukacyjną odpowiednim rozwiązaniem.","ru":"Финансируйте учёбу, обучение и расходы, связанные с вашим образованием, с помощью подходящего решения.","nl":"Financier uw studies, uw opleiding en de uitgaven verbonden aan uw academisch traject met een passende oplossing.","tr":"Eğitiminizi, öğrenim giderlerinizi ve akademik sürecinizle ilgili harcamaları uygun bir çözümle finanse edin."},"Étudiants":{"en":"Students","es":"Estudiantes","it":"Studenti","de":"Studierende","pt":"Estudantes","pl":"Studenci","ru":"Студенты","nl":"Studenten","tr":"Öğrenciler"},"Études":{"en":"Studies","es":"Estudios","it":"Studi","de":"Studium","pt":"Estudos","pl":"Studia","ru":"Учёба","nl":"Studies","tr":"Eğitim"},"Prêt à la consommation":{"en":"Consumer loan","es":"Préstamo al consumo","it":"Credito al consumo","de":"Konsumentenkredit","pt":"Crédito ao consumo","pl":"Kredyt konsumencki","ru":"Потребительский кредит","nl":"Consumentenkrediet","tr":"Tüketici kredisi"},"Financez vos achats et dépenses importantes avec une solution pensée pour accompagner vos besoins du quotidien.":{"en":"Finance your purchases and major expenses with a solution designed to support your everyday needs.","es":"Financia tus compras y gastos importantes con una solución pensada para acompañar tus necesidades cotidianas.","it":"Finanzia i tuoi acquisti e le spese importanti con una soluzione pensata per accompagnare le tue esigenze quotidiane.","de":"Finanzieren Sie Ihre Einkäufe und größeren Ausgaben mit einer Lösung für Ihre alltäglichen Bedürfnisse.","pt":"Financie as suas compras e despesas importantes com uma solução pensada para acompanhar as suas necessidades do dia a dia.","pl":"Sfinansuj zakupy i większe wydatki rozwiązaniem stworzonym z myślą o Twoich codziennych potrzebach.","ru":"Финансируйте покупки и крупные расходы с помощью решения, созданного для ваших повседневных потребностей.","nl":"Financier uw aankopen en grote uitgaven met een oplossing voor uw dagelijkse behoeften.","tr":"Alışverişlerinizi ve büyük harcamalarınızı günlük ihtiyaçlarınıza eşlik edecek bir çözümle finanse edin."},"Consommation":{"en":"Consumer","es":"Consumo","it":"Consumo","de":"Konsum","pt":"Consumo","pl":"Konsumpcja","ru":"Потребление","nl":"Consumptie","tr":"Tüketim"},"Quotidien":{"en":"Daily","es":"Día a día","it":"Quotidiano","de":"Alltag","pt":"Quotidiano","pl":"Codzienność","ru":"Повседневное","nl":"Dagelijks","tr":"Günlük"},"Les conditions, montants, durées et taux éventuels sont déterminés selon le produit et l'étude de votre demande.":{"en":"Conditions, amounts, terms and any rates are determined according to the product and the review of your application.","es":"Las condiciones, importes, plazos y posibles tipos se determinan según el producto y el estudio de tu solicitud.","it":"Le condizioni, gli importi, le durate e gli eventuali tassi sono determinati in base al prodotto e all'esame della tua richiesta.","de":"Bedingungen, Beträge, Laufzeiten und etwaige Zinssätze richten sich nach dem Produkt und der Prüfung Ihres Antrags.","pt":"As condições, montantes, prazos e eventuais taxas são determinados consoante o produto e a análise do seu pedido.","pl":"Warunki, kwoty, okresy i ewentualne oprocentowanie są określane w zależności od produktu i oceny Twojego wniosku.","ru":"Условия, суммы, сроки и возможные ставки определяются в зависимости от продукта и рассмотрения вашей заявки.","nl":"De voorwaarden, bedragen, looptijden en eventuele rentevoeten worden bepaald volgens het product en de beoordeling van uw aanvraag.","tr":"Koşullar, tutarlar, vadeler ve olası oranlar, ürüne ve talebinizin incelenmesine göre belirlenir."},"02 • COMMENT ÇA MARCHE":{"en":"02 • HOW IT WORKS","es":"02 • CÓMO FUNCIONA","it":"02 • COME FUNZIONA","de":"02 • SO FUNKTIONIERT ES","pt":"02 • COMO FUNCIONA","pl":"02 • JAK TO DZIAŁA","ru":"02 • КАК ЭТО РАБОТАЕТ","nl":"02 • HOE HET WERKT","tr":"02 • NASIL ÇALIŞIR"},"Un parcours":{"en":"A simple and","es":"Un proceso","it":"Un percorso","de":"Ein einfacher und","pt":"Um percurso","pl":"Prosty i","ru":"Простой и","nl":"Een eenvoudig en","tr":"Basit ve"},"simple et clair.":{"en":"clear process.","es":"sencillo y claro.","it":"semplice e chiaro.","de":"klarer Ablauf.","pt":"simples e claro.","pl":"przejrzysty proces.","ru":"понятный процесс.","nl":"duidelijk traject.","tr":"net bir süreç."},"Votre demande peut être préparée étape par étape depuis votre smartphone.":{"en":"Your application can be prepared step by step from your smartphone.","es":"Tu solicitud puede prepararse paso a paso desde tu smartphone.","it":"La tua richiesta può essere preparata passo dopo passo dal tuo smartphone.","de":"Ihr Antrag kann Schritt für Schritt von Ihrem Smartphone aus vorbereitet werden.","pt":"O seu pedido pode ser preparado passo a passo a partir do seu smartphone.","pl":"Twój wniosek można przygotować krok po kroku na smartfonie.","ru":"Вашу заявку можно подготовить шаг за шагом со смартфона.","nl":"Uw aanvraag kan stap voor stap vanaf uw smartphone worden voorbereid.","tr":"Başvurunuz akıllı telefonunuzdan adım adım hazırlanabilir."},"Choisissez votre prêt":{"en":"Choose your loan","es":"Elige tu préstamo","it":"Scegli il tuo prestito","de":"Wählen Sie Ihren Kredit","pt":"Escolha o seu crédito","pl":"Wybierz swój kredyt","ru":"Выберите свой кредит","nl":"Kies uw lening","tr":"Kredinizi seçin"},"Sélectionnez la solution qui correspond à votre projet.":{"en":"Select the solution that matches your project.","es":"Selecciona la solución que corresponde a tu proyecto.","it":"Seleziona la soluzione che corrisponde al tuo progetto.","de":"Wählen Sie die Lösung, die zu Ihrem Projekt passt.","pt":"Selecione a solução que corresponde ao seu projeto.","pl":"Wybierz rozwiązanie odpowiadające Twojemu projektowi.","ru":"Выберите решение, соответствующее вашему проекту.","nl":"Selecteer de oplossing die bij uw project past.","tr":"Projenize uygun çözümü seçin."},"Préparez votre demande":{"en":"Prepare your application","es":"Prepara tu solicitud","it":"Prepara la tua richiesta","de":"Antrag vorbereiten","pt":"Prepare o seu pedido","pl":"Przygotuj wniosek","ru":"Подготовьте заявку","nl":"Bereid uw aanvraag voor","tr":"Başvurunuzu hazırlayın"},"Renseignez les informations nécessaires à l'étude de votre projet.":{"en":"Provide the information needed to review your project.","es":"Indica la información necesaria para el estudio de tu proyecto.","it":"Inserisci le informazioni necessarie per l'esame del tuo progetto.","de":"Geben Sie die für die Prüfung Ihres Projekts nötigen Informationen an.","pt":"Preencha as informações necessárias para a análise do seu projeto.","pl":"Podaj informacje niezbędne do oceny Twojego projektu.","ru":"Укажите информацию, необходимую для рассмотрения вашего проекта.","nl":"Vul de nodige informatie in voor de beoordeling van uw project.","tr":"Projenizin incelenmesi için gerekli bilgileri girin."},"Étude du dossier":{"en":"File review","es":"Estudio del expediente","it":"Esame della pratica","de":"Prüfung der Unterlagen","pt":"Análise do processo","pl":"Analiza dokumentów","ru":"Рассмотрение заявки","nl":"Beoordeling van het dossier","tr":"Dosya incelemesi"},"Votre demande est examinée selon les critères et conditions applicables.":{"en":"Your application is reviewed according to the applicable criteria and conditions.","es":"Tu solicitud se examina según los criterios y condiciones aplicables.","it":"La tua richiesta viene esaminata secondo i criteri e le condizioni applicabili.","de":"Ihr Antrag wird nach den geltenden Kriterien und Bedingungen geprüft.","pt":"O seu pedido é analisado de acordo com os critérios e condições aplicáveis.","pl":"Twój wniosek jest rozpatrywany według obowiązujących kryteriów i warunków.","ru":"Ваша заявка рассматривается в соответствии с применимыми критериями и условиями.","nl":"Uw aanvraag wordt beoordeeld volgens de toepasselijke criteria en voorwaarden.","tr":"Talebiniz geçerli kriterlere ve koşullara göre incelenir."},"Réponse et suite du parcours":{"en":"Answer and next steps","es":"Respuesta y continuación del proceso","it":"Risposta e seguito del percorso","de":"Antwort und weiterer Ablauf","pt":"Resposta e continuação do percurso","pl":"Odpowiedź i dalsze kroki","ru":"Ответ и дальнейшие шаги","nl":"Antwoord en vervolg van het traject","tr":"Yanıt ve sürecin devamı"},"Vous êtes informé de la suite donnée à votre demande selon le processus prévu.":{"en":"You are informed of the outcome of your application according to the planned process.","es":"Se te informa del curso dado a tu solicitud según el proceso previsto.","it":"Vieni informato sul seguito dato alla tua richiesta secondo il processo previsto.","de":"Sie werden über den weiteren Verlauf Ihres Antrags gemäß dem vorgesehenen Verfahren informiert.","pt":"É informado do seguimento dado ao seu pedido de acordo com o processo previsto.","pl":"Zostaniesz poinformowany o dalszym losie wniosku zgodnie z przewidzianą procedurą.","ru":"Вас информируют о ходе рассмотрения вашей заявки в соответствии с предусмотренным процессом.","nl":"U wordt op de hoogte gebracht van het gevolg dat aan uw aanvraag wordt gegeven volgens het voorziene proces.","tr":"Talebinize verilen sonuç hakkında öngörülen sürece göre bilgilendirilirsiniz."},"03 • L'EXPÉRIENCE SOREVIA":{"en":"03 • THE SOREVIA EXPERIENCE","es":"03 • LA EXPERIENCIA SOREVIA","it":"03 • L'ESPERIENZA SOREVIA","de":"03 • DAS SOREVIA ERLEBNIS","pt":"03 • A EXPERIÊNCIA SOREVIA","pl":"03 • DOŚWIADCZENIE SOREVIA","ru":"03 • ОПЫТ SOREVIA","nl":"03 • DE SOREVIA-ERVARING","tr":"03 • SOREVIA DENEYİMİ"},"Pensé pour vos":{"en":"Designed for your","es":"Pensado para tus","it":"Pensato per i tuoi","de":"Gemacht für Ihre","pt":"Pensado para os seus","pl":"Stworzone dla Twoich","ru":"Создано для ваших","nl":"Ontworpen voor uw","tr":"Projeleriniz için"},"projets.":{"en":"projects.","es":"proyectos.","it":"progetti.","de":"Projekte.","pt":"projetos.","pl":"projektów.","ru":"проектов.","nl":"projecten.","tr":"tasarlandı."},"Une expérience digitale conçue pour rendre votre parcours de financement plus lisible.":{"en":"A digital experience designed to make your financing journey more readable.","es":"Una experiencia digital diseñada para que tu recorrido de financiación sea más legible.","it":"Un'esperienza digitale progettata per rendere più leggibile il tuo percorso di finanziamento.","de":"Ein digitales Erlebnis, das Ihren Finanzierungsweg übersichtlicher macht.","pt":"Uma experiência digital concebida para tornar o seu percurso de financiamento mais legível.","pl":"Cyfrowe doświadczenie, które sprawia, że proces finansowania jest bardziej czytelny.","ru":"Цифровой опыт, созданный, чтобы сделать ваш путь к финансированию понятнее.","nl":"Een digitale ervaring die uw financieringstraject overzichtelijker maakt.","tr":"Finansman sürecinizi daha anlaşılır kılmak için tasarlanmış dijital bir deneyim."},"100 % mobile":{"en":"100% mobile","es":"100 % móvil","it":"100 % mobile","de":"100 % mobil","pt":"100 % móvel","pl":"100 % mobilnie","ru":"100 % мобильно","nl":"100 % mobiel","tr":"%100 mobil"},"Consultez et préparez votre demande depuis votre smartphone.":{"en":"View and prepare your application from your smartphone.","es":"Consulta y prepara tu solicitud desde tu smartphone.","it":"Consulta e prepara la tua richiesta dal tuo smartphone.","de":"Sehen Sie Ihren Antrag ein und bereiten Sie ihn von Ihrem Smartphone aus vor.","pt":"Consulte e prepare o seu pedido a partir do seu smartphone.","pl":"Przeglądaj i przygotuj wniosek na swoim smartfonie.","ru":"Просматривайте и готовьте заявку со своего смартфона.","nl":"Raadpleeg en bereid uw aanvraag voor vanaf uw smartphone.","tr":"Başvurunuzu akıllı telefonunuzdan görüntüleyin ve hazırlayın."},"Parcours structuré":{"en":"Structured process","es":"Proceso estructurado","it":"Percorso strutturato","de":"Strukturierter Ablauf","pt":"Percurso estruturado","pl":"Uporządkowany proces","ru":"Структурированный процесс","nl":"Gestructureerd traject","tr":"Yapılandırılmış süreç"},"Chaque étape est présentée de manière claire et progressive.":{"en":"Each step is presented clearly and progressively.","es":"Cada etapa se presenta de forma clara y progresiva.","it":"Ogni fase è presentata in modo chiaro e progressivo.","de":"Jeder Schritt wird klar und nachvollziehbar dargestellt.","pt":"Cada etapa é apresentada de forma clara e progressiva.","pl":"Każdy etap jest przedstawiony jasno i stopniowo.","ru":"Каждый этап представлен ясно и последовательно.","nl":"Elke stap wordt duidelijk en geleidelijk gepresenteerd.","tr":"Her adım net ve kademeli olarak sunulur."},"Confidentialité":{"en":"Privacy","es":"Confidencialidad","it":"Riservatezza","de":"Vertraulichkeit","pt":"Confidencialidade","pl":"Poufność","ru":"Конфиденциальность","nl":"Vertrouwelijkheid","tr":"Gizlilik"},"Adoptez les bonnes pratiques pour protéger vos informations.":{"en":"Adopt good practices to protect your information.","es":"Adopta buenas prácticas para proteger tu información.","it":"Adotta le buone pratiche per proteggere le tue informazioni.","de":"Befolgen Sie bewährte Verfahren, um Ihre Informationen zu schützen.","pt":"Adote boas práticas para proteger as suas informações.","pl":"Stosuj dobre praktyki, aby chronić swoje informacje.","ru":"Соблюдайте правила безопасности, чтобы защитить свою информацию.","nl":"Pas goede gewoonten toe om uw gegevens te beschermen.","tr":"Bilgilerinizi korumak için iyi uygulamaları benimseyin."},"Accompagnement":{"en":"Support","es":"Acompañamiento","it":"Accompagnamento","de":"Begleitung","pt":"Acompanhamento","pl":"Wsparcie","ru":"Сопровождение","nl":"Begeleiding","tr":"Destek"},"Retrouvez les informations utiles tout au long de votre parcours.":{"en":"Find useful information throughout your journey.","es":"Encuentra la información útil a lo largo de tu recorrido.","it":"Ritrova le informazioni utili durante tutto il tuo percorso.","de":"Finden Sie die nützlichen Informationen auf Ihrem gesamten Weg.","pt":"Encontre as informações úteis ao longo do seu percurso.","pl":"Znajdź przydatne informacje na każdym etapie.","ru":"Находите полезную информацию на протяжении всего пути.","nl":"Vind de nuttige informatie tijdens uw hele traject terug.","tr":"Süreciniz boyunca faydalı bilgilere ulaşın."},"04 • PROJECTION":{"en":"04 • PROJECTION","es":"04 • PROYECCIÓN","it":"04 • PROIEZIONE","de":"04 • VORSCHAU","pt":"04 • PROJEÇÃO","pl":"04 • PROJEKCJA","ru":"04 • ПРОГНОЗ","nl":"04 • VOORUITBLIK","tr":"04 • PROJEKSİYON"},"Imaginez votre":{"en":"Imagine your","es":"Imagina tu","it":"Immagina il tuo","de":"Stellen Sie sich Ihr","pt":"Imagine o seu","pl":"Wyobraź sobie swój","ru":"Представьте свой","nl":"Stel u uw volgende","tr":"Bir sonraki projenizi"},"prochain projet.":{"en":"next project.","es":"próximo proyecto.","it":"prossimo progetto.","de":"nächstes Projekt vor.","pt":"próximo projeto.","pl":"następny projekt.","ru":"следующий проект.","nl":"project voor.","tr":"hayal edin."},"Utilisez cette présentation indicative pour visualiser l'idée d'un financement.":{"en":"Use this indicative presentation to visualize the idea of financing.","es":"Utiliza esta presentación orientativa para visualizar la idea de una financiación.","it":"Usa questa presentazione indicativa per visualizzare l'idea di un finanziamento.","de":"Nutzen Sie diese unverbindliche Darstellung, um sich die Idee einer Finanzierung vorzustellen.","pt":"Utilize esta apresentação indicativa para visualizar a ideia de um financiamento.","pl":"Skorzystaj z tej orientacyjnej prezentacji, aby zobrazować ideę finansowania.","ru":"Используйте эту ориентировочную презентацию, чтобы представить идею финансирования.","nl":"Gebruik deze indicatieve presentatie om het idee van een financiering te visualiseren.","tr":"Bir finansman fikrini görselleştirmek için bu bilgilendirici sunumu kullanın."},"Votre projet":{"en":"Your project","es":"Tu proyecto","it":"Il tuo progetto","de":"Ihr Projekt","pt":"O seu projeto","pl":"Twój projekt","ru":"Ваш проект","nl":"Uw project","tr":"Projeniz"},"Les valeurs ci-dessous sont uniquement illustratives et ne constituent pas une simulation bancaire contractuelle.":{"en":"The values below are for illustration only and do not constitute a contractual bank simulation.","es":"Los valores siguientes son únicamente ilustrativos y no constituyen una simulación bancaria contractual.","it":"I valori qui sotto sono solo illustrativi e non costituiscono una simulazione bancaria contrattuale.","de":"Die folgenden Werte dienen nur zur Veranschaulichung und stellen keine vertragliche Bankberechnung dar.","pt":"Os valores abaixo são meramente ilustrativos e não constituem uma simulação bancária contratual.","pl":"Poniższe wartości mają wyłącznie charakter poglądowy i nie stanowią wiążącej symulacji bankowej.","ru":"Значения ниже приведены только для иллюстрации и не являются договорным банковским расчётом.","nl":"De onderstaande waarden zijn uitsluitend ter illustratie en vormen geen contractuele banksimulatie.","tr":"Aşağıdaki değerler yalnızca örnek niteliğindedir ve sözleşmeye esas bir banka simülasyonu değildir."},"Montant souhaité":{"en":"Desired amount","es":"Importe deseado","it":"Importo desiderato","de":"Gewünschter Betrag","pt":"Montante pretendido","pl":"Żądana kwota","ru":"Желаемая сумма","nl":"Gewenst bedrag","tr":"İstenen tutar"},"Durée indicative":{"en":"Indicative term","es":"Plazo orientativo","it":"Durata indicativa","de":"Voraussichtliche Laufzeit","pt":"Duração indicativa","pl":"Orientacyjny okres","ru":"Ориентировочный срок","nl":"Indicatieve looptijd","tr":"Tahmini vade"},"36 mois":{"en":"36 months","es":"36 meses","it":"36 mesi","de":"36 Monate","pt":"36 meses","pl":"36 miesięcy","ru":"36 мес.","nl":"36 maanden","tr":"36 ay"},"PROJET INDICATIF":{"en":"INDICATIVE PROJECT","es":"PROYECTO ORIENTATIVO","it":"PROGETTO INDICATIVO","de":"BEISPIELPROJEKT","pt":"PROJETO INDICATIVO","pl":"PROJEKT ORIENTACYJNY","ru":"ОРИЕНТИРОВОЧНЫЙ ПРОЕКТ","nl":"INDICATIEF PROJECT","tr":"ÖRNEK PROJE"},"Montant sélectionné":{"en":"Selected amount","es":"Importe seleccionado","it":"Importo selezionato","de":"Gewählter Betrag","pt":"Montante selecionado","pl":"Wybrana kwota","ru":"Выбранная сумма","nl":"Geselecteerd bedrag","tr":"Seçilen tutar"},"05 • QUESTIONS":{"en":"05 • QUESTIONS","es":"05 • PREGUNTAS","it":"05 • DOMANDE","de":"05 • FRAGEN","pt":"05 • PERGUNTAS","pl":"05 • PYTANIA","ru":"05 • ВОПРОСЫ","nl":"05 • VRAGEN","tr":"05 • SORULAR"},"Avant de faire":{"en":"Before making","es":"Antes de hacer","it":"Prima di fare","de":"Bevor Sie","pt":"Antes de fazer","pl":"Zanim złożysz","ru":"Прежде чем подать","nl":"Voordat u uw","tr":"Başvurunuzu"},"votre demande.":{"en":"your application.","es":"tu solicitud.","it":"la tua richiesta.","de":"Ihren Antrag stellen.","pt":"o seu pedido.","pl":"wniosek.","ru":"заявку.","nl":"aanvraag indient.","tr":"yapmadan önce."},"Quelques informations utiles avant de commencer votre parcours.":{"en":"A few useful pieces of information before starting your journey.","es":"Algunas informaciones útiles antes de comenzar tu recorrido.","it":"Alcune informazioni utili prima di iniziare il tuo percorso.","de":"Einige nützliche Informationen, bevor Sie Ihren Weg beginnen.","pt":"Algumas informações úteis antes de começar o seu percurso.","pl":"Kilka przydatnych informacji przed rozpoczęciem procesu.","ru":"Несколько полезных сведений, прежде чем начать ваш путь.","nl":"Enkele nuttige gegevens voordat u uw traject begint.","tr":"Sürecinize başlamadan önce bazı faydalı bilgiler."},"Quel prêt choisir ?":{"en":"Which loan should I choose?","es":"¿Qué préstamo elegir?","it":"Quale prestito scegliere?","de":"Welchen Kredit soll ich wählen?","pt":"Que crédito escolher?","pl":"Jaki kredyt wybrać?","ru":"Какой кредит выбрать?","nl":"Welke lening kiezen?","tr":"Hangi krediyi seçmeli?"},"Le choix dépend de la nature de votre projet : personnel, professionnel, automobile, immobilier, étudiant ou consommation.":{"en":"The choice depends on the nature of your project: personal, business, car, real estate, student or consumer.","es":"La elección depende de la naturaleza de tu proyecto: personal, profesional, automóvil, inmobiliario, estudiantil o de consumo.","it":"La scelta dipende dalla natura del tuo progetto: personale, professionale, auto, immobiliare, studentesco o al consumo.","de":"Die Wahl hängt von der Art Ihres Projekts ab: privat, beruflich, Auto, Immobilie, Studium oder Konsum.","pt":"A escolha depende da natureza do seu projeto: pessoal, profissional, automóvel, imobiliário, estudantil ou de consumo.","pl":"Wybór zależy od charakteru Twojego projektu: osobisty, zawodowy, samochodowy, nieruchomość, studencki lub konsumencki.","ru":"Выбор зависит от характера вашего проекта: личный, профессиональный, автомобильный, недвижимость, студенческий или потребительский.","nl":"De keuze hangt af van de aard van uw project: persoonlijk, professioneel, auto, vastgoed, student of consumptie.","tr":"Seçim projenizin niteliğine bağlıdır: kişisel, mesleki, taşıt, gayrimenkul, öğrenci veya tüketici."},"Comment commencer ?":{"en":"How do I get started?","es":"¿Cómo empezar?","it":"Come iniziare?","de":"Wie fange ich an?","pt":"Como começar?","pl":"Jak zacząć?","ru":"С чего начать?","nl":"Hoe begin ik?","tr":"Nasıl başlanır?"},"Sélectionnez le prêt qui correspond à votre besoin puis utilisez le bouton « Prêtez maintenant » pour accéder à la page de demande.":{"en":"Select the loan that matches your need, then use the \"Borrow now\" button to access the application page.","es":"Selecciona el préstamo que corresponde a tu necesidad y utiliza el botón «Solicita ahora» para acceder a la página de solicitud.","it":"Seleziona il prestito che corrisponde alla tua esigenza, poi usa il pulsante «Richiedi ora» per accedere alla pagina della richiesta.","de":"Wählen Sie den Kredit, der zu Ihrem Bedarf passt, und nutzen Sie dann die Schaltfläche „Jetzt beantragen“, um zur Antragsseite zu gelangen.","pt":"Selecione o crédito que corresponde à sua necessidade e utilize o botão «Peça já» para aceder à página de pedido.","pl":"Wybierz kredyt odpowiadający Twojej potrzebie, a następnie użyj przycisku „Złóż wniosek teraz”, aby przejść do strony wniosku.","ru":"Выберите кредит, соответствующий вашей потребности, затем нажмите кнопку «Оформить сейчас», чтобы перейти на страницу заявки.","nl":"Selecteer de lening die bij uw behoefte past en gebruik daarna de knop „Nu lenen” om naar de aanvraagpagina te gaan.","tr":"İhtiyacınıza uygun krediyi seçin, ardından başvuru sayfasına ulaşmak için «Şimdi başvurun» düğmesini kullanın."},"Les conditions sont-elles identiques pour tous ?":{"en":"Are the conditions the same for everyone?","es":"¿Las condiciones son idénticas para todos?","it":"Le condizioni sono identiche per tutti?","de":"Sind die Bedingungen für alle gleich?","pt":"As condições são idênticas para todos?","pl":"Czy warunki są takie same dla wszystkich?","ru":"Одинаковы ли условия для всех?","nl":"Zijn de voorwaarden voor iedereen dezelfde?","tr":"Koşullar herkes için aynı mı?"},"Non. Les conditions dépendent notamment du type de financement, du projet et de l'étude du dossier.":{"en":"No. Conditions depend in particular on the type of financing, the project and the review of the file.","es":"No. Las condiciones dependen, entre otras cosas, del tipo de financiación, del proyecto y del estudio del expediente.","it":"No. Le condizioni dipendono in particolare dal tipo di finanziamento, dal progetto e dall'esame della pratica.","de":"Nein. Die Bedingungen hängen unter anderem von der Art der Finanzierung, dem Projekt und der Prüfung der Unterlagen ab.","pt":"Não. As condições dependem nomeadamente do tipo de financiamento, do projeto e da análise do processo.","pl":"Nie. Warunki zależą w szczególności od rodzaju finansowania, projektu i oceny dokumentów.","ru":"Нет. Условия зависят, в частности, от вида финансирования, проекта и рассмотрения заявки.","nl":"Nee. De voorwaarden hangen onder meer af van het type financiering, het project en de beoordeling van het dossier.","tr":"Hayır. Koşullar özellikle finansman türüne, projeye ve dosyanın incelenmesine bağlıdır."},"Les montants affichés sont-ils contractuels ?":{"en":"Are the amounts shown contractual?","es":"¿Los importes mostrados son contractuales?","it":"Gli importi mostrati sono contrattuali?","de":"Sind die angezeigten Beträge verbindlich?","pt":"Os montantes apresentados são contratuais?","pl":"Czy wyświetlane kwoty są wiążące?","ru":"Являются ли указанные суммы договорными?","nl":"Zijn de getoonde bedragen contractueel?","tr":"Gösterilen tutarlar bağlayıcı mı?"},"Non. Les montants présentés sur cette page sont des exemples visuels. Les conditions réelles sont déterminées lors de l'étude de la demande.":{"en":"No. The amounts shown on this page are visual examples. Actual conditions are determined during the review of the application.","es":"No. Los importes presentados en esta página son ejemplos visuales. Las condiciones reales se determinan durante el estudio de la solicitud.","it":"No. Gli importi presentati in questa pagina sono esempi visivi. Le condizioni reali sono determinate durante l'esame della richiesta.","de":"Nein. Die auf dieser Seite gezeigten Beträge sind visuelle Beispiele. Die tatsächlichen Bedingungen werden bei der Prüfung des Antrags festgelegt.","pt":"Não. Os montantes apresentados nesta página são exemplos visuais. As condições reais são determinadas durante a análise do pedido.","pl":"Nie. Kwoty przedstawione na tej stronie to przykłady poglądowe. Rzeczywiste warunki są ustalane podczas rozpatrywania wniosku.","ru":"Нет. Суммы, представленные на этой странице, — это наглядные примеры. Реальные условия определяются при рассмотрении заявки.","nl":"Nee. De bedragen op deze pagina zijn visuele voorbeelden. De werkelijke voorwaarden worden bepaald bij de beoordeling van de aanvraag.","tr":"Hayır. Bu sayfada gösterilen tutarlar görsel örneklerdir. Gerçek koşullar talebin incelenmesi sırasında belirlenir."},"06 • VOTRE PROJET":{"en":"06 • YOUR PROJECT","es":"06 • TU PROYECTO","it":"06 • IL TUO PROGETTO","de":"06 • IHR PROJEKT","pt":"06 • O SEU PROJETO","pl":"06 • TWÓJ PROJEKT","ru":"06 • ВАШ ПРОЕКТ","nl":"06 • UW PROJECT","tr":"06 • PROJENİZ"},"Prêt à faire avancer":{"en":"Ready to move","es":"¿Listo para hacer avanzar","it":"Pronto a far avanzare","de":"Bereit, Ihr Projekt","pt":"Pronto para fazer avançar","pl":"Gotowy, by rozwinąć","ru":"Готовы продвинуть","nl":"Klaar om uw project","tr":"Projenizi ilerletmeye"},"votre projet ?":{"en":"your project forward?","es":"tu proyecto?","it":"il tuo progetto?","de":"voranzubringen?","pt":"o seu projeto?","pl":"swój projekt?","ru":"свой проект?","nl":"vooruit te helpen?","tr":"hazır mısınız?"},"Choisissez votre solution de financement et commencez votre demande depuis votre smartphone.":{"en":"Choose your financing solution and start your application from your smartphone.","es":"Elige tu solución de financiación y comienza tu solicitud desde tu smartphone.","it":"Scegli la tua soluzione di finanziamento e inizia la tua richiesta dal tuo smartphone.","de":"Wählen Sie Ihre Finanzierungslösung und starten Sie Ihren Antrag von Ihrem Smartphone aus.","pt":"Escolha a sua solução de financiamento e comece o seu pedido a partir do seu smartphone.","pl":"Wybierz rozwiązanie finansowe i złóż wniosek ze swojego smartfona.","ru":"Выберите решение по финансированию и начните заявку со своего смартфона.","nl":"Kies uw financieringsoplossing en start uw aanvraag vanaf uw smartphone.","tr":"Finansman çözümünüzü seçin ve başvurunuza akıllı telefonunuzdan başlayın."},"Des solutions bancaires digitales pensées pour accompagner votre quotidien, vos projets et vos ambitions.":{"en":"Digital banking solutions designed to support your daily life, your projects and your ambitions.","es":"Soluciones bancarias digitales pensadas para acompañar tu día a día, tus proyectos y tus ambiciones.","it":"Soluzioni bancarie digitali pensate per accompagnare la tua quotidianità, i tuoi progetti e le tue ambizioni.","de":"Digitale Banklösungen, die Ihren Alltag, Ihre Projekte und Ihre Ambitionen begleiten.","pt":"Soluções bancárias digitais pensadas para acompanhar o seu quotidiano, os seus projetos e as suas ambições.","pl":"Cyfrowe rozwiązania bankowe stworzone, by towarzyszyć Twojej codzienności, planom i ambicjom.","ru":"Цифровые банковские решения, созданные, чтобы сопровождать вашу повседневность, ваши планы и ваши амбиции.","nl":"Digitale bankoplossingen die uw dagelijks leven, uw plannen en uw ambities begeleiden.","tr":"Günlük yaşamınıza, projelerinize ve hedeflerinize eşlik etmek için tasarlanmış dijital bankacılık çözümleri."},"Services":{"en":"Services","es":"Servicios","it":"Servizi","de":"Services","pt":"Serviços","pl":"Usługi","ru":"Услуги","nl":"Diensten","tr":"Hizmetler"},"Compte courant":{"en":"Current account","es":"Cuenta corriente","it":"Conto corrente","de":"Girokonto","pt":"Conta corrente","pl":"Konto bieżące","ru":"Текущий счёт","nl":"Zichtrekening","tr":"Vadesiz hesap"},"Épargne":{"en":"Savings","es":"Ahorro","it":"Risparmio","de":"Sparen","pt":"Poupança","pl":"Oszczędności","ru":"Сбережения","nl":"Sparen","tr":"Birikim"},"Cartes bancaires":{"en":"Bank cards","es":"Tarjetas bancarias","it":"Carte bancarie","de":"Bankkarten","pt":"Cartões bancários","pl":"Karty bankowe","ru":"Банковские карты","nl":"Bankkaarten","tr":"Banka kartları"},"Paiements":{"en":"Payments","es":"Pagos","it":"Pagamenti","de":"Zahlungen","pt":"Pagamentos","pl":"Płatności","ru":"Платежи","nl":"Betalingen","tr":"Ödemeler"},"Assurances":{"en":"Insurance","es":"Seguros","it":"Assicurazioni","de":"Versicherungen","pt":"Seguros","pl":"Ubezpieczenia","ru":"Страхование","nl":"Verzekeringen","tr":"Sigorta"},"Crédits":{"en":"Credits","es":"Créditos","it":"Crediti","de":"Kredite","pt":"Créditos","pl":"Kredyty","ru":"Кредиты","nl":"Kredieten","tr":"Krediler"},"Sorevia":{"en":"Sorevia","es":"Sorevia","it":"Sorevia","de":"Sorevia","pt":"Sorevia","pl":"Sorevia","ru":"Sorevia","nl":"Sorevia","tr":"Sorevia"},"Accueil":{"en":"Home","es":"Inicio","it":"Home","de":"Startseite","pt":"Início","pl":"Strona główna","ru":"Главная","nl":"Home","tr":"Ana sayfa"},"Entreprise":{"en":"Business","es":"Empresa","it":"Impresa","de":"Unternehmen","pt":"Empresa","pl":"Firma","ru":"Для бизнеса","nl":"Bedrijf","tr":"Şirket"},"Remboursement":{"en":"Repayment","es":"Reembolso","it":"Rimborso","de":"Rückzahlung","pt":"Reembolso","pl":"Spłata","ru":"Погашение","nl":"Terugbetaling","tr":"Geri ödeme"},"Inscription":{"en":"Sign up","es":"Registro","it":"Registrazione","de":"Registrierung","pt":"Registo","pl":"Rejestracja","ru":"Регистрация","nl":"Registratie","tr":"Kayıt"},"Demande de prêt":{"en":"Loan application","es":"Solicitud de préstamo","it":"Richiesta di prestito","de":"Kreditantrag","pt":"Pedido de crédito","pl":"Wniosek o pożyczkę","ru":"Заявка на кредит","nl":"Leningaanvraag","tr":"Kredi başvurusu"},"© 2026 Sorevia Bank — Tous droits réservés.":{"en":"© 2026 Sorevia Bank — All rights reserved.","es":"© 2026 Sorevia Bank — Todos los derechos reservados.","it":"© 2026 Sorevia Bank — Tutti i diritti riservati.","de":"© 2026 Sorevia Bank — Alle Rechte vorbehalten.","pt":"© 2026 Sorevia Bank — Todos os direitos reservados.","pl":"© 2026 Sorevia Bank — Wszelkie prawa zastrzeżone.","ru":"© 2026 Sorevia Bank — Все права защищены.","nl":"© 2026 Sorevia Bank — Alle rechten voorbehouden.","tr":"© 2026 Sorevia Bank — Tüm hakları saklıdır."},"Les informations et montants présentés sont illustratifs et ne constituent pas une offre de crédit.":{"en":"The information and amounts shown are illustrative and do not constitute a credit offer.","es":"La información y los importes presentados son ilustrativos y no constituyen una oferta de crédito.","it":"Le informazioni e gli importi presentati sono illustrativi e non costituiscono un'offerta di credito.","de":"Die dargestellten Informationen und Beträge sind illustrativ und stellen kein Kreditangebot dar.","pt":"As informações e montantes apresentados são ilustrativos e não constituem uma oferta de crédito.","pl":"Przedstawione informacje i kwoty mają charakter poglądowy i nie stanowią oferty kredytowej.","ru":"Представленные информация и суммы носят иллюстративный характер и не являются кредитным предложением.","nl":"De gepresenteerde informatie en bedragen zijn illustratief en vormen geen kredietaanbod.","tr":"Sunulan bilgiler ve tutarlar örnek niteliğindedir ve bir kredi teklifi oluşturmaz."}};
+var L=["fr","en","es","it","de","pt","pl","ru","nl","tr"];
+var LOC={fr:"fr-FR",en:"en-GB",es:"es-ES",it:"it-IT",de:"de-DE",pt:"pt-PT",pl:"pl-PL",ru:"ru-RU",nl:"nl-NL",tr:"tr-TR"};
+var MONTHS={fr:"mois",en:"months",es:"meses",it:"mesi",de:"Monate",pt:"meses",pl:"miesięcy",ru:"мес.",nl:"maanden",tr:"ay"};
+function pick(){
+  var m=location.search.match(/[?&]lang=([a-z]{2})/i);
+  if(m&&L.indexOf(m[1].toLowerCase())>-1)return m[1].toLowerCase();
+  var c=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||navigator.userLanguage||"fr"];
+  for(var i=0;i<c.length;i++){var b=String(c[i]).toLowerCase().split("-")[0];if(L.indexOf(b)>-1)return b;}
+  return "en";
+}
+var lang=pick();
+window.__lang=lang;window.__locale=LOC[lang];window.__monthsWord=MONTHS[lang];
+var N=function(s){return s.replace(/\s+/g," ").trim();};
+function tr(s){var e=D[N(s)];return e&&e[lang]?e[lang]:null;}
+function run(){
+  document.documentElement.setAttribute("lang",lang);
+  if(lang!=="fr"){
+    var w=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT,null,false),n,list=[];
+    while((n=w.nextNode())){
+      var p=n.parentNode&&n.parentNode.nodeName;
+      if(p==="SCRIPT"||p==="STYLE"||!/\S/.test(n.nodeValue))continue;
+      list.push(n);
+    }
+    list.forEach(function(n){
+      var t=tr(n.nodeValue);
+      if(t){var v=n.nodeValue,a=v.match(/^\s*/)[0],b=v.match(/\s*$/)[0];n.nodeValue=a+t+b;}
+    });
+    document.querySelectorAll("[alt],[title],[placeholder],[aria-label]").forEach(function(el){
+      ["alt","title","placeholder","aria-label"].forEach(function(k){
+        var v=el.getAttribute(k);if(v){var t=tr(v);if(t)el.setAttribute(k,t);}
+      });
+    });
+    var md=document.querySelector('meta[name="description"]');
+    if(md){var t=tr(md.getAttribute("content")||"");if(t)md.setAttribute("content",t);}
+  }
+  if(typeof updateSimulator==="function"){try{updateSimulator();}catch(e){}}
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();
+})();
+</script>
+
+</body>
+</html>
